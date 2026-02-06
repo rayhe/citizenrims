@@ -30,4 +30,5 @@ jobs:
           git add public/
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "Update crime data $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git pull --rebase
           git push
