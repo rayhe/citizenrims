@@ -310,7 +310,7 @@ async function loadData() {
 
   if (feedData.meta.generated_at) {
     const raw = feedData.meta.generated_at;
-    lastRefreshDate = new Date(raw.endsWith('Z') ? raw : raw + 'Z');
+    lastRefreshDate = new Date(raw.match(/[Z+\-]\d/) ? raw : raw + 'Z');
     updateLastUpdated();
   }
 

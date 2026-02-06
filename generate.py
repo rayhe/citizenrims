@@ -6,7 +6,7 @@ Designed to run in GitHub Actions on a cron schedule.
 
 import json
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from urllib.request import Request, urlopen
 from urllib.parse import urlencode
 from urllib.error import HTTPError
@@ -208,7 +208,7 @@ def main():
     all_agencies = AGENCIES + ["paloalto"]
 
     meta = {
-        "generated_at": datetime.now().isoformat(),
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "days": days,
         "agencies": all_agencies,
         "incident_count": len(all_incidents),
