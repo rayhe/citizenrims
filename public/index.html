@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Crime Feed — Menlo Park, Atherton & San Mateo County</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: system-ui, -apple-system, sans-serif; color: #1a1a1a; background: #f8f8f8; }
@@ -80,8 +82,11 @@
     <span><span class="crime-icon-demo" style="background:#757575;width:10px;height:10px;font-size:7px">&#x2022;</span> Other</span>
   </div>
   <span class="legend-divider"></span>
-  <div class="legend-section">
-    <span style="font-size:0.7rem;color:#888">Size = severity</span>
+  <div class="legend-section" style="gap:10px">
+    <span><span class="crime-icon-demo" style="background:#555;width:24px;height:24px;font-size:7px">&nbsp;</span> Critical</span>
+    <span><span class="crime-icon-demo" style="background:#555;width:20px;height:20px;font-size:7px">&nbsp;</span> High</span>
+    <span><span class="crime-icon-demo" style="background:#555;width:16px;height:16px;font-size:7px">&nbsp;</span> Med</span>
+    <span><span class="crime-icon-demo" style="background:#555;width:12px;height:12px;font-size:7px">&nbsp;</span> Low</span>
   </div>
 </div>
 
@@ -124,6 +129,7 @@
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script>
 const COLORS = {
   menlopark:  { incident: '#4285f4', case: '#ea4335' },
@@ -202,6 +208,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 let allMarkers = [];
 let activeFilter = 'all';
 let lastRefreshDate = null;
+const clusterGroup = L.markerClusterGroup({
+  maxClusterRadius: 40,
+  spiderfyOnMaxZoom: true,
+  showCoverageOnHover: false,
+  zoomToBoundsOnClick: true,
+});
 
 function timeAgo(date) {
   const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
@@ -247,24 +259,31 @@ async function loadData() {
 
     const marker = L.marker([item.yCoord, item.xCoord], {
       icon: makeDivIcon(crimeConf, agencyColor),
-    }).addTo(map);
+    });
 
     marker.bindPopup(`<div style="font:13px system-ui;max-width:260px">${detail}</div>`);
     marker._prefix = prefix;
     marker._source = source;
     allMarkers.push(marker);
   });
+  clusterGroup.addLayers(allMarkers);
+  map.addLayer(clusterGroup);
 }
 
 function applyFilter(f) {
   activeFilter = f;
+  const toAdd = [];
+  const toRemove = [];
   allMarkers.forEach(m => {
-    let show = true;
+    let show = f === 'all';
     if (f === 'incident') show = m._source === 'incident';
     else if (f === 'case') show = m._source === 'case';
     else if (f === 'menlopark' || f === 'atherton' || f === 'smcsheriff') show = m._prefix === f;
-    if (show) { m.addTo(map); } else { m.removeFrom(map); }
+    else show = true;
+    if (show) toAdd.push(m); else toRemove.push(m);
   });
+  clusterGroup.removeLayers(toRemove);
+  clusterGroup.addLayers(toAdd);
 }
 
 document.querySelector('.filter-bar').addEventListener('click', e => {
