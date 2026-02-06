@@ -43,10 +43,14 @@
   footer { text-align: center; padding: 24px 16px; color: #aaa; font-size: 0.72rem; }
   footer a { color: #888; }
 
-  .filter-bar { display: flex; gap: 6px; padding: 10px 16px; background: #fff; border-bottom: 1px solid #eee; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; }
+  .filter-bar { display: flex; gap: 6px; padding: 10px 16px; background: #fff; border-bottom: 1px solid #eee; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; align-items: center; }
   .filter-btn { font-size: 0.78rem; padding: 5px 14px; border-radius: 16px; border: 1px solid #ddd; background: #fff; cursor: pointer; white-space: nowrap; transition: all 0.15s ease; font-weight: 500; color: #555; }
   .filter-btn:hover { border-color: #aaa; }
   .filter-btn.active { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
+  .filter-sep { width: 1px; height: 20px; background: #ddd; flex-shrink: 0; }
+  .time-btn { font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid #ddd; background: #fff; cursor: pointer; white-space: nowrap; transition: all 0.15s ease; font-weight: 600; color: #888; }
+  .time-btn:hover { border-color: #aaa; }
+  .time-btn.active { background: #455a64; color: #fff; border-color: #455a64; }
 
   .legend { display: flex; gap: 12px; padding: 8px 16px; background: #fff; border-bottom: 1px solid #eee; font-size: 0.75rem; color: #666; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; align-items: center; }
   .legend span { display: flex; align-items: center; gap: 4px; white-space: nowrap; }
@@ -82,9 +86,16 @@
   <button class="filter-btn active" data-filter="all">All</button>
   <button class="filter-btn" data-filter="incident">Incidents</button>
   <button class="filter-btn" data-filter="case">Cases</button>
+  <button class="filter-btn" data-filter="violent">Violent</button>
+  <button class="filter-btn" data-filter="property">Property</button>
+  <span class="filter-sep"></span>
   <button class="filter-btn" data-filter="menlopark">Menlo Park</button>
   <button class="filter-btn" data-filter="atherton">Atherton</button>
   <button class="filter-btn" data-filter="smcsheriff">SMC Sheriff</button>
+  <span class="filter-sep"></span>
+  <button class="time-btn active" data-days="7">7d</button>
+  <button class="time-btn" data-days="14">14d</button>
+  <button class="time-btn" data-days="31">31d</button>
 </div>
 
 <div class="legend">
@@ -119,7 +130,7 @@
 
 <div class="content">
   <div class="stats">
-    <div class="stat"><div class="num" id="inc-count">—</div><div class="label">Incidents (7 days)</div></div>
+    <div class="stat"><div class="num" id="inc-count">—</div><div class="label" id="inc-label">Incidents (7d)</div></div>
     <div class="stat"><div class="num" id="case-count">—</div><div class="label">Crime Reports</div></div>
     <div class="stat"><div class="num" id="agency-count">3</div><div class="label">Agencies</div></div>
   </div>
@@ -191,6 +202,9 @@ const CRIME_CATEGORIES = [
 const DEFAULT_CRIME = { icon: '\u{2022}', color: '#757575', severity: 'low' };
 const SEVERITY_RANK = { critical: 3, high: 2, medium: 1, low: 0 };
 
+const VIOLENT_RE = /assault|person crime|homicide|battery|robbery|weapon|stabbing|shooting|domestic|weapon call|shots? fired/i;
+const PROPERTY_RE = /burglary|larceny|theft|fraud|stolen|shoplift|embezzle|forgery|identity|vandal|arson/i;
+
 function classifyCrime(item) {
   const text = [
     item.callType, item.callTypeDescription,
@@ -233,6 +247,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 let allMarkers = [];
 let activeFilter = 'all';
+let activeDays = 7;
 let lastRefreshDate = null;
 const clusterGroup = L.markerClusterGroup({
   maxClusterRadius: 10,
@@ -322,33 +337,58 @@ async function loadData() {
     marker._prefix = prefix;
     marker._source = source;
     marker._crimeConf = crimeConf;
+    marker._crimeText = [item.callType, item.callTypeDescription, item.crimeType, item.crimeClassification, item.offenseDescription1].filter(Boolean).join(' ');
+    const dateStr = item.incidentDate || item.reportDate || item.occurrence1Date || '';
+    marker._itemDate = dateStr ? new Date(dateStr.endsWith('Z') ? dateStr : dateStr + 'Z') : null;
     allMarkers.push(marker);
   });
   clusterGroup.addLayers(allMarkers);
   map.addLayer(clusterGroup);
 }
 
-function applyFilter(f) {
-  activeFilter = f;
+function applyFilters() {
+  const cutoff = new Date(Date.now() - activeDays * 86400000);
   const toAdd = [];
   const toRemove = [];
+  let visibleInc = 0, visibleCase = 0;
   allMarkers.forEach(m => {
-    let show = f === 'all';
-    if (f === 'incident') show = m._source === 'incident';
-    else if (f === 'case') show = m._source === 'case';
-    else if (f === 'menlopark' || f === 'atherton' || f === 'smcsheriff') show = m._prefix === f;
-    else show = true;
-    if (show) toAdd.push(m); else toRemove.push(m);
+    let show = true;
+    // time filter
+    if (m._itemDate && m._itemDate < cutoff) show = false;
+    // type filter
+    if (show && activeFilter !== 'all') {
+      if (activeFilter === 'incident') show = m._source === 'incident';
+      else if (activeFilter === 'case') show = m._source === 'case';
+      else if (activeFilter === 'violent') show = VIOLENT_RE.test(m._crimeText);
+      else if (activeFilter === 'property') show = PROPERTY_RE.test(m._crimeText);
+      else if (activeFilter === 'menlopark' || activeFilter === 'atherton' || activeFilter === 'smcsheriff') show = m._prefix === activeFilter;
+    }
+    if (show) {
+      toAdd.push(m);
+      if (m._source === 'incident') visibleInc++; else visibleCase++;
+    } else {
+      toRemove.push(m);
+    }
   });
   clusterGroup.removeLayers(toRemove);
   clusterGroup.addLayers(toAdd);
+  document.getElementById('inc-count').textContent = visibleInc.toLocaleString();
+  document.getElementById('case-count').textContent = visibleCase.toLocaleString();
+  document.getElementById('inc-label').textContent = `Incidents (${activeDays}d)`;
 }
 
 document.querySelector('.filter-bar').addEventListener('click', e => {
-  if (!e.target.classList.contains('filter-btn')) return;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  e.target.classList.add('active');
-  applyFilter(e.target.dataset.filter);
+  if (e.target.classList.contains('filter-btn')) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    e.target.classList.add('active');
+    activeFilter = e.target.dataset.filter;
+    applyFilters();
+  } else if (e.target.classList.contains('time-btn')) {
+    document.querySelectorAll('.time-btn').forEach(b => b.classList.remove('active'));
+    e.target.classList.add('active');
+    activeDays = parseInt(e.target.dataset.days);
+    applyFilters();
+  }
 });
 
 loadData();

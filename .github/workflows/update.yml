@@ -21,7 +21,7 @@ jobs:
       - name: Generate static JSON
         run: python generate.py
         env:
-          DAYS: "7"
+          DAYS: "31"
 
       - name: Commit and push if changed
         run: |
