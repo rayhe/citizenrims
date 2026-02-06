@@ -209,10 +209,23 @@ let allMarkers = [];
 let activeFilter = 'all';
 let lastRefreshDate = null;
 const clusterGroup = L.markerClusterGroup({
-  maxClusterRadius: 40,
-  spiderfyOnMaxZoom: true,
+  maxClusterRadius: 10,
+  spiderfyOnMaxZoom: false,
   showCoverageOnHover: false,
-  zoomToBoundsOnClick: true,
+  zoomToBoundsOnClick: false,
+  iconCreateFunction: function(cluster) {
+    const count = cluster.getChildCount();
+    const size = 26;
+    return L.divIcon({
+      html: `<div style="width:${size}px;height:${size}px;border-radius:50%;background:rgba(50,50,50,0.8);color:#fff;display:flex;align-items:center;justify-content:center;font:bold 11px system-ui;box-shadow:0 1px 4px rgba(0,0,0,0.4);border:2px solid #fff">${count}</div>`,
+      className: '',
+      iconSize: [size, size],
+      iconAnchor: [size / 2, size / 2],
+    });
+  },
+});
+clusterGroup.on('clusterclick', function(e) {
+  e.layer.spiderfy();
 });
 
 function timeAgo(date) {
