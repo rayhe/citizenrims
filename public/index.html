@@ -302,8 +302,7 @@ async function loadData() {
   const resp = await fetch('feed.json');
   const feedData = await resp.json();
 
-  document.getElementById('inc-count').textContent = feedData.meta.incident_count.toLocaleString();
-  document.getElementById('case-count').textContent = feedData.meta.case_count.toLocaleString();
+
 
   if (feedData.meta.generated_at) {
     const raw = feedData.meta.generated_at;
@@ -342,8 +341,8 @@ async function loadData() {
     marker._itemDate = dateStr ? new Date(dateStr.endsWith('Z') ? dateStr : dateStr + 'Z') : null;
     allMarkers.push(marker);
   });
-  clusterGroup.addLayers(allMarkers);
   map.addLayer(clusterGroup);
+  applyFilters();
 }
 
 function applyFilters() {
