@@ -34,6 +34,9 @@
   .legend { display: flex; gap: 16px; padding: 8px 20px; background: #fff; border-bottom: 1px solid #eee; font-size: 0.8rem; color: #555; flex-wrap: wrap; }
   .legend span { display: flex; align-items: center; gap: 4px; }
   .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .legend-section { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+  .legend-divider { width: 1px; height: 16px; background: #ddd; }
+  .crime-icon-demo { display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff; font-weight: 700; font-size: 10px; line-height: 1; }
   .filter-bar { display: flex; gap: 8px; padding: 10px 20px; background: #fff; border-bottom: 1px solid #eee; flex-wrap: wrap; }
   .filter-btn { font-size: 0.8rem; padding: 4px 12px; border-radius: 14px; border: 1px solid #ccc; background: #fff; cursor: pointer; }
   .filter-btn.active { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
@@ -56,11 +59,28 @@
 </div>
 
 <div class="legend">
-  <span><span class="dot" style="background:#4285f4"></span> Menlo Park incidents</span>
-  <span><span class="dot" style="background:#ea4335"></span> Menlo Park cases</span>
-  <span><span class="dot" style="background:#34a853"></span> Atherton incidents</span>
-  <span><span class="dot" style="background:#ff6d00"></span> Atherton cases</span>
-  <span><span class="dot" style="background:#9c27b0"></span> SMC Sheriff cases</span>
+  <div class="legend-section">
+    <span><span class="dot" style="background:#4285f4"></span> Menlo Park inc.</span>
+    <span><span class="dot" style="background:#ea4335"></span> Menlo Park cases</span>
+    <span><span class="dot" style="background:#34a853"></span> Atherton inc.</span>
+    <span><span class="dot" style="background:#ff6d00"></span> Atherton cases</span>
+    <span><span class="dot" style="background:#9c27b0"></span> SMC Sheriff</span>
+  </div>
+  <span class="legend-divider"></span>
+  <div class="legend-section">
+    <span><span class="crime-icon-demo" style="background:#d32f2f;width:16px;height:16px;font-size:11px">!</span> Violent</span>
+    <span><span class="crime-icon-demo" style="background:#e65100;width:14px;height:14px">$</span> Theft</span>
+    <span><span class="crime-icon-demo" style="background:#1565c0;width:14px;height:14px;font-size:9px">&#x1F697;</span> Traffic</span>
+    <span><span class="crime-icon-demo" style="background:#6a1b9a;width:14px;height:14px;font-size:9px">&#x1F48A;</span> Drugs</span>
+    <span><span class="crime-icon-demo" style="background:#f9a825;width:12px;height:12px;font-size:8px">&#x1F441;</span> Suspicious</span>
+    <span><span class="crime-icon-demo" style="background:#bf360c;width:12px;height:12px;font-size:8px">&#x1F525;</span> Fire</span>
+    <span><span class="crime-icon-demo" style="background:#2e7d32;width:12px;height:12px;font-size:8px">+</span> Medical</span>
+    <span><span class="crime-icon-demo" style="background:#757575;width:10px;height:10px;font-size:7px">&#x2022;</span> Other</span>
+  </div>
+  <span class="legend-divider"></span>
+  <div class="legend-section">
+    <span style="font-size:0.7rem;color:#888">Size = severity</span>
+  </div>
 </div>
 
 <div id="map"></div>
@@ -109,6 +129,68 @@ const COLORS = {
   smcsheriff: { incident: '#9c27b0', case: '#9c27b0' },
 };
 
+// severity → marker diameter in px
+const SEVERITY = { critical: 24, high: 20, medium: 16, low: 12 };
+
+// Each config: { icon, severity, iconColor }
+// iconColor is the circle fill; the icon character is always white
+const CRIME_CATEGORIES = [
+  { icon: '!',      color: '#d32f2f', severity: 'critical',
+    match: /assault|person crime|homicide|battery|robbery|weapon|stabbing|shooting|domestic/i },
+  { icon: '$',      color: '#e65100', severity: 'high',
+    match: /burglary|larceny|theft|fraud|stolen|shoplift|embezzle|forgery|identity/i },
+  { icon: '\u{1F697}', color: '#1565c0', severity: 'medium',
+    match: /traffic|collision|parking|hit.?and.?run|dui|reckless|vehicle stop|speed/i },
+  { icon: '\u{1F48A}', color: '#6a1b9a', severity: 'high',
+    match: /drug|narcotic|alcohol|controlled substance|paraphernalia/i },
+  { icon: '\u{1F441}', color: '#f9a825', severity: 'medium',
+    match: /suspicious|proactive|trespass|prowler|loiter/i },
+  { icon: '\u{1F525}', color: '#bf360c', severity: 'medium',
+    match: /fire|arson|hazard|hazmat/i },
+  { icon: '+',      color: '#2e7d32', severity: 'low',
+    match: /medical|welfare|mental health|ambulance|overdose/i },
+  { icon: '!',      color: '#d32f2f', severity: 'critical',
+    match: /weapon call|shots? fired/i },
+  { icon: '$',      color: '#e65100', severity: 'high',
+    match: /missing person/i },
+];
+
+const DEFAULT_CRIME = { icon: '\u{2022}', color: '#757575', severity: 'low' };
+
+function classifyCrime(item) {
+  const text = [
+    item.callType, item.callTypeDescription,
+    item.crimeType, item.crimeClassification,
+    item.offenseDescription1
+  ].filter(Boolean).join(' ');
+
+  for (const cat of CRIME_CATEGORIES) {
+    if (cat.match.test(text)) return cat;
+  }
+  return DEFAULT_CRIME;
+}
+
+function makeDivIcon(crimeConf, agencyColor) {
+  const size = SEVERITY[crimeConf.severity];
+  const fontSize = Math.max(size * 0.45, 8);
+  // Ring color = agency color, fill = crime category color
+  const html = `<div style="
+    width:${size}px;height:${size}px;border-radius:50%;
+    background:${crimeConf.color};
+    border:2px solid ${agencyColor};
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:700;font-size:${fontSize}px;line-height:1;
+    box-shadow:0 1px 4px rgba(0,0,0,0.3);
+  ">${crimeConf.icon}</div>`;
+  return L.divIcon({
+    html,
+    className: '',
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2],
+    popupAnchor: [0, -size / 2],
+  });
+}
+
 const map = L.map('map').setView([37.46, -122.18], 13);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -130,18 +212,15 @@ async function loadData() {
     if (!item.yCoord || !item.xCoord) return;
     const prefix = item._prefix;
     const source = item._source;
-    const color = COLORS[prefix]?.[source] || '#999';
+    const agencyColor = COLORS[prefix]?.[source] || '#999';
+    const crimeConf = classifyCrime(item);
 
     const detail = source === 'incident'
       ? `<b>${item.callType || ''}</b><br>${item.callTypeDescription || ''}<br>${item.street || ''}, ${item.city || ''}<br>${(item.incidentDate || '').split('T')[0]} ${item.incidentTime || ''}<br><i style="color:#888">${item._agency}</i>`
       : `<b>${item.crimeType || ''}</b> (${item.crimeClassification || ''})<br>${item.offenseDescription1 || ''}<br>${item.street || ''}, ${item.city || ''}<br>${(item.reportDate || item.occurrence1Date || '').split('T')[0]}<br><i style="color:#888">${item._agency}</i>`;
 
-    const marker = L.circleMarker([item.yCoord, item.xCoord], {
-      radius: 7,
-      fillColor: color,
-      fillOpacity: 0.85,
-      color: '#fff',
-      weight: 1,
+    const marker = L.marker([item.yCoord, item.xCoord], {
+      icon: makeDivIcon(crimeConf, agencyColor),
     }).addTo(map);
 
     marker.bindPopup(`<div style="font:13px system-ui;max-width:260px">${detail}</div>`);

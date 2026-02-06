@@ -114,6 +114,36 @@ GET /?agency=menlopark,atherton
 }
 ```
 
+## Map
+
+The interactive map at `public/index.html` displays markers with:
+
+- **Crime-type icons** — each incident/case is classified by regex matching against `callType`, `callTypeDescription`, `crimeType`, `crimeClassification`, and `offenseDescription1`:
+
+  | Icon | Color | Category | Example matches |
+  |------|-------|----------|-----------------|
+  | `!` | Red | Violent crime | Assault, Homicide, Robbery, Weapons |
+  | `$` | Orange | Burglary/Theft | Burglary, Larceny, Theft, Fraud, Stolen Vehicle |
+  | 🚗 | Blue | Traffic | Traffic, Collisions, Parking, DUI |
+  | 💊 | Purple | Drugs | Drug Offenses, Narcotics, Alcohol |
+  | 👁 | Yellow | Suspicious | Suspicious Circumstances, Trespass, Prowler |
+  | 🔥 | Dark red | Fire/Hazard | Fire, Arson, Hazmat |
+  | `+` | Green | Medical | Medical, Welfare Check, Mental Health |
+  | `•` | Gray | Other | Everything else |
+
+- **Severity-based sizing** — marker diameter scales with severity:
+
+  | Severity | Diameter | Examples |
+  |----------|----------|----------|
+  | Critical | 24px | Homicide, Assault, Robbery, Weapons |
+  | High | 20px | Burglary, Stolen Vehicle, Drugs, Missing Persons |
+  | Medium | 16px | Traffic, Collisions, Suspicious, Fire |
+  | Low | 12px | Medical, Welfare Check, Alarms, Other |
+
+- **Agency border ring** — the marker border color indicates the source agency (Menlo Park blue/red, Atherton green/orange, SMC Sheriff purple)
+
+Markers use Leaflet `L.divIcon` with inline HTML — no external icon assets needed.
+
 ## How It Works
 
 The script reverse-engineers the CitizenRIMS API (built by Sun Ridge Systems):
