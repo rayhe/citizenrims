@@ -3,32 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CitizenRIMS Crime Feed</title>
+<title>Crime Feed — Menlo Park, Atherton & San Mateo County</title>
 <style>
-  body { font-family: system-ui, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; color: #333; }
-  a { color: #0066cc; }
-  code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; }
-  pre { background: #f0f0f0; padding: 12px; border-radius: 6px; overflow-x: auto; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, -apple-system, sans-serif; color: #1a1a1a; background: #f8f8f8; }
+  header { background: #1a1a2e; color: #fff; padding: 24px 20px; }
+  header h1 { font-size: 1.4rem; font-weight: 600; }
+  header p { color: #aab; margin-top: 6px; font-size: 0.9rem; }
+  #map { width: 100%; height: 55vh; min-height: 350px; }
+  .content { max-width: 720px; margin: 0 auto; padding: 24px 20px; }
+  .stats { display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
+  .stat { background: #fff; border-radius: 8px; padding: 16px; flex: 1; min-width: 140px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .stat .num { font-size: 1.8rem; font-weight: 700; color: #1a1a2e; }
+  .stat .label { font-size: 0.8rem; color: #666; margin-top: 2px; }
+  h2 { font-size: 1.1rem; margin: 20px 0 10px; color: #333; }
+  .agencies { list-style: none; }
+  .agencies li { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+  .agencies li:last-child { border: none; }
+  .badge { display: inline-block; font-size: 0.7rem; padding: 2px 6px; border-radius: 3px; margin-left: 6px; vertical-align: middle; }
+  .badge-inc { background: #e3f2fd; color: #1565c0; }
+  .badge-case { background: #fce4ec; color: #c62828; }
+  .endpoints { list-style: none; }
+  .endpoints li { margin: 6px 0; }
+  .endpoints a { color: #0066cc; text-decoration: none; font-size: 0.9rem; }
+  .endpoints a:hover { text-decoration: underline; }
+  .endpoints .desc { color: #888; font-size: 0.8rem; }
+  pre { background: #1a1a2e; color: #a8d8a8; padding: 14px; border-radius: 8px; overflow-x: auto; font-size: 0.82rem; margin-top: 8px; }
+  footer { text-align: center; padding: 20px; color: #999; font-size: 0.75rem; }
+  .legend { display: flex; gap: 16px; padding: 8px 20px; background: #fff; border-bottom: 1px solid #eee; font-size: 0.8rem; color: #555; flex-wrap: wrap; }
+  .legend span { display: flex; align-items: center; gap: 4px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .filter-bar { display: flex; gap: 8px; padding: 10px 20px; background: #fff; border-bottom: 1px solid #eee; flex-wrap: wrap; }
+  .filter-btn { font-size: 0.8rem; padding: 4px 12px; border-radius: 14px; border: 1px solid #ccc; background: #fff; cursor: pointer; }
+  .filter-btn.active { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
 </style>
 </head>
 <body>
-<h1>CitizenRIMS Crime Feed</h1>
-<p>Public crime data from Bay Area police agencies, updated every 5 minutes.</p>
-<h2>Endpoints</h2>
-<ul>
-  <li><a href="feed.json">feed.json</a> — All incidents + cases</li>
-  <li><a href="incidents.json">incidents.json</a> — Incidents only</li>
-  <li><a href="cases.json">cases.json</a> — Cases only</li>
-</ul>
-<h2>Agencies</h2>
-<ul>
-  <li>Menlo Park Police Department</li>
-  <li>Atherton Police Department</li>
-  <li>San Mateo County Sheriff's Office</li>
-</ul>
-<h2>Usage</h2>
-<pre>fetch('/feed.json')
-  .then(r => r.json())
-  .then(d => console.log(d.meta, d.incidents, d.cases))</pre>
+
+<header>
+  <h1>Crime Feed</h1>
+  <p>Live incidents and crime reports from Menlo Park, Atherton, and San Mateo County Sheriff — updated every 5 minutes.</p>
+</header>
+
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="incident">Incidents</button>
+  <button class="filter-btn" data-filter="case">Cases</button>
+  <button class="filter-btn" data-filter="menlopark">Menlo Park</button>
+  <button class="filter-btn" data-filter="atherton">Atherton</button>
+  <button class="filter-btn" data-filter="smcsheriff">SMC Sheriff</button>
+</div>
+
+<div class="legend">
+  <span><span class="dot" style="background:#4285f4"></span> Menlo Park incidents</span>
+  <span><span class="dot" style="background:#ea4335"></span> Menlo Park cases</span>
+  <span><span class="dot" style="background:#34a853"></span> Atherton incidents</span>
+  <span><span class="dot" style="background:#ff6d00"></span> Atherton cases</span>
+  <span><span class="dot" style="background:#9c27b0"></span> SMC Sheriff cases</span>
+</div>
+
+<div id="map"></div>
+
+<div class="content">
+  <div class="stats">
+    <div class="stat"><div class="num" id="inc-count">—</div><div class="label">Incidents (7 days)</div></div>
+    <div class="stat"><div class="num" id="case-count">—</div><div class="label">Crime Reports</div></div>
+    <div class="stat"><div class="num" id="agency-count">3</div><div class="label">Agencies</div></div>
+  </div>
+
+  <h2>Agencies</h2>
+  <ul class="agencies">
+    <li>Menlo Park Police Department <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
+    <li>Atherton Police Department <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
+    <li>San Mateo County Sheriff's Office <span class="badge badge-case">cases only</span></li>
+  </ul>
+
+  <h2>JSON Endpoints</h2>
+  <ul class="endpoints">
+    <li><a href="feed.json">feed.json</a> <span class="desc">— All incidents + cases combined</span></li>
+    <li><a href="incidents.json">incidents.json</a> <span class="desc">— Incidents only (calls for service)</span></li>
+    <li><a href="cases.json">cases.json</a> <span class="desc">— Cases only (crime reports)</span></li>
+  </ul>
+
+  <h2>Fetch Example</h2>
+  <pre>fetch('/feed.json')
+  .then(r =&gt; r.json())
+  .then(({ meta, incidents, cases }) =&gt; {
+    console.log(`${meta.incident_count} incidents, ${meta.case_count} cases`)
+    incidents.forEach(i =&gt;
+      console.log(i.callType, i.street, i._agency))
+  })</pre>
+</div>
+
+<footer>
+  Data sourced from <a href="https://citizenrims.com" style="color:#666">CitizenRIMS</a> (Sun Ridge Systems).
+  Auto-updated via GitHub Actions.
+</footer>
+
+<script>
+const COLORS = {
+  menlopark:  { incident: '#4285f4', case: '#ea4335' },
+  atherton:   { incident: '#34a853', case: '#ff6d00' },
+  smcsheriff: { incident: '#9c27b0', case: '#9c27b0' },
+};
+
+let map, allMarkers = [], feedData = null;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: 37.46, lng: -122.18 },
+    zoom: 13,
+    mapTypeId: 'roadmap',
+    styles: [
+      { featureType: 'poi', stylers: [{ visibility: 'off' }] },
+      { featureType: 'transit', stylers: [{ visibility: 'off' }] },
+    ],
+  });
+  loadData();
+}
+
+async function loadData() {
+  const resp = await fetch('feed.json');
+  feedData = await resp.json();
+
+  document.getElementById('inc-count').textContent = feedData.meta.incident_count.toLocaleString();
+  document.getElementById('case-count').textContent = feedData.meta.case_count.toLocaleString();
+
+  const items = [...feedData.incidents, ...feedData.cases];
+  items.forEach(item => {
+    if (!item.yCoord || !item.xCoord) return;
+    const prefix = item._prefix;
+    const source = item._source;
+    const color = COLORS[prefix]?.[source] || '#999';
+
+    const title = source === 'incident'
+      ? `${item.callType || item.callTypeDescription} — ${item.street || item.city || ''}`
+      : `${item.crimeType} — ${item.street || item.city || ''}`;
+
+    const dateStr = source === 'incident'
+      ? (item.incidentDate || '').split('T')[0]
+      : (item.reportDate || item.occurrence1Date || '').split('T')[0];
+
+    const marker = new google.maps.Marker({
+      position: { lat: item.yCoord, lng: item.xCoord },
+      map: map,
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: color,
+        fillOpacity: 0.85,
+        strokeColor: '#fff',
+        strokeWeight: 1,
+        scale: 7,
+      },
+      title: title,
+    });
+
+    const detail = source === 'incident'
+      ? `<b>${item.callType || ''}</b><br>${item.callTypeDescription || ''}<br>${item.street || ''}, ${item.city || ''}<br>${dateStr} ${item.incidentTime || ''}<br><i style="color:#888">${item._agency}</i>`
+      : `<b>${item.crimeType || ''}</b> (${item.crimeClassification || ''})<br>${item.offenseDescription1 || ''}<br>${item.street || ''}, ${item.city || ''}<br>${dateStr}<br><i style="color:#888">${item._agency}</i>`;
+
+    const infoWindow = new google.maps.InfoWindow({ content: `<div style="font:13px system-ui;max-width:260px">${detail}</div>` });
+    marker.addListener('click', () => {
+      allMarkers.forEach(m => m._info?.close());
+      infoWindow.open(map, marker);
+    });
+
+    marker._info = infoWindow;
+    marker._prefix = prefix;
+    marker._source = source;
+    allMarkers.push(marker);
+  });
+}
+
+// Filtering
+document.querySelector('.filter-bar').addEventListener('click', e => {
+  if (!e.target.classList.contains('filter-btn')) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  e.target.classList.add('active');
+  const f = e.target.dataset.filter;
+  allMarkers.forEach(m => {
+    let show = true;
+    if (f === 'incident') show = m._source === 'incident';
+    else if (f === 'case') show = m._source === 'case';
+    else if (f === 'menlopark' || f === 'atherton' || f === 'smcsheriff') show = m._prefix === f;
+    m.setVisible(show);
+  });
+});
+</script>
+
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqlbjf2rlRODRJH_7dWN82vwFvBDS-wxo&callback=initMap"></script>
+
 </body>
 </html>
