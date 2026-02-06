@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Crime Feed — Menlo Park, Atherton & San Mateo County</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: system-ui, -apple-system, sans-serif; color: #1a1a1a; background: #f8f8f8; }
@@ -100,6 +101,7 @@
   Auto-updated via GitHub Actions.
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 const COLORS = {
   menlopark:  { incident: '#4285f4', case: '#ea4335' },
@@ -107,24 +109,18 @@ const COLORS = {
   smcsheriff: { incident: '#9c27b0', case: '#9c27b0' },
 };
 
-let map, allMarkers = [], feedData = null;
+const map = L.map('map').setView([37.46, -122.18], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  maxZoom: 19,
+}).addTo(map);
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: 37.46, lng: -122.18 },
-    zoom: 13,
-    mapTypeId: 'roadmap',
-    styles: [
-      { featureType: 'poi', stylers: [{ visibility: 'off' }] },
-      { featureType: 'transit', stylers: [{ visibility: 'off' }] },
-    ],
-  });
-  loadData();
-}
+let allMarkers = [];
+let activeFilter = 'all';
 
 async function loadData() {
   const resp = await fetch('feed.json');
-  feedData = await resp.json();
+  const feedData = await resp.json();
 
   document.getElementById('inc-count').textContent = feedData.meta.incident_count.toLocaleString();
   document.getElementById('case-count').textContent = feedData.meta.case_count.toLocaleString();
@@ -136,62 +132,45 @@ async function loadData() {
     const source = item._source;
     const color = COLORS[prefix]?.[source] || '#999';
 
-    const title = source === 'incident'
-      ? `${item.callType || item.callTypeDescription} — ${item.street || item.city || ''}`
-      : `${item.crimeType} — ${item.street || item.city || ''}`;
-
-    const dateStr = source === 'incident'
-      ? (item.incidentDate || '').split('T')[0]
-      : (item.reportDate || item.occurrence1Date || '').split('T')[0];
-
-    const marker = new google.maps.Marker({
-      position: { lat: item.yCoord, lng: item.xCoord },
-      map: map,
-      icon: {
-        path: google.maps.SymbolPath.CIRCLE,
-        fillColor: color,
-        fillOpacity: 0.85,
-        strokeColor: '#fff',
-        strokeWeight: 1,
-        scale: 7,
-      },
-      title: title,
-    });
-
     const detail = source === 'incident'
-      ? `<b>${item.callType || ''}</b><br>${item.callTypeDescription || ''}<br>${item.street || ''}, ${item.city || ''}<br>${dateStr} ${item.incidentTime || ''}<br><i style="color:#888">${item._agency}</i>`
-      : `<b>${item.crimeType || ''}</b> (${item.crimeClassification || ''})<br>${item.offenseDescription1 || ''}<br>${item.street || ''}, ${item.city || ''}<br>${dateStr}<br><i style="color:#888">${item._agency}</i>`;
+      ? `<b>${item.callType || ''}</b><br>${item.callTypeDescription || ''}<br>${item.street || ''}, ${item.city || ''}<br>${(item.incidentDate || '').split('T')[0]} ${item.incidentTime || ''}<br><i style="color:#888">${item._agency}</i>`
+      : `<b>${item.crimeType || ''}</b> (${item.crimeClassification || ''})<br>${item.offenseDescription1 || ''}<br>${item.street || ''}, ${item.city || ''}<br>${(item.reportDate || item.occurrence1Date || '').split('T')[0]}<br><i style="color:#888">${item._agency}</i>`;
 
-    const infoWindow = new google.maps.InfoWindow({ content: `<div style="font:13px system-ui;max-width:260px">${detail}</div>` });
-    marker.addListener('click', () => {
-      allMarkers.forEach(m => m._info?.close());
-      infoWindow.open(map, marker);
-    });
+    const marker = L.circleMarker([item.yCoord, item.xCoord], {
+      radius: 7,
+      fillColor: color,
+      fillOpacity: 0.85,
+      color: '#fff',
+      weight: 1,
+    }).addTo(map);
 
-    marker._info = infoWindow;
+    marker.bindPopup(`<div style="font:13px system-ui;max-width:260px">${detail}</div>`);
     marker._prefix = prefix;
     marker._source = source;
     allMarkers.push(marker);
   });
 }
 
-// Filtering
-document.querySelector('.filter-bar').addEventListener('click', e => {
-  if (!e.target.classList.contains('filter-btn')) return;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  e.target.classList.add('active');
-  const f = e.target.dataset.filter;
+function applyFilter(f) {
+  activeFilter = f;
   allMarkers.forEach(m => {
     let show = true;
     if (f === 'incident') show = m._source === 'incident';
     else if (f === 'case') show = m._source === 'case';
     else if (f === 'menlopark' || f === 'atherton' || f === 'smcsheriff') show = m._prefix === f;
-    m.setVisible(show);
+    if (show) { m.addTo(map); } else { m.removeFrom(map); }
   });
-});
-</script>
+}
 
-<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqlbjf2rlRODRJH_7dWN82vwFvBDS-wxo&callback=initMap"></script>
+document.querySelector('.filter-bar').addEventListener('click', e => {
+  if (!e.target.classList.contains('filter-btn')) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  e.target.classList.add('active');
+  applyFilter(e.target.dataset.filter);
+});
+
+loadData();
+</script>
 
 </body>
 </html>
