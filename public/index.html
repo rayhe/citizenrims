@@ -11,6 +11,7 @@
   header { background: #1a1a2e; color: #fff; padding: 24px 20px; }
   header h1 { font-size: 1.4rem; font-weight: 600; }
   header p { color: #aab; margin-top: 6px; font-size: 0.9rem; }
+  .last-updated { color: #8f8fa0; font-size: 0.78rem; margin-top: 8px; }
   #map { width: 100%; height: 55vh; min-height: 350px; }
   .content { max-width: 720px; margin: 0 auto; padding: 24px 20px; }
   .stats { display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
@@ -47,6 +48,7 @@
 <header>
   <h1>Crime Feed</h1>
   <p>Live incidents and crime reports from Menlo Park, Atherton, and San Mateo County Sheriff — updated every 5 minutes.</p>
+  <div class="last-updated" id="last-updated"></div>
 </header>
 
 <div class="filter-bar">
@@ -199,6 +201,25 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 let allMarkers = [];
 let activeFilter = 'all';
+let lastRefreshDate = null;
+
+function timeAgo(date) {
+  const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+  if (seconds < 60) return 'just now';
+  const minutes = Math.floor(seconds / 60);
+  if (minutes < 60) return `${minutes}m ago`;
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) return `${hours}h ${minutes % 60}m ago`;
+  const days = Math.floor(hours / 24);
+  return `${days}d ${hours % 24}h ago`;
+}
+
+function updateLastUpdated() {
+  if (!lastRefreshDate) return;
+  const el = document.getElementById('last-updated');
+  const ts = lastRefreshDate.toLocaleString();
+  el.textContent = `Last updated: ${ts} (${timeAgo(lastRefreshDate)})`;
+}
 
 async function loadData() {
   const resp = await fetch('feed.json');
@@ -206,6 +227,11 @@ async function loadData() {
 
   document.getElementById('inc-count').textContent = feedData.meta.incident_count.toLocaleString();
   document.getElementById('case-count').textContent = feedData.meta.case_count.toLocaleString();
+
+  if (feedData.meta.generated_at) {
+    lastRefreshDate = new Date(feedData.meta.generated_at);
+    updateLastUpdated();
+  }
 
   const items = [...feedData.incidents, ...feedData.cases];
   items.forEach(item => {
@@ -249,6 +275,7 @@ document.querySelector('.filter-bar').addEventListener('click', e => {
 });
 
 loadData();
+setInterval(updateLastUpdated, 60000);
 </script>
 
 </body>
