@@ -251,7 +251,9 @@ function timeAgo(date) {
 function updateLastUpdated() {
   if (!lastRefreshDate) return;
   const el = document.getElementById('last-updated');
-  const ts = lastRefreshDate.toLocaleString();
+  const ts = lastRefreshDate.toLocaleString(undefined, {
+    dateStyle: 'medium', timeStyle: 'short', timeZoneName: 'short',
+  });
   el.textContent = `Last updated: ${ts} (${timeAgo(lastRefreshDate)})`;
 }
 
@@ -263,7 +265,8 @@ async function loadData() {
   document.getElementById('case-count').textContent = feedData.meta.case_count.toLocaleString();
 
   if (feedData.meta.generated_at) {
-    lastRefreshDate = new Date(feedData.meta.generated_at);
+    const raw = feedData.meta.generated_at;
+    lastRefreshDate = new Date(raw.endsWith('Z') ? raw : raw + 'Z');
     updateLastUpdated();
   }
 
@@ -275,9 +278,15 @@ async function loadData() {
     const agencyColor = COLORS[prefix]?.[source] || '#999';
     const crimeConf = classifyCrime(item);
 
+    const fmtDate = (iso) => {
+      if (!iso) return '';
+      const d = new Date(iso.endsWith('Z') ? iso : iso + 'Z');
+      return isNaN(d) ? iso.split('T')[0] : d.toLocaleDateString(undefined, { dateStyle: 'medium' });
+    };
+
     const detail = source === 'incident'
-      ? `<b>${item.callType || ''}</b><br>${item.callTypeDescription || ''}<br>${item.street || ''}, ${item.city || ''}<br>${(item.incidentDate || '').split('T')[0]} ${item.incidentTime || ''}<br><i style="color:#888">${item._agency}</i>`
-      : `<b>${item.crimeType || ''}</b> (${item.crimeClassification || ''})<br>${item.offenseDescription1 || ''}<br>${item.street || ''}, ${item.city || ''}<br>${(item.reportDate || item.occurrence1Date || '').split('T')[0]}<br><i style="color:#888">${item._agency}</i>`;
+      ? `<b>${item.callType || ''}</b><br>${item.callTypeDescription || ''}<br>${item.street || ''}, ${item.city || ''}<br>${fmtDate(item.incidentDate)} ${item.incidentTime || ''}<br><i style="color:#888">${item._agency}</i>`
+      : `<b>${item.crimeType || ''}</b> (${item.crimeClassification || ''})<br>${item.offenseDescription1 || ''}<br>${item.street || ''}, ${item.city || ''}<br>${fmtDate(item.reportDate || item.occurrence1Date)}<br><i style="color:#888">${item._agency}</i>`;
 
     const marker = L.marker([item.yCoord, item.xCoord], {
       icon: makeDivIcon(crimeConf, agencyColor),
