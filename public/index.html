@@ -9,40 +9,65 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: system-ui, -apple-system, sans-serif; color: #1a1a1a; background: #f8f8f8; }
-  header { background: #1a1a2e; color: #fff; padding: 24px 20px; }
-  header h1 { font-size: 1.4rem; font-weight: 600; }
-  header p { color: #aab; margin-top: 6px; font-size: 0.9rem; }
-  .last-updated { color: #8f8fa0; font-size: 0.78rem; margin-top: 8px; }
-  #map { width: 100%; height: 55vh; min-height: 350px; }
-  .content { max-width: 720px; margin: 0 auto; padding: 24px 20px; }
-  .stats { display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
-  .stat { background: #fff; border-radius: 8px; padding: 16px; flex: 1; min-width: 140px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-  .stat .num { font-size: 1.8rem; font-weight: 700; color: #1a1a2e; }
-  .stat .label { font-size: 0.8rem; color: #666; margin-top: 2px; }
-  h2 { font-size: 1.1rem; margin: 20px 0 10px; color: #333; }
+  body { font-family: system-ui, -apple-system, sans-serif; color: #1a1a1a; background: #f5f6f8; }
+
+  header { background: linear-gradient(135deg, #1a1a2e 0%, #2d2d50 100%); color: #fff; padding: 20px 20px 16px; }
+  header h1 { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.02em; }
+  header p { color: #9a9ab0; margin-top: 4px; font-size: 0.82rem; line-height: 1.4; }
+  .last-updated { color: #7a7a96; font-size: 0.72rem; margin-top: 6px; }
+
+  #map { width: 100%; height: 55vh; min-height: 340px; }
+
+  .content { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 24px; }
+  .stat { background: #fff; border-radius: 10px; padding: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  .stat .num { font-size: 1.6rem; font-weight: 800; color: #1a1a2e; letter-spacing: -0.03em; }
+  .stat .label { font-size: 0.72rem; color: #888; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.03em; }
+
+  h2 { font-size: 1rem; margin: 24px 0 8px; color: #444; font-weight: 600; }
   .agencies { list-style: none; }
-  .agencies li { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+  .agencies li { padding: 10px 0; border-bottom: 1px solid #eee; font-size: 0.85rem; }
   .agencies li:last-child { border: none; }
-  .badge { display: inline-block; font-size: 0.7rem; padding: 2px 6px; border-radius: 3px; margin-left: 6px; vertical-align: middle; }
+  .badge { display: inline-block; font-size: 0.65rem; padding: 2px 7px; border-radius: 4px; margin-left: 6px; vertical-align: middle; font-weight: 500; }
   .badge-inc { background: #e3f2fd; color: #1565c0; }
   .badge-case { background: #fce4ec; color: #c62828; }
+
   .endpoints { list-style: none; }
-  .endpoints li { margin: 6px 0; }
-  .endpoints a { color: #0066cc; text-decoration: none; font-size: 0.9rem; }
+  .endpoints li { margin: 8px 0; }
+  .endpoints a { color: #1a6dd4; text-decoration: none; font-size: 0.85rem; font-weight: 500; }
   .endpoints a:hover { text-decoration: underline; }
-  .endpoints .desc { color: #888; font-size: 0.8rem; }
-  pre { background: #1a1a2e; color: #a8d8a8; padding: 14px; border-radius: 8px; overflow-x: auto; font-size: 0.82rem; margin-top: 8px; }
-  footer { text-align: center; padding: 20px; color: #999; font-size: 0.75rem; }
-  .legend { display: flex; gap: 16px; padding: 8px 20px; background: #fff; border-bottom: 1px solid #eee; font-size: 0.8rem; color: #555; flex-wrap: wrap; }
-  .legend span { display: flex; align-items: center; gap: 4px; }
-  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
-  .legend-section { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
-  .legend-divider { width: 1px; height: 16px; background: #ddd; }
-  .crime-icon-demo { display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff; font-weight: 700; font-size: 10px; line-height: 1; }
-  .filter-bar { display: flex; gap: 8px; padding: 10px 20px; background: #fff; border-bottom: 1px solid #eee; flex-wrap: wrap; }
-  .filter-btn { font-size: 0.8rem; padding: 4px 12px; border-radius: 14px; border: 1px solid #ccc; background: #fff; cursor: pointer; }
+  .endpoints .desc { color: #999; font-size: 0.78rem; }
+
+  pre { background: #1a1a2e; color: #a8d8a8; padding: 14px; border-radius: 10px; overflow-x: auto; font-size: 0.78rem; margin-top: 8px; -webkit-overflow-scrolling: touch; }
+
+  footer { text-align: center; padding: 24px 16px; color: #aaa; font-size: 0.72rem; }
+  footer a { color: #888; }
+
+  .filter-bar { display: flex; gap: 6px; padding: 10px 16px; background: #fff; border-bottom: 1px solid #eee; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; }
+  .filter-btn { font-size: 0.78rem; padding: 5px 14px; border-radius: 16px; border: 1px solid #ddd; background: #fff; cursor: pointer; white-space: nowrap; transition: all 0.15s ease; font-weight: 500; color: #555; }
+  .filter-btn:hover { border-color: #aaa; }
   .filter-btn.active { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
+
+  .legend { display: flex; gap: 12px; padding: 8px 16px; background: #fff; border-bottom: 1px solid #eee; font-size: 0.75rem; color: #666; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; align-items: center; }
+  .legend span { display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+  .legend-section { display: flex; gap: 10px; align-items: center; flex-shrink: 0; }
+  .legend-divider { width: 1px; height: 16px; background: #ddd; flex-shrink: 0; }
+  .crime-icon-demo { display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff; font-weight: 700; font-size: 10px; line-height: 1; flex-shrink: 0; }
+
+  @media (max-width: 600px) {
+    header { padding: 16px 14px 12px; }
+    header h1 { font-size: 1.15rem; }
+    header p { font-size: 0.76rem; }
+    #map { height: 50vh; min-height: 280px; }
+    .stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .stat { padding: 10px; }
+    .stat .num { font-size: 1.3rem; }
+    .stat .label { font-size: 0.65rem; }
+    .content { padding: 16px 14px; }
+    .filter-bar { padding: 8px 14px; gap: 6px; }
+    .legend { padding: 6px 14px; gap: 10px; }
+  }
 </style>
 </head>
 <body>
