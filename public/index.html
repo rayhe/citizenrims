@@ -164,6 +164,7 @@ const CRIME_CATEGORIES = [
 ];
 
 const DEFAULT_CRIME = { icon: '\u{2022}', color: '#757575', severity: 'low' };
+const SEVERITY_RANK = { critical: 3, high: 2, medium: 1, low: 0 };
 
 function classifyCrime(item) {
   const text = [
@@ -214,10 +215,18 @@ const clusterGroup = L.markerClusterGroup({
   showCoverageOnHover: false,
   zoomToBoundsOnClick: false,
   iconCreateFunction: function(cluster) {
-    const count = cluster.getChildCount();
-    const size = 26;
+    const markers = cluster.getAllChildMarkers();
+    const count = markers.length;
+    let best = DEFAULT_CRIME;
+    markers.forEach(m => {
+      if (m._crimeConf && SEVERITY_RANK[m._crimeConf.severity] > SEVERITY_RANK[best.severity]) {
+        best = m._crimeConf;
+      }
+    });
+    const size = SEVERITY[best.severity] + 6;
+    const fontSize = Math.max(size * 0.38, 8);
     return L.divIcon({
-      html: `<div style="width:${size}px;height:${size}px;border-radius:50%;background:rgba(50,50,50,0.8);color:#fff;display:flex;align-items:center;justify-content:center;font:bold 11px system-ui;box-shadow:0 1px 4px rgba(0,0,0,0.4);border:2px solid #fff">${count}</div>`,
+      html: `<div style="width:${size}px;height:${size}px;border-radius:50%;background:${best.color};color:#fff;display:flex;align-items:center;justify-content:center;font:bold ${fontSize}px system-ui;box-shadow:0 1px 4px rgba(0,0,0,0.4);border:2px solid #fff;position:relative"><span style="font-size:${fontSize * 0.7}px;position:absolute;top:-1px">${best.icon}</span><span style="font-size:${fontSize * 0.8}px;position:absolute;bottom:-1px">${count}</span></div>`,
       className: '',
       iconSize: [size, size],
       iconAnchor: [size / 2, size / 2],
@@ -277,6 +286,7 @@ async function loadData() {
     marker.bindPopup(`<div style="font:13px system-ui;max-width:260px">${detail}</div>`);
     marker._prefix = prefix;
     marker._source = source;
+    marker._crimeConf = crimeConf;
     allMarkers.push(marker);
   });
   clusterGroup.addLayers(allMarkers);
