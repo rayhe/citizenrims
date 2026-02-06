@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crime Feed — Menlo Park, Atherton & San Mateo County</title>
+<title>Crime Feed — Menlo Park, Atherton, Palo Alto & San Mateo County</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
@@ -78,7 +78,7 @@
 
 <header>
   <h1>Crime Feed</h1>
-  <p>Live incidents and crime reports from Menlo Park, Atherton, and San Mateo County Sheriff — updated every 5 minutes.</p>
+  <p>Live incidents and crime reports from Menlo Park, Atherton, Palo Alto, and San Mateo County Sheriff — updated every 5 minutes.</p>
   <div class="last-updated" id="last-updated"></div>
 </header>
 
@@ -91,6 +91,7 @@
   <span class="filter-sep"></span>
   <button class="filter-btn" data-filter="menlopark">Menlo Park</button>
   <button class="filter-btn" data-filter="atherton">Atherton</button>
+  <button class="filter-btn" data-filter="paloalto">Palo Alto</button>
   <button class="filter-btn" data-filter="smcsheriff">SMC Sheriff</button>
   <span class="filter-sep"></span>
   <button class="time-btn active" data-days="7">7d</button>
@@ -104,6 +105,7 @@
     <span><span class="dot" style="background:#ea4335"></span> Menlo Park cases</span>
     <span><span class="dot" style="background:#34a853"></span> Atherton inc.</span>
     <span><span class="dot" style="background:#ff6d00"></span> Atherton cases</span>
+    <span><span class="dot" style="background:#00897b"></span> Palo Alto</span>
     <span><span class="dot" style="background:#9c27b0"></span> SMC Sheriff</span>
   </div>
   <span class="legend-divider"></span>
@@ -132,13 +134,14 @@
   <div class="stats">
     <div class="stat"><div class="num" id="inc-count">—</div><div class="label" id="inc-label">Incidents (7d)</div></div>
     <div class="stat"><div class="num" id="case-count">—</div><div class="label">Crime Reports</div></div>
-    <div class="stat"><div class="num" id="agency-count">3</div><div class="label">Agencies</div></div>
+    <div class="stat"><div class="num" id="agency-count">4</div><div class="label">Agencies</div></div>
   </div>
 
   <h2>Agencies</h2>
   <ul class="agencies">
     <li>Menlo Park Police Department <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
     <li>Atherton Police Department <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
+    <li>Palo Alto Police Department <span class="badge badge-inc">incidents</span></li>
     <li>San Mateo County Sheriff's Office <span class="badge badge-case">cases only</span></li>
   </ul>
 
@@ -160,7 +163,7 @@
 </div>
 
 <footer>
-  Data sourced from <a href="https://citizenrims.com" style="color:#666">CitizenRIMS</a> (Sun Ridge Systems).
+  Data sourced from <a href="https://citizenrims.com" style="color:#666">CitizenRIMS</a> (Sun Ridge Systems) and <a href="https://gis.cityofpaloalto.org" style="color:#666">City of Palo Alto GIS</a>.
   Auto-updated via GitHub Actions.
 </footer>
 
@@ -170,6 +173,7 @@
 const COLORS = {
   menlopark:  { incident: '#4285f4', case: '#ea4335' },
   atherton:   { incident: '#34a853', case: '#ff6d00' },
+  paloalto:   { incident: '#00897b', case: '#00897b' },
   smcsheriff: { incident: '#9c27b0', case: '#9c27b0' },
 };
 
@@ -239,7 +243,7 @@ function makeDivIcon(crimeConf, agencyColor) {
   });
 }
 
-const map = L.map('map').setView([37.46, -122.18], 13);
+const map = L.map('map').setView([37.44, -122.16], 12);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   maxZoom: 19,
@@ -360,7 +364,7 @@ function applyFilters() {
       else if (activeFilter === 'case') show = m._source === 'case';
       else if (activeFilter === 'violent') show = VIOLENT_RE.test(m._crimeText);
       else if (activeFilter === 'property') show = PROPERTY_RE.test(m._crimeText);
-      else if (activeFilter === 'menlopark' || activeFilter === 'atherton' || activeFilter === 'smcsheriff') show = m._prefix === activeFilter;
+      else if (activeFilter === 'menlopark' || activeFilter === 'atherton' || activeFilter === 'paloalto' || activeFilter === 'smcsheriff') show = m._prefix === activeFilter;
     }
     if (show) {
       toAdd.push(m);

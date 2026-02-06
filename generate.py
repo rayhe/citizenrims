@@ -16,6 +16,8 @@ OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "public")
 
 AGENCIES = ["menlopark", "atherton", "smcsheriff"]
 
+PA_BASE = "https://gis.cityofpaloalto.org/server/rest/services/PublicSafety/AgencyCommonEvent/MapServer/2/query"
+
 
 def get_token():
     req = Request(
@@ -107,6 +109,78 @@ def fetch_agency(prefix, token, days):
     return incidents, cases
 
 
+def fetch_paloalto(days):
+    """Fetch incidents from Palo Alto's ArcGIS REST endpoint."""
+    cutoff = datetime.now() - timedelta(days=days)
+    where = f"CALLTIME >= TIMESTAMP '{cutoff.strftime('%Y-%m-%d %H:%M:%S')}'"
+
+    all_features = []
+    offset = 0
+    batch = 1000
+    while True:
+        params = urlencode({
+            "where": where,
+            "outFields": "*",
+            "f": "json",
+            "resultRecordCount": batch,
+            "resultOffset": offset,
+            "returnGeometry": "true",
+            "outSR": "4326",
+        })
+        url = f"{PA_BASE}?{params}"
+        req = Request(url, headers={"Accept": "application/json"})
+        with urlopen(req, timeout=60) as resp:
+            data = json.loads(resp.read())
+        features = data.get("features", [])
+        all_features.extend(features)
+        if not data.get("exceededTransferLimit") or len(features) < batch:
+            break
+        offset += len(features)
+
+    incidents = []
+    for feat in all_features:
+        attr = feat.get("attributes", {})
+        geom = feat.get("geometry", {})
+
+        # Compute centroid from polygon rings
+        rings = geom.get("rings", [])
+        if rings and rings[0]:
+            xs = [p[0] for p in rings[0]]
+            ys = [p[1] for p in rings[0]]
+            cx = sum(xs) / len(xs)
+            cy = sum(ys) / len(ys)
+        else:
+            cx, cy = None, None
+
+        call_time = attr.get("CALLTIME")
+        if call_time:
+            dt = datetime.fromtimestamp(call_time / 1000, tz=None)
+            inc_date = dt.strftime("%Y-%m-%dT%H:%M:%S")
+            inc_time = dt.strftime("%H:%M:%S")
+        else:
+            inc_date, inc_time = None, None
+
+        incidents.append({
+            "incidentNumber": attr.get("INCIDENTNUMBER", ""),
+            "street": attr.get("CROSSSTREET", ""),
+            "city": "Palo Alto",
+            "status": attr.get("INCIDENTSTATUS", ""),
+            "incidentDate": inc_date,
+            "incidentTime": inc_time,
+            "xCoord": cx,
+            "yCoord": cy,
+            "callType": attr.get("CALLTYPE", ""),
+            "callTypeDescription": attr.get("CALLTYPEDESCRIPTION", ""),
+            "callSubtype": attr.get("CALLSUBTYPE", ""),
+            "callSubtypeDescription": attr.get("CALLSUBTYPEDESCRIPTION", ""),
+            "_source": "incident",
+            "_agency": "Palo Alto Police Department",
+            "_prefix": "paloalto",
+        })
+
+    return incidents
+
+
 def main():
     days = int(os.environ.get("DAYS", "7"))
     print(f"Fetching {days} days of data...")
@@ -123,10 +197,20 @@ def main():
         all_cases.extend(cases)
         print(f"    {len(incidents)} incidents, {len(cases)} cases")
 
+    print("  paloalto (ArcGIS)...")
+    try:
+        pa_incidents = fetch_paloalto(days)
+        all_incidents.extend(pa_incidents)
+        print(f"    {len(pa_incidents)} incidents")
+    except Exception as e:
+        print(f"  WARN: Palo Alto fetch failed: {e}")
+
+    all_agencies = AGENCIES + ["paloalto"]
+
     meta = {
         "generated_at": datetime.now().isoformat(),
         "days": days,
-        "agencies": AGENCIES,
+        "agencies": all_agencies,
         "incident_count": len(all_incidents),
         "case_count": len(all_cases),
     }

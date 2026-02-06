@@ -1,17 +1,17 @@
-# CitizenRIMS Crime Data Feed
+# Crime Data Feed
 
-Aggregates public crime data from multiple Bay Area police agencies on the [CitizenRIMS](https://sunridgesystems.com/applications/records-management/citizenrims/) platform and serves it as a single JSON API.
+Aggregates public crime data from multiple Bay Area police agencies and serves it as a single JSON API with an interactive map.
 
 ## Agencies
 
-| Agency | Prefix | Incidents | Cases | URL |
-|--------|--------|-----------|-------|-----|
-| Menlo Park PD | `menlopark` | Yes | Yes | https://menlopark.citizenrims.com/map |
-| Atherton PD | `atherton` | Yes | Yes | https://atherton.citizenrims.com/map |
-| San Mateo County Sheriff | `smcsheriff` | No | Yes | https://smcsheriff.citizenrims.com/map |
-| Palo Alto PD | `papd` | Disabled | Disabled | - |
+| Agency | Prefix | Source | Incidents | Cases |
+|--------|--------|--------|-----------|-------|
+| Menlo Park PD | `menlopark` | CitizenRIMS | Yes | Yes |
+| Atherton PD | `atherton` | CitizenRIMS | Yes | Yes |
+| Palo Alto PD | `paloalto` | ArcGIS REST | Yes | No |
+| San Mateo County Sheriff | `smcsheriff` | CitizenRIMS | No | Yes |
 
-Palo Alto PD exists on CitizenRIMS but has all public data feeds turned off.
+Palo Alto PD has CitizenRIMS data feeds disabled, so we pull from their [public ArcGIS endpoint](https://gis.cityofpaloalto.org/server/rest/services/PublicSafety/AgencyCommonEvent/MapServer/2) instead.
 
 ## Requirements
 
@@ -140,17 +140,22 @@ The interactive map at `public/index.html` displays markers with:
   | Medium | 16px | Traffic, Collisions, Suspicious, Fire |
   | Low | 12px | Medical, Welfare Check, Alarms, Other |
 
-- **Agency border ring** — the marker border color indicates the source agency (Menlo Park blue/red, Atherton green/orange, SMC Sheriff purple)
+- **Agency border ring** — the marker border color indicates the source agency (Menlo Park blue/red, Atherton green/orange, Palo Alto teal, SMC Sheriff purple)
 
 Markers use Leaflet `L.divIcon` with inline HTML — no external icon assets needed.
 
 ## How It Works
 
-The script reverse-engineers the CitizenRIMS API (built by Sun Ridge Systems):
+### CitizenRIMS agencies (Menlo Park, Atherton, SMC Sheriff)
 
-1. **Auth** - `POST /api/v1/auth/citizen` with an empty body returns a JWT token (public citizen-level access, no credentials needed)
-2. **Agency config** - Fetches each agency's configuration to discover agency IDs, enabled features, and incident/case type codes
-3. **Incidents & Cases** - Queries the Incident and Case endpoints using the discovered parameters
-4. **Serve** - Combines everything and serves over HTTP with CORS enabled
+1. **Auth** — `POST /api/v1/auth/citizen` with an empty body returns a JWT token (public citizen-level access, no credentials needed)
+2. **Agency config** — Fetches each agency's configuration to discover agency IDs, enabled features, and incident/case type codes
+3. **Incidents & Cases** — Queries the Incident and Case endpoints using the discovered parameters
 
-Tokens auto-refresh before expiry. Data auto-refreshes on the configured interval.
+### Palo Alto PD (ArcGIS)
+
+Queries the City of Palo Alto's public ArcGIS REST endpoint with a `CALLTIME >= <cutoff_ms>` filter. Paginates through all results, computes polygon centroids for lat/lng, and normalizes fields to match the CitizenRIMS schema.
+
+### Output
+
+`generate.py` writes `feed.json`, `incidents.json`, and `cases.json` to `public/`. GitHub Actions runs it every 5 minutes via cron.
