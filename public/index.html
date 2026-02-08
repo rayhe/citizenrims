@@ -59,6 +59,25 @@
   .legend-divider { width: 1px; height: 16px; background: #ddd; flex-shrink: 0; }
   .crime-icon-demo { display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff; font-weight: 700; font-size: 10px; line-height: 1; flex-shrink: 0; }
 
+  .map-wrap { position: relative; }
+  .feed-toggle { position: absolute; bottom: 10px; right: 10px; z-index: 1000; background: #1a1a2e; color: #fff; border: none; padding: 7px 14px; border-radius: 16px; font: 600 0.78rem system-ui; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.3); transition: all 0.15s ease; }
+  .feed-toggle:hover { background: #2d2d50; }
+  .feed-toggle .feed-count { background: rgba(255,255,255,0.2); padding: 1px 6px; border-radius: 8px; margin-left: 5px; font-size: 0.7rem; }
+  .feed-panel { position: absolute; bottom: 0; left: 0; right: 0; z-index: 999; background: #fff; border-top: 1px solid #ddd; max-height: 0; overflow: hidden; transition: max-height 0.25s ease; box-shadow: 0 -2px 8px rgba(0,0,0,0.1); }
+  .feed-panel.feed-open { max-height: 45%; }
+  .feed-header { display: flex; justify-content: space-between; align-items: center; padding: 8px 14px; border-bottom: 1px solid #eee; background: #fafafa; cursor: pointer; }
+  .feed-header-title { font-size: 0.8rem; font-weight: 600; color: #333; }
+  .feed-header-close { font-size: 0.75rem; color: #999; }
+  #feed-list { overflow-y: auto; max-height: calc(45vh * 0.85); -webkit-overflow-scrolling: touch; }
+  .feed-item { display: flex; align-items: center; gap: 10px; padding: 9px 14px; border-bottom: 1px solid #f0f0f0; cursor: pointer; transition: background 0.1s; }
+  .feed-item:hover { background: #f5f7fa; }
+  .feed-icon { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 10px; }
+  .feed-body { flex: 1; min-width: 0; }
+  .feed-title { font-size: 0.82rem; font-weight: 600; color: #1a1a2e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .feed-meta { font-size: 0.72rem; color: #999; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .feed-time { flex-shrink: 0; font-size: 0.7rem; color: #aaa; font-weight: 500; white-space: nowrap; }
+  .feed-empty { padding: 20px; text-align: center; color: #bbb; font-size: 0.82rem; }
+
   @media (max-width: 600px) {
     header { padding: 16px 14px 12px; }
     header h1 { font-size: 1.15rem; }
@@ -128,7 +147,17 @@
   </div>
 </div>
 
-<div id="map"></div>
+<div class="map-wrap">
+  <div id="map"></div>
+  <button class="feed-toggle" id="feed-toggle">Feed <span class="feed-count" id="feed-count">0</span></button>
+  <div class="feed-panel" id="feed-panel">
+    <div class="feed-header" id="feed-header">
+      <span class="feed-header-title">Latest in view</span>
+      <span class="feed-header-close">close</span>
+    </div>
+    <div id="feed-list"></div>
+  </div>
+</div>
 
 <div class="content">
   <div class="stats">
@@ -343,6 +372,11 @@ async function loadData() {
     marker._crimeText = [item.callType, item.callTypeDescription, item.crimeType, item.crimeClassification, item.offenseDescription1].filter(Boolean).join(' ');
     const dateStr = item.incidentDate || item.reportDate || item.occurrence1Date || '';
     marker._itemDate = dateStr ? new Date(dateStr.endsWith('Z') ? dateStr : dateStr + 'Z') : null;
+    marker._itemData = {
+      title: (source === 'incident' ? (item.callTypeDescription || item.callType || '') : (item.crimeType || item.offenseDescription1 || '')),
+      street: item.street || '',
+      agency: item._agency || '',
+    };
     allMarkers.push(marker);
   });
   map.addLayer(clusterGroup);
@@ -375,9 +409,11 @@ function applyFilters() {
   });
   clusterGroup.removeLayers(toRemove);
   clusterGroup.addLayers(toAdd);
+  visibleSet = new Set(toAdd);
   document.getElementById('inc-count').textContent = visibleInc.toLocaleString();
   document.getElementById('case-count').textContent = visibleCase.toLocaleString();
   document.getElementById('inc-label').textContent = `Incidents (${activeDays}d)`;
+  if (typeof updateFeed === 'function') updateFeed();
 }
 
 document.querySelector('.filter-bar').addEventListener('click', e => {
@@ -391,6 +427,79 @@ document.querySelector('.filter-bar').addEventListener('click', e => {
     e.target.classList.add('active');
     activeDays = parseInt(e.target.dataset.days);
     applyFilters();
+  }
+});
+
+let feedOpen = false;
+const feedPanel = document.getElementById('feed-panel');
+const feedToggle = document.getElementById('feed-toggle');
+const feedList = document.getElementById('feed-list');
+const feedCountEl = document.getElementById('feed-count');
+
+document.getElementById('feed-toggle').addEventListener('click', () => {
+  feedOpen = !feedOpen;
+  feedPanel.classList.toggle('feed-open', feedOpen);
+  if (feedOpen) updateFeed();
+});
+document.getElementById('feed-header').addEventListener('click', () => {
+  feedOpen = false;
+  feedPanel.classList.remove('feed-open');
+});
+
+// Track which markers are currently visible (pass filters)
+let visibleSet = new Set();
+
+function updateFeed() {
+  const bounds = map.getBounds();
+  const inView = [];
+  visibleSet.forEach(m => {
+    if (bounds.contains(m.getLatLng())) inView.push(m);
+  });
+  inView.sort((a, b) => (b._itemDate || 0) - (a._itemDate || 0));
+  const capped = inView.slice(0, 50);
+  feedCountEl.textContent = inView.length;
+
+  if (!capped.length) {
+    feedList.innerHTML = '<div class="feed-empty">No incidents in this area</div>';
+    return;
+  }
+
+  feedList.innerHTML = capped.map((m, i) => {
+    const d = m._itemData;
+    const conf = m._crimeConf || DEFAULT_CRIME;
+    const ago = m._itemDate ? timeAgo(m._itemDate) : '';
+    return `<div class="feed-item" data-feed-idx="${i}">
+      <span class="feed-icon" style="background:${conf.color}">${conf.icon}</span>
+      <div class="feed-body">
+        <div class="feed-title">${d.title}</div>
+        <div class="feed-meta">${d.street}${d.street && d.agency ? ' — ' : ''}${d.agency}</div>
+      </div>
+      <div class="feed-time">${ago}</div>
+    </div>`;
+  }).join('');
+
+  // Store refs for click handler
+  feedList._markers = capped;
+}
+
+feedList.addEventListener('click', e => {
+  const item = e.target.closest('.feed-item');
+  if (!item || !feedList._markers) return;
+  const idx = parseInt(item.dataset.feedIdx);
+  const m = feedList._markers[idx];
+  if (!m) return;
+  map.setView(m.getLatLng(), Math.max(map.getZoom(), 15));
+  setTimeout(() => m.openPopup(), 300);
+});
+
+map.on('moveend', () => {
+  if (feedOpen) updateFeed();
+  else {
+    // Still update count badge
+    const bounds = map.getBounds();
+    let count = 0;
+    visibleSet.forEach(m => { if (bounds.contains(m.getLatLng())) count++; });
+    feedCountEl.textContent = count;
   }
 });
 
