@@ -26,8 +26,8 @@ AGENCIES = ["menlopark", "atherton", "smcsheriff"]
 
 PA_BASE = "https://gis.cityofpaloalto.org/server/rest/services/PublicSafety/AgencyCommonEvent/MapServer/2/query"
 
-MENLO_OAKS_LAT = 37.448
-MENLO_OAKS_LNG = -122.177
+MENLO_OAKS_LAT = 37.4665
+MENLO_OAKS_LNG = -122.1663
 THREE_MILES_M = 4828
 QUARTER_MILE_M = 402
 

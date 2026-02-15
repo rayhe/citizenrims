@@ -298,7 +298,7 @@ const SEVERITY_RANK = { critical: 3, high: 2, medium: 1, low: 0 };
 const VIOLENT_RE = /assault|person crime|homicide|battery|robbery|weapon|stabbing|shooting|domestic|weapon call|shots? fired/i;
 const PROPERTY_RE = /burglary|larceny|theft|fraud|stolen|shoplift|embezzle|forgery|identity|vandal|arson/i;
 
-const MENLO_OAKS = L.latLng(37.448, -122.177);
+const MENLO_OAKS = L.latLng(37.4665, -122.1663);
 const THREE_MILES_M = 4828;
 
 function classifyCrime(item) {
@@ -335,7 +335,7 @@ function makeDivIcon(crimeConf, agencyColor) {
   });
 }
 
-const map = L.map('map').setView([37.448, -122.177], 13);
+const map = L.map('map').setView([37.4665, -122.1663], 13);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
   maxZoom: 20,
