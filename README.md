@@ -1,6 +1,8 @@
 # Crime Data Feed
 
-Aggregates public crime data from multiple Bay Area police agencies and serves it as a single JSON API with an interactive map.
+Aggregates public crime data from multiple Bay Area police agencies into a static JSON feed with an interactive map, email alerts, and analytics.
+
+Deployed via GitHub Pages. GitHub Actions runs `generate.py` every 5 minutes to refresh data.
 
 ## Agencies
 
@@ -15,147 +17,162 @@ Palo Alto PD has CitizenRIMS data feeds disabled, so we pull from their [public 
 
 ## Requirements
 
-Python 3.7+ (no external dependencies, stdlib only).
+Python 3.7+ (stdlib only, no external dependencies).
 
-## Usage
+## Files
+
+```
+generate.py          # Data fetcher, alert engine, static JSON writer
+test_alerts.py       # 65 unit tests for alerting logic and geometry
+public/index.html    # Interactive map + analytics (single-file, no build step)
+public/*.json        # Generated data files (feed.json, incidents.json, cases.json)
+alerted.json         # Persistent set of already-alerted incident IDs
+.github/workflows/   # Cron job: runs generate.py every 5 minutes
+```
+
+## How it works
+
+### Data pipeline (`generate.py`)
+
+**CitizenRIMS agencies** (Menlo Park, Atherton, SMC Sheriff):
+1. `POST /api/v1/auth/citizen` with empty body returns a JWT (public citizen-level, no credentials)
+2. Fetches agency config to discover IDs, features, and type codes
+3. Queries Incident and Case endpoints
+
+**Palo Alto PD** (ArcGIS):
+- Queries the city's public ArcGIS REST endpoint with `CALLTIME >= <cutoff_ms>`
+- Paginates results, computes polygon centroids for lat/lng, normalizes to CitizenRIMS schema
+
+**Output**: Writes `feed.json`, `incidents.json`, `cases.json` to `public/`.
+
+### Email alerts
+
+Alerts trigger for property/suspicious crimes near Menlo Oaks:
+
+- **Alertable crimes**: burglary, larceny, theft, fraud, stolen vehicle, shoplifting, embezzlement, forgery, identity theft, vandalism, arson, suspicious person, prowler, trespass
+- **Excluded**: shoplifting, petty theft, alarm-only burglary (low signal)
+- **Distance tiers** from Menlo Oaks polygon boundary:
+  - Within 0.25 mi: suspicious person, prowler, trespass also alert
+  - Within 3 mi: all other alertable types
+- **Deduplication**: `alerted.json` tracks sent IDs to avoid repeats
+
+Configure via environment variables:
+```
+ALERT_EMAIL_USER      # Gmail SMTP username
+ALERT_EMAIL_PASSWORD  # Gmail app password
+ALERT_RECIPIENTS      # Comma-separated email addresses
+```
+
+### Menlo Oaks polygon boundary
+
+Distance is measured from the neighborhood boundary polygon, not a center point. Incidents inside the polygon have distance = 0. The boundary is a 6-vertex polygon:
+
+| Vertex | Location | Coordinates |
+|--------|----------|-------------|
+| NW | Bay Rd & Ringwood Ave | 37.4717, -122.1680 |
+| NE | Bay Rd & Perimeter Rd (VA campus) | 37.4700, -122.1616 |
+| E | Coleman Ave & Perimeter Rd | 37.4629, -122.1651 |
+| SE | Coleman Ave & Berkeley Ave | 37.4636, -122.1673 |
+| S | South of Arlington Way | 37.4599, -122.1706 |
+| SW | Ringwood Ave & Arlington Way | 37.4611, -122.1732 |
+
+Geometry functions: ray-casting point-in-polygon, point-to-segment projection for edge distance, haversine for meters.
+
+## Interactive map (`public/index.html`)
+
+Single HTML file, no build step. Uses Leaflet for mapping, Chart.js for analytics.
+
+### Markers
+
+**Crime-type icons** classified by regex matching against callType, crimeType, offenseDescription fields:
+
+| Icon | Color | Category | Examples |
+|------|-------|----------|----------|
+| `!` | Red | Violent | Assault, Homicide, Robbery, Weapons |
+| `$` | Orange | Property | Burglary, Larceny, Theft, Fraud, Stolen Vehicle |
+| car | Blue | Traffic | Traffic, Collisions, Parking, DUI |
+| pill | Purple | Drugs | Drug Offenses, Narcotics, Alcohol |
+| eye | Yellow | Suspicious | Suspicious Circumstances, Trespass, Prowler |
+| fire | Dark red | Fire/Hazard | Fire, Arson, Hazmat |
+| `+` | Green | Medical | Medical, Welfare Check, Mental Health |
+| dot | Gray | Other | Everything else |
+
+**Severity-based sizing** (marker diameter):
+
+| Severity | Size | Examples |
+|----------|------|----------|
+| Critical | 24px | Homicide, Assault, Robbery, Weapons |
+| High | 20px | Burglary, Stolen Vehicle, Drugs, Missing Persons |
+| Medium | 16px | Traffic, Suspicious, Fire |
+| Low | 12px | Medical, Welfare Check, Alarms |
+
+**Agency border ring** — border color indicates source agency.
+
+### Filters
+
+**Type filters**: All, Incidents, Cases, Violent, Property, Alerts (alertable crime types only)
+
+**Agency filters**: Menlo Park, Atherton, Palo Alto, SMC Sheriff
+
+**Geo filter**: "Menlo Oaks 3mi" — shows only incidents within 3 miles of the Menlo Oaks boundary. Draws the polygon outline on the map when active.
+
+**Day range**: 1, 3, 7, 14, 31 days
+
+### Deep linking
+
+Filters sync to the URL bar via `history.replaceState`. Query parameters:
+
+| Param | Values | Default |
+|-------|--------|---------|
+| `filter` | `all`, `incident`, `case`, `violent`, `property`, `alerts`, agency prefix | `all` |
+| `days` | `1`, `3`, `7`, `14`, `31` | `7` |
+| `geo` | `1` (Menlo Oaks 3mi on) | off |
+
+Example: `?filter=property&days=14&geo=1`
+
+Settings also persist in localStorage.
+
+### Timeline chart
+
+Stacked bar chart showing incidents per day, broken down by police watch period:
+
+| Watch | Hours | Color |
+|-------|-------|-------|
+| Day | 7:00 AM – 3:00 PM | Yellow |
+| Swing | 3:00 PM – 11:00 PM | Orange |
+| Night | 11:00 PM – 7:00 AM | Navy |
+
+- Weekend day labels shown in red
+- Expand button opens a fullscreen overlay with the chart at viewport scale
+- Responds to all active filters (type, agency, geo, day range)
+
+### Heatmap table
+
+Watch period x day-of-week cross-tabulation below the chart:
+
+- Rows: Day, Swing, Night watches
+- Columns: Mon – Sun
+- Cells colored on a green-to-red gradient based on incident count
+- Row totals, column totals, and grand total
+
+## Tests
 
 ```bash
-python3 citizenrims_feed.py
+python3 -m unittest test_alerts -v
 ```
 
-### Options
+65 tests covering:
+- Alert regex matching (crime types, exclusions)
+- Distance tier logic (0.25mi suspicious, 3mi property)
+- Polygon geometry (point-in-polygon, distance-to-edge)
+- Crime text formatting and ID extraction
 
-```
---port PORT       HTTP port (default: 8080)
---days DAYS       Number of days of data to fetch (default: 7)
---refresh SECS    Auto-refresh interval in seconds (default: 300)
-```
+A pre-commit hook runs the full test suite before every commit.
 
-### Example
+## CI/CD
 
-```bash
-python3 citizenrims_feed.py --port 8080 --days 14 --refresh 600
-```
-
-## API Endpoints
-
-### `GET /`
-
-Returns all incidents and cases from all agencies.
-
-### `GET /incidents`
-
-Returns incidents only (calls for service: alarms, traffic stops, medical, etc).
-
-### `GET /cases`
-
-Returns cases only (crime reports: burglary, assault, theft, etc).
-
-### `GET /agencies`
-
-Returns agency configuration info.
-
-### Filtering
-
-Add `?agency=` to filter by agency prefix:
-
-```
-GET /incidents?agency=menlopark
-GET /?agency=menlopark,atherton
-```
-
-## Response Format
-
-```json
-{
-  "meta": {
-    "last_refresh": "2026-02-05T19:14:41.981875",
-    "incident_count": 1087,
-    "case_count": 55
-  },
-  "incidents": [
-    {
-      "incidentNumber": 202601290001,
-      "agencyID": 797,
-      "type": "INFO",
-      "location": "",
-      "street": "",
-      "city": "Menlo Park",
-      "status": "C",
-      "incidentDate": "2026-01-29T00:00:00",
-      "incidentTime": "01:30:52",
-      "beat": "2",
-      "xCoord": -122.175,
-      "yCoord": 37.453,
-      "callType": "Information",
-      "callTypeDescription": "Other Calls for Service",
-      "_source": "incident",
-      "_agency": "Menlo Park Police Department",
-      "_prefix": "menlopark"
-    }
-  ],
-  "cases": [
-    {
-      "caseNumber": "26-206",
-      "agencyId": 797,
-      "reportDate": "2026-01-29T00:00:00",
-      "offenseDescription1": "Possess unlawful paraphernalia (M)",
-      "city": "Menlo Park",
-      "street": "MERRILL ST/SANTA CRUZ AV",
-      "xCoord": -122.143,
-      "yCoord": 37.478,
-      "crimeType": "Drugs or Alcohol",
-      "crimeClassification": "Misdemeanor",
-      "_source": "case",
-      "_agency": "Menlo Park Police Department",
-      "_prefix": "menlopark"
-    }
-  ]
-}
-```
-
-## Map
-
-The interactive map at `public/index.html` displays markers with:
-
-- **Crime-type icons** — each incident/case is classified by regex matching against `callType`, `callTypeDescription`, `crimeType`, `crimeClassification`, and `offenseDescription1`:
-
-  | Icon | Color | Category | Example matches |
-  |------|-------|----------|-----------------|
-  | `!` | Red | Violent crime | Assault, Homicide, Robbery, Weapons |
-  | `$` | Orange | Burglary/Theft | Burglary, Larceny, Theft, Fraud, Stolen Vehicle |
-  | 🚗 | Blue | Traffic | Traffic, Collisions, Parking, DUI |
-  | 💊 | Purple | Drugs | Drug Offenses, Narcotics, Alcohol |
-  | 👁 | Yellow | Suspicious | Suspicious Circumstances, Trespass, Prowler |
-  | 🔥 | Dark red | Fire/Hazard | Fire, Arson, Hazmat |
-  | `+` | Green | Medical | Medical, Welfare Check, Mental Health |
-  | `•` | Gray | Other | Everything else |
-
-- **Severity-based sizing** — marker diameter scales with severity:
-
-  | Severity | Diameter | Examples |
-  |----------|----------|----------|
-  | Critical | 24px | Homicide, Assault, Robbery, Weapons |
-  | High | 20px | Burglary, Stolen Vehicle, Drugs, Missing Persons |
-  | Medium | 16px | Traffic, Collisions, Suspicious, Fire |
-  | Low | 12px | Medical, Welfare Check, Alarms, Other |
-
-- **Agency border ring** — the marker border color indicates the source agency (Menlo Park blue/red, Atherton green/orange, Palo Alto teal, SMC Sheriff purple)
-
-Markers use Leaflet `L.divIcon` with inline HTML — no external icon assets needed.
-
-## How It Works
-
-### CitizenRIMS agencies (Menlo Park, Atherton, SMC Sheriff)
-
-1. **Auth** — `POST /api/v1/auth/citizen` with an empty body returns a JWT token (public citizen-level access, no credentials needed)
-2. **Agency config** — Fetches each agency's configuration to discover agency IDs, enabled features, and incident/case type codes
-3. **Incidents & Cases** — Queries the Incident and Case endpoints using the discovered parameters
-
-### Palo Alto PD (ArcGIS)
-
-Queries the City of Palo Alto's public ArcGIS REST endpoint with a `CALLTIME >= <cutoff_ms>` filter. Paginates through all results, computes polygon centroids for lat/lng, and normalizes fields to match the CitizenRIMS schema.
-
-### Output
-
-`generate.py` writes `feed.json`, `incidents.json`, and `cases.json` to `public/`. GitHub Actions runs it every 5 minutes via cron.
+GitHub Actions workflow (`.github/workflows/update.yml`):
+1. Runs every 5 minutes via cron
+2. Executes `python generate.py` with `DAYS=31`
+3. Checks alerts and sends emails if triggered
+4. Commits and pushes updated JSON files if data changed
