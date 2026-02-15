@@ -72,7 +72,8 @@
   .chart-section { padding: 14px; background: #f5f6f8; }
   .chart-wrap { background: #fff; border-radius: 8px; padding: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
   .chart-wrap h2 { font-size: 0.82rem; margin: 0 0 8px; color: #444; font-weight: 600; }
-  .chart-container { position: relative; height: 180px; }
+  .chart-container { position: relative; height: 180px; transition: height 0.2s ease; cursor: pointer; }
+  .chart-container.chart-expanded { height: 360px; }
 
   .info-section { padding: 16px; background: #f5f6f8; }
   .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -661,6 +662,13 @@ function applyFilters() {
   if (typeof updateFeed === 'function') updateFeed();
   updateChart(toAdd);
 }
+
+document.querySelector('.chart-container').addEventListener('click', e => {
+  if (e.target.closest('.chart-container')) {
+    e.target.closest('.chart-container').classList.toggle('chart-expanded');
+    if (timelineChart) timelineChart.resize();
+  }
+});
 
 // Watch periods: Day 0700-1500, Swing 1500-2300, Night 2300-0700
 const WATCHES = [
