@@ -29,8 +29,9 @@ MENLO_OAKS_LAT = 37.448
 MENLO_OAKS_LNG = -122.177
 THREE_MILES_M = 4828
 
-PROPERTY_RE = re.compile(
-    r"burglary|larceny|theft|fraud|stolen|shoplift|embezzle|forgery|identity|vandal|arson",
+ALERT_RE = re.compile(
+    r"burglary|larceny|theft|fraud|stolen|shoplift|embezzle|forgery|identity|vandal|arson"
+    r"|suspicious\s*person|prowler|trespass",
     re.IGNORECASE,
 )
 # Exclude retail/petty theft from alerts (not from map filter)
@@ -234,9 +235,9 @@ def crime_text(item):
     ]))
 
 
-def is_property_crime(item):
+def is_alertable_crime(item):
     ct = crime_text(item)
-    if not PROPERTY_RE.search(ct):
+    if not ALERT_RE.search(ct):
         return False
     # Exclude shoplifting / petty theft (store theft) unless also burglary or vehicle-related
     if STORE_THEFT_RE.search(ct) and not re.search(r"burglary|vehicle|motor", ct, re.IGNORECASE):
@@ -380,7 +381,7 @@ def check_alerts(all_incidents, all_cases):
         iid = item_id(item)
         if iid in alerted:
             continue
-        if not is_property_crime(item):
+        if not is_alertable_crime(item):
             continue
         within, dist = item_within_menlo_oaks(item)
         if not within:
