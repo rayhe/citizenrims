@@ -48,6 +48,9 @@
   .filter-btn:hover { border-color: #aaa; }
   .filter-btn.active { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
   .filter-sep { width: 1px; height: 20px; background: #ddd; flex-shrink: 0; }
+  .geo-btn { font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid #ddd; background: #fff; cursor: pointer; white-space: nowrap; transition: all 0.15s ease; font-weight: 600; color: #888; }
+  .geo-btn:hover { border-color: #aaa; }
+  .geo-btn.active { background: #00695c; color: #fff; border-color: #00695c; }
   .time-btn { font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid #ddd; background: #fff; cursor: pointer; white-space: nowrap; transition: all 0.15s ease; font-weight: 600; color: #888; }
   .time-btn:hover { border-color: #aaa; }
   .time-btn.active { background: #455a64; color: #fff; border-color: #455a64; }
@@ -116,7 +119,7 @@
   <button class="filter-btn" data-filter="paloalto">Palo Alto</button>
   <button class="filter-btn" data-filter="smcsheriff">SMC Sheriff</button>
   <span class="filter-sep"></span>
-  <button class="filter-btn" data-filter="menlooaks">Menlo Oaks 3mi</button>
+  <button class="geo-btn" id="geo-menlooaks">Menlo Oaks 3mi</button>
   <span class="filter-sep"></span>
   <button class="time-btn active" data-days="7">7d</button>
   <button class="time-btn" data-days="14">14d</button>
@@ -290,6 +293,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 let allMarkers = [];
 let activeFilter = 'all';
 let activeDays = 7;
+let geoMenloOaks = false;
 let lastRefreshDate = null;
 const clusterGroup = L.markerClusterGroup({
   maxClusterRadius: 10,
@@ -407,8 +411,11 @@ function applyFilters() {
       else if (activeFilter === 'case') show = m._source === 'case';
       else if (activeFilter === 'violent') show = VIOLENT_RE.test(m._crimeText);
       else if (activeFilter === 'property') show = PROPERTY_RE.test(m._crimeText);
-      else if (activeFilter === 'menlooaks') show = m.getLatLng().distanceTo(MENLO_OAKS) <= THREE_MILES_M;
       else if (activeFilter === 'menlopark' || activeFilter === 'atherton' || activeFilter === 'paloalto' || activeFilter === 'smcsheriff') show = m._prefix === activeFilter;
+    }
+    // geo filter (AND)
+    if (show && geoMenloOaks) {
+      show = m.getLatLng().distanceTo(MENLO_OAKS) <= THREE_MILES_M;
     }
     if (show) {
       toAdd.push(m);
@@ -438,6 +445,12 @@ document.querySelector('.filter-bar').addEventListener('click', e => {
     activeDays = parseInt(e.target.dataset.days);
     applyFilters();
   }
+});
+
+document.getElementById('geo-menlooaks').addEventListener('click', e => {
+  geoMenloOaks = !geoMenloOaks;
+  e.target.classList.toggle('active', geoMenloOaks);
+  applyFilters();
 });
 
 let feedOpen = false;
