@@ -58,8 +58,8 @@
   .feed-item:hover { background: #f5f7fa; }
   .feed-icon { flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 9px; }
   .feed-body { flex: 1; min-width: 0; }
-  .feed-title { font-size: 0.8rem; font-weight: 600; color: #1a1a2e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .feed-meta { font-size: 0.7rem; color: #999; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .feed-title { font-size: 0.8rem; font-weight: 600; color: #1a1a2e; }
+  .feed-meta { font-size: 0.7rem; color: #999; }
   .feed-time { flex-shrink: 0; font-size: 0.68rem; color: #aaa; font-weight: 500; white-space: nowrap; }
   .feed-empty { padding: 18px; text-align: center; color: #bbb; font-size: 0.8rem; }
 
@@ -100,9 +100,9 @@
   @media (min-width: 1200px) {
     .page { max-width: 1400px; }
     .main-area { flex-direction: row; }
-    .map-wrap { flex: 1; min-width: 0; }
+    .map-wrap { flex: 2; min-width: 0; }
     .feed-toggle { display: none; }
-    .feed-panel { width: 320px; flex-shrink: 0; height: auto !important; border-top: none; border-left: 1px solid #ddd; overflow: hidden; }
+    .feed-panel { flex: 1; min-width: 280px; max-width: 420px; height: auto !important; border-top: none; border-left: 1px solid #ddd; overflow: hidden; }
     .feed-panel, .feed-panel.feed-open { height: auto !important; }
     .feed-header-close { display: none; }
     .feed-drag { display: none; }
