@@ -475,10 +475,15 @@ const clusterGroup = L.markerClusterGroup({
         best = m._crimeConf;
       }
     });
-    const size = SEVERITY[best.severity] + 6;
-    const fontSize = Math.max(size * 0.38, 8);
+    const size = SEVERITY[best.severity] + 8;
+    const isSvg = best.icon.startsWith('<');
+    const iconSize = Math.round(size * 0.38);
+    const iconHtml = isSvg
+      ? `<div style="width:${iconSize}px;height:${iconSize}px;flex-shrink:0">${best.icon}</div>`
+      : `<span style="font-size:${iconSize}px;line-height:1">${best.icon}</span>`;
+    const numSize = Math.max(size * 0.36, 8);
     return L.divIcon({
-      html: `<div style="width:${size}px;height:${size}px;border-radius:50%;background:${best.color};color:#fff;display:flex;align-items:center;justify-content:center;font:bold ${fontSize}px system-ui;box-shadow:0 1px 4px rgba(0,0,0,0.4);border:2px solid #fff;position:relative"><span style="font-size:${fontSize * 0.7}px;position:absolute;top:-1px">${best.icon}</span><span style="font-size:${fontSize * 0.8}px;position:absolute;bottom:-1px">${count}</span></div>`,
+      html: `<div style="width:${size}px;height:${size}px;border-radius:50%;background:${best.color};color:#fff;display:flex;align-items:center;justify-content:center;gap:1px;font-weight:700;box-shadow:0 1px 4px rgba(0,0,0,0.4);border:2px solid #fff">${iconHtml}<span style="font-size:${numSize}px;line-height:1">${count}</span></div>`,
       className: '',
       iconSize: [size, size],
       iconAnchor: [size / 2, size / 2],
