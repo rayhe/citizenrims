@@ -154,8 +154,8 @@ def fetch_paloalto(days):
 
         call_time = attr.get("CALLTIME")
         if call_time:
-            dt = datetime.fromtimestamp(call_time / 1000, tz=None)
-            inc_date = dt.strftime("%Y-%m-%dT%H:%M:%S")
+            dt = datetime.fromtimestamp(call_time / 1000, tz=timezone.utc)
+            inc_date = dt.strftime("%Y-%m-%dT%H:%M:%SZ")
             inc_time = dt.strftime("%H:%M:%S")
         else:
             inc_date, inc_time = None, None
