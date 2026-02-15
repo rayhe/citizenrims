@@ -202,6 +202,7 @@
     <button class="time-btn active" data-days="7">7d</button>
     <button class="time-btn" data-days="14">14d</button>
     <button class="time-btn" data-days="31">31d</button>
+    <button class="time-btn" data-days="0">All</button>
   </div>
 </div>
 
@@ -442,7 +443,7 @@ function saveSettings() {
   }));
   const p = new URLSearchParams();
   if (activeFilter !== 'all') p.set('filter', activeFilter);
-  if (activeDays !== 7) p.set('days', activeDays);
+  if (activeDays !== 7) p.set('days', activeDays === 0 ? 'all' : activeDays);
   if (geoMenloOaks) p.set('geo', '1');
   const qs = p.toString();
   history.replaceState(null, '', qs ? '?' + qs : window.location.pathname);
@@ -450,7 +451,8 @@ function saveSettings() {
 const saved = (() => { try { return JSON.parse(localStorage.getItem('cf_settings')) || {}; } catch { return {}; } })();
 const urlParams = new URLSearchParams(window.location.search);
 let activeFilter = urlParams.get('filter') || saved.filter || 'all';
-let activeDays = parseInt(urlParams.get('days')) || saved.days || 7;
+const daysParam = urlParams.get('days');
+let activeDays = daysParam === 'all' ? 0 : (parseInt(daysParam) || saved.days || 7);
 let geoMenloOaks = urlParams.has('geo') ? urlParams.get('geo') === '1' : !!saved.geo;
 const clusterGroup = L.markerClusterGroup({
   maxClusterRadius: 10,
@@ -663,14 +665,14 @@ async function loadData() {
 }
 
 function applyFilters() {
-  const cutoff = new Date(Date.now() - activeDays * 86400000);
+  const cutoff = activeDays > 0 ? new Date(Date.now() - activeDays * 86400000) : null;
   const toAdd = [];
   const toRemove = [];
   let visibleInc = 0, visibleCase = 0;
   allMarkers.forEach(m => {
     let show = true;
     // time filter
-    if (m._itemDate && m._itemDate < cutoff) show = false;
+    if (cutoff && m._itemDate && m._itemDate < cutoff) show = false;
     // type filter
     if (show && activeFilter !== 'all') {
       if (activeFilter === 'incident') show = m._source === 'incident';
@@ -697,7 +699,7 @@ function applyFilters() {
   visibleSet = new Set(toAdd);
   document.getElementById('inc-count').textContent = visibleInc.toLocaleString();
   document.getElementById('case-count').textContent = visibleCase.toLocaleString();
-  document.getElementById('inc-label').textContent = `Incidents (${activeDays}d)`;
+  document.getElementById('inc-label').textContent = `Incidents (${activeDays > 0 ? activeDays + 'd' : 'all'})`;
   if (typeof updateFeed === 'function') updateFeed();
   updateChart(toAdd);
 }
@@ -719,16 +721,11 @@ function openChartOverlay() {
       overlayChart.destroy();
       overlayChart = null;
     }
+    const opts = Object.assign({}, lastChartData.options, { animation: false });
     overlayChart = new Chart(ctx, {
       type: 'bar',
-      data: JSON.parse(JSON.stringify(lastChartData)),
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        animation: false,
-        plugins: timelineChart.options.plugins,
-        scales: timelineChart.options.scales,
-      },
+      data: { labels: lastChartData.labels, datasets: JSON.parse(JSON.stringify(lastChartData.datasets)) },
+      options: opts,
     });
   }
 }
@@ -798,10 +795,20 @@ function buildHeatmap(tableId, grid, dow, rowTotals, colTotals, grand, maxVal) {
 
 let timelineChart = null;
 function updateChart(markers) {
-  const days = activeDays;
   const now = new Date();
-  const cutoff = new Date(now.getTime() - days * 86400000);
-  cutoff.setHours(0, 0, 0, 0);
+  let days, cutoff;
+  if (activeDays > 0) {
+    days = activeDays;
+    cutoff = new Date(now.getTime() - days * 86400000);
+    cutoff.setHours(0, 0, 0, 0);
+  } else {
+    // "All" mode: span from oldest marker to today
+    let oldest = now;
+    markers.forEach(m => { if (m._itemDate && m._itemDate < oldest) oldest = m._itemDate; });
+    cutoff = new Date(oldest);
+    cutoff.setHours(0, 0, 0, 0);
+    days = Math.max(1, Math.ceil((now.getTime() - cutoff.getTime()) / 86400000) + 1);
+  }
 
   // Build per-day buckets for each watch
   const dayBuckets = []; // [{date, day, swing, night}, ...]
@@ -829,7 +836,7 @@ function updateChart(markers) {
   });
   const isWeekend = dayBuckets.map(b => { const d = b.date.getDay(); return d === 0 || d === 6; });
 
-  document.getElementById('chart-title').textContent = `Activity by watch (${days}d)`;
+  document.getElementById('chart-title').textContent = `Activity by watch (${activeDays > 0 ? days + 'd' : 'all'})`;
 
   // Build watch x day-of-week heatmap: grid[watch][dow] = count
   const DOW = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
@@ -855,7 +862,32 @@ function updateChart(markers) {
     borderRadius: wi === 2 ? { topLeft: 3, topRight: 3 } : 0,
   }));
 
-  lastChartData = { labels, datasets };
+  const chartOpts = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: true, position: 'top', labels: { boxWidth: 10, font: { size: 10 }, padding: 8 }},
+      tooltip: {
+        mode: 'index',
+        callbacks: {
+          title: items => labels[items[0].dataIndex] + (isWeekend[items[0].dataIndex] ? ' (weekend)' : ''),
+          footer: items => 'Total: ' + items.reduce((s, i) => s + i.raw, 0),
+        },
+      },
+    },
+    scales: {
+      x: {
+        stacked: true, grid: { display: false },
+        ticks: {
+          font: { size: days <= 14 ? 10 : 9 }, maxRotation: 45, autoSkip: true,
+          maxTicksLimit: days <= 7 ? 7 : days <= 14 ? 14 : 16,
+          color: dayBuckets.map(b => { const d = b.date.getDay(); return d === 0 || d === 6 ? '#d32f2f' : '#666'; }),
+        },
+      },
+      y: { stacked: true, beginAtZero: true, grid: { color: '#f0f0f0' }, ticks: { font: { size: 10 }, precision: 0 }},
+    },
+  };
+  lastChartData = { labels, datasets, options: chartOpts };
 
   if (timelineChart) {
     timelineChart.data.labels = labels;
@@ -871,46 +903,7 @@ function updateChart(markers) {
   }
 
   const ctx = document.getElementById('timeline-chart').getContext('2d');
-  timelineChart = new Chart(ctx, {
-    type: 'bar',
-    data: { labels, datasets },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: { display: true, position: 'top', labels: { boxWidth: 10, font: { size: 10 }, padding: 8 }},
-        tooltip: {
-          mode: 'index',
-          callbacks: {
-            title: items => labels[items[0].dataIndex] + (isWeekend[items[0].dataIndex] ? ' (weekend)' : ''),
-            footer: items => {
-              const total = items.reduce((s, i) => s + i.raw, 0);
-              return `Total: ${total}`;
-            },
-          },
-        },
-      },
-      scales: {
-        x: {
-          stacked: true,
-          grid: { display: false },
-          ticks: {
-            font: { size: days <= 14 ? 10 : 9 },
-            maxRotation: 45,
-            autoSkip: true,
-            maxTicksLimit: days <= 7 ? 7 : days <= 14 ? 14 : 16,
-            color: dayBuckets.map(b => { const d = b.date.getDay(); return d === 0 || d === 6 ? '#d32f2f' : '#666'; }),
-          },
-        },
-        y: {
-          stacked: true,
-          beginAtZero: true,
-          grid: { color: '#f0f0f0' },
-          ticks: { font: { size: 10 }, precision: 0 },
-        },
-      },
-    },
-  });
+  timelineChart = new Chart(ctx, { type: 'bar', data: { labels, datasets }, options: chartOpts });
 }
 
 let moPolyLayer = null;
@@ -1056,13 +1049,14 @@ function updateFeed() {
     const d = m._itemData;
     const conf = m._crimeConf || DEFAULT_CRIME;
     const ago = m._itemDate ? timeAgo(m._itemDate) : '';
+    const dateTime = m._itemDate ? m._itemDate.toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) + ' ' + m._itemDate.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' }) : '';
     return `<div class="feed-item" data-feed-idx="${i}">
       <span class="feed-icon" style="background:${conf.color}">${conf.icon}</span>
       <div class="feed-body">
         <div class="feed-title">${d.title}${d.subtitle ? ' <span style="font-weight:400;color:#777">· ' + d.subtitle + '</span>' : ''}</div>
         <div class="feed-meta">${d.street}${d.street && d.agency ? ' — ' : ''}${d.agency}</div>
       </div>
-      <div class="feed-time">${ago}</div>
+      <div class="feed-time">${dateTime}${ago ? '<br>' + ago : ''}</div>
     </div>`;
   }).join('');
 

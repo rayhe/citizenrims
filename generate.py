@@ -504,6 +504,30 @@ def main():
 
     all_agencies = AGENCIES + ["paloalto"]
 
+    # Merge with existing archive (indefinite retention)
+    os.makedirs(OUT_DIR, exist_ok=True)
+    archive_path = os.path.join(OUT_DIR, "feed.json")
+    if os.path.exists(archive_path):
+        try:
+            with open(archive_path) as f:
+                archive = json.load(f)
+            seen = {}
+            for item in archive.get("incidents", []):
+                seen[item_id(item)] = item
+            for item in archive.get("cases", []):
+                seen[item_id(item)] = item
+            archived = len(seen)
+            # Fresh data wins (overwrites stale copies)
+            for item in all_incidents:
+                seen[item_id(item)] = item
+            for item in all_cases:
+                seen[item_id(item)] = item
+            all_incidents = [v for v in seen.values() if v.get("_source") == "incident"]
+            all_cases = [v for v in seen.values() if v.get("_source") == "case"]
+            print(f"  Archive: {archived} existing + {len(seen) - archived} new = {len(seen)} total")
+        except (json.JSONDecodeError, KeyError) as e:
+            print(f"  WARN: could not load archive: {e}")
+
     meta = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "days": days,
@@ -511,8 +535,6 @@ def main():
         "incident_count": len(all_incidents),
         "case_count": len(all_cases),
     }
-
-    os.makedirs(OUT_DIR, exist_ok=True)
 
     def write(name, data):
         path = os.path.join(OUT_DIR, name)
