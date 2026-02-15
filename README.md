@@ -43,25 +43,79 @@ alerted.json         # Persistent set of already-alerted incident IDs
 - Queries the city's public ArcGIS REST endpoint with `CALLTIME >= <cutoff_ms>`
 - Paginates results, computes polygon centroids for lat/lng, normalizes to CitizenRIMS schema
 
+**Archive merge**: Before writing, new data is merged with the existing `feed.json` archive. Items are keyed by unique ID (`inc-{prefix}-{number}` or `case-{prefix}-{number}`). Fresh data overwrites stale copies of the same item. Items that fall out of the 31-day API window are preserved from the prior archive, so the dataset grows indefinitely.
+
 **Output**: Writes `feed.json`, `incidents.json`, `cases.json` to `public/`.
 
 ### Email alerts
 
-Alerts trigger for property/suspicious crimes near Menlo Oaks:
+Sends email alerts for property and suspicious crimes near Menlo Oaks. Runs every 5 minutes as part of the GitHub Actions pipeline.
 
-- **Alertable crimes**: burglary, larceny, theft, fraud, stolen vehicle, shoplifting, embezzlement, forgery, identity theft, vandalism, arson, suspicious person, prowler, trespass
-- **Excluded**: shoplifting, petty theft, alarm-only burglary (low signal)
-- **Distance tiers** from Menlo Oaks polygon boundary:
-  - Within 0.25 mi: suspicious person, prowler, trespass also alert
-  - Within 3 mi: all other alertable types
-- **Deduplication**: `alerted.json` tracks sent IDs to avoid repeats
+#### Alert criteria
 
-Configure via environment variables:
+**Matching** — crime text (callType, callTypeDescription, crimeType, crimeClassification, offenseDescription) is tested against:
+```
+ALERT_RE = burglary|larceny|theft|fraud|stolen|shoplift|embezzle|forgery|identity|vandal|arson
+           |suspicious person|prowler|trespass
+```
+
+**Exclusions** — matched items are then filtered out if they match:
+```
+EXCLUDE_RE = shoplift|petty.theft|484 theft|alarm...burglary|burglary...alarm
+```
+These are high-volume, low-signal calls that would overwhelm the inbox.
+
+#### Distance tiers
+
+Distance is measured from the Menlo Oaks polygon boundary (not a center point). Incidents inside the polygon have distance = 0.
+
+| Tier | Radius | Crime types |
+|------|--------|-------------|
+| Near | 0.25 mi (402 m) | Suspicious person, prowler, trespass |
+| Wide | 3.0 mi (4828 m) | Burglary, larceny, theft, fraud, stolen vehicle, vandalism, arson, forgery, identity theft, embezzlement |
+
+Suspicious/prowler/trespass alerts only trigger within the tight 0.25 mi radius since these are frequent and only relevant if very close.
+
+#### Deduplication
+
+- `alerted.json` persists the set of already-alerted item IDs across runs
+- Each item gets a unique key: `inc-{prefix}-{incidentNumber}` or `case-{prefix}-{caseNumber}`
+- An item is only emailed once, even if it appears in subsequent API fetches
+
+#### Email format
+
+**Subject line**: `[MOSI] {crime} near {street} — {dist}mi from Menlo Oaks ({severity})`
+
+**Severity classification** (shown in subject and email body):
+
+| Severity | Badge color | Crime types |
+|----------|-------------|-------------|
+| High | Red | Burglary, stolen vehicle, arson |
+| Medium | Orange | Theft, shoplifting, fraud, larceny, vandalism, forgery, identity theft, embezzlement |
+
+**HTML body** includes: crime type, severity badge, location, distance from Menlo Oaks, agency, date/time, and a "View on Map" button linking to the live site.
+
+**Plain text** fallback included for email clients that don't render HTML.
+
+Sent via Gmail SMTP SSL (port 465).
+
+#### Alert log
+
+Every alert attempt (sent or failed) is appended to `alert_log.json` with:
+- Timestamp, item ID, subject line
+- Street, city, agency
+- Distance in miles
+- Status (`sent` or `failed`) and error message if failed
+
+#### Configuration
+
 ```
 ALERT_EMAIL_USER      # Gmail SMTP username
 ALERT_EMAIL_PASSWORD  # Gmail app password
 ALERT_RECIPIENTS      # Comma-separated email addresses
 ```
+
+All three must be set for emails to send. If any are missing, alerts are skipped silently.
 
 ### Menlo Oaks polygon boundary
 
@@ -89,13 +143,16 @@ Single HTML file, no build step. Uses Leaflet for mapping, Chart.js for analytic
 | Icon | Color | Category | Examples |
 |------|-------|----------|----------|
 | `!` | Red | Violent | Assault, Homicide, Robbery, Weapons |
-| `$` | Orange | Property | Burglary, Larceny, Theft, Fraud, Stolen Vehicle |
+| mask | Dark red | Burglary | Burglary (459 PC), Auto Burglary, Residential Burglary |
+| `$` | Orange | Property | Larceny, Theft, Fraud, Stolen Vehicle, Shoplifting |
 | car | Blue | Traffic | Traffic, Collisions, Parking, DUI |
 | pill | Purple | Drugs | Drug Offenses, Narcotics, Alcohol |
 | eye | Yellow | Suspicious | Suspicious Circumstances, Trespass, Prowler |
 | fire | Dark red | Fire/Hazard | Fire, Arson, Hazmat |
 | `+` | Green | Medical | Medical, Welfare Check, Mental Health |
 | dot | Gray | Other | Everything else |
+
+The burglary icon is a domino mask SVG ([game-icons.net](https://game-icons.net/1x1/lorc/domino-mask.html), CC BY 3.0, by Lorc). It uses a dedicated regex to match California Penal Code sections (459, 460) and burglary offense descriptions while excluding alarms and shoplifting.
 
 **Severity-based sizing** (marker diameter):
 
@@ -110,13 +167,13 @@ Single HTML file, no build step. Uses Leaflet for mapping, Chart.js for analytic
 
 ### Filters
 
-**Type filters**: All, Incidents, Cases, Violent, Property, Alerts (alertable crime types only)
+**Type filters**: All, Incidents, Cases, Violent, Property, Burglary, Alerts (alertable crime types only)
 
 **Agency filters**: Menlo Park, Atherton, Palo Alto, SMC Sheriff
 
 **Geo filter**: "Menlo Oaks 3mi" — shows only incidents within 3 miles of the Menlo Oaks boundary. Draws the polygon outline on the map when active.
 
-**Day range**: 1, 3, 7, 14, 31 days
+**Day range**: 1, 3, 7, 14, 31, All (full archive)
 
 ### Deep linking
 
@@ -124,8 +181,8 @@ Filters sync to the URL bar via `history.replaceState`. Query parameters:
 
 | Param | Values | Default |
 |-------|--------|---------|
-| `filter` | `all`, `incident`, `case`, `violent`, `property`, `alerts`, agency prefix | `all` |
-| `days` | `1`, `3`, `7`, `14`, `31` | `7` |
+| `filter` | `all`, `incident`, `case`, `violent`, `property`, `burglary`, `alerts`, agency prefix | `all` |
+| `days` | `1`, `3`, `7`, `14`, `31`, `all` | `7` |
 | `geo` | `1` (Menlo Oaks 3mi on) | off |
 
 Example: `?filter=property&days=14&geo=1`
