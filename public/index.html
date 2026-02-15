@@ -55,7 +55,8 @@
   .feed-drag { height: 18px; display: flex; align-items: center; justify-content: center; cursor: ns-resize; flex-shrink: 0; background: #fafafa; border-top: 1px solid #eee; touch-action: none; user-select: none; }
   .feed-drag-grip { width: 32px; height: 4px; border-radius: 2px; background: #ccc; }
   .feed-item { display: flex; align-items: center; gap: 10px; padding: 8px 14px; border-bottom: 1px solid #f0f0f0; cursor: pointer; transition: background 0.1s; }
-  .feed-item:hover { background: #f5f7fa; }
+  .feed-item:hover, .feed-item.feed-highlight { background: #f5f7fa; }
+  .feed-item.feed-highlight { box-shadow: inset 3px 0 0 #ff0; background: #fffde7; }
   .feed-icon { flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 9px; }
   .feed-body { flex: 1; min-width: 0; }
   .feed-title { font-size: 0.8rem; font-weight: 600; color: #1a1a2e; }
@@ -434,6 +435,18 @@ async function loadData() {
       street: item.street || '',
       agency: item._agency || '',
     };
+    marker.on('mouseover', () => {
+      if (!feedList._markerToEl) return;
+      const el = feedList._markerToEl.get(marker);
+      if (!el) return;
+      el.classList.add('feed-highlight');
+      el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    });
+    marker.on('mouseout', () => {
+      if (!feedList._markerToEl) return;
+      const el = feedList._markerToEl.get(marker);
+      if (el) el.classList.remove('feed-highlight');
+    });
     allMarkers.push(marker);
   });
   map.addLayer(clusterGroup);
@@ -616,8 +629,13 @@ function updateFeed() {
     </div>`;
   }).join('');
 
-  // Store refs for click handler
+  // Store refs for click/hover handlers
   feedList._markers = capped;
+  // Build reverse lookup: marker → feed DOM element
+  feedList._markerToEl = new Map();
+  capped.forEach((m, i) => {
+    feedList._markerToEl.set(m, feedList.children[i]);
+  });
 }
 
 let highlightCircle = null;
