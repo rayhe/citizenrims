@@ -113,6 +113,8 @@
   <button class="filter-btn" data-filter="paloalto">Palo Alto</button>
   <button class="filter-btn" data-filter="smcsheriff">SMC Sheriff</button>
   <span class="filter-sep"></span>
+  <button class="filter-btn" data-filter="menlooaks">Menlo Oaks 3mi</button>
+  <span class="filter-sep"></span>
   <button class="time-btn active" data-days="7">7d</button>
   <button class="time-btn" data-days="14">14d</button>
   <button class="time-btn" data-days="31">31d</button>
@@ -237,6 +239,9 @@ const SEVERITY_RANK = { critical: 3, high: 2, medium: 1, low: 0 };
 
 const VIOLENT_RE = /assault|person crime|homicide|battery|robbery|weapon|stabbing|shooting|domestic|weapon call|shots? fired/i;
 const PROPERTY_RE = /burglary|larceny|theft|fraud|stolen|shoplift|embezzle|forgery|identity|vandal|arson/i;
+
+const MENLO_OAKS = L.latLng(37.448, -122.177);
+const THREE_MILES_M = 4828;
 
 function classifyCrime(item) {
   const text = [
@@ -398,6 +403,7 @@ function applyFilters() {
       else if (activeFilter === 'case') show = m._source === 'case';
       else if (activeFilter === 'violent') show = VIOLENT_RE.test(m._crimeText);
       else if (activeFilter === 'property') show = PROPERTY_RE.test(m._crimeText);
+      else if (activeFilter === 'menlooaks') show = m.getLatLng().distanceTo(MENLO_OAKS) <= THREE_MILES_M;
       else if (activeFilter === 'menlopark' || activeFilter === 'atherton' || activeFilter === 'paloalto' || activeFilter === 'smcsheriff') show = m._prefix === activeFilter;
     }
     if (show) {
