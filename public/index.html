@@ -103,7 +103,7 @@
   .popup-location { color: #888; font-size: 0.75rem; margin-top: 3px; }
   .popup-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 4px; font-size: 0.7rem; color: #aaa; }
   .popup-agency { font-style: italic; }
-  .popup-scroll { max-height: 240px; overflow-y: auto; }
+  .popup-scroll { overflow-y: auto; }
 
   /* Desktop: contained page */
   @media (min-width: 900px) {
@@ -420,30 +420,51 @@ function buildPopupCard(marker) {
 function buildClusterPopup(cluster) {
   const markers = cluster.getAllChildMarkers();
   markers.sort((a, b) => (b._itemDate || 0) - (a._itemDate || 0));
-  const cards = markers.slice(0, 10).map(m => popupCardHtml(m._popupItem, m._crimeConf)).join('');
-  const extra = markers.length > 10 ? `<div style="padding:6px 12px;color:#999;font-size:0.72rem;text-align:center">+ ${markers.length - 10} more</div>` : '';
-  return `<div class="popup-scroll">${cards}${extra}</div>`;
+  const cards = markers.map(m => popupCardHtml(m._popupItem, m._crimeConf)).join('');
+  return `<div class="popup-scroll">${cards}</div>`;
+}
+
+// Smart popup positioning: avoids overflow off map edges
+function smartPopup(latlng, content, opts) {
+  const pt = map.latLngToContainerPoint(latlng);
+  const mapSize = map.getSize();
+  const pad = 60; // min distance from edge before flipping
+  // Default: open above (negative Y offset)
+  let offsetY = -12;
+  let offsetX = 0;
+  if (pt.y < mapSize.y * 0.35) {
+    // Near top: open below
+    offsetY = 16;
+  }
+  if (pt.x < pad + 140) {
+    // Near left: shift right
+    offsetX = 20;
+  } else if (pt.x > mapSize.x - pad - 140) {
+    // Near right: shift left
+    offsetX = -20;
+  }
+  const popup = L.popup({
+    maxWidth: 320, autoPan: false, closeButton: false,
+    offset: [offsetX, offsetY],
+    ...opts,
+  })
+    .setLatLng(latlng)
+    .setContent(content)
+    .openOn(map);
+  return popup;
 }
 
 let clusterPopup = null;
 clusterGroup.on('clusterclick', function(e) {
   if (isTouchDevice) {
-    // Mobile: show combined popup on tap
-    const popup = L.popup({ maxWidth: 300, maxHeight: 280 })
-      .setLatLng(e.layer.getLatLng())
-      .setContent(buildClusterPopup(e.layer))
-      .openOn(map);
-    clusterPopup = popup;
+    clusterPopup = smartPopup(e.layer.getLatLng(), buildClusterPopup(e.layer), { closeButton: true, autoPan: true });
   } else {
     e.layer.spiderfy();
   }
 });
 clusterGroup.on('clustermouseover', function(e) {
   if (isTouchDevice) return;
-  clusterPopup = L.popup({ maxWidth: 300, maxHeight: 280, autoPan: false })
-    .setLatLng(e.layer.getLatLng())
-    .setContent(buildClusterPopup(e.layer))
-    .openOn(map);
+  clusterPopup = smartPopup(e.layer.getLatLng(), buildClusterPopup(e.layer));
 });
 clusterGroup.on('clustermouseout', function(e) {
   if (isTouchDevice) return;
@@ -508,10 +529,15 @@ async function loadData() {
     };
     marker._popupItem = item;
 
-    marker.bindPopup(() => buildPopupCard(marker), { maxWidth: 300 });
-    // Desktop: open on hover too
+    let markerPopup = null;
+    function openMarkerPopup(autoPan) {
+      markerPopup = smartPopup(marker.getLatLng(), buildPopupCard(marker), autoPan ? { autoPan: true, closeButton: true } : {});
+    }
+    marker.on('click', function() {
+      openMarkerPopup(true);
+    });
     marker.on('mouseover', function() {
-      if (!isTouchDevice) this.openPopup();
+      if (!isTouchDevice) openMarkerPopup(false);
       if (!feedList._markerToEl) return;
       const el = feedList._markerToEl.get(marker);
       if (!el) return;
@@ -519,7 +545,7 @@ async function loadData() {
       el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     });
     marker.on('mouseout', function() {
-      if (!isTouchDevice) this.closePopup();
+      if (!isTouchDevice && markerPopup) { map.closePopup(markerPopup); markerPopup = null; }
       if (!feedList._markerToEl) return;
       const el = feedList._markerToEl.get(marker);
       if (el) el.classList.remove('feed-highlight');
@@ -740,7 +766,7 @@ feedList.addEventListener('click', e => {
   if (!m) return;
   if (highlightCircle) { highlightCircle.remove(); highlightCircle = null; }
   map.setView(m.getLatLng(), Math.max(map.getZoom(), 15));
-  setTimeout(() => m.openPopup(), 300);
+  setTimeout(() => smartPopup(m.getLatLng(), buildPopupCard(m), { autoPan: false, closeButton: true }), 300);
 });
 
 // On wide screens, feed is always visible as sidebar
