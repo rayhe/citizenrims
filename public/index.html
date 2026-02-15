@@ -620,12 +620,30 @@ function updateFeed() {
   feedList._markers = capped;
 }
 
+let highlightCircle = null;
+feedList.addEventListener('mouseover', e => {
+  const item = e.target.closest('.feed-item');
+  if (!item || !feedList._markers) return;
+  const m = feedList._markers[parseInt(item.dataset.feedIdx)];
+  if (!m) return;
+  if (highlightCircle) { highlightCircle.remove(); }
+  highlightCircle = L.circleMarker(m.getLatLng(), {
+    radius: 22, weight: 3, color: '#ff0', fillColor: '#ff0', fillOpacity: 0.25, opacity: 0.9,
+  }).addTo(map);
+});
+feedList.addEventListener('mouseout', e => {
+  const related = e.relatedTarget;
+  if (related && feedList.contains(related)) return;
+  if (highlightCircle) { highlightCircle.remove(); highlightCircle = null; }
+});
+
 feedList.addEventListener('click', e => {
   const item = e.target.closest('.feed-item');
   if (!item || !feedList._markers) return;
   const idx = parseInt(item.dataset.feedIdx);
   const m = feedList._markers[idx];
   if (!m) return;
+  if (highlightCircle) { highlightCircle.remove(); highlightCircle = null; }
   map.setView(m.getLatLng(), Math.max(map.getZoom(), 15));
   setTimeout(() => m.openPopup(), 300);
 });
