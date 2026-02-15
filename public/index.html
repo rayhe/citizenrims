@@ -580,6 +580,10 @@ async function loadData() {
     marker._crimeText = [item.callType, item.callTypeDescription, item.crimeType, item.crimeClassification, item.offenseDescription1].filter(Boolean).join(' ');
     const dateStr = item.incidentDate || item.reportDate || item.occurrence1Date || '';
     marker._itemDate = dateStr ? new Date(dateStr.endsWith('Z') ? dateStr : dateStr + 'Z') : null;
+    // Extract raw hour from local time fields (avoid UTC conversion)
+    const rawTime = item.incidentTime || '';
+    const rawHourMatch = rawTime ? rawTime.match(/^(\d{1,2})/) : dateStr.match(/T(\d{2})/);
+    marker._rawHour = rawHourMatch ? parseInt(rawHourMatch[1]) : -1;
     const _title = source === 'incident' ? (item.callType || item.callTypeDescription || '') : (item.crimeType || item.offenseDescription1 || '');
     const _sub = source === 'incident'
       ? (item.callTypeDescription && item.callTypeDescription !== _title ? item.callTypeDescription : '')
@@ -690,7 +694,8 @@ function updateChart(markers) {
     if (!m._itemDate || m._itemDate < cutoff) return;
     const idx = Math.floor((m._itemDate.getTime() - cutoff.getTime()) / 86400000);
     if (idx < 0 || idx >= days) return;
-    const w = getWatch(m._itemDate.getHours());
+    if (m._rawHour < 0) return;
+    const w = getWatch(m._rawHour);
     if (w === 0) dayBuckets[idx].day++;
     else if (w === 1) dayBuckets[idx].swing++;
     else dayBuckets[idx].night++;
@@ -698,8 +703,8 @@ function updateChart(markers) {
 
   const labels = dayBuckets.map(b => {
     const dow = b.date.toLocaleDateString(undefined, { weekday: 'short' });
-    const md = b.date.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
-    return days <= 14 ? `${dow} ${md}` : md;
+    const day = b.date.getDate();
+    return `${dow} ${day}`;
   });
   const isWeekend = dayBuckets.map(b => { const d = b.date.getDay(); return d === 0 || d === 6; });
 
