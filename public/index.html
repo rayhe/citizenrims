@@ -90,6 +90,21 @@
   footer { text-align: center; padding: 18px 14px; color: #aaa; font-size: 0.7rem; border-top: 1px solid #e0e0e0; }
   footer a { color: #888; }
 
+  /* Modern popup */
+  .leaflet-popup-content-wrapper { border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); padding: 0; }
+  .leaflet-popup-content { margin: 0; font: 12px/1.5 system-ui, -apple-system, sans-serif; }
+  .leaflet-popup-tip { box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+  .popup-card { padding: 10px 12px; max-width: 280px; }
+  .popup-card + .popup-card { border-top: 1px solid #eee; }
+  .popup-type { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+  .popup-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .popup-label { font-weight: 700; font-size: 0.82rem; color: #1a1a2e; }
+  .popup-desc { color: #555; font-size: 0.78rem; }
+  .popup-location { color: #888; font-size: 0.75rem; margin-top: 3px; }
+  .popup-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 4px; font-size: 0.7rem; color: #aaa; }
+  .popup-agency { font-style: italic; }
+  .popup-scroll { max-height: 240px; overflow-y: auto; }
+
   /* Desktop: contained page */
   @media (min-width: 900px) {
     body { padding: 24px 0; }
@@ -364,8 +379,75 @@ const clusterGroup = L.markerClusterGroup({
     });
   },
 });
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+function fmtDate(iso) {
+  if (!iso) return '';
+  const d = new Date(iso.endsWith('Z') ? iso : iso + 'Z');
+  return isNaN(d) ? iso.split('T')[0] : d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+function popupCardHtml(item, crimeConf) {
+  const source = item._source;
+  const label = source === 'incident'
+    ? (item.callType || item.callTypeDescription || 'Incident')
+    : (item.crimeType || 'Case');
+  const desc = source === 'incident'
+    ? (item.callTypeDescription || '')
+    : [item.offenseDescription1, item.crimeClassification ? `(${item.crimeClassification})` : ''].filter(Boolean).join(' ');
+  const street = [item.street, item.city].filter(Boolean).join(', ');
+  const dateStr = source === 'incident'
+    ? [fmtDate(item.incidentDate), item.incidentTime].filter(Boolean).join(' ')
+    : fmtDate(item.reportDate || item.occurrence1Date);
+  const ago = (() => {
+    const raw = item.incidentDate || item.reportDate || item.occurrence1Date;
+    if (!raw) return '';
+    const d = new Date(raw.endsWith('Z') ? raw : raw + 'Z');
+    return isNaN(d) ? '' : timeAgo(d);
+  })();
+  return `<div class="popup-card">
+    <div class="popup-type"><span class="popup-dot" style="background:${crimeConf.color}"></span><span class="popup-label">${label}</span></div>
+    ${desc && desc !== label ? `<div class="popup-desc">${desc}</div>` : ''}
+    ${street ? `<div class="popup-location">${street}</div>` : ''}
+    <div class="popup-footer"><span>${dateStr}${ago ? ' · ' + ago : ''}</span><span class="popup-agency">${item._agency || ''}</span></div>
+  </div>`;
+}
+
+function buildPopupCard(marker) {
+  return popupCardHtml(marker._popupItem, marker._crimeConf);
+}
+
+function buildClusterPopup(cluster) {
+  const markers = cluster.getAllChildMarkers();
+  markers.sort((a, b) => (b._itemDate || 0) - (a._itemDate || 0));
+  const cards = markers.slice(0, 10).map(m => popupCardHtml(m._popupItem, m._crimeConf)).join('');
+  const extra = markers.length > 10 ? `<div style="padding:6px 12px;color:#999;font-size:0.72rem;text-align:center">+ ${markers.length - 10} more</div>` : '';
+  return `<div class="popup-scroll">${cards}${extra}</div>`;
+}
+
+let clusterPopup = null;
 clusterGroup.on('clusterclick', function(e) {
-  e.layer.spiderfy();
+  if (isTouchDevice) {
+    // Mobile: show combined popup on tap
+    const popup = L.popup({ maxWidth: 300, maxHeight: 280 })
+      .setLatLng(e.layer.getLatLng())
+      .setContent(buildClusterPopup(e.layer))
+      .openOn(map);
+    clusterPopup = popup;
+  } else {
+    e.layer.spiderfy();
+  }
+});
+clusterGroup.on('clustermouseover', function(e) {
+  if (isTouchDevice) return;
+  clusterPopup = L.popup({ maxWidth: 300, maxHeight: 280, autoPan: false })
+    .setLatLng(e.layer.getLatLng())
+    .setContent(buildClusterPopup(e.layer))
+    .openOn(map);
+});
+clusterGroup.on('clustermouseout', function(e) {
+  if (isTouchDevice) return;
+  if (clusterPopup) { map.closePopup(clusterPopup); clusterPopup = null; }
 });
 
 function timeAgo(date) {
@@ -409,21 +491,10 @@ async function loadData() {
     const agencyColor = COLORS[prefix]?.[source] || '#999';
     const crimeConf = classifyCrime(item);
 
-    const fmtDate = (iso) => {
-      if (!iso) return '';
-      const d = new Date(iso.endsWith('Z') ? iso : iso + 'Z');
-      return isNaN(d) ? iso.split('T')[0] : d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
-    };
-
-    const detail = source === 'incident'
-      ? `<b>${item.callType || ''}</b><br>${item.callTypeDescription || ''}<br>${item.street || ''}, ${item.city || ''}<br>${fmtDate(item.incidentDate)} ${item.incidentTime || ''}<br><i style="color:#888">${item._agency}</i>`
-      : `<b>${item.crimeType || ''}</b> (${item.crimeClassification || ''})<br>${item.offenseDescription1 || ''}<br>${item.street || ''}, ${item.city || ''}<br>${fmtDate(item.reportDate || item.occurrence1Date)}<br><i style="color:#888">${item._agency}</i>`;
-
     const marker = L.marker([item.yCoord, item.xCoord], {
       icon: makeDivIcon(crimeConf, agencyColor),
     });
 
-    marker.bindPopup(`<div style="font:13px system-ui;max-width:260px">${detail}</div>`);
     marker._prefix = prefix;
     marker._source = source;
     marker._crimeConf = crimeConf;
@@ -435,14 +506,20 @@ async function loadData() {
       street: item.street || '',
       agency: item._agency || '',
     };
-    marker.on('mouseover', () => {
+    marker._popupItem = item;
+
+    marker.bindPopup(() => buildPopupCard(marker), { maxWidth: 300 });
+    // Desktop: open on hover too
+    marker.on('mouseover', function() {
+      if (!isTouchDevice) this.openPopup();
       if (!feedList._markerToEl) return;
       const el = feedList._markerToEl.get(marker);
       if (!el) return;
       el.classList.add('feed-highlight');
       el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     });
-    marker.on('mouseout', () => {
+    marker.on('mouseout', function() {
+      if (!isTouchDevice) this.closePopup();
       if (!feedList._markerToEl) return;
       const el = feedList._markerToEl.get(marker);
       if (el) el.classList.remove('feed-highlight');
