@@ -34,9 +34,9 @@ ALERT_RE = re.compile(
     r"|suspicious\s*person|prowler|trespass",
     re.IGNORECASE,
 )
-# Exclude retail/petty theft from alerts (not from map filter)
-STORE_THEFT_RE = re.compile(
-    r"shoplift|petty.theft|484\s*theft",
+# Exclude noise from alerts
+EXCLUDE_RE = re.compile(
+    r"shoplift|petty.theft|484\s*theft|alarm.{0,5}burglary|burglary.{0,5}alarm",
     re.IGNORECASE,
 )
 
@@ -239,8 +239,8 @@ def is_alertable_crime(item):
     ct = crime_text(item)
     if not ALERT_RE.search(ct):
         return False
-    # Exclude shoplifting / petty theft (store theft) unless also burglary or vehicle-related
-    if STORE_THEFT_RE.search(ct) and not re.search(r"burglary|vehicle|motor", ct, re.IGNORECASE):
+    # Exclude burglary alarms, shoplifting, petty theft
+    if EXCLUDE_RE.search(ct):
         return False
     return True
 
