@@ -923,6 +923,7 @@ function toggleMenloOaksPoly() {
   if (geoMenloOaks && !moPolyLayer) {
     moPolyLayer = L.polygon(MENLO_OAKS_POLY, {
       color: '#004d40', weight: 3, opacity: 0.8, fillColor: '#00695c', fillOpacity: 0.06, dashArray: '6 4',
+      interactive: false,
     }).addTo(map);
   } else if (!geoMenloOaks && moPolyLayer) {
     moPolyLayer.remove();
