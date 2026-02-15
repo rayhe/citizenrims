@@ -5,18 +5,42 @@ Designed to run in GitHub Actions on a cron schedule.
 """
 
 import json
+import math
 import os
+import re
+import smtplib
 from datetime import datetime, timedelta, timezone
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 from urllib.request import Request, urlopen
 from urllib.parse import urlencode
 from urllib.error import HTTPError
 
 API_BASE = "https://api.v1.citizenrims.com"
-OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "public")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+OUT_DIR = os.path.join(BASE_DIR, "public")
+ALERTED_PATH = os.path.join(BASE_DIR, "alerted.json")
 
 AGENCIES = ["menlopark", "atherton", "smcsheriff"]
 
 PA_BASE = "https://gis.cityofpaloalto.org/server/rest/services/PublicSafety/AgencyCommonEvent/MapServer/2/query"
+
+MENLO_OAKS_LAT = 37.448
+MENLO_OAKS_LNG = -122.177
+THREE_MILES_M = 4828
+
+PROPERTY_RE = re.compile(
+    r"burglary|larceny|theft|fraud|stolen|shoplift|embezzle|forgery|identity|vandal|arson",
+    re.IGNORECASE,
+)
+
+ALERT_RECIPIENTS = [
+    "rayche@gmail.com",
+    "brentebrown@gmail.com",
+    "rmc@3emus.com",
+]
+
+MAP_URL = "https://rayhe.github.io/citizenrims/"
 
 
 def get_token():
@@ -181,6 +205,182 @@ def fetch_paloalto(days):
     return incidents
 
 
+def haversine_m(lat1, lon1, lat2, lon2):
+    """Distance in meters between two lat/lng points."""
+    R = 6371000
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlam = math.radians(lon2 - lon1)
+    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlam / 2) ** 2
+    return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+
+def item_id(item):
+    """Unique key for an incident/case."""
+    src = item.get("_source", "")
+    if src == "incident":
+        return f"inc-{item.get('_prefix', '')}-{item.get('incidentNumber', '')}"
+    return f"case-{item.get('_prefix', '')}-{item.get('caseNumber', '')}"
+
+
+def crime_text(item):
+    return " ".join(filter(None, [
+        item.get("callType"), item.get("callTypeDescription"),
+        item.get("crimeType"), item.get("crimeClassification"),
+        item.get("offenseDescription1"),
+    ]))
+
+
+def is_property_crime(item):
+    return bool(PROPERTY_RE.search(crime_text(item)))
+
+
+def item_within_menlo_oaks(item):
+    lat = item.get("yCoord")
+    lng = item.get("xCoord")
+    if lat is None or lng is None:
+        return False, 0
+    dist = haversine_m(lat, lng, MENLO_OAKS_LAT, MENLO_OAKS_LNG)
+    return dist <= THREE_MILES_M, dist
+
+
+def load_alerted():
+    if os.path.exists(ALERTED_PATH):
+        with open(ALERTED_PATH) as f:
+            return set(json.load(f))
+    return set()
+
+
+def save_alerted(ids):
+    with open(ALERTED_PATH, "w") as f:
+        json.dump(sorted(ids), f)
+
+
+def send_alert(item, dist_m):
+    smtp_user = os.environ.get("ALERT_EMAIL_USER", "")
+    smtp_pass = os.environ.get("ALERT_EMAIL_PASSWORD", "")
+    if not smtp_user or not smtp_pass:
+        print("    SKIP email: ALERT_EMAIL_USER / ALERT_EMAIL_PASSWORD not set")
+        return
+
+    src = item.get("_source", "")
+    agency = item.get("_agency", "Unknown")
+    street = item.get("street", "Unknown location")
+    city = item.get("city", "")
+    location = f"{street}, {city}" if city else street
+    dist_mi = dist_m / 1609.34
+
+    if src == "incident":
+        crime = item.get("callTypeDescription") or item.get("callType") or "Property Crime"
+        date_raw = item.get("incidentDate", "")
+        time_raw = item.get("incidentTime", "")
+    else:
+        crime = item.get("offenseDescription1") or item.get("crimeType") or "Property Crime"
+        date_raw = item.get("reportDate") or item.get("occurrence1Date", "")
+        time_raw = ""
+
+    ct = crime_text(item)
+    severity = "High"
+    if re.search(r"burglary|stolen vehicle|arson", ct, re.IGNORECASE):
+        severity = "High"
+    elif re.search(r"theft|shoplift|fraud|larceny", ct, re.IGNORECASE):
+        severity = "Medium"
+    elif re.search(r"vandal|forgery|identity|embezzle", ct, re.IGNORECASE):
+        severity = "Medium"
+
+    subject = f"{crime} — {dist_mi:.1f}mi from Menlo Oaks ({severity})"
+
+    # Format date nicely
+    date_display = date_raw
+    if date_raw:
+        try:
+            dt = datetime.fromisoformat(date_raw.replace("Z", "+00:00"))
+            date_display = dt.strftime("%b %d, %Y %I:%M %p UTC")
+        except Exception:
+            pass
+
+    html = f"""\
+<div style="font-family:system-ui,-apple-system,sans-serif;max-width:520px;margin:0 auto">
+  <div style="background:linear-gradient(135deg,#1a1a2e,#2d2d50);color:#fff;padding:16px 20px;border-radius:10px 10px 0 0">
+    <h2 style="margin:0;font-size:18px">Property Crime Alert</h2>
+    <p style="margin:4px 0 0;color:#9a9ab0;font-size:13px">{dist_mi:.1f} miles from Menlo Oaks</p>
+  </div>
+  <div style="background:#fff;padding:20px;border:1px solid #e0e0e0;border-top:none;border-radius:0 0 10px 10px">
+    <table style="width:100%;border-collapse:collapse;font-size:14px;color:#333">
+      <tr>
+        <td style="padding:8px 0;color:#888;width:100px;vertical-align:top">Type</td>
+        <td style="padding:8px 0;font-weight:600">{crime}</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0;color:#888;vertical-align:top">Severity</td>
+        <td style="padding:8px 0"><span style="background:{'#d32f2f' if severity == 'High' else '#e65100'};color:#fff;padding:2px 10px;border-radius:10px;font-size:12px;font-weight:600">{severity}</span></td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0;color:#888;vertical-align:top">Location</td>
+        <td style="padding:8px 0">{location}</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0;color:#888;vertical-align:top">Distance</td>
+        <td style="padding:8px 0">{dist_mi:.1f} miles from Menlo Oaks</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0;color:#888;vertical-align:top">Agency</td>
+        <td style="padding:8px 0">{agency}</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0;color:#888;vertical-align:top">Date</td>
+        <td style="padding:8px 0">{date_display}{(' ' + time_raw) if time_raw else ''}</td>
+      </tr>
+    </table>
+    <div style="margin-top:16px;text-align:center">
+      <a href="{MAP_URL}" style="display:inline-block;background:#1a1a2e;color:#fff;padding:10px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px">View on Map</a>
+    </div>
+  </div>
+  <p style="text-align:center;color:#aaa;font-size:11px;margin-top:12px">Crime Feed — Menlo Park, Atherton, Palo Alto &amp; SMC Sheriff</p>
+</div>"""
+
+    msg = MIMEMultipart("alternative")
+    msg["Subject"] = subject
+    msg["From"] = smtp_user
+    msg["To"] = ", ".join(ALERT_RECIPIENTS)
+
+    plain = f"{crime}\n{location}\n{agency}\nDistance: {dist_mi:.1f}mi from Menlo Oaks\nDate: {date_display}\nSeverity: {severity}\n\nView map: {MAP_URL}"
+    msg.attach(MIMEText(plain, "plain"))
+    msg.attach(MIMEText(html, "html"))
+
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
+            s.login(smtp_user, smtp_pass)
+            s.sendmail(smtp_user, ALERT_RECIPIENTS, msg.as_string())
+        print(f"    Sent alert: {subject}")
+    except Exception as e:
+        print(f"    WARN: email failed: {e}")
+
+
+def check_alerts(all_incidents, all_cases):
+    alerted = load_alerted()
+    all_items = all_incidents + all_cases
+    new_alerts = 0
+
+    for item in all_items:
+        iid = item_id(item)
+        if iid in alerted:
+            continue
+        if not is_property_crime(item):
+            continue
+        within, dist = item_within_menlo_oaks(item)
+        if not within:
+            continue
+
+        print(f"  NEW ALERT: {crime_text(item)} at {item.get('street', '?')} ({dist/1609.34:.1f}mi)")
+        send_alert(item, dist)
+        alerted.add(iid)
+        new_alerts += 1
+
+    save_alerted(alerted)
+    print(f"  Alerts: {new_alerts} new, {len(alerted)} total tracked")
+
+
 def main():
     days = int(os.environ.get("DAYS", "7"))
     print(f"Fetching {days} days of data...")
@@ -226,6 +426,9 @@ def main():
     write("feed.json", {"meta": meta, "incidents": all_incidents, "cases": all_cases})
     write("incidents.json", {"meta": meta, "incidents": all_incidents})
     write("cases.json", {"meta": meta, "cases": all_cases})
+
+    print("Checking alerts...")
+    check_alerts(all_incidents, all_cases)
 
     print("Done.")
 

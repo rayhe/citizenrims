@@ -18,16 +18,18 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Generate static JSON
+      - name: Generate static JSON and check alerts
         run: python generate.py
         env:
           DAYS: "31"
+          ALERT_EMAIL_USER: ${{ secrets.ALERT_EMAIL_USER }}
+          ALERT_EMAIL_PASSWORD: ${{ secrets.ALERT_EMAIL_PASSWORD }}
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/
+          git add public/ alerted.json
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "Update crime data $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           git pull --rebase
