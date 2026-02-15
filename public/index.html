@@ -63,12 +63,15 @@
   .feed-toggle { position: absolute; bottom: 10px; right: 10px; z-index: 1000; background: #1a1a2e; color: #fff; border: none; padding: 7px 14px; border-radius: 16px; font: 600 0.78rem system-ui; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.3); transition: all 0.15s ease; }
   .feed-toggle:hover { background: #2d2d50; }
   .feed-toggle .feed-count { background: rgba(255,255,255,0.2); padding: 1px 6px; border-radius: 8px; margin-left: 5px; font-size: 0.7rem; }
-  .feed-panel { position: absolute; bottom: 0; left: 0; right: 0; z-index: 999; background: #fff; border-top: 1px solid #ddd; max-height: 0; overflow: hidden; transition: max-height 0.25s ease; box-shadow: 0 -2px 8px rgba(0,0,0,0.1); }
-  .feed-panel.feed-open { max-height: 45%; }
-  .feed-header { display: flex; justify-content: space-between; align-items: center; padding: 8px 14px; border-bottom: 1px solid #eee; background: #fafafa; cursor: pointer; }
+  .feed-panel { position: absolute; bottom: 0; left: 0; right: 0; z-index: 999; background: #fff; border-top: 1px solid #ddd; height: 0; overflow: hidden; transition: height 0.2s ease; box-shadow: 0 -2px 8px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
+  .feed-panel.feed-open { height: 40%; }
+  .feed-panel.feed-dragging { transition: none; }
+  .feed-drag { height: 20px; display: flex; align-items: center; justify-content: center; cursor: ns-resize; flex-shrink: 0; background: #fafafa; border-bottom: 1px solid #eee; touch-action: none; }
+  .feed-drag-grip { width: 32px; height: 4px; border-radius: 2px; background: #ccc; }
+  .feed-header { display: flex; justify-content: space-between; align-items: center; padding: 4px 14px 6px; background: #fafafa; flex-shrink: 0; }
   .feed-header-title { font-size: 0.8rem; font-weight: 600; color: #333; }
-  .feed-header-close { font-size: 0.75rem; color: #999; }
-  #feed-list { overflow-y: auto; max-height: calc(45vh * 0.85); -webkit-overflow-scrolling: touch; }
+  .feed-header-close { font-size: 0.75rem; color: #999; cursor: pointer; }
+  #feed-list { overflow-y: auto; flex: 1; -webkit-overflow-scrolling: touch; }
   .feed-item { display: flex; align-items: center; gap: 10px; padding: 9px 14px; border-bottom: 1px solid #f0f0f0; cursor: pointer; transition: background 0.1s; }
   .feed-item:hover { background: #f5f7fa; }
   .feed-icon { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 10px; }
@@ -153,9 +156,10 @@
   <div id="map"></div>
   <button class="feed-toggle" id="feed-toggle">Feed <span class="feed-count" id="feed-count">0</span></button>
   <div class="feed-panel" id="feed-panel">
+    <div class="feed-drag" id="feed-drag"><div class="feed-drag-grip"></div></div>
     <div class="feed-header" id="feed-header">
       <span class="feed-header-title">Latest in view</span>
-      <span class="feed-header-close">close</span>
+      <span class="feed-header-close" id="feed-close">close</span>
     </div>
     <div id="feed-list"></div>
   </div>
@@ -442,15 +446,62 @@ const feedToggle = document.getElementById('feed-toggle');
 const feedList = document.getElementById('feed-list');
 const feedCountEl = document.getElementById('feed-count');
 
+const feedDrag = document.getElementById('feed-drag');
+const mapWrap = document.querySelector('.map-wrap');
+
 document.getElementById('feed-toggle').addEventListener('click', () => {
   feedOpen = !feedOpen;
-  feedPanel.classList.toggle('feed-open', feedOpen);
-  if (feedOpen) updateFeed();
+  if (feedOpen) {
+    feedPanel.style.height = '';
+    feedPanel.classList.add('feed-open');
+    updateFeed();
+  } else {
+    feedPanel.classList.remove('feed-open');
+    feedPanel.style.height = '';
+  }
 });
-document.getElementById('feed-header').addEventListener('click', () => {
+document.getElementById('feed-close').addEventListener('click', (e) => {
+  e.stopPropagation();
   feedOpen = false;
   feedPanel.classList.remove('feed-open');
+  feedPanel.style.height = '';
 });
+
+// Drag to resize
+let dragStartY = 0, dragStartH = 0;
+function onDragMove(clientY) {
+  const wrapH = mapWrap.offsetHeight;
+  const delta = dragStartY - clientY;
+  const newH = Math.max(80, Math.min(wrapH - 40, dragStartH + delta));
+  feedPanel.style.height = newH + 'px';
+}
+feedDrag.addEventListener('mousedown', e => {
+  e.preventDefault();
+  dragStartY = e.clientY;
+  dragStartH = feedPanel.offsetHeight;
+  feedPanel.classList.add('feed-dragging');
+  const onMove = ev => onDragMove(ev.clientY);
+  const onUp = () => {
+    feedPanel.classList.remove('feed-dragging');
+    document.removeEventListener('mousemove', onMove);
+    document.removeEventListener('mouseup', onUp);
+  };
+  document.addEventListener('mousemove', onMove);
+  document.addEventListener('mouseup', onUp);
+});
+feedDrag.addEventListener('touchstart', e => {
+  dragStartY = e.touches[0].clientY;
+  dragStartH = feedPanel.offsetHeight;
+  feedPanel.classList.add('feed-dragging');
+  const onMove = ev => { ev.preventDefault(); onDragMove(ev.touches[0].clientY); };
+  const onEnd = () => {
+    feedPanel.classList.remove('feed-dragging');
+    document.removeEventListener('touchmove', onMove);
+    document.removeEventListener('touchend', onEnd);
+  };
+  document.addEventListener('touchmove', onMove, { passive: false });
+  document.addEventListener('touchend', onEnd);
+}, { passive: true });
 
 // Track which markers are currently visible (pass filters)
 let visibleSet = new Set();
