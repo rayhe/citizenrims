@@ -87,43 +87,43 @@ def make_case(offense="", crime_type="", classification="", prefix="menlopark", 
 # │  Drug paraphernalia          │ non-property   │ NO     │           │
 # └─────────────────────────────────────────────────────────────────────┘
 
-# --- Alertable crimes: (type, builder, alert?, description) ---
+# --- (name, alert?, builder) ---
 ALERT_CASES = [
     # YES — property crimes (~25/mo)
-    ("Burglary - Residential",  lambda: make_case(offense="Burglary - Residential (F)", crime_type="Burglary"),    True),
-    ("Burglary - Commercial",   lambda: make_case(offense="Burglary - Commercial (F)", crime_type="Burglary"),     True),
-    ("Burglary - Vehicle",      lambda: make_case(offense="Burglary - Vehicle (F)", crime_type="Burglary"),        True),
-    ("Grand Theft",             lambda: make_case(offense="Grand Theft (F)", crime_type="Theft"),                  True),
-    ("Theft From Vehicle",      lambda: make_case(offense="Theft From Vehicle", crime_type="Theft"),               True),
-    ("Stolen Vehicle",          lambda: make_case(offense="Stolen Vehicle (F)", crime_type="Theft"),               True),
-    ("Fraud",                   lambda: make_case(offense="Fraud (M)", crime_type="Fraud"),                        True),
-    ("Identity Theft",          lambda: make_case(offense="Identity Theft (F)", crime_type="Fraud"),               True),
-    ("Forgery",                 lambda: make_case(offense="Forgery (F)", crime_type="Fraud"),                      True),
-    ("Embezzlement",            lambda: make_case(offense="Embezzlement (F)", crime_type="Fraud"),                 True),
-    ("Larceny",                 lambda: make_case(offense="Larceny (M)", crime_type="Theft"),                      True),
+    ("Burglary - Residential",   True,  lambda: make_case(offense="Burglary - Residential (F)", crime_type="Burglary")),
+    ("Burglary - Commercial",    True,  lambda: make_case(offense="Burglary - Commercial (F)", crime_type="Burglary")),
+    ("Burglary - Vehicle",       True,  lambda: make_case(offense="Burglary - Vehicle (F)", crime_type="Burglary")),
+    ("Grand Theft",              True,  lambda: make_case(offense="Grand Theft (F)", crime_type="Theft")),
+    ("Theft From Vehicle",       True,  lambda: make_case(offense="Theft From Vehicle", crime_type="Theft")),
+    ("Stolen Vehicle",           True,  lambda: make_case(offense="Stolen Vehicle (F)", crime_type="Theft")),
+    ("Fraud",                    True,  lambda: make_case(offense="Fraud (M)", crime_type="Fraud")),
+    ("Identity Theft",           True,  lambda: make_case(offense="Identity Theft (F)", crime_type="Fraud")),
+    ("Forgery",                  True,  lambda: make_case(offense="Forgery (F)", crime_type="Fraud")),
+    ("Embezzlement",             True,  lambda: make_case(offense="Embezzlement (F)", crime_type="Fraud")),
+    ("Larceny",                  True,  lambda: make_case(offense="Larceny (M)", crime_type="Theft")),
     # YES — vandalism/arson (~10/mo)
-    ("Vandalism",               lambda: make_case(offense="Vandalism (M)", crime_type="Property Crime"),           True),
-    ("Arson",                   lambda: make_case(offense="Arson (F)", crime_type="Property Crime"),               True),
+    ("Vandalism",                True,  lambda: make_case(offense="Vandalism (M)", crime_type="Property Crime")),
+    ("Arson",                    True,  lambda: make_case(offense="Arson (F)", crime_type="Property Crime")),
     # YES — suspicious activity (~60/mo, tight 0.25mi radius)
-    ("Suspicious Person",       lambda: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances"), True),
-    ("Prowler",                 lambda: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances"),           True),
-    ("Trespass",                lambda: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service"),            True),
+    ("Suspicious Person",        True,  lambda: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances")),
+    ("Prowler",                  True,  lambda: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances")),
+    ("Trespass",                 True,  lambda: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service")),
     # NO — excluded store theft (~40/mo)
-    ("Shoplift",                lambda: make_case(offense="Shoplift (M)", crime_type="Theft"),                     False),
-    ("Petty Theft",             lambda: make_case(offense="Petty Theft (M)", crime_type="Theft"),                  False),
-    ("484 Theft",               lambda: make_case(offense="484 Theft (M)", crime_type="Theft"),                    False),
+    ("Shoplift",                 False, lambda: make_case(offense="Shoplift (M)", crime_type="Theft")),
+    ("Petty Theft",              False, lambda: make_case(offense="Petty Theft (M)", crime_type="Theft")),
+    ("484 Theft",                False, lambda: make_case(offense="484 Theft (M)", crime_type="Theft")),
     # NO — excluded burglary alarms (~67/mo)
-    ("ALARM - BURGLARY",        lambda: make_incident(call_type="ALARM - BURGLARY", call_type_desc="Alarm Responses"),  False),
-    ("Burglary Alarm",          lambda: make_incident(call_type="Burglary Alarm", call_type_desc="Alarm Responses"),    False),
+    ("ALARM - BURGLARY",         False, lambda: make_incident(call_type="ALARM - BURGLARY", call_type_desc="Alarm Responses")),
+    ("Burglary Alarm",           False, lambda: make_incident(call_type="Burglary Alarm", call_type_desc="Alarm Responses")),
     # NO — non-property crimes (~1000+/mo)
-    ("Traffic Stop",            lambda: make_incident(call_type="Traffic Stop", call_type_desc="Traffic"),                        False),
-    ("Medical Aid",             lambda: make_incident(call_type="Medical Aid", call_type_desc="Medical"),                         False),
-    ("Welfare Check",           lambda: make_incident(call_type="Welfare Check", call_type_desc="Other Calls for Service"),      False),
-    ("Assault",                 lambda: make_case(offense="Assault (F)", crime_type="Violent Crime"),                             False),
-    ("DUI",                     lambda: make_incident(call_type="DUI", call_type_desc="Traffic"),                                False),
-    ("Noise Complaint",         lambda: make_incident(call_type="Noise Complaint", call_type_desc="Other Calls for Service"),    False),
-    ("Suspicious Circumstances",lambda: make_incident(call_type="Suspicious Circumstances", call_type_desc="Suspicious Circumstances"), False),
-    ("Drug paraphernalia",      lambda: make_case(offense="Possess unlawful paraphernalia (M)", crime_type="Drugs or Alcohol"),  False),
+    ("Traffic Stop",             False, lambda: make_incident(call_type="Traffic Stop", call_type_desc="Traffic")),
+    ("Medical Aid",              False, lambda: make_incident(call_type="Medical Aid", call_type_desc="Medical")),
+    ("Welfare Check",            False, lambda: make_incident(call_type="Welfare Check", call_type_desc="Other Calls for Service")),
+    ("Assault",                  False, lambda: make_case(offense="Assault (F)", crime_type="Violent Crime")),
+    ("DUI",                      False, lambda: make_incident(call_type="DUI", call_type_desc="Traffic")),
+    ("Noise Complaint",          False, lambda: make_incident(call_type="Noise Complaint", call_type_desc="Other Calls for Service")),
+    ("Suspicious Circumstances", False, lambda: make_incident(call_type="Suspicious Circumstances", call_type_desc="Suspicious Circumstances")),
+    ("Drug paraphernalia",       False, lambda: make_case(offense="Possess unlawful paraphernalia (M)", crime_type="Drugs or Alcohol")),
 ]
 
 
@@ -133,7 +133,7 @@ class TestIsAlertableCrime(unittest.TestCase):
 
 
 # Generate a test method for each row
-for _name, _builder, _expected in ALERT_CASES:
+for _name, _expected, _builder in ALERT_CASES:
     def _make_test(builder=_builder, expected=_expected):
         def test(self):
             item = builder()
