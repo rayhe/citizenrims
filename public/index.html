@@ -218,7 +218,7 @@
   <span class="legend-divider"></span>
   <div class="legend-section">
     <span><span class="crime-icon-demo" style="background:#d32f2f;width:14px;height:14px;font-size:10px">!</span> Violent</span>
-    <span><span class="crime-icon-demo" style="background:#bf360c;width:13px;height:13px;font-size:8px">&#x1F3E0;</span> Burglary</span>
+    <span><span class="crime-icon-demo" style="background:#bf360c;width:13px;height:13px;padding:2px"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg></span> Burglary</span>
     <span><span class="crime-icon-demo" style="background:#e65100;width:13px;height:13px;font-size:9px">$</span> Theft</span>
     <span><span class="crime-icon-demo" style="background:#1565c0;width:13px;height:13px;font-size:8px">&#x1F697;</span> Traffic</span>
     <span><span class="crime-icon-demo" style="background:#6a1b9a;width:13px;height:13px;font-size:8px">&#x1F48A;</span> Drugs</span>
@@ -327,8 +327,8 @@ const SEVERITY = { critical: 24, high: 20, medium: 16, low: 12 };
 const CRIME_CATEGORIES = [
   { icon: '!',      color: '#d32f2f', severity: 'critical',
     match: /assault|person crime|homicide|battery|robbery|weapon|stabbing|shooting|domestic/i },
-  { icon: '\u{1F3E0}', color: '#bf360c', severity: 'high',
-    match: /burglary/i },
+  { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>',
+    color: '#bf360c', severity: 'high', match: /burglary/i },
   { icon: '$',      color: '#e65100', severity: 'high',
     match: /larceny|theft|fraud|stolen|shoplift|embezzle|forgery|identity/i },
   { icon: '\u{1F697}', color: '#1565c0', severity: 'medium',
@@ -411,6 +411,10 @@ function classifyCrime(item) {
 function makeDivIcon(crimeConf, agencyColor) {
   const size = SEVERITY[crimeConf.severity];
   const fontSize = Math.max(size * 0.45, 8);
+  const isSvg = crimeConf.icon.startsWith('<');
+  const inner = isSvg
+    ? `<div style="width:${fontSize + 2}px;height:${fontSize + 2}px">${crimeConf.icon}</div>`
+    : crimeConf.icon;
   // Ring color = agency color, fill = crime category color
   const html = `<div style="
     width:${size}px;height:${size}px;border-radius:50%;
@@ -419,7 +423,7 @@ function makeDivIcon(crimeConf, agencyColor) {
     display:flex;align-items:center;justify-content:center;
     color:#fff;font-weight:700;font-size:${fontSize}px;line-height:1;
     box-shadow:0 1px 4px rgba(0,0,0,0.3);
-  ">${crimeConf.icon}</div>`;
+  ">${inner}</div>`;
   return L.divIcon({
     html,
     className: '',
@@ -1055,7 +1059,7 @@ function updateFeed() {
     const datePart = m._itemDate ? m._itemDate.toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) : '';
     const timePart = m._itemDate ? m._itemDate.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' }) : '';
     return `<div class="feed-item" data-feed-idx="${i}">
-      <span class="feed-icon" style="background:${conf.color}">${conf.icon}</span>
+      <span class="feed-icon" style="background:${conf.color}${conf.icon.startsWith('<') ? ';padding:3px' : ''}">${conf.icon}</span>
       <div class="feed-body">
         <div class="feed-title">${d.title}${d.subtitle ? ' <span style="font-weight:400;color:#777">· ' + d.subtitle + '</span>' : ''}</div>
         <div class="feed-meta">${d.street}${d.street && d.agency ? ' — ' : ''}${d.agency}</div>
