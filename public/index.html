@@ -9,201 +9,236 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: system-ui, -apple-system, sans-serif; color: #1a1a1a; background: #f5f6f8; }
+  body { font-family: system-ui, -apple-system, sans-serif; color: #1a1a1a; background: #e8eaed; }
 
-  header { background: linear-gradient(135deg, #1a1a2e 0%, #2d2d50 100%); color: #fff; padding: 20px 20px 16px; }
-  header h1 { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.02em; }
-  header p { color: #9a9ab0; margin-top: 4px; font-size: 0.82rem; line-height: 1.4; }
-  .last-updated { color: #7a7a96; font-size: 0.72rem; margin-top: 6px; }
+  .page { max-width: 1100px; margin: 0 auto; background: #f5f6f8; min-height: 100vh; }
 
-  #map { width: 100%; height: 55vh; min-height: 340px; }
+  header { background: linear-gradient(135deg, #1a1a2e 0%, #2d2d50 100%); color: #fff; padding: 18px 20px 14px; display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .header-left { flex: 1; min-width: 200px; }
+  header h1 { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em; }
+  header p { color: #9a9ab0; margin-top: 2px; font-size: 0.78rem; line-height: 1.3; }
+  .last-updated { color: #7a7a96; font-size: 0.72rem; white-space: nowrap; }
 
-  .content { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
-  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 24px; }
-  .stat { background: #fff; border-radius: 10px; padding: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-  .stat .num { font-size: 1.6rem; font-weight: 800; color: #1a1a2e; letter-spacing: -0.03em; }
-  .stat .label { font-size: 0.72rem; color: #888; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .controls { display: flex; flex-wrap: wrap; gap: 0; background: #fff; border-bottom: 1px solid #eee; }
+  .filter-bar { display: flex; gap: 5px; padding: 8px 14px; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; align-items: center; flex: 1; min-width: 0; }
+  .filter-btn { font-size: 0.75rem; padding: 4px 12px; border-radius: 14px; border: 1px solid #ddd; background: #fff; cursor: pointer; white-space: nowrap; transition: all 0.15s ease; font-weight: 500; color: #555; }
+  .filter-btn:hover { border-color: #aaa; }
+  .filter-btn.active { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
+  .filter-sep { width: 1px; height: 18px; background: #ddd; flex-shrink: 0; }
+  .geo-btn { font-size: 0.7rem; padding: 3px 9px; border-radius: 12px; border: 1px solid #ddd; background: #fff; cursor: pointer; white-space: nowrap; transition: all 0.15s ease; font-weight: 600; color: #888; }
+  .geo-btn:hover { border-color: #aaa; }
+  .geo-btn.active { background: #00695c; color: #fff; border-color: #00695c; }
+  .time-btn { font-size: 0.7rem; padding: 3px 9px; border-radius: 12px; border: 1px solid #ddd; background: #fff; cursor: pointer; white-space: nowrap; transition: all 0.15s ease; font-weight: 600; color: #888; }
+  .time-btn:hover { border-color: #aaa; }
+  .time-btn.active { background: #455a64; color: #fff; border-color: #455a64; }
 
-  h2 { font-size: 1rem; margin: 24px 0 8px; color: #444; font-weight: 600; }
+  .legend { display: flex; gap: 10px; padding: 6px 14px; background: #fff; border-bottom: 1px solid #eee; font-size: 0.7rem; color: #666; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; align-items: center; }
+  .legend span { display: flex; align-items: center; gap: 3px; white-space: nowrap; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+  .legend-section { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+  .legend-divider { width: 1px; height: 14px; background: #ddd; flex-shrink: 0; }
+  .crime-icon-demo { display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff; font-weight: 700; font-size: 10px; line-height: 1; flex-shrink: 0; }
+
+  .main-area { display: flex; flex-direction: column; }
+  .map-wrap { position: relative; flex-shrink: 0; }
+  #map { width: 100%; height: 60vh; min-height: 360px; }
+  .feed-toggle { position: absolute; bottom: 10px; right: 10px; z-index: 1000; background: #1a1a2e; color: #fff; border: none; padding: 6px 12px; border-radius: 14px; font: 600 0.75rem system-ui; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.3); transition: all 0.15s ease; }
+  .feed-toggle:hover { background: #2d2d50; }
+  .feed-toggle .feed-count { background: rgba(255,255,255,0.2); padding: 1px 6px; border-radius: 8px; margin-left: 5px; font-size: 0.68rem; }
+  .feed-panel { background: #fff; border-top: 1px solid #ddd; height: 0; overflow: hidden; transition: height 0.2s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: flex; flex-direction: column; }
+  .feed-panel.feed-open { height: 220px; }
+  .feed-panel.feed-dragging { transition: none; }
+  .feed-header { display: flex; justify-content: space-between; align-items: center; padding: 4px 14px 5px; background: #fafafa; border-bottom: 1px solid #eee; flex-shrink: 0; }
+  .feed-header-title { font-size: 0.78rem; font-weight: 600; color: #333; }
+  .feed-header-close { font-size: 0.72rem; color: #999; cursor: pointer; }
+  #feed-list { overflow-y: auto; flex: 1; -webkit-overflow-scrolling: touch; }
+  .feed-drag { height: 18px; display: flex; align-items: center; justify-content: center; cursor: ns-resize; flex-shrink: 0; background: #fafafa; border-top: 1px solid #eee; touch-action: none; user-select: none; }
+  .feed-drag-grip { width: 32px; height: 4px; border-radius: 2px; background: #ccc; }
+  .feed-item { display: flex; align-items: center; gap: 10px; padding: 8px 14px; border-bottom: 1px solid #f0f0f0; cursor: pointer; transition: background 0.1s; }
+  .feed-item:hover { background: #f5f7fa; }
+  .feed-icon { flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 9px; }
+  .feed-body { flex: 1; min-width: 0; }
+  .feed-title { font-size: 0.8rem; font-weight: 600; color: #1a1a2e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .feed-meta { font-size: 0.7rem; color: #999; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .feed-time { flex-shrink: 0; font-size: 0.68rem; color: #aaa; font-weight: 500; white-space: nowrap; }
+  .feed-empty { padding: 18px; text-align: center; color: #bbb; font-size: 0.8rem; }
+
+  .stats-bar { display: flex; gap: 10px; padding: 14px; background: #f5f6f8; }
+  .stat { flex: 1; background: #fff; border-radius: 8px; padding: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); text-align: center; }
+  .stat .num { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; letter-spacing: -0.03em; }
+  .stat .label { font-size: 0.68rem; color: #888; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.03em; }
+
+  .info-section { padding: 16px; background: #f5f6f8; }
+  .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  h2 { font-size: 0.92rem; margin: 0 0 8px; color: #444; font-weight: 600; }
   .agencies { list-style: none; }
-  .agencies li { padding: 10px 0; border-bottom: 1px solid #eee; font-size: 0.85rem; }
+  .agencies li { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 0.82rem; }
   .agencies li:last-child { border: none; }
-  .badge { display: inline-block; font-size: 0.65rem; padding: 2px 7px; border-radius: 4px; margin-left: 6px; vertical-align: middle; font-weight: 500; }
+  .badge { display: inline-block; font-size: 0.62rem; padding: 2px 6px; border-radius: 4px; margin-left: 5px; vertical-align: middle; font-weight: 500; }
   .badge-inc { background: #e3f2fd; color: #1565c0; }
   .badge-case { background: #fce4ec; color: #c62828; }
 
   .endpoints { list-style: none; }
-  .endpoints li { margin: 8px 0; }
-  .endpoints a { color: #1a6dd4; text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+  .endpoints li { margin: 6px 0; }
+  .endpoints a { color: #1a6dd4; text-decoration: none; font-size: 0.82rem; font-weight: 500; }
   .endpoints a:hover { text-decoration: underline; }
-  .endpoints .desc { color: #999; font-size: 0.78rem; }
+  .endpoints .desc { color: #999; font-size: 0.75rem; }
 
-  pre { background: #1a1a2e; color: #a8d8a8; padding: 14px; border-radius: 10px; overflow-x: auto; font-size: 0.78rem; margin-top: 8px; -webkit-overflow-scrolling: touch; }
+  pre { background: #1a1a2e; color: #a8d8a8; padding: 12px; border-radius: 8px; overflow-x: auto; font-size: 0.75rem; margin-top: 8px; -webkit-overflow-scrolling: touch; }
 
-  footer { text-align: center; padding: 24px 16px; color: #aaa; font-size: 0.72rem; }
+  footer { text-align: center; padding: 18px 14px; color: #aaa; font-size: 0.7rem; border-top: 1px solid #e0e0e0; }
   footer a { color: #888; }
 
-  .filter-bar { display: flex; gap: 6px; padding: 10px 16px; background: #fff; border-bottom: 1px solid #eee; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; align-items: center; }
-  .filter-btn { font-size: 0.78rem; padding: 5px 14px; border-radius: 16px; border: 1px solid #ddd; background: #fff; cursor: pointer; white-space: nowrap; transition: all 0.15s ease; font-weight: 500; color: #555; }
-  .filter-btn:hover { border-color: #aaa; }
-  .filter-btn.active { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
-  .filter-sep { width: 1px; height: 20px; background: #ddd; flex-shrink: 0; }
-  .geo-btn { font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid #ddd; background: #fff; cursor: pointer; white-space: nowrap; transition: all 0.15s ease; font-weight: 600; color: #888; }
-  .geo-btn:hover { border-color: #aaa; }
-  .geo-btn.active { background: #00695c; color: #fff; border-color: #00695c; }
-  .time-btn { font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid #ddd; background: #fff; cursor: pointer; white-space: nowrap; transition: all 0.15s ease; font-weight: 600; color: #888; }
-  .time-btn:hover { border-color: #aaa; }
-  .time-btn.active { background: #455a64; color: #fff; border-color: #455a64; }
+  /* Desktop: contained page */
+  @media (min-width: 900px) {
+    body { padding: 24px 0; }
+    .page { border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+    #map { height: 58vh; }
+  }
 
-  .legend { display: flex; gap: 12px; padding: 8px 16px; background: #fff; border-bottom: 1px solid #eee; font-size: 0.75rem; color: #666; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; align-items: center; }
-  .legend span { display: flex; align-items: center; gap: 4px; white-space: nowrap; }
-  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
-  .legend-section { display: flex; gap: 10px; align-items: center; flex-shrink: 0; }
-  .legend-divider { width: 1px; height: 16px; background: #ddd; flex-shrink: 0; }
-  .crime-icon-demo { display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff; font-weight: 700; font-size: 10px; line-height: 1; flex-shrink: 0; }
+  /* Wide desktop: feed beside map */
+  @media (min-width: 1200px) {
+    .page { max-width: 1400px; }
+    .main-area { flex-direction: row; }
+    .map-wrap { flex: 1; min-width: 0; }
+    .feed-toggle { display: none; }
+    .feed-panel { width: 320px; flex-shrink: 0; height: auto !important; border-top: none; border-left: 1px solid #ddd; overflow: hidden; }
+    .feed-panel, .feed-panel.feed-open { height: auto !important; }
+    .feed-header-close { display: none; }
+    .feed-drag { display: none; }
+    #feed-list { max-height: 58vh; }
+    #map { height: 58vh; }
+  }
 
-  .map-wrap { position: relative; }
-  .feed-toggle { position: absolute; bottom: 10px; right: 10px; z-index: 1000; background: #1a1a2e; color: #fff; border: none; padding: 7px 14px; border-radius: 16px; font: 600 0.78rem system-ui; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.3); transition: all 0.15s ease; }
-  .feed-toggle:hover { background: #2d2d50; }
-  .feed-toggle .feed-count { background: rgba(255,255,255,0.2); padding: 1px 6px; border-radius: 8px; margin-left: 5px; font-size: 0.7rem; }
-  .feed-panel { background: #fff; border-top: 1px solid #ddd; height: 0; overflow: hidden; transition: height 0.2s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: flex; flex-direction: column; }
-  .feed-panel.feed-open { height: 240px; }
-  .feed-panel.feed-dragging { transition: none; }
-  .feed-drag { height: 20px; display: flex; align-items: center; justify-content: center; cursor: ns-resize; flex-shrink: 0; background: #fafafa; border-bottom: 1px solid #eee; touch-action: none; }
-  .feed-drag-grip { width: 32px; height: 4px; border-radius: 2px; background: #ccc; }
-  .feed-header { display: flex; justify-content: space-between; align-items: center; padding: 4px 14px 6px; background: #fafafa; flex-shrink: 0; }
-  .feed-header-title { font-size: 0.8rem; font-weight: 600; color: #333; }
-  .feed-header-close { font-size: 0.75rem; color: #999; cursor: pointer; }
-  #feed-list { overflow-y: auto; flex: 1; -webkit-overflow-scrolling: touch; }
-  .feed-item { display: flex; align-items: center; gap: 10px; padding: 9px 14px; border-bottom: 1px solid #f0f0f0; cursor: pointer; transition: background 0.1s; }
-  .feed-item:hover { background: #f5f7fa; }
-  .feed-icon { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 10px; }
-  .feed-body { flex: 1; min-width: 0; }
-  .feed-title { font-size: 0.82rem; font-weight: 600; color: #1a1a2e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .feed-meta { font-size: 0.72rem; color: #999; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .feed-time { flex-shrink: 0; font-size: 0.7rem; color: #aaa; font-weight: 500; white-space: nowrap; }
-  .feed-empty { padding: 20px; text-align: center; color: #bbb; font-size: 0.82rem; }
-
+  /* Mobile: full-width, compact */
   @media (max-width: 600px) {
-    header { padding: 16px 14px 12px; }
-    header h1 { font-size: 1.15rem; }
-    header p { font-size: 0.76rem; }
+    body { padding: 0; background: #f5f6f8; }
+    .page { border-radius: 0; box-shadow: none; }
+    header { padding: 14px 12px 10px; flex-direction: column; gap: 4px; }
+    header h1 { font-size: 1.1rem; }
+    header p { font-size: 0.74rem; }
     #map { height: 50vh; min-height: 280px; }
-    .stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-    .stat { padding: 10px; }
-    .stat .num { font-size: 1.3rem; }
-    .stat .label { font-size: 0.65rem; }
-    .content { padding: 16px 14px; }
-    .filter-bar { padding: 8px 14px; gap: 6px; }
-    .legend { padding: 6px 14px; gap: 10px; }
+    .stats-bar { gap: 6px; padding: 10px; }
+    .stat { padding: 8px; }
+    .stat .num { font-size: 1.2rem; }
+    .stat .label { font-size: 0.62rem; }
+    .info-grid { grid-template-columns: 1fr; gap: 12px; }
+    .info-section { padding: 14px 12px; }
+    .filter-bar { padding: 6px 10px; gap: 4px; }
+    .legend { padding: 5px 10px; gap: 8px; }
   }
 </style>
 </head>
 <body>
+<div class="page">
 
 <header>
-  <h1>Crime Feed</h1>
-  <p>Live incidents and crime reports from Menlo Park, Atherton, Palo Alto, and San Mateo County Sheriff — updated every 5 minutes.</p>
+  <div class="header-left">
+    <h1>Crime Feed</h1>
+    <p>Menlo Park, Atherton, Palo Alto &amp; SMC Sheriff — updated every 5 min</p>
+  </div>
   <div class="last-updated" id="last-updated"></div>
 </header>
 
-<div class="filter-bar">
-  <button class="filter-btn active" data-filter="all">All</button>
-  <button class="filter-btn" data-filter="incident">Incidents</button>
-  <button class="filter-btn" data-filter="case">Cases</button>
-  <button class="filter-btn" data-filter="violent">Violent</button>
-  <button class="filter-btn" data-filter="property">Property</button>
-  <span class="filter-sep"></span>
-  <button class="filter-btn" data-filter="menlopark">Menlo Park</button>
-  <button class="filter-btn" data-filter="atherton">Atherton</button>
-  <button class="filter-btn" data-filter="paloalto">Palo Alto</button>
-  <button class="filter-btn" data-filter="smcsheriff">SMC Sheriff</button>
-  <span class="filter-sep"></span>
-  <button class="geo-btn" id="geo-menlooaks">Menlo Oaks 3mi</button>
-  <span class="filter-sep"></span>
-  <button class="time-btn active" data-days="7">7d</button>
-  <button class="time-btn" data-days="14">14d</button>
-  <button class="time-btn" data-days="31">31d</button>
+<div class="controls">
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="incident">Incidents</button>
+    <button class="filter-btn" data-filter="case">Cases</button>
+    <button class="filter-btn" data-filter="violent">Violent</button>
+    <button class="filter-btn" data-filter="property">Property</button>
+    <span class="filter-sep"></span>
+    <button class="filter-btn" data-filter="menlopark">Menlo Park</button>
+    <button class="filter-btn" data-filter="atherton">Atherton</button>
+    <button class="filter-btn" data-filter="paloalto">Palo Alto</button>
+    <button class="filter-btn" data-filter="smcsheriff">SMC Sheriff</button>
+    <span class="filter-sep"></span>
+    <button class="geo-btn" id="geo-menlooaks">Menlo Oaks 3mi</button>
+    <span class="filter-sep"></span>
+    <button class="time-btn active" data-days="7">7d</button>
+    <button class="time-btn" data-days="14">14d</button>
+    <button class="time-btn" data-days="31">31d</button>
+  </div>
 </div>
 
 <div class="legend">
   <div class="legend-section">
-    <span><span class="dot" style="background:#4285f4"></span> Menlo Park inc.</span>
-    <span><span class="dot" style="background:#ea4335"></span> Menlo Park cases</span>
-    <span><span class="dot" style="background:#34a853"></span> Atherton inc.</span>
-    <span><span class="dot" style="background:#ff6d00"></span> Atherton cases</span>
-    <span><span class="dot" style="background:#00897b"></span> Palo Alto</span>
-    <span><span class="dot" style="background:#9c27b0"></span> SMC Sheriff</span>
+    <span><span class="dot" style="background:#4285f4"></span> MP inc.</span>
+    <span><span class="dot" style="background:#ea4335"></span> MP case</span>
+    <span><span class="dot" style="background:#34a853"></span> Ath inc.</span>
+    <span><span class="dot" style="background:#ff6d00"></span> Ath case</span>
+    <span><span class="dot" style="background:#00897b"></span> PA</span>
+    <span><span class="dot" style="background:#9c27b0"></span> SMC</span>
   </div>
   <span class="legend-divider"></span>
   <div class="legend-section">
-    <span><span class="crime-icon-demo" style="background:#d32f2f;width:16px;height:16px;font-size:11px">!</span> Violent</span>
-    <span><span class="crime-icon-demo" style="background:#e65100;width:14px;height:14px">$</span> Theft</span>
-    <span><span class="crime-icon-demo" style="background:#1565c0;width:14px;height:14px;font-size:9px">&#x1F697;</span> Traffic</span>
-    <span><span class="crime-icon-demo" style="background:#6a1b9a;width:14px;height:14px;font-size:9px">&#x1F48A;</span> Drugs</span>
+    <span><span class="crime-icon-demo" style="background:#d32f2f;width:14px;height:14px;font-size:10px">!</span> Violent</span>
+    <span><span class="crime-icon-demo" style="background:#e65100;width:13px;height:13px;font-size:9px">$</span> Theft</span>
+    <span><span class="crime-icon-demo" style="background:#1565c0;width:13px;height:13px;font-size:8px">&#x1F697;</span> Traffic</span>
+    <span><span class="crime-icon-demo" style="background:#6a1b9a;width:13px;height:13px;font-size:8px">&#x1F48A;</span> Drugs</span>
     <span><span class="crime-icon-demo" style="background:#f9a825;width:12px;height:12px;font-size:8px">&#x1F441;</span> Suspicious</span>
     <span><span class="crime-icon-demo" style="background:#bf360c;width:12px;height:12px;font-size:8px">&#x1F525;</span> Fire</span>
     <span><span class="crime-icon-demo" style="background:#2e7d32;width:12px;height:12px;font-size:8px">+</span> Medical</span>
     <span><span class="crime-icon-demo" style="background:#757575;width:10px;height:10px;font-size:7px">&#x2022;</span> Other</span>
   </div>
   <span class="legend-divider"></span>
-  <div class="legend-section" style="gap:10px">
-    <span><span class="crime-icon-demo" style="background:#555;width:24px;height:24px;font-size:7px">&nbsp;</span> Critical</span>
-    <span><span class="crime-icon-demo" style="background:#555;width:20px;height:20px;font-size:7px">&nbsp;</span> High</span>
-    <span><span class="crime-icon-demo" style="background:#555;width:16px;height:16px;font-size:7px">&nbsp;</span> Med</span>
-    <span><span class="crime-icon-demo" style="background:#555;width:12px;height:12px;font-size:7px">&nbsp;</span> Low</span>
+  <div class="legend-section" style="gap:8px">
+    <span><span class="crime-icon-demo" style="background:#555;width:20px;height:20px;font-size:7px">&nbsp;</span> Crit</span>
+    <span><span class="crime-icon-demo" style="background:#555;width:16px;height:16px;font-size:7px">&nbsp;</span> High</span>
+    <span><span class="crime-icon-demo" style="background:#555;width:13px;height:13px;font-size:7px">&nbsp;</span> Med</span>
+    <span><span class="crime-icon-demo" style="background:#555;width:10px;height:10px;font-size:7px">&nbsp;</span> Low</span>
   </div>
 </div>
 
-<div class="map-wrap">
-  <div id="map"></div>
-  <button class="feed-toggle" id="feed-toggle">Feed <span class="feed-count" id="feed-count">0</span></button>
-</div>
-<div class="feed-panel" id="feed-panel">
-  <div class="feed-drag" id="feed-drag"><div class="feed-drag-grip"></div></div>
-  <div class="feed-header" id="feed-header">
-    <span class="feed-header-title">Latest in view</span>
-    <span class="feed-header-close" id="feed-close">close</span>
+<div class="main-area">
+  <div class="map-wrap">
+    <div id="map"></div>
+    <button class="feed-toggle" id="feed-toggle">Feed <span class="feed-count" id="feed-count">0</span></button>
   </div>
-  <div id="feed-list"></div>
+  <div class="feed-panel" id="feed-panel">
+    <div class="feed-header" id="feed-header">
+      <span class="feed-header-title">Latest in view</span>
+      <span class="feed-header-close" id="feed-close">close</span>
+    </div>
+    <div id="feed-list"></div>
+    <div class="feed-drag" id="feed-drag"><div class="feed-drag-grip"></div></div>
+  </div>
 </div>
 
-<div class="content">
-  <div class="stats">
-    <div class="stat"><div class="num" id="inc-count">—</div><div class="label" id="inc-label">Incidents (7d)</div></div>
-    <div class="stat"><div class="num" id="case-count">—</div><div class="label">Crime Reports</div></div>
-    <div class="stat"><div class="num" id="agency-count">4</div><div class="label">Agencies</div></div>
+<div class="stats-bar">
+  <div class="stat"><div class="num" id="inc-count">—</div><div class="label" id="inc-label">Incidents (7d)</div></div>
+  <div class="stat"><div class="num" id="case-count">—</div><div class="label">Crime Reports</div></div>
+  <div class="stat"><div class="num" id="agency-count">4</div><div class="label">Agencies</div></div>
+</div>
+
+<div class="info-section">
+  <div class="info-grid">
+    <div>
+      <h2>Agencies</h2>
+      <ul class="agencies">
+        <li>Menlo Park PD <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
+        <li>Atherton PD <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
+        <li>Palo Alto PD <span class="badge badge-inc">incidents</span></li>
+        <li>SMC Sheriff <span class="badge badge-case">cases only</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>JSON Endpoints</h2>
+      <ul class="endpoints">
+        <li><a href="feed.json">feed.json</a> <span class="desc">— All data</span></li>
+        <li><a href="incidents.json">incidents.json</a> <span class="desc">— Incidents only</span></li>
+        <li><a href="cases.json">cases.json</a> <span class="desc">— Cases only</span></li>
+      </ul>
+    </div>
   </div>
-
-  <h2>Agencies</h2>
-  <ul class="agencies">
-    <li>Menlo Park Police Department <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
-    <li>Atherton Police Department <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
-    <li>Palo Alto Police Department <span class="badge badge-inc">incidents</span></li>
-    <li>San Mateo County Sheriff's Office <span class="badge badge-case">cases only</span></li>
-  </ul>
-
-  <h2>JSON Endpoints</h2>
-  <ul class="endpoints">
-    <li><a href="feed.json">feed.json</a> <span class="desc">— All incidents + cases combined</span></li>
-    <li><a href="incidents.json">incidents.json</a> <span class="desc">— Incidents only (calls for service)</span></li>
-    <li><a href="cases.json">cases.json</a> <span class="desc">— Cases only (crime reports)</span></li>
-  </ul>
-
-  <h2>Fetch Example</h2>
-  <pre>fetch('/feed.json')
-  .then(r =&gt; r.json())
-  .then(({ meta, incidents, cases }) =&gt; {
-    console.log(`${meta.incident_count} incidents, ${meta.case_count} cases`)
-    incidents.forEach(i =&gt;
-      console.log(i.callType, i.street, i._agency))
-  })</pre>
 </div>
 
 <footer>
-  Data sourced from <a href="https://citizenrims.com" style="color:#666">CitizenRIMS</a> (Sun Ridge Systems) and <a href="https://gis.cityofpaloalto.org" style="color:#666">City of Palo Alto GIS</a>.
+  Data from <a href="https://citizenrims.com" style="color:#666">CitizenRIMS</a> and <a href="https://gis.cityofpaloalto.org" style="color:#666">Palo Alto GIS</a>.
   Auto-updated via GitHub Actions.
 </footer>
+
+</div><!-- .page -->
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
@@ -461,8 +496,11 @@ const feedCountEl = document.getElementById('feed-count');
 
 const feedDrag = document.getElementById('feed-drag');
 const mapWrap = document.querySelector('.map-wrap');
+const wideQuery = window.matchMedia('(min-width: 1200px)');
+function isWide() { return wideQuery.matches; }
 
 document.getElementById('feed-toggle').addEventListener('click', () => {
+  if (isWide()) return; // sidebar always visible on wide
   feedOpen = !feedOpen;
   if (feedOpen) {
     feedPanel.style.height = '';
@@ -480,13 +518,22 @@ document.getElementById('feed-close').addEventListener('click', (e) => {
   feedPanel.style.height = '';
 });
 
-// Drag to resize (drag down = expand)
+// Drag bottom grip to resize — grip tracks cursor
 let dragStartY = 0, dragStartH = 0;
 function onDragMove(clientY) {
   const maxH = window.innerHeight * 0.7;
   const delta = clientY - dragStartY;
-  const newH = Math.max(80, Math.min(maxH, dragStartH + delta));
+  const newH = Math.max(60, Math.min(maxH, dragStartH + delta));
   feedPanel.style.height = newH + 'px';
+}
+function onDragEnd() {
+  feedPanel.classList.remove('feed-dragging');
+  // Snap closed if too small
+  if (feedPanel.offsetHeight < 100) {
+    feedOpen = false;
+    feedPanel.classList.remove('feed-open');
+    feedPanel.style.height = '';
+  }
 }
 feedDrag.addEventListener('mousedown', e => {
   e.preventDefault();
@@ -495,7 +542,7 @@ feedDrag.addEventListener('mousedown', e => {
   feedPanel.classList.add('feed-dragging');
   const onMove = ev => onDragMove(ev.clientY);
   const onUp = () => {
-    feedPanel.classList.remove('feed-dragging');
+    onDragEnd();
     document.removeEventListener('mousemove', onMove);
     document.removeEventListener('mouseup', onUp);
   };
@@ -508,7 +555,7 @@ feedDrag.addEventListener('touchstart', e => {
   feedPanel.classList.add('feed-dragging');
   const onMove = ev => { ev.preventDefault(); onDragMove(ev.touches[0].clientY); };
   const onEnd = () => {
-    feedPanel.classList.remove('feed-dragging');
+    onDragEnd();
     document.removeEventListener('touchmove', onMove);
     document.removeEventListener('touchend', onEnd);
   };
@@ -562,10 +609,20 @@ feedList.addEventListener('click', e => {
   setTimeout(() => m.openPopup(), 300);
 });
 
+// On wide screens, feed is always visible as sidebar
+wideQuery.addEventListener('change', () => {
+  if (isWide()) {
+    feedOpen = true;
+    feedPanel.classList.add('feed-open');
+    feedPanel.style.height = '';
+    updateFeed();
+    map.invalidateSize();
+  }
+});
+
 map.on('moveend', () => {
-  if (feedOpen) updateFeed();
+  if (feedOpen || isWide()) updateFeed();
   else {
-    // Still update count badge
     const bounds = map.getBounds();
     let count = 0;
     visibleSet.forEach(m => { if (bounds.contains(m.getLatLng())) count++; });
@@ -573,7 +630,13 @@ map.on('moveend', () => {
   }
 });
 
-loadData();
+loadData().then(() => {
+  if (isWide()) {
+    feedOpen = true;
+    feedPanel.classList.add('feed-open');
+    updateFeed();
+  }
+});
 setInterval(updateLastUpdated, 60000);
 </script>
 
