@@ -633,6 +633,18 @@ function applyFilters() {
   if (typeof updateFeed === 'function') updateFeed();
 }
 
+let moPolyLayer = null;
+function toggleMenloOaksPoly() {
+  if (geoMenloOaks && !moPolyLayer) {
+    moPolyLayer = L.polygon(MENLO_OAKS_POLY, {
+      color: '#004d40', weight: 3, opacity: 0.8, fillColor: '#00695c', fillOpacity: 0.06, dashArray: '6 4',
+    }).addTo(map);
+  } else if (!geoMenloOaks && moPolyLayer) {
+    moPolyLayer.remove();
+    moPolyLayer = null;
+  }
+}
+
 // Restore active button states from saved settings
 document.querySelectorAll('.filter-btn').forEach(b => {
   b.classList.toggle('active', b.dataset.filter === activeFilter);
@@ -641,6 +653,7 @@ document.querySelectorAll('.time-btn').forEach(b => {
   b.classList.toggle('active', parseInt(b.dataset.days) === activeDays);
 });
 document.getElementById('geo-menlooaks').classList.toggle('active', geoMenloOaks);
+toggleMenloOaksPoly();
 
 document.querySelector('.filter-bar').addEventListener('click', e => {
   if (e.target.classList.contains('filter-btn')) {
@@ -661,6 +674,7 @@ document.querySelector('.filter-bar').addEventListener('click', e => {
 document.getElementById('geo-menlooaks').addEventListener('click', e => {
   geoMenloOaks = !geoMenloOaks;
   e.target.classList.toggle('active', geoMenloOaks);
+  toggleMenloOaksPoly();
   saveSettings();
   applyFilters();
 });
