@@ -71,9 +71,20 @@
 
   .chart-section { padding: 14px; background: #f5f6f8; }
   .chart-wrap { background: #fff; border-radius: 8px; padding: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-  .chart-wrap h2 { font-size: 0.82rem; margin: 0 0 8px; color: #444; font-weight: 600; }
-  .chart-container { position: relative; height: 180px; transition: height 0.2s ease; cursor: pointer; }
-  .chart-container.chart-expanded { height: 360px; }
+  .chart-wrap h2 { font-size: 0.82rem; margin: 0; color: #444; font-weight: 600; }
+  .chart-container { position: relative; height: 180px; }
+  .chart-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .chart-header h2 { margin: 0; }
+  .chart-expand-btn { background: none; border: 1px solid #ccc; border-radius: 4px; padding: 2px 6px; cursor: pointer; color: #666; font-size: 0.75rem; line-height: 1; }
+  .chart-expand-btn:hover { background: #f0f0f0; border-color: #999; }
+  .chart-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.5); align-items: center; justify-content: center; padding: 24px; }
+  .chart-overlay.active { display: flex; }
+  .chart-overlay-inner { background: #fff; border-radius: 10px; padding: 20px; width: 100%; max-width: 96vw; height: 85vh; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
+  .chart-overlay-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .chart-overlay-header h2 { font-size: 0.92rem; margin: 0; color: #444; font-weight: 600; }
+  .chart-close-btn { background: none; border: 1px solid #ccc; border-radius: 4px; padding: 2px 8px; cursor: pointer; color: #666; font-size: 0.85rem; line-height: 1.2; }
+  .chart-close-btn:hover { background: #f0f0f0; border-color: #999; }
+  .chart-overlay-chart { flex: 1; position: relative; min-height: 0; }
   .chart-summary { margin-top: 10px; width: 100%; border-collapse: collapse; font-size: 0.75rem; }
   .chart-summary th, .chart-summary td { padding: 4px 8px; text-align: right; border-bottom: 1px solid #eee; }
   .chart-summary th { text-align: left; color: #666; font-weight: 600; }
@@ -242,12 +253,30 @@
 
 <div class="chart-section">
   <div class="chart-wrap">
-    <h2 id="chart-title">Incidents per day</h2>
+    <div class="chart-header">
+      <h2 id="chart-title">Incidents per day</h2>
+      <button class="chart-expand-btn" id="chart-expand-btn" title="Expand chart">&#x26F6;</button>
+    </div>
     <div class="chart-container"><canvas id="timeline-chart"></canvas></div>
     <table class="chart-summary" id="chart-summary">
       <thead><tr><th>Watch</th><th>Total</th><th>Avg/day</th></tr></thead>
       <tbody id="chart-summary-body"></tbody>
       <tfoot><tr><td class="label-cell">Total</td><td id="cs-total">—</td><td id="cs-avg">—</td></tr></tfoot>
+    </table>
+  </div>
+</div>
+
+<div class="chart-overlay" id="chart-overlay">
+  <div class="chart-overlay-inner">
+    <div class="chart-overlay-header">
+      <h2 id="chart-overlay-title">Activity by watch</h2>
+      <button class="chart-close-btn" id="chart-close-btn" title="Close">&#x2715; Close</button>
+    </div>
+    <div class="chart-overlay-chart"><canvas id="overlay-chart"></canvas></div>
+    <table class="chart-summary" id="overlay-summary">
+      <thead><tr><th>Watch</th><th>Total</th><th>Avg/day</th></tr></thead>
+      <tbody id="overlay-summary-body"></tbody>
+      <tfoot><tr><td class="label-cell">Total</td><td id="os-total">—</td><td id="os-avg">—</td></tr></tfoot>
     </table>
   </div>
 </div>
@@ -674,11 +703,46 @@ function applyFilters() {
   updateChart(toAdd);
 }
 
-document.querySelector('.chart-container').addEventListener('click', e => {
-  if (e.target.closest('.chart-container')) {
-    e.target.closest('.chart-container').classList.toggle('chart-expanded');
-    if (timelineChart) timelineChart.resize();
+let overlayChart = null;
+let lastChartData = null;
+function openChartOverlay() {
+  const overlay = document.getElementById('chart-overlay');
+  overlay.classList.add('active');
+  document.getElementById('chart-overlay-title').textContent =
+    document.getElementById('chart-title').textContent;
+  // Copy summary table
+  document.getElementById('overlay-summary-body').innerHTML =
+    document.getElementById('chart-summary-body').innerHTML;
+  document.getElementById('os-total').textContent =
+    document.getElementById('cs-total').textContent;
+  document.getElementById('os-avg').textContent =
+    document.getElementById('cs-avg').textContent;
+  // Build or update overlay chart
+  if (lastChartData) {
+    const ctx = document.getElementById('overlay-chart').getContext('2d');
+    if (overlayChart) {
+      overlayChart.data = JSON.parse(JSON.stringify(lastChartData));
+      overlayChart.update('none');
+    } else {
+      overlayChart = new Chart(ctx, {
+        type: 'bar',
+        data: JSON.parse(JSON.stringify(lastChartData)),
+        options: { ...timelineChart.options, animation: false },
+      });
+    }
+    setTimeout(() => overlayChart.resize(), 50);
   }
+}
+function closeChartOverlay() {
+  document.getElementById('chart-overlay').classList.remove('active');
+}
+document.getElementById('chart-expand-btn').addEventListener('click', openChartOverlay);
+document.getElementById('chart-close-btn').addEventListener('click', closeChartOverlay);
+document.getElementById('chart-overlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeChartOverlay();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeChartOverlay();
 });
 
 // Watch periods: Day 0700-1500, Swing 1500-2300, Night 2300-0700
@@ -751,6 +815,8 @@ function updateChart(markers) {
     borderRadius: wi === 2 ? { topLeft: 3, topRight: 3 } : 0,
   }));
 
+  lastChartData = { labels, datasets };
+
   if (timelineChart) {
     timelineChart.data.labels = labels;
     datasets.forEach((ds, i) => {
@@ -758,6 +824,9 @@ function updateChart(markers) {
       timelineChart.data.datasets[i].backgroundColor = ds.backgroundColor;
     });
     timelineChart.update('none');
+    if (overlayChart && document.getElementById('chart-overlay').classList.contains('active')) {
+      openChartOverlay();
+    }
     return;
   }
 
