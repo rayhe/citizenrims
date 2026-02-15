@@ -388,6 +388,12 @@ function saveSettings() {
   localStorage.setItem('cf_settings', JSON.stringify({
     filter: activeFilter, days: activeDays, geo: geoMenloOaks,
   }));
+  const p = new URLSearchParams();
+  if (activeFilter !== 'all') p.set('filter', activeFilter);
+  if (activeDays !== 7) p.set('days', activeDays);
+  if (geoMenloOaks) p.set('geo', '1');
+  const qs = p.toString();
+  history.replaceState(null, '', qs ? '?' + qs : window.location.pathname);
 }
 const saved = (() => { try { return JSON.parse(localStorage.getItem('cf_settings')) || {}; } catch { return {}; } })();
 const urlParams = new URLSearchParams(window.location.search);
