@@ -85,12 +85,15 @@
   .chart-close-btn { background: none; border: 1px solid #ccc; border-radius: 4px; padding: 2px 8px; cursor: pointer; color: #666; font-size: 0.85rem; line-height: 1.2; }
   .chart-close-btn:hover { background: #f0f0f0; border-color: #999; }
   .chart-overlay-chart { flex: 1; position: relative; min-height: 0; }
-  .chart-summary { margin-top: 10px; width: 100%; border-collapse: collapse; font-size: 0.75rem; }
-  .chart-summary th, .chart-summary td { padding: 4px 8px; text-align: right; border-bottom: 1px solid #eee; }
-  .chart-summary th { text-align: left; color: #666; font-weight: 600; }
-  .chart-summary td.label-cell { text-align: left; font-weight: 500; }
-  .chart-summary .watch-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
-  .chart-summary tfoot td { border-top: 2px solid #ccc; font-weight: 700; }
+  .heatmap { margin-top: 10px; width: 100%; border-collapse: collapse; font-size: 0.72rem; }
+  .heatmap th, .heatmap td { padding: 4px 6px; text-align: center; }
+  .heatmap th { color: #666; font-weight: 600; font-size: 0.68rem; }
+  .heatmap th.row-label { text-align: left; }
+  .heatmap td.row-label { text-align: left; font-weight: 500; white-space: nowrap; }
+  .heatmap td.heat { border-radius: 3px; font-weight: 600; min-width: 28px; }
+  .heatmap td.sum-cell { font-weight: 700; color: #444; }
+  .heatmap .watch-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 3px; vertical-align: middle; }
+  .heatmap tfoot td { border-top: 2px solid #ccc; font-weight: 700; }
 
   .info-section { padding: 16px; background: #f5f6f8; }
   .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -258,11 +261,7 @@
       <button class="chart-expand-btn" id="chart-expand-btn" title="Expand chart">&#x26F6;</button>
     </div>
     <div class="chart-container"><canvas id="timeline-chart"></canvas></div>
-    <table class="chart-summary" id="chart-summary">
-      <thead><tr><th>Watch</th><th>Total</th><th>Avg/day</th></tr></thead>
-      <tbody id="chart-summary-body"></tbody>
-      <tfoot><tr><td class="label-cell">Total</td><td id="cs-total">—</td><td id="cs-avg">—</td></tr></tfoot>
-    </table>
+    <table class="heatmap" id="chart-heatmap"></table>
   </div>
 </div>
 
@@ -273,11 +272,7 @@
       <button class="chart-close-btn" id="chart-close-btn" title="Close">&#x2715; Close</button>
     </div>
     <div class="chart-overlay-chart"><canvas id="overlay-chart"></canvas></div>
-    <table class="chart-summary" id="overlay-summary">
-      <thead><tr><th>Watch</th><th>Total</th><th>Avg/day</th></tr></thead>
-      <tbody id="overlay-summary-body"></tbody>
-      <tfoot><tr><td class="label-cell">Total</td><td id="os-total">—</td><td id="os-avg">—</td></tr></tfoot>
-    </table>
+    <table class="heatmap" id="overlay-heatmap"></table>
   </div>
 </div>
 
@@ -710,27 +705,27 @@ function openChartOverlay() {
   overlay.classList.add('active');
   document.getElementById('chart-overlay-title').textContent =
     document.getElementById('chart-title').textContent;
-  // Copy summary table
-  document.getElementById('overlay-summary-body').innerHTML =
-    document.getElementById('chart-summary-body').innerHTML;
-  document.getElementById('os-total').textContent =
-    document.getElementById('cs-total').textContent;
-  document.getElementById('os-avg').textContent =
-    document.getElementById('cs-avg').textContent;
+  // Copy heatmap
+  document.getElementById('overlay-heatmap').innerHTML =
+    document.getElementById('chart-heatmap').innerHTML;
   // Build or update overlay chart
   if (lastChartData) {
     const ctx = document.getElementById('overlay-chart').getContext('2d');
     if (overlayChart) {
-      overlayChart.data = JSON.parse(JSON.stringify(lastChartData));
-      overlayChart.update('none');
-    } else {
-      overlayChart = new Chart(ctx, {
-        type: 'bar',
-        data: JSON.parse(JSON.stringify(lastChartData)),
-        options: { ...timelineChart.options, animation: false },
-      });
+      overlayChart.destroy();
+      overlayChart = null;
     }
-    setTimeout(() => overlayChart.resize(), 50);
+    overlayChart = new Chart(ctx, {
+      type: 'bar',
+      data: JSON.parse(JSON.stringify(lastChartData)),
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: false,
+        plugins: timelineChart.options.plugins,
+        scales: timelineChart.options.scales,
+      },
+    });
   }
 }
 function closeChartOverlay() {
@@ -756,6 +751,45 @@ function getWatch(hour) {
   if (hour >= 7 && hour < 15) return 0;   // Day
   if (hour >= 15 && hour < 23) return 1;  // Swing
   return 2;                                // Night
+}
+
+function heatColor(val, max) {
+  // 5-stop gradient: green → yellowgreen → yellow → orange → red
+  const stops = [
+    [76,175,80],    // green
+    [139,195,74],   // yellowgreen
+    [255,235,59],   // yellow
+    [255,152,0],    // orange
+    [229,57,53],    // red
+  ];
+  const t = max > 0 ? Math.min(val / max, 1) : 0;
+  const seg = t * (stops.length - 1);
+  const i = Math.min(Math.floor(seg), stops.length - 2);
+  const f = seg - i;
+  const r = Math.round(stops[i][0] + f * (stops[i+1][0] - stops[i][0]));
+  const g = Math.round(stops[i][1] + f * (stops[i+1][1] - stops[i][1]));
+  const b = Math.round(stops[i][2] + f * (stops[i+1][2] - stops[i][2]));
+  const alpha = 0.25 + 0.55 * t;
+  return `rgba(${r},${g},${b},${alpha})`;
+}
+
+function buildHeatmap(tableId, grid, dow, rowTotals, colTotals, grand, maxVal) {
+  const tbl = document.getElementById(tableId);
+  let html = '<thead><tr><th class="row-label"></th>';
+  dow.forEach(d => html += `<th>${d}</th>`);
+  html += '<th>Total</th></tr></thead><tbody>';
+  WATCHES.forEach((w, wi) => {
+    html += `<tr><td class="row-label"><span class="watch-dot" style="background:${w.color}"></span>${w.label}</td>`;
+    grid[wi].forEach(v => {
+      const bg = heatColor(v, maxVal);
+      html += `<td class="heat" style="background:${bg}">${v}</td>`;
+    });
+    html += `<td class="sum-cell">${rowTotals[wi]}</td></tr>`;
+  });
+  html += '</tbody><tfoot><tr><td class="row-label"><strong>Total</strong></td>';
+  colTotals.forEach(v => html += `<td class="sum-cell">${v}</td>`);
+  html += `<td class="sum-cell">${grand}</td></tr></tfoot>`;
+  tbl.innerHTML = html;
 }
 
 let timelineChart = null;
@@ -793,18 +827,20 @@ function updateChart(markers) {
 
   document.getElementById('chart-title').textContent = `Activity by watch (${days}d)`;
 
-  // Populate summary table
-  const totals = [0, 0, 0];
-  dayBuckets.forEach(b => { totals[0] += b.day; totals[1] += b.swing; totals[2] += b.night; });
-  const grand = totals[0] + totals[1] + totals[2];
-  const nDays = dayBuckets.length || 1;
-  const tbody = document.getElementById('chart-summary-body');
-  tbody.innerHTML = WATCHES.map((w, i) =>
-    `<tr><td class="label-cell"><span class="watch-dot" style="background:${w.color}"></span>${w.label}</td>` +
-    `<td>${totals[i]}</td><td>${(totals[i] / nDays).toFixed(1)}</td></tr>`
-  ).join('');
-  document.getElementById('cs-total').textContent = grand;
-  document.getElementById('cs-avg').textContent = (grand / nDays).toFixed(1);
+  // Build watch x day-of-week heatmap: grid[watch][dow] = count
+  const DOW = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  const grid = WATCHES.map(() => [0,0,0,0,0,0,0]);
+  const colTotals = [0,0,0,0,0,0,0];
+  const rowTotals = [0,0,0];
+  dayBuckets.forEach(b => {
+    const dow = (b.date.getDay() + 6) % 7; // 0=Mon
+    grid[0][dow] += b.day;   grid[1][dow] += b.swing;  grid[2][dow] += b.night;
+  });
+  grid.forEach((row, wi) => row.forEach((v, di) => { rowTotals[wi] += v; colTotals[di] += v; }));
+  const grand = rowTotals.reduce((a, b) => a + b, 0);
+  const allCells = grid.flat();
+  const maxVal = Math.max(...allCells, 1);
+  buildHeatmap('chart-heatmap', grid, DOW, rowTotals, colTotals, grand, maxVal);
 
   const datasets = WATCHES.map((w, wi) => ({
     label: w.label,
