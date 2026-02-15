@@ -288,7 +288,9 @@ def send_alert(item, dist_m):
     elif re.search(r"vandal|forgery|identity|embezzle", ct, re.IGNORECASE):
         severity = "Medium"
 
-    subject = f"{crime} — {dist_mi:.1f}mi from Menlo Oaks ({severity})"
+    # Short location for subject line
+    short_loc = street or city or "Unknown"
+    subject = f"{crime} near {short_loc} — {dist_mi:.1f}mi from Menlo Oaks ({severity})"
 
     # Format date nicely
     date_display = date_raw
