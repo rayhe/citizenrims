@@ -69,6 +69,11 @@
   .stat .num { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; letter-spacing: -0.03em; }
   .stat .label { font-size: 0.68rem; color: #888; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.03em; }
 
+  .chart-section { padding: 14px; background: #f5f6f8; }
+  .chart-wrap { background: #fff; border-radius: 8px; padding: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .chart-wrap h2 { font-size: 0.82rem; margin: 0 0 8px; color: #444; font-weight: 600; }
+  #timeline-chart { width: 100%; height: 140px; }
+
   .info-section { padding: 16px; background: #f5f6f8; }
   .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   h2 { font-size: 0.92rem; margin: 0 0 8px; color: #444; font-weight: 600; }
@@ -228,6 +233,13 @@
   <div class="stat"><div class="num" id="agency-count">4</div><div class="label">Agencies</div></div>
 </div>
 
+<div class="chart-section">
+  <div class="chart-wrap">
+    <h2 id="chart-title">Incidents per day</h2>
+    <canvas id="timeline-chart"></canvas>
+  </div>
+</div>
+
 <div class="info-section">
   <div class="info-grid">
     <div>
@@ -258,6 +270,7 @@
 </div><!-- .page -->
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/chart.js@4/dist/chart.umd.min.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script>
 const COLORS = {
@@ -642,6 +655,63 @@ function applyFilters() {
   document.getElementById('case-count').textContent = visibleCase.toLocaleString();
   document.getElementById('inc-label').textContent = `Incidents (${activeDays}d)`;
   if (typeof updateFeed === 'function') updateFeed();
+  updateChart(toAdd);
+}
+
+let timelineChart = null;
+function updateChart(markers) {
+  const days = activeDays;
+  const now = new Date();
+  const buckets = {};
+  for (let i = 0; i < days; i++) {
+    const d = new Date(now);
+    d.setDate(d.getDate() - i);
+    buckets[d.toISOString().slice(0, 10)] = 0;
+  }
+  markers.forEach(m => {
+    if (!m._itemDate) return;
+    const key = m._itemDate.toISOString().slice(0, 10);
+    if (key in buckets) buckets[key]++;
+  });
+  const sorted = Object.keys(buckets).sort();
+  const labels = sorted.map(d => {
+    const dt = new Date(d + 'T12:00:00');
+    return dt.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+  });
+  const data = sorted.map(d => buckets[d]);
+
+  document.getElementById('chart-title').textContent = `Incidents per day (${days}d)`;
+
+  if (timelineChart) {
+    timelineChart.data.labels = labels;
+    timelineChart.data.datasets[0].data = data;
+    timelineChart.update('none');
+    return;
+  }
+  const ctx = document.getElementById('timeline-chart').getContext('2d');
+  timelineChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        data,
+        backgroundColor: 'rgba(26,26,46,0.6)',
+        borderRadius: 2,
+      }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { callbacks: {
+        title: items => items[0].label,
+        label: item => `${item.raw} incident${item.raw !== 1 ? 's' : ''}`,
+      }}},
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 45, autoSkip: true, maxTicksLimit: days <= 14 ? days : 16 }},
+        y: { beginAtZero: true, grid: { color: '#f0f0f0' }, ticks: { font: { size: 10 }, precision: 0 }},
+      },
+    },
+  });
 }
 
 let moPolyLayer = null;
