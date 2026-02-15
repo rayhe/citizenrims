@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/ alerted.json
+          git add public/ alerted.json alert_log.json
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "Update crime data $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           git pull --rebase

@@ -20,6 +20,7 @@ API_BASE = "https://api.v1.citizenrims.com"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(BASE_DIR, "public")
 ALERTED_PATH = os.path.join(BASE_DIR, "alerted.json")
+ALERT_LOG_PATH = os.path.join(BASE_DIR, "alert_log.json")
 
 AGENCIES = ["menlopark", "atherton", "smcsheriff"]
 
@@ -267,6 +268,33 @@ def save_alerted(ids):
         json.dump(sorted(ids), f)
 
 
+def log_alert(item, dist_m, subject, status, error=None):
+    """Append an entry to alert_log.json."""
+    log = []
+    if os.path.exists(ALERT_LOG_PATH):
+        with open(ALERT_LOG_PATH) as f:
+            try:
+                log = json.load(f)
+            except json.JSONDecodeError:
+                log = []
+    entry = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "id": item_id(item),
+        "subject": subject,
+        "street": item.get("street", ""),
+        "city": item.get("city", ""),
+        "agency": item.get("_agency", ""),
+        "distance_mi": round(dist_m / 1609.34, 2),
+        "recipients": ALERT_RECIPIENTS,
+        "status": status,
+    }
+    if error:
+        entry["error"] = str(error)
+    log.append(entry)
+    with open(ALERT_LOG_PATH, "w") as f:
+        json.dump(log, f, indent=2)
+
+
 def send_alert(item, dist_m):
     smtp_user = os.environ.get("ALERT_EMAIL_USER", "")
     smtp_pass = os.environ.get("ALERT_EMAIL_PASSWORD", "")
@@ -369,8 +397,10 @@ def send_alert(item, dist_m):
             s.login(smtp_user, smtp_pass)
             s.sendmail(smtp_user, ALERT_RECIPIENTS, msg.as_string())
         print(f"    Sent alert: {subject}")
+        log_alert(item, dist_m, subject, "sent")
     except Exception as e:
         print(f"    WARN: email failed: {e}")
+        log_alert(item, dist_m, subject, "failed", error=e)
 
 
 def check_alerts(all_incidents, all_cases):
