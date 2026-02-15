@@ -690,13 +690,19 @@ function updateChart(markers) {
   }
   const ctx = document.getElementById('timeline-chart').getContext('2d');
   timelineChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     data: {
       labels,
       datasets: [{
         data,
-        backgroundColor: 'rgba(26,26,46,0.6)',
-        borderRadius: 2,
+        borderColor: '#1a1a2e',
+        borderWidth: 1.5,
+        backgroundColor: 'rgba(26,26,46,0.08)',
+        fill: true,
+        tension: 0.3,
+        pointRadius: days <= 14 ? 3 : 1.5,
+        pointHoverRadius: 5,
+        pointBackgroundColor: '#1a1a2e',
       }],
     },
     options: {
