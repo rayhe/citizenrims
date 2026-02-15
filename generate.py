@@ -384,7 +384,7 @@ def send_alert(item, dist_m):
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
-    msg["From"] = "Menlo Oaks Safety <menlooaks@rayhe.net>"
+    msg["From"] = smtp_user
     msg["To"] = ", ".join(ALERT_RECIPIENTS)
 
     plain = f"{crime}\n{location}\n{agency}\nDistance: {dist_mi:.1f}mi from Menlo Oaks\nDate: {date_display}\nSeverity: {severity}\n\nView map: {MAP_URL}"
