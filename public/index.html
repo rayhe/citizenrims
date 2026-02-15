@@ -63,8 +63,8 @@
   .feed-toggle { position: absolute; bottom: 10px; right: 10px; z-index: 1000; background: #1a1a2e; color: #fff; border: none; padding: 7px 14px; border-radius: 16px; font: 600 0.78rem system-ui; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.3); transition: all 0.15s ease; }
   .feed-toggle:hover { background: #2d2d50; }
   .feed-toggle .feed-count { background: rgba(255,255,255,0.2); padding: 1px 6px; border-radius: 8px; margin-left: 5px; font-size: 0.7rem; }
-  .feed-panel { position: absolute; bottom: 0; left: 0; right: 0; z-index: 999; background: #fff; border-top: 1px solid #ddd; height: 0; overflow: hidden; transition: height 0.2s ease; box-shadow: 0 -2px 8px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
-  .feed-panel.feed-open { height: 40%; }
+  .feed-panel { background: #fff; border-top: 1px solid #ddd; height: 0; overflow: hidden; transition: height 0.2s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: flex; flex-direction: column; }
+  .feed-panel.feed-open { height: 240px; }
   .feed-panel.feed-dragging { transition: none; }
   .feed-drag { height: 20px; display: flex; align-items: center; justify-content: center; cursor: ns-resize; flex-shrink: 0; background: #fafafa; border-bottom: 1px solid #eee; touch-action: none; }
   .feed-drag-grip { width: 32px; height: 4px; border-radius: 2px; background: #ccc; }
@@ -155,14 +155,14 @@
 <div class="map-wrap">
   <div id="map"></div>
   <button class="feed-toggle" id="feed-toggle">Feed <span class="feed-count" id="feed-count">0</span></button>
-  <div class="feed-panel" id="feed-panel">
-    <div class="feed-drag" id="feed-drag"><div class="feed-drag-grip"></div></div>
-    <div class="feed-header" id="feed-header">
-      <span class="feed-header-title">Latest in view</span>
-      <span class="feed-header-close" id="feed-close">close</span>
-    </div>
-    <div id="feed-list"></div>
+</div>
+<div class="feed-panel" id="feed-panel">
+  <div class="feed-drag" id="feed-drag"><div class="feed-drag-grip"></div></div>
+  <div class="feed-header" id="feed-header">
+    <span class="feed-header-title">Latest in view</span>
+    <span class="feed-header-close" id="feed-close">close</span>
   </div>
+  <div id="feed-list"></div>
 </div>
 
 <div class="content">
@@ -467,12 +467,12 @@ document.getElementById('feed-close').addEventListener('click', (e) => {
   feedPanel.style.height = '';
 });
 
-// Drag to resize
+// Drag to resize (drag down = expand)
 let dragStartY = 0, dragStartH = 0;
 function onDragMove(clientY) {
-  const wrapH = mapWrap.offsetHeight;
-  const delta = dragStartY - clientY;
-  const newH = Math.max(80, Math.min(wrapH - 40, dragStartH + delta));
+  const maxH = window.innerHeight * 0.7;
+  const delta = clientY - dragStartY;
+  const newH = Math.max(80, Math.min(maxH, dragStartH + delta));
   feedPanel.style.height = newH + 'px';
 }
 feedDrag.addEventListener('mousedown', e => {
