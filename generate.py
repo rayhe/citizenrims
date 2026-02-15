@@ -35,9 +35,7 @@ PROPERTY_RE = re.compile(
 )
 
 ALERT_RECIPIENTS = [
-    "rayche@gmail.com",
-    "brentebrown@gmail.com",
-    "rmc@3emus.com",
+    r.strip() for r in os.environ.get("ALERT_RECIPIENTS", "").split(",") if r.strip()
 ]
 
 MAP_URL = "https://rayhe.github.io/citizenrims/"
@@ -261,6 +259,9 @@ def send_alert(item, dist_m):
     smtp_pass = os.environ.get("ALERT_EMAIL_PASSWORD", "")
     if not smtp_user or not smtp_pass:
         print("    SKIP email: ALERT_EMAIL_USER / ALERT_EMAIL_PASSWORD not set")
+        return
+    if not ALERT_RECIPIENTS:
+        print("    SKIP email: ALERT_RECIPIENTS not set")
         return
 
     src = item.get("_source", "")

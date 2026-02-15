@@ -24,6 +24,7 @@ jobs:
           DAYS: "31"
           ALERT_EMAIL_USER: ${{ secrets.ALERT_EMAIL_USER }}
           ALERT_EMAIL_PASSWORD: ${{ secrets.ALERT_EMAIL_PASSWORD }}
+          ALERT_RECIPIENTS: ${{ secrets.ALERT_RECIPIENTS }}
 
       - name: Commit and push if changed
         run: |
