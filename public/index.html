@@ -327,10 +327,18 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 }).addTo(map);
 
 let allMarkers = [];
-let activeFilter = 'all';
-let activeDays = 7;
-let geoMenloOaks = false;
 let lastRefreshDate = null;
+
+// Persist settings in localStorage
+function saveSettings() {
+  localStorage.setItem('cf_settings', JSON.stringify({
+    filter: activeFilter, days: activeDays, geo: geoMenloOaks,
+  }));
+}
+const saved = (() => { try { return JSON.parse(localStorage.getItem('cf_settings')) || {}; } catch { return {}; } })();
+let activeFilter = saved.filter || 'all';
+let activeDays = saved.days || 7;
+let geoMenloOaks = !!saved.geo;
 const clusterGroup = L.markerClusterGroup({
   maxClusterRadius: 10,
   spiderfyOnMaxZoom: false,
@@ -469,16 +477,27 @@ function applyFilters() {
   if (typeof updateFeed === 'function') updateFeed();
 }
 
+// Restore active button states from saved settings
+document.querySelectorAll('.filter-btn').forEach(b => {
+  b.classList.toggle('active', b.dataset.filter === activeFilter);
+});
+document.querySelectorAll('.time-btn').forEach(b => {
+  b.classList.toggle('active', parseInt(b.dataset.days) === activeDays);
+});
+document.getElementById('geo-menlooaks').classList.toggle('active', geoMenloOaks);
+
 document.querySelector('.filter-bar').addEventListener('click', e => {
   if (e.target.classList.contains('filter-btn')) {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     e.target.classList.add('active');
     activeFilter = e.target.dataset.filter;
+    saveSettings();
     applyFilters();
   } else if (e.target.classList.contains('time-btn')) {
     document.querySelectorAll('.time-btn').forEach(b => b.classList.remove('active'));
     e.target.classList.add('active');
     activeDays = parseInt(e.target.dataset.days);
+    saveSettings();
     applyFilters();
   }
 });
@@ -486,6 +505,7 @@ document.querySelector('.filter-bar').addEventListener('click', e => {
 document.getElementById('geo-menlooaks').addEventListener('click', e => {
   geoMenloOaks = !geoMenloOaks;
   e.target.classList.toggle('active', geoMenloOaks);
+  saveSettings();
   applyFilters();
 });
 
