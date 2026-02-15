@@ -285,7 +285,7 @@ def send_alert(item, dist_m):
     dist_mi = dist_m / 1609.34
 
     if src == "incident":
-        crime = item.get("callTypeDescription") or item.get("callType") or "Property Crime"
+        crime = item.get("callType") or item.get("callTypeDescription") or "Crime"
         date_raw = item.get("incidentDate", "")
         time_raw = item.get("incidentTime", "")
     else:
