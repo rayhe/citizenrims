@@ -72,7 +72,7 @@
   .chart-section { padding: 14px; background: #f5f6f8; }
   .chart-wrap { background: #fff; border-radius: 8px; padding: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
   .chart-wrap h2 { font-size: 0.82rem; margin: 0 0 8px; color: #444; font-weight: 600; }
-  .chart-container { position: relative; height: 80px; }
+  .chart-container { position: relative; height: 120px; }
 
   .info-section { padding: 16px; background: #f5f6f8; }
   .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -661,30 +661,36 @@ function applyFilters() {
 let timelineChart = null;
 function updateChart(markers) {
   const days = activeDays;
+  const totalHours = days * 24;
   const now = new Date();
-  const buckets = {};
-  for (let i = 0; i < days; i++) {
-    const d = new Date(now);
-    d.setDate(d.getDate() - i);
-    buckets[d.toISOString().slice(0, 10)] = 0;
+  const cutoff = new Date(now.getTime() - days * 86400000);
+  // Round cutoff down to the hour
+  cutoff.setMinutes(0, 0, 0);
+
+  // Build hourly buckets
+  const buckets = new Array(totalHours).fill(0);
+  const bucketStarts = [];
+  for (let i = 0; i < totalHours; i++) {
+    bucketStarts.push(new Date(cutoff.getTime() + i * 3600000));
   }
   markers.forEach(m => {
-    if (!m._itemDate) return;
-    const key = m._itemDate.toISOString().slice(0, 10);
-    if (key in buckets) buckets[key]++;
+    if (!m._itemDate || m._itemDate < cutoff) return;
+    const idx = Math.floor((m._itemDate.getTime() - cutoff.getTime()) / 3600000);
+    if (idx >= 0 && idx < totalHours) buckets[idx]++;
   });
-  const sorted = Object.keys(buckets).sort();
-  const labels = sorted.map(d => {
-    const dt = new Date(d + 'T12:00:00');
-    return dt.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
-  });
-  const data = sorted.map(d => buckets[d]);
 
-  document.getElementById('chart-title').textContent = `Incidents per day (${days}d)`;
+  // Labels: show date at midnight, skip other hours
+  const labels = bucketStarts.map(d => {
+    if (d.getHours() === 0) return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+    return '';
+  });
+
+  document.getElementById('chart-title').textContent = `Activity (${days}d, hourly)`;
 
   if (timelineChart) {
     timelineChart.data.labels = labels;
-    timelineChart.data.datasets[0].data = data;
+    timelineChart.data.datasets[0].data = buckets;
+    timelineChart.options.scales.x.ticks.maxTicksLimit = days <= 7 ? 8 : days <= 14 ? 15 : 16;
     timelineChart.update('none');
     return;
   }
@@ -694,14 +700,15 @@ function updateChart(markers) {
     data: {
       labels,
       datasets: [{
-        data,
+        data: buckets,
         borderColor: '#1a1a2e',
-        borderWidth: 1.5,
+        borderWidth: 1,
         backgroundColor: 'rgba(26,26,46,0.08)',
         fill: true,
         tension: 0.3,
-        pointRadius: days <= 14 ? 3 : 1.5,
-        pointHoverRadius: 5,
+        pointRadius: 0,
+        pointHitRadius: 6,
+        pointHoverRadius: 3,
         pointBackgroundColor: '#1a1a2e',
       }],
     },
@@ -709,11 +716,14 @@ function updateChart(markers) {
       responsive: true,
       maintainAspectRatio: false,
       plugins: { legend: { display: false }, tooltip: { callbacks: {
-        title: items => items[0].label,
+        title: items => {
+          const d = bucketStarts[items[0].dataIndex];
+          return d ? d.toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric' }) : '';
+        },
         label: item => `${item.raw} incident${item.raw !== 1 ? 's' : ''}`,
       }}},
       scales: {
-        x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 45, autoSkip: true, maxTicksLimit: days <= 14 ? days : 16 }},
+        x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: days <= 7 ? 8 : days <= 14 ? 15 : 16 }},
         y: { beginAtZero: true, grid: { color: '#f0f0f0' }, ticks: { font: { size: 10 }, precision: 0 }},
       },
     },
