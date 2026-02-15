@@ -298,8 +298,43 @@ const SEVERITY_RANK = { critical: 3, high: 2, medium: 1, low: 0 };
 const VIOLENT_RE = /assault|person crime|homicide|battery|robbery|weapon|stabbing|shooting|domestic|weapon call|shots? fired/i;
 const PROPERTY_RE = /burglary|larceny|theft|fraud|stolen|shoplift|embezzle|forgery|identity|vandal|arson/i;
 
-const MENLO_OAKS = L.latLng(37.4665, -122.1663);
+const MENLO_OAKS_POLY = [
+  [37.4717, -122.1680], // NW: Bay Rd & Ringwood Ave
+  [37.4700, -122.1616], // NE: Bay Rd & Perimeter Rd
+  [37.4629, -122.1651], // E:  Coleman Ave & Perimeter Rd
+  [37.4636, -122.1673], // SE: Coleman Ave & Berkeley Ave
+  [37.4599, -122.1706], // S:  South of Arlington Way
+  [37.4611, -122.1732], // SW: Ringwood Ave & Arlington Way
+];
 const THREE_MILES_M = 4828;
+
+function pointInPolygon(lat, lng, poly) {
+  let inside = false;
+  for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+    const yi = poly[i][0], xi = poly[i][1];
+    const yj = poly[j][0], xj = poly[j][1];
+    if ((yi > lat) !== (yj > lat) && lng < (xj - xi) * (lat - yi) / (yj - yi) + xi) {
+      inside = !inside;
+    }
+  }
+  return inside;
+}
+
+function distanceToPolygonM(lat, lng, poly) {
+  if (pointInPolygon(lat, lng, poly)) return 0;
+  const pt = L.latLng(lat, lng);
+  let minDist = Infinity;
+  for (let i = 0; i < poly.length; i++) {
+    const j = (i + 1) % poly.length;
+    const a = poly[i], b = poly[j];
+    const dx = b[0] - a[0], dy = b[1] - a[1];
+    let t = dx === 0 && dy === 0 ? 0 : ((lat - a[0]) * dx + (lng - a[1]) * dy) / (dx * dx + dy * dy);
+    t = Math.max(0, Math.min(1, t));
+    const d = pt.distanceTo(L.latLng(a[0] + t * dx, a[1] + t * dy));
+    if (d < minDist) minDist = d;
+  }
+  return minDist;
+}
 
 function classifyCrime(item) {
   const text = [
@@ -580,7 +615,7 @@ function applyFilters() {
     }
     // geo filter (AND)
     if (show && geoMenloOaks) {
-      show = m.getLatLng().distanceTo(MENLO_OAKS) <= THREE_MILES_M;
+      show = distanceToPolygonM(m.getLatLng().lat, m.getLatLng().lng, MENLO_OAKS_POLY) <= THREE_MILES_M;
     }
     if (show) {
       toAdd.push(m);

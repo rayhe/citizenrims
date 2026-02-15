@@ -2,14 +2,14 @@
 Tests for the full alert pipeline in generate.py.
 
 Tests would_alert() which combines: crime type matching, exclusion,
-distance from Menlo Oaks, and tiered radius (3mi vs 0.25mi).
+distance from Menlo Oaks polygon boundary, and tiered radius (3mi vs 0.25mi).
 
 Frequency context (31 days, ~1400 incidents + ~100 cases):
-  - Suspicious Person/Prowler/Trespass: ~60/mo  (0.25mi radius)
+  - Suspicious Person/Prowler/Trespass: ~60/mo  (0.25mi radius from boundary)
   - Burglary Alarm responses:           ~67/mo  (excluded)
   - Shoplifting / Petty Theft:           ~40/mo  (excluded)
-  - Real Burglary / Theft / Fraud:       ~25/mo  (3mi radius)
-  - Vandalism / Identity / Forgery:      ~10/mo  (3mi radius)
+  - Real Burglary / Theft / Fraud:       ~25/mo  (3mi radius from boundary)
+  - Vandalism / Identity / Forgery:      ~10/mo  (3mi radius from boundary)
 """
 
 import re
@@ -25,8 +25,9 @@ from generate import (
     item_within_menlo_oaks,
     crime_text,
     item_id,
-    MENLO_OAKS_LAT,
-    MENLO_OAKS_LNG,
+    point_in_polygon,
+    distance_to_polygon_m,
+    MENLO_OAKS_POLY,
     THREE_MILES_M,
     QUARTER_MILE_M,
 )
@@ -34,29 +35,44 @@ from generate import (
 # 1 degree latitude ≈ 111km ≈ 69mi
 MILES_TO_DEG = 1.0 / 69.0
 
+# Polygon center (inside the boundary — distance = 0)
+POLY_CENTER_LAT = sum(p[0] for p in MENLO_OAKS_POLY) / len(MENLO_OAKS_POLY)
+POLY_CENTER_LNG = sum(p[1] for p in MENLO_OAKS_POLY) / len(MENLO_OAKS_POLY)
 
-def lat_at(miles):
-    """Latitude that is `miles` north of Menlo Oaks center."""
-    return MENLO_OAKS_LAT + miles * MILES_TO_DEG
+# North edge of polygon (for placing points outside by N miles)
+POLY_NORTH_LAT = max(p[0] for p in MENLO_OAKS_POLY)
+
+
+def coords_at(miles):
+    """Return (lat, lng) that is `miles` from the polygon boundary.
+
+    0mi → polygon center (inside, distance = 0).
+    >0mi → that many miles north of the polygon's north edge.
+    """
+    if miles == 0:
+        return POLY_CENTER_LAT, POLY_CENTER_LNG
+    return POLY_NORTH_LAT + miles * MILES_TO_DEG, POLY_CENTER_LNG
 
 
 def make_incident(call_type="", call_type_desc="", miles=0, prefix="menlopark"):
+    lat, lng = coords_at(miles)
     return {
         "_source": "incident", "_prefix": prefix,
         "incidentNumber": "202601010001",
         "callType": call_type, "callTypeDescription": call_type_desc,
-        "yCoord": lat_at(miles), "xCoord": MENLO_OAKS_LNG,
+        "yCoord": lat, "xCoord": lng,
         "street": "100 TEST ST", "city": "Menlo Park",
     }
 
 
 def make_case(offense="", crime_type="", classification="", miles=0, prefix="menlopark"):
+    lat, lng = coords_at(miles)
     return {
         "_source": "case", "_prefix": prefix,
         "caseNumber": "26-001",
         "offenseDescription1": offense, "crimeType": crime_type,
         "crimeClassification": classification,
-        "yCoord": lat_at(miles), "xCoord": MENLO_OAKS_LNG,
+        "yCoord": lat, "xCoord": lng,
         "street": "100 TEST ST", "city": "Menlo Park",
     }
 
@@ -76,46 +92,50 @@ def would_alert(item):
 
 
 # ┌──────────────────────────────────────────────────────────────────────────────┐
-# │  FULL ALERT TABLE — crime type × distance → alert yes/no                    │
+# │  FULL ALERT TABLE — crime type × distance from boundary → alert yes/no      │
+# │  Distance is measured from the Menlo Oaks polygon edge (0 = inside)          │
 # │                                                                              │
 # │  Crime type               │ Dist  │ Alert? │ Why                            │
 # │  ─────────────────────────┼───────┼────────┼─────────────────────────────── │
-# │  Property crimes (3mi radius, ~25/mo)                                        │
-# │  Burglary - Residential   │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Property crimes (3mi radius from boundary, ~25/mo)                          │
+# │  Burglary - Residential   │ 0mi   │  YES   │ inside polygon                │
 # │  Burglary - Residential   │ 2mi   │  YES   │ property crime within 3mi     │
 # │  Burglary - Residential   │ 4mi   │  NO    │ property crime outside 3mi    │
-# │  Burglary - Commercial    │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Burglary - Commercial    │ 0mi   │  YES   │ inside polygon                │
 # │  Burglary - Commercial    │ 4mi   │  NO    │ property crime outside 3mi    │
 # │  Burglary - Vehicle       │ 0.5mi │  YES   │ property crime within 3mi     │
 # │  Burglary - Vehicle       │ 4mi   │  NO    │ property crime outside 3mi    │
 # │  Grand Theft              │ 2mi   │  YES   │ property crime within 3mi     │
 # │  Grand Theft              │ 4mi   │  NO    │ property crime outside 3mi    │
-# │  Theft From Vehicle       │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Theft From Vehicle       │ 0mi   │  YES   │ inside polygon                │
 # │  Theft From Vehicle       │ 4mi   │  NO    │ property crime outside 3mi    │
 # │  Stolen Vehicle           │ 2mi   │  YES   │ property crime within 3mi     │
 # │  Stolen Vehicle           │ 4mi   │  NO    │ property crime outside 3mi    │
 # │  Fraud                    │ 0.5mi │  YES   │ property crime within 3mi     │
 # │  Fraud                    │ 4mi   │  NO    │ property crime outside 3mi    │
-# │  Identity Theft           │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Identity Theft           │ 0mi   │  YES   │ inside polygon                │
 # │  Identity Theft           │ 4mi   │  NO    │ property crime outside 3mi    │
-# │  Forgery                  │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Forgery                  │ 0mi   │  YES   │ inside polygon                │
 # │  Forgery                  │ 4mi   │  NO    │ property crime outside 3mi    │
-# │  Embezzlement             │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Embezzlement             │ 0mi   │  YES   │ inside polygon                │
 # │  Embezzlement             │ 4mi   │  NO    │ property crime outside 3mi    │
-# │  Larceny                  │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Larceny                  │ 0mi   │  YES   │ inside polygon                │
 # │  Larceny                  │ 4mi   │  NO    │ property crime outside 3mi    │
-# │  Vandalism                │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Vandalism                │ 0mi   │  YES   │ inside polygon                │
 # │  Vandalism                │ 4mi   │  NO    │ property crime outside 3mi    │
-# │  Arson                    │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Arson                    │ 0mi   │  YES   │ inside polygon                │
 # │  Arson                    │ 4mi   │  NO    │ property crime outside 3mi    │
 # │  ─────────────────────────┼───────┼────────┼─────────────────────────────── │
-# │  Suspicious activity (0.25mi radius, ~60/mo)                                 │
+# │  Suspicious activity (0.25mi radius from boundary, ~60/mo)                   │
+# │  Suspicious Person        │ 0mi   │  YES   │ inside polygon (dist=0)       │
 # │  Suspicious Person        │ 0.1mi │  YES   │ suspicious within 0.25mi      │
 # │  Suspicious Person        │ 0.5mi │  NO    │ suspicious outside 0.25mi     │
 # │  Suspicious Person        │ 4mi   │  NO    │ suspicious outside 3mi        │
+# │  Prowler                  │ 0mi   │  YES   │ inside polygon (dist=0)       │
 # │  Prowler                  │ 0.1mi │  YES   │ suspicious within 0.25mi      │
 # │  Prowler                  │ 0.5mi │  NO    │ suspicious outside 0.25mi     │
 # │  Prowler                  │ 4mi   │  NO    │ suspicious outside 3mi        │
+# │  Trespass                 │ 0mi   │  YES   │ inside polygon (dist=0)       │
 # │  Trespass                 │ 0.1mi │  YES   │ suspicious within 0.25mi      │
 # │  Trespass                 │ 0.5mi │  NO    │ suspicious outside 0.25mi     │
 # │  Trespass                 │ 4mi   │  NO    │ suspicious outside 3mi        │
@@ -138,10 +158,10 @@ def would_alert(item):
 # │  Drug paraphernalia       │ 0mi   │  NO    │ not in ALERT_RE               │
 # └──────────────────────────────────────────────────────────────────────────────┘
 
-# --- (name, miles, alert?, builder(miles)) ---
-# The miles field is passed to the builder to set coordinates.
+# --- (name, miles from boundary, alert?, builder(miles)) ---
+# 0mi = inside polygon center. >0mi = that far north of polygon north edge.
 ALERT_CASES = [
-    # ── Property crimes: YES within 3mi, NO outside 3mi (~25/mo) ──
+    # ── Property crimes: YES within 3mi of boundary, NO outside (~25/mo) ──
     ("Burglary-Residential",    0,   True,  lambda mi: make_case(offense="Burglary - Residential (F)", crime_type="Burglary", miles=mi)),
     ("Burglary-Residential",    2,   True,  lambda mi: make_case(offense="Burglary - Residential (F)", crime_type="Burglary", miles=mi)),
     ("Burglary-Residential",    4,   False, lambda mi: make_case(offense="Burglary - Residential (F)", crime_type="Burglary", miles=mi)),
@@ -170,13 +190,16 @@ ALERT_CASES = [
     ("Arson",                   0,   True,  lambda mi: make_case(offense="Arson (F)", crime_type="Property Crime", miles=mi)),
     ("Arson",                   4,   False, lambda mi: make_case(offense="Arson (F)", crime_type="Property Crime", miles=mi)),
 
-    # ── Suspicious activity: YES within 0.25mi, NO outside (~60/mo) ──
+    # ── Suspicious activity: YES within 0.25mi of boundary, NO outside (~60/mo) ──
+    ("Suspicious Person",       0,   True,  lambda mi: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances", miles=mi)),
     ("Suspicious Person",       0.1, True,  lambda mi: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances", miles=mi)),
     ("Suspicious Person",       0.5, False, lambda mi: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances", miles=mi)),
     ("Suspicious Person",       4,   False, lambda mi: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances", miles=mi)),
+    ("Prowler",                 0,   True,  lambda mi: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances", miles=mi)),
     ("Prowler",                 0.1, True,  lambda mi: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances", miles=mi)),
     ("Prowler",                 0.5, False, lambda mi: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances", miles=mi)),
     ("Prowler",                 4,   False, lambda mi: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances", miles=mi)),
+    ("Trespass",                0,   True,  lambda mi: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service", miles=mi)),
     ("Trespass",                0.1, True,  lambda mi: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service", miles=mi)),
     ("Trespass",                0.5, False, lambda mi: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service", miles=mi)),
     ("Trespass",                4,   False, lambda mi: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service", miles=mi)),
@@ -210,34 +233,50 @@ for _name, _miles, _expected, _builder in ALERT_CASES:
         def test(self):
             item = builder(miles)
             result = would_alert(item)
-            self.assertEqual(result, expected, f"{name} @ {miles}mi: expected {expected}, got {result}")
+            self.assertEqual(result, expected, f"{name} @ {miles}mi from boundary: expected {expected}, got {result}")
         return test
     safe = f"{_name}_{_miles}mi".lower().replace(' ', '_').replace('-', '_').replace('.', '_')
     setattr(TestWouldAlert, f"test_{safe}", _make_test())
 
 
-class TestDistancePresets(unittest.TestCase):
-    """Verify lat_at() produces the expected distances."""
+class TestPolygonGeometry(unittest.TestCase):
+    """Verify polygon functions and distance presets."""
 
-    def test_0mi(self):
-        dist = haversine_m(lat_at(0), MENLO_OAKS_LNG, MENLO_OAKS_LAT, MENLO_OAKS_LNG)
-        self.assertAlmostEqual(dist, 0, places=0)
+    def test_center_inside_polygon(self):
+        self.assertTrue(point_in_polygon(POLY_CENTER_LAT, POLY_CENTER_LNG, MENLO_OAKS_POLY))
+
+    def test_center_distance_zero(self):
+        dist = distance_to_polygon_m(POLY_CENTER_LAT, POLY_CENTER_LNG, MENLO_OAKS_POLY)
+        self.assertEqual(dist, 0)
+
+    def test_far_point_outside_polygon(self):
+        self.assertFalse(point_in_polygon(37.50, -122.17, MENLO_OAKS_POLY))
+
+    def test_0mi_inside(self):
+        lat, lng = coords_at(0)
+        dist = distance_to_polygon_m(lat, lng, MENLO_OAKS_POLY)
+        self.assertEqual(dist, 0, "0mi should be inside polygon (dist=0)")
 
     def test_01mi_within_quarter(self):
-        dist = haversine_m(lat_at(0.1), MENLO_OAKS_LNG, MENLO_OAKS_LAT, MENLO_OAKS_LNG)
+        lat, lng = coords_at(0.1)
+        dist = distance_to_polygon_m(lat, lng, MENLO_OAKS_POLY)
+        self.assertGreater(dist, 0, "0.1mi should be outside polygon")
         self.assertLess(dist, QUARTER_MILE_M, f"{dist:.0f}m should be < {QUARTER_MILE_M}m (0.25mi)")
 
     def test_05mi_outside_quarter_inside_3mi(self):
-        dist = haversine_m(lat_at(0.5), MENLO_OAKS_LNG, MENLO_OAKS_LAT, MENLO_OAKS_LNG)
+        lat, lng = coords_at(0.5)
+        dist = distance_to_polygon_m(lat, lng, MENLO_OAKS_POLY)
         self.assertGreater(dist, QUARTER_MILE_M, f"{dist:.0f}m should be > {QUARTER_MILE_M}m (0.25mi)")
         self.assertLess(dist, THREE_MILES_M, f"{dist:.0f}m should be < {THREE_MILES_M}m (3mi)")
 
     def test_2mi_inside_3mi(self):
-        dist = haversine_m(lat_at(2), MENLO_OAKS_LNG, MENLO_OAKS_LAT, MENLO_OAKS_LNG)
+        lat, lng = coords_at(2)
+        dist = distance_to_polygon_m(lat, lng, MENLO_OAKS_POLY)
         self.assertLess(dist, THREE_MILES_M, f"{dist:.0f}m should be < {THREE_MILES_M}m (3mi)")
 
     def test_4mi_outside_3mi(self):
-        dist = haversine_m(lat_at(4), MENLO_OAKS_LNG, MENLO_OAKS_LAT, MENLO_OAKS_LNG)
+        lat, lng = coords_at(4)
+        dist = distance_to_polygon_m(lat, lng, MENLO_OAKS_POLY)
         self.assertGreater(dist, THREE_MILES_M, f"{dist:.0f}m should be > {THREE_MILES_M}m (3mi)")
 
     def test_missing_coords(self):

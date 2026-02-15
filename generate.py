@@ -26,8 +26,14 @@ AGENCIES = ["menlopark", "atherton", "smcsheriff"]
 
 PA_BASE = "https://gis.cityofpaloalto.org/server/rest/services/PublicSafety/AgencyCommonEvent/MapServer/2/query"
 
-MENLO_OAKS_LAT = 37.4665
-MENLO_OAKS_LNG = -122.1663
+MENLO_OAKS_POLY = [
+    (37.4717, -122.1680),  # NW: Bay Rd & Ringwood Ave
+    (37.4700, -122.1616),  # NE: Bay Rd & Perimeter Rd (VA campus)
+    (37.4629, -122.1651),  # E:  Coleman Ave & Perimeter Rd
+    (37.4636, -122.1673),  # SE: Coleman Ave & Berkeley Ave
+    (37.4599, -122.1706),  # S:  South of Arlington Way
+    (37.4611, -122.1732),  # SW: Ringwood Ave & Arlington Way
+]
 THREE_MILES_M = 4828
 QUARTER_MILE_M = 402
 
@@ -221,6 +227,47 @@ def haversine_m(lat1, lon1, lat2, lon2):
     return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
 
 
+def point_in_polygon(lat, lng, poly):
+    """Ray casting: True if (lat, lng) is inside the polygon."""
+    n = len(poly)
+    inside = False
+    j = n - 1
+    for i in range(n):
+        yi, xi = poly[i]
+        yj, xj = poly[j]
+        if ((yi > lat) != (yj > lat)) and (lng < (xj - xi) * (lat - yi) / (yj - yi) + xi):
+            inside = not inside
+        j = i
+    return inside
+
+
+def _point_to_segment_m(lat, lng, lat1, lng1, lat2, lng2):
+    """Minimum distance in meters from point to a line segment."""
+    dx = lat2 - lat1
+    dy = lng2 - lng1
+    if dx == 0 and dy == 0:
+        return haversine_m(lat, lng, lat1, lng1)
+    t = ((lat - lat1) * dx + (lng - lng1) * dy) / (dx * dx + dy * dy)
+    t = max(0.0, min(1.0, t))
+    proj_lat = lat1 + t * dx
+    proj_lng = lng1 + t * dy
+    return haversine_m(lat, lng, proj_lat, proj_lng)
+
+
+def distance_to_polygon_m(lat, lng, poly):
+    """Distance in meters from point to polygon. 0 if inside."""
+    if point_in_polygon(lat, lng, poly):
+        return 0
+    n = len(poly)
+    min_dist = float('inf')
+    for i in range(n):
+        j = (i + 1) % n
+        d = _point_to_segment_m(lat, lng, poly[i][0], poly[i][1], poly[j][0], poly[j][1])
+        if d < min_dist:
+            min_dist = d
+    return min_dist
+
+
 def item_id(item):
     """Unique key for an incident/case."""
     src = item.get("_source", "")
@@ -252,7 +299,7 @@ def item_within_menlo_oaks(item):
     lng = item.get("xCoord")
     if lat is None or lng is None:
         return False, 0
-    dist = haversine_m(lat, lng, MENLO_OAKS_LAT, MENLO_OAKS_LNG)
+    dist = distance_to_polygon_m(lat, lng, MENLO_OAKS_POLY)
     return dist <= THREE_MILES_M, dist
 
 
