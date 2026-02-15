@@ -522,8 +522,13 @@ async function loadData() {
     marker._crimeText = [item.callType, item.callTypeDescription, item.crimeType, item.crimeClassification, item.offenseDescription1].filter(Boolean).join(' ');
     const dateStr = item.incidentDate || item.reportDate || item.occurrence1Date || '';
     marker._itemDate = dateStr ? new Date(dateStr.endsWith('Z') ? dateStr : dateStr + 'Z') : null;
+    const _title = source === 'incident' ? (item.callType || item.callTypeDescription || '') : (item.crimeType || item.offenseDescription1 || '');
+    const _sub = source === 'incident'
+      ? (item.callTypeDescription && item.callTypeDescription !== _title ? item.callTypeDescription : '')
+      : (item.offenseDescription1 && item.offenseDescription1 !== _title ? item.offenseDescription1 : '');
     marker._itemData = {
-      title: (source === 'incident' ? (item.callTypeDescription || item.callType || '') : (item.crimeType || item.offenseDescription1 || '')),
+      title: _title,
+      subtitle: _sub,
       street: item.street || '',
       agency: item._agency || '',
     };
@@ -725,7 +730,7 @@ function updateFeed() {
     return `<div class="feed-item" data-feed-idx="${i}">
       <span class="feed-icon" style="background:${conf.color}">${conf.icon}</span>
       <div class="feed-body">
-        <div class="feed-title">${d.title}</div>
+        <div class="feed-title">${d.title}${d.subtitle ? ' <span style="font-weight:400;color:#777">· ' + d.subtitle + '</span>' : ''}</div>
         <div class="feed-meta">${d.street}${d.street && d.agency ? ' — ' : ''}${d.agency}</div>
       </div>
       <div class="feed-time">${ago}</div>
