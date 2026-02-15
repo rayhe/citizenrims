@@ -285,7 +285,6 @@ def log_alert(item, dist_m, subject, status, error=None):
         "city": item.get("city", ""),
         "agency": item.get("_agency", ""),
         "distance_mi": round(dist_m / 1609.34, 2),
-        "recipients": ALERT_RECIPIENTS,
         "status": status,
     }
     if error:
