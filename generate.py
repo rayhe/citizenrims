@@ -38,7 +38,7 @@ ALERT_RECIPIENTS = [
     r.strip() for r in os.environ.get("ALERT_RECIPIENTS", "").split(",") if r.strip()
 ]
 
-MAP_URL = "https://rayhe.github.io/citizenrims/"
+MAP_URL = "https://rayhe.github.io/citizenrims/public/"
 
 
 def get_token():
