@@ -390,9 +390,10 @@ function saveSettings() {
   }));
 }
 const saved = (() => { try { return JSON.parse(localStorage.getItem('cf_settings')) || {}; } catch { return {}; } })();
-let activeFilter = saved.filter || 'all';
-let activeDays = saved.days || 7;
-let geoMenloOaks = !!saved.geo;
+const urlParams = new URLSearchParams(window.location.search);
+let activeFilter = urlParams.get('filter') || saved.filter || 'all';
+let activeDays = parseInt(urlParams.get('days')) || saved.days || 7;
+let geoMenloOaks = urlParams.has('geo') ? urlParams.get('geo') === '1' : !!saved.geo;
 const clusterGroup = L.markerClusterGroup({
   maxClusterRadius: 10,
   spiderfyOnMaxZoom: false,
