@@ -72,7 +72,7 @@
   .chart-section { padding: 14px; background: #f5f6f8; }
   .chart-wrap { background: #fff; border-radius: 8px; padding: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
   .chart-wrap h2 { font-size: 0.82rem; margin: 0 0 8px; color: #444; font-weight: 600; }
-  .chart-container { position: relative; height: 120px; }
+  .chart-container { position: relative; height: 180px; }
 
   .info-section { padding: 16px; background: #f5f6f8; }
   .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -658,73 +658,110 @@ function applyFilters() {
   updateChart(toAdd);
 }
 
+// Watch periods: Day 0700-1500, Swing 1500-2300, Night 2300-0700
+const WATCHES = [
+  { label: 'Day (7a–3p)',   color: '#f9a825', border: '#f57f17', hour0: 7,  hour1: 15 },
+  { label: 'Swing (3p–11p)', color: '#e65100', border: '#bf360c', hour0: 15, hour1: 23 },
+  { label: 'Night (11p–7a)', color: '#1a237e', border: '#0d1642', hour0: 23, hour1: 7  },
+];
+
+function getWatch(hour) {
+  if (hour >= 7 && hour < 15) return 0;   // Day
+  if (hour >= 15 && hour < 23) return 1;  // Swing
+  return 2;                                // Night
+}
+
 let timelineChart = null;
 function updateChart(markers) {
   const days = activeDays;
-  const totalHours = days * 24;
   const now = new Date();
   const cutoff = new Date(now.getTime() - days * 86400000);
-  // Round cutoff down to the hour
-  cutoff.setMinutes(0, 0, 0);
+  cutoff.setHours(0, 0, 0, 0);
 
-  // Build hourly buckets
-  const buckets = new Array(totalHours).fill(0);
-  const bucketStarts = [];
-  for (let i = 0; i < totalHours; i++) {
-    bucketStarts.push(new Date(cutoff.getTime() + i * 3600000));
+  // Build per-day buckets for each watch
+  const dayBuckets = []; // [{date, day, swing, night}, ...]
+  for (let i = 0; i < days; i++) {
+    const d = new Date(cutoff);
+    d.setDate(d.getDate() + i);
+    dayBuckets.push({ date: new Date(d), day: 0, swing: 0, night: 0 });
   }
+
   markers.forEach(m => {
     if (!m._itemDate || m._itemDate < cutoff) return;
-    const idx = Math.floor((m._itemDate.getTime() - cutoff.getTime()) / 3600000);
-    if (idx >= 0 && idx < totalHours) buckets[idx]++;
+    const idx = Math.floor((m._itemDate.getTime() - cutoff.getTime()) / 86400000);
+    if (idx < 0 || idx >= days) return;
+    const w = getWatch(m._itemDate.getHours());
+    if (w === 0) dayBuckets[idx].day++;
+    else if (w === 1) dayBuckets[idx].swing++;
+    else dayBuckets[idx].night++;
   });
 
-  // Labels: show date at midnight, skip other hours
-  const labels = bucketStarts.map(d => {
-    if (d.getHours() === 0) return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
-    return '';
+  const labels = dayBuckets.map(b => {
+    const dow = b.date.toLocaleDateString(undefined, { weekday: 'short' });
+    const md = b.date.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+    return days <= 14 ? `${dow} ${md}` : md;
   });
+  const isWeekend = dayBuckets.map(b => { const d = b.date.getDay(); return d === 0 || d === 6; });
 
-  document.getElementById('chart-title').textContent = `Activity (${days}d, hourly)`;
+  document.getElementById('chart-title').textContent = `Activity by watch (${days}d)`;
+
+  const datasets = WATCHES.map((w, wi) => ({
+    label: w.label,
+    data: dayBuckets.map(b => wi === 0 ? b.day : wi === 1 ? b.swing : b.night),
+    backgroundColor: dayBuckets.map((_, i) => isWeekend[i] ? w.color + 'cc' : w.color),
+    borderColor: w.border,
+    borderWidth: 0.5,
+    borderRadius: wi === 2 ? { topLeft: 3, topRight: 3 } : 0,
+  }));
 
   if (timelineChart) {
     timelineChart.data.labels = labels;
-    timelineChart.data.datasets[0].data = buckets;
-    timelineChart.options.scales.x.ticks.maxTicksLimit = days <= 7 ? 8 : days <= 14 ? 15 : 16;
+    datasets.forEach((ds, i) => {
+      timelineChart.data.datasets[i].data = ds.data;
+      timelineChart.data.datasets[i].backgroundColor = ds.backgroundColor;
+    });
     timelineChart.update('none');
     return;
   }
+
   const ctx = document.getElementById('timeline-chart').getContext('2d');
   timelineChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels,
-      datasets: [{
-        data: buckets,
-        borderColor: '#1a1a2e',
-        borderWidth: 1,
-        backgroundColor: 'rgba(26,26,46,0.08)',
-        fill: true,
-        tension: 0.3,
-        pointRadius: 0,
-        pointHitRadius: 6,
-        pointHoverRadius: 3,
-        pointBackgroundColor: '#1a1a2e',
-      }],
-    },
+    type: 'bar',
+    data: { labels, datasets },
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      plugins: { legend: { display: false }, tooltip: { callbacks: {
-        title: items => {
-          const d = bucketStarts[items[0].dataIndex];
-          return d ? d.toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric' }) : '';
+      plugins: {
+        legend: { display: true, position: 'top', labels: { boxWidth: 10, font: { size: 10 }, padding: 8 }},
+        tooltip: {
+          mode: 'index',
+          callbacks: {
+            title: items => labels[items[0].dataIndex] + (isWeekend[items[0].dataIndex] ? ' (weekend)' : ''),
+            footer: items => {
+              const total = items.reduce((s, i) => s + i.raw, 0);
+              return `Total: ${total}`;
+            },
+          },
         },
-        label: item => `${item.raw} incident${item.raw !== 1 ? 's' : ''}`,
-      }}},
+      },
       scales: {
-        x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: days <= 7 ? 8 : days <= 14 ? 15 : 16 }},
-        y: { beginAtZero: true, grid: { color: '#f0f0f0' }, ticks: { font: { size: 10 }, precision: 0 }},
+        x: {
+          stacked: true,
+          grid: { display: false },
+          ticks: {
+            font: { size: days <= 14 ? 10 : 9 },
+            maxRotation: 45,
+            autoSkip: true,
+            maxTicksLimit: days <= 7 ? 7 : days <= 14 ? 14 : 16,
+            color: dayBuckets.map(b => { const d = b.date.getDay(); return d === 0 || d === 6 ? '#d32f2f' : '#666'; }),
+          },
+        },
+        y: {
+          stacked: true,
+          beginAtZero: true,
+          grid: { color: '#f0f0f0' },
+          ticks: { font: { size: 10 }, precision: 0 },
+        },
       },
     },
   });
