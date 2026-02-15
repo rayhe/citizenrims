@@ -61,7 +61,7 @@
   .feed-body { flex: 1; min-width: 0; }
   .feed-title { font-size: 0.8rem; font-weight: 600; color: #1a1a2e; }
   .feed-meta { font-size: 0.7rem; color: #999; }
-  .feed-time { flex-shrink: 0; font-size: 0.68rem; color: #aaa; font-weight: 500; white-space: nowrap; }
+  .feed-time { flex-shrink: 0; font-size: 0.65rem; color: #aaa; font-weight: 500; text-align: right; line-height: 1.4; min-width: 70px; }
   .feed-empty { padding: 18px; text-align: center; color: #bbb; font-size: 0.8rem; }
 
   .stats-bar { display: flex; gap: 10px; padding: 14px; background: #f5f6f8; }
@@ -218,6 +218,7 @@
   <span class="legend-divider"></span>
   <div class="legend-section">
     <span><span class="crime-icon-demo" style="background:#d32f2f;width:14px;height:14px;font-size:10px">!</span> Violent</span>
+    <span><span class="crime-icon-demo" style="background:#bf360c;width:13px;height:13px;font-size:8px">&#x1F3E0;</span> Burglary</span>
     <span><span class="crime-icon-demo" style="background:#e65100;width:13px;height:13px;font-size:9px">$</span> Theft</span>
     <span><span class="crime-icon-demo" style="background:#1565c0;width:13px;height:13px;font-size:8px">&#x1F697;</span> Traffic</span>
     <span><span class="crime-icon-demo" style="background:#6a1b9a;width:13px;height:13px;font-size:8px">&#x1F48A;</span> Drugs</span>
@@ -326,8 +327,10 @@ const SEVERITY = { critical: 24, high: 20, medium: 16, low: 12 };
 const CRIME_CATEGORIES = [
   { icon: '!',      color: '#d32f2f', severity: 'critical',
     match: /assault|person crime|homicide|battery|robbery|weapon|stabbing|shooting|domestic/i },
+  { icon: '\u{1F3E0}', color: '#bf360c', severity: 'high',
+    match: /burglary/i },
   { icon: '$',      color: '#e65100', severity: 'high',
-    match: /burglary|larceny|theft|fraud|stolen|shoplift|embezzle|forgery|identity/i },
+    match: /larceny|theft|fraud|stolen|shoplift|embezzle|forgery|identity/i },
   { icon: '\u{1F697}', color: '#1565c0', severity: 'medium',
     match: /traffic|collision|parking|hit.?and.?run|dui|reckless|vehicle stop|speed/i },
   { icon: '\u{1F48A}', color: '#6a1b9a', severity: 'high',
@@ -1049,14 +1052,15 @@ function updateFeed() {
     const d = m._itemData;
     const conf = m._crimeConf || DEFAULT_CRIME;
     const ago = m._itemDate ? timeAgo(m._itemDate) : '';
-    const dateTime = m._itemDate ? m._itemDate.toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) + ' ' + m._itemDate.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' }) : '';
+    const datePart = m._itemDate ? m._itemDate.toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) : '';
+    const timePart = m._itemDate ? m._itemDate.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' }) : '';
     return `<div class="feed-item" data-feed-idx="${i}">
       <span class="feed-icon" style="background:${conf.color}">${conf.icon}</span>
       <div class="feed-body">
         <div class="feed-title">${d.title}${d.subtitle ? ' <span style="font-weight:400;color:#777">· ' + d.subtitle + '</span>' : ''}</div>
         <div class="feed-meta">${d.street}${d.street && d.agency ? ' — ' : ''}${d.agency}</div>
       </div>
-      <div class="feed-time">${dateTime}${ago ? '<br>' + ago : ''}</div>
+      <div class="feed-time">${datePart} ${timePart}${ago ? '<br>' + ago : ''}</div>
     </div>`;
   }).join('');
 
