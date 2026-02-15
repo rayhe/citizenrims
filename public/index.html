@@ -74,6 +74,12 @@
   .chart-wrap h2 { font-size: 0.82rem; margin: 0 0 8px; color: #444; font-weight: 600; }
   .chart-container { position: relative; height: 180px; transition: height 0.2s ease; cursor: pointer; }
   .chart-container.chart-expanded { height: 360px; }
+  .chart-summary { margin-top: 10px; width: 100%; border-collapse: collapse; font-size: 0.75rem; }
+  .chart-summary th, .chart-summary td { padding: 4px 8px; text-align: right; border-bottom: 1px solid #eee; }
+  .chart-summary th { text-align: left; color: #666; font-weight: 600; }
+  .chart-summary td.label-cell { text-align: left; font-weight: 500; }
+  .chart-summary .watch-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+  .chart-summary tfoot td { border-top: 2px solid #ccc; font-weight: 700; }
 
   .info-section { padding: 16px; background: #f5f6f8; }
   .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -238,6 +244,11 @@
   <div class="chart-wrap">
     <h2 id="chart-title">Incidents per day</h2>
     <div class="chart-container"><canvas id="timeline-chart"></canvas></div>
+    <table class="chart-summary" id="chart-summary">
+      <thead><tr><th>Watch</th><th>Total</th><th>Avg/day</th></tr></thead>
+      <tbody id="chart-summary-body"></tbody>
+      <tfoot><tr><td class="label-cell">Total</td><td id="cs-total">—</td><td id="cs-avg">—</td></tr></tfoot>
+    </table>
   </div>
 </div>
 
@@ -717,6 +728,19 @@ function updateChart(markers) {
   const isWeekend = dayBuckets.map(b => { const d = b.date.getDay(); return d === 0 || d === 6; });
 
   document.getElementById('chart-title').textContent = `Activity by watch (${days}d)`;
+
+  // Populate summary table
+  const totals = [0, 0, 0];
+  dayBuckets.forEach(b => { totals[0] += b.day; totals[1] += b.swing; totals[2] += b.night; });
+  const grand = totals[0] + totals[1] + totals[2];
+  const nDays = dayBuckets.length || 1;
+  const tbody = document.getElementById('chart-summary-body');
+  tbody.innerHTML = WATCHES.map((w, i) =>
+    `<tr><td class="label-cell"><span class="watch-dot" style="background:${w.color}"></span>${w.label}</td>` +
+    `<td>${totals[i]}</td><td>${(totals[i] / nDays).toFixed(1)}</td></tr>`
+  ).join('');
+  document.getElementById('cs-total').textContent = grand;
+  document.getElementById('cs-avg').textContent = (grand / nDays).toFixed(1);
 
   const datasets = WATCHES.map((w, wi) => ({
     label: w.label,
