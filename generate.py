@@ -33,6 +33,11 @@ PROPERTY_RE = re.compile(
     r"burglary|larceny|theft|fraud|stolen|shoplift|embezzle|forgery|identity|vandal|arson",
     re.IGNORECASE,
 )
+# Exclude retail/petty theft from alerts (not from map filter)
+STORE_THEFT_RE = re.compile(
+    r"shoplift|petty.theft|484\s*theft",
+    re.IGNORECASE,
+)
 
 ALERT_RECIPIENTS = [
     r.strip() for r in os.environ.get("ALERT_RECIPIENTS", "").split(",") if r.strip()
@@ -230,7 +235,13 @@ def crime_text(item):
 
 
 def is_property_crime(item):
-    return bool(PROPERTY_RE.search(crime_text(item)))
+    ct = crime_text(item)
+    if not PROPERTY_RE.search(ct):
+        return False
+    # Exclude shoplifting / petty theft (store theft) unless also burglary or vehicle-related
+    if STORE_THEFT_RE.search(ct) and not re.search(r"burglary|vehicle|motor", ct, re.IGNORECASE):
+        return False
+    return True
 
 
 def item_within_menlo_oaks(item):
