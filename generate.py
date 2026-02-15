@@ -28,6 +28,7 @@ PA_BASE = "https://gis.cityofpaloalto.org/server/rest/services/PublicSafety/Agen
 MENLO_OAKS_LAT = 37.448
 MENLO_OAKS_LNG = -122.177
 THREE_MILES_M = 4828
+QUARTER_MILE_M = 402
 
 ALERT_RE = re.compile(
     r"burglary|larceny|theft|fraud|stolen|shoplift|embezzle|forgery|identity|vandal|arson"
@@ -386,6 +387,11 @@ def check_alerts(all_incidents, all_cases):
         within, dist = item_within_menlo_oaks(item)
         if not within:
             continue
+        # Suspicious person/prowler/trespass: tighter radius (0.25mi)
+        ct = crime_text(item)
+        if re.search(r"suspicious\s*person|prowler|trespass", ct, re.IGNORECASE):
+            if dist > QUARTER_MILE_M:
+                continue
 
         print(f"  NEW ALERT: {crime_text(item)} at {item.get('street', '?')} ({dist/1609.34:.1f}mi)")
         send_alert(item, dist)
