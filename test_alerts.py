@@ -31,32 +31,32 @@ from generate import (
     QUARTER_MILE_M,
 )
 
-# ── Distance presets (latitude offsets from Menlo Oaks center) ──────────
-LNG = MENLO_OAKS_LNG
-AT_0MI   = MENLO_OAKS_LAT                # 0mi   — right at center
-AT_01MI  = MENLO_OAKS_LAT + 0.00145      # 0.1mi — inside 0.25mi
-AT_05MI  = MENLO_OAKS_LAT + 0.00725      # 0.5mi — outside 0.25mi, inside 3mi
-AT_2MI   = MENLO_OAKS_LAT + 0.029        # 2mi   — inside 3mi
-AT_4MI   = MENLO_OAKS_LAT + 0.058        # 4mi   — outside 3mi
+# 1 degree latitude ≈ 111km ≈ 69mi
+MILES_TO_DEG = 1.0 / 69.0
 
 
-def make_incident(call_type="", call_type_desc="", lat=AT_0MI, prefix="menlopark"):
+def lat_at(miles):
+    """Latitude that is `miles` north of Menlo Oaks center."""
+    return MENLO_OAKS_LAT + miles * MILES_TO_DEG
+
+
+def make_incident(call_type="", call_type_desc="", miles=0, prefix="menlopark"):
     return {
         "_source": "incident", "_prefix": prefix,
         "incidentNumber": "202601010001",
         "callType": call_type, "callTypeDescription": call_type_desc,
-        "yCoord": lat, "xCoord": LNG,
+        "yCoord": lat_at(miles), "xCoord": MENLO_OAKS_LNG,
         "street": "100 TEST ST", "city": "Menlo Park",
     }
 
 
-def make_case(offense="", crime_type="", classification="", lat=AT_0MI, prefix="menlopark"):
+def make_case(offense="", crime_type="", classification="", miles=0, prefix="menlopark"):
     return {
         "_source": "case", "_prefix": prefix,
         "caseNumber": "26-001",
         "offenseDescription1": offense, "crimeType": crime_type,
         "crimeClassification": classification,
-        "yCoord": lat, "xCoord": LNG,
+        "yCoord": lat_at(miles), "xCoord": MENLO_OAKS_LNG,
         "street": "100 TEST ST", "city": "Menlo Park",
     }
 
@@ -138,64 +138,65 @@ def would_alert(item):
 # │  Drug paraphernalia       │ 0mi   │  NO    │ not in ALERT_RE               │
 # └──────────────────────────────────────────────────────────────────────────────┘
 
-# --- (name, distance, alert?, builder) ---
+# --- (name, miles, alert?, builder(miles)) ---
+# The miles field is passed to the builder to set coordinates.
 ALERT_CASES = [
     # ── Property crimes: YES within 3mi, NO outside 3mi (~25/mo) ──
-    ("Burglary-Residential",   "0mi",   True,  lambda: make_case(offense="Burglary - Residential (F)", crime_type="Burglary", lat=AT_0MI)),
-    ("Burglary-Residential",   "2mi",   True,  lambda: make_case(offense="Burglary - Residential (F)", crime_type="Burglary", lat=AT_2MI)),
-    ("Burglary-Residential",   "4mi",   False, lambda: make_case(offense="Burglary - Residential (F)", crime_type="Burglary", lat=AT_4MI)),
-    ("Burglary-Commercial",    "0mi",   True,  lambda: make_case(offense="Burglary - Commercial (F)", crime_type="Burglary", lat=AT_0MI)),
-    ("Burglary-Commercial",    "4mi",   False, lambda: make_case(offense="Burglary - Commercial (F)", crime_type="Burglary", lat=AT_4MI)),
-    ("Burglary-Vehicle",       "0.5mi", True,  lambda: make_case(offense="Burglary - Vehicle (F)", crime_type="Burglary", lat=AT_05MI)),
-    ("Burglary-Vehicle",       "4mi",   False, lambda: make_case(offense="Burglary - Vehicle (F)", crime_type="Burglary", lat=AT_4MI)),
-    ("Grand Theft",            "2mi",   True,  lambda: make_case(offense="Grand Theft (F)", crime_type="Theft", lat=AT_2MI)),
-    ("Grand Theft",            "4mi",   False, lambda: make_case(offense="Grand Theft (F)", crime_type="Theft", lat=AT_4MI)),
-    ("Theft From Vehicle",     "0mi",   True,  lambda: make_case(offense="Theft From Vehicle", crime_type="Theft", lat=AT_0MI)),
-    ("Theft From Vehicle",     "4mi",   False, lambda: make_case(offense="Theft From Vehicle", crime_type="Theft", lat=AT_4MI)),
-    ("Stolen Vehicle",         "2mi",   True,  lambda: make_case(offense="Stolen Vehicle (F)", crime_type="Theft", lat=AT_2MI)),
-    ("Stolen Vehicle",         "4mi",   False, lambda: make_case(offense="Stolen Vehicle (F)", crime_type="Theft", lat=AT_4MI)),
-    ("Fraud",                  "0.5mi", True,  lambda: make_case(offense="Fraud (M)", crime_type="Fraud", lat=AT_05MI)),
-    ("Fraud",                  "4mi",   False, lambda: make_case(offense="Fraud (M)", crime_type="Fraud", lat=AT_4MI)),
-    ("Identity Theft",         "0mi",   True,  lambda: make_case(offense="Identity Theft (F)", crime_type="Fraud", lat=AT_0MI)),
-    ("Identity Theft",         "4mi",   False, lambda: make_case(offense="Identity Theft (F)", crime_type="Fraud", lat=AT_4MI)),
-    ("Forgery",                "0mi",   True,  lambda: make_case(offense="Forgery (F)", crime_type="Fraud", lat=AT_0MI)),
-    ("Forgery",                "4mi",   False, lambda: make_case(offense="Forgery (F)", crime_type="Fraud", lat=AT_4MI)),
-    ("Embezzlement",           "0mi",   True,  lambda: make_case(offense="Embezzlement (F)", crime_type="Fraud", lat=AT_0MI)),
-    ("Embezzlement",           "4mi",   False, lambda: make_case(offense="Embezzlement (F)", crime_type="Fraud", lat=AT_4MI)),
-    ("Larceny",                "0mi",   True,  lambda: make_case(offense="Larceny (M)", crime_type="Theft", lat=AT_0MI)),
-    ("Larceny",                "4mi",   False, lambda: make_case(offense="Larceny (M)", crime_type="Theft", lat=AT_4MI)),
-    ("Vandalism",              "0mi",   True,  lambda: make_case(offense="Vandalism (M)", crime_type="Property Crime", lat=AT_0MI)),
-    ("Vandalism",              "4mi",   False, lambda: make_case(offense="Vandalism (M)", crime_type="Property Crime", lat=AT_4MI)),
-    ("Arson",                  "0mi",   True,  lambda: make_case(offense="Arson (F)", crime_type="Property Crime", lat=AT_0MI)),
-    ("Arson",                  "4mi",   False, lambda: make_case(offense="Arson (F)", crime_type="Property Crime", lat=AT_4MI)),
+    ("Burglary-Residential",    0,   True,  lambda mi: make_case(offense="Burglary - Residential (F)", crime_type="Burglary", miles=mi)),
+    ("Burglary-Residential",    2,   True,  lambda mi: make_case(offense="Burglary - Residential (F)", crime_type="Burglary", miles=mi)),
+    ("Burglary-Residential",    4,   False, lambda mi: make_case(offense="Burglary - Residential (F)", crime_type="Burglary", miles=mi)),
+    ("Burglary-Commercial",     0,   True,  lambda mi: make_case(offense="Burglary - Commercial (F)", crime_type="Burglary", miles=mi)),
+    ("Burglary-Commercial",     4,   False, lambda mi: make_case(offense="Burglary - Commercial (F)", crime_type="Burglary", miles=mi)),
+    ("Burglary-Vehicle",        0.5, True,  lambda mi: make_case(offense="Burglary - Vehicle (F)", crime_type="Burglary", miles=mi)),
+    ("Burglary-Vehicle",        4,   False, lambda mi: make_case(offense="Burglary - Vehicle (F)", crime_type="Burglary", miles=mi)),
+    ("Grand Theft",             2,   True,  lambda mi: make_case(offense="Grand Theft (F)", crime_type="Theft", miles=mi)),
+    ("Grand Theft",             4,   False, lambda mi: make_case(offense="Grand Theft (F)", crime_type="Theft", miles=mi)),
+    ("Theft From Vehicle",      0,   True,  lambda mi: make_case(offense="Theft From Vehicle", crime_type="Theft", miles=mi)),
+    ("Theft From Vehicle",      4,   False, lambda mi: make_case(offense="Theft From Vehicle", crime_type="Theft", miles=mi)),
+    ("Stolen Vehicle",          2,   True,  lambda mi: make_case(offense="Stolen Vehicle (F)", crime_type="Theft", miles=mi)),
+    ("Stolen Vehicle",          4,   False, lambda mi: make_case(offense="Stolen Vehicle (F)", crime_type="Theft", miles=mi)),
+    ("Fraud",                   0.5, True,  lambda mi: make_case(offense="Fraud (M)", crime_type="Fraud", miles=mi)),
+    ("Fraud",                   4,   False, lambda mi: make_case(offense="Fraud (M)", crime_type="Fraud", miles=mi)),
+    ("Identity Theft",          0,   True,  lambda mi: make_case(offense="Identity Theft (F)", crime_type="Fraud", miles=mi)),
+    ("Identity Theft",          4,   False, lambda mi: make_case(offense="Identity Theft (F)", crime_type="Fraud", miles=mi)),
+    ("Forgery",                 0,   True,  lambda mi: make_case(offense="Forgery (F)", crime_type="Fraud", miles=mi)),
+    ("Forgery",                 4,   False, lambda mi: make_case(offense="Forgery (F)", crime_type="Fraud", miles=mi)),
+    ("Embezzlement",            0,   True,  lambda mi: make_case(offense="Embezzlement (F)", crime_type="Fraud", miles=mi)),
+    ("Embezzlement",            4,   False, lambda mi: make_case(offense="Embezzlement (F)", crime_type="Fraud", miles=mi)),
+    ("Larceny",                 0,   True,  lambda mi: make_case(offense="Larceny (M)", crime_type="Theft", miles=mi)),
+    ("Larceny",                 4,   False, lambda mi: make_case(offense="Larceny (M)", crime_type="Theft", miles=mi)),
+    ("Vandalism",               0,   True,  lambda mi: make_case(offense="Vandalism (M)", crime_type="Property Crime", miles=mi)),
+    ("Vandalism",               4,   False, lambda mi: make_case(offense="Vandalism (M)", crime_type="Property Crime", miles=mi)),
+    ("Arson",                   0,   True,  lambda mi: make_case(offense="Arson (F)", crime_type="Property Crime", miles=mi)),
+    ("Arson",                   4,   False, lambda mi: make_case(offense="Arson (F)", crime_type="Property Crime", miles=mi)),
 
     # ── Suspicious activity: YES within 0.25mi, NO outside (~60/mo) ──
-    ("Suspicious Person",      "0.1mi", True,  lambda: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances", lat=AT_01MI)),
-    ("Suspicious Person",      "0.5mi", False, lambda: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances", lat=AT_05MI)),
-    ("Suspicious Person",      "4mi",   False, lambda: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances", lat=AT_4MI)),
-    ("Prowler",                "0.1mi", True,  lambda: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances", lat=AT_01MI)),
-    ("Prowler",                "0.5mi", False, lambda: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances", lat=AT_05MI)),
-    ("Prowler",                "4mi",   False, lambda: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances", lat=AT_4MI)),
-    ("Trespass",               "0.1mi", True,  lambda: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service", lat=AT_01MI)),
-    ("Trespass",               "0.5mi", False, lambda: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service", lat=AT_05MI)),
-    ("Trespass",               "4mi",   False, lambda: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service", lat=AT_4MI)),
+    ("Suspicious Person",       0.1, True,  lambda mi: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances", miles=mi)),
+    ("Suspicious Person",       0.5, False, lambda mi: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances", miles=mi)),
+    ("Suspicious Person",       4,   False, lambda mi: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances", miles=mi)),
+    ("Prowler",                 0.1, True,  lambda mi: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances", miles=mi)),
+    ("Prowler",                 0.5, False, lambda mi: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances", miles=mi)),
+    ("Prowler",                 4,   False, lambda mi: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances", miles=mi)),
+    ("Trespass",                0.1, True,  lambda mi: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service", miles=mi)),
+    ("Trespass",                0.5, False, lambda mi: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service", miles=mi)),
+    ("Trespass",                4,   False, lambda mi: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service", miles=mi)),
 
     # ── Excluded: NO at any distance (~107/mo) ──
-    ("Shoplift",               "0mi",   False, lambda: make_case(offense="Shoplift (M)", crime_type="Theft", lat=AT_0MI)),
-    ("Petty Theft",            "0mi",   False, lambda: make_case(offense="Petty Theft (M)", crime_type="Theft", lat=AT_0MI)),
-    ("484 Theft",              "0mi",   False, lambda: make_case(offense="484 Theft (M)", crime_type="Theft", lat=AT_0MI)),
-    ("ALARM-BURGLARY",         "0mi",   False, lambda: make_incident(call_type="ALARM - BURGLARY", call_type_desc="Alarm Responses", lat=AT_0MI)),
-    ("Burglary Alarm",         "0mi",   False, lambda: make_incident(call_type="Burglary Alarm", call_type_desc="Alarm Responses", lat=AT_0MI)),
+    ("Shoplift",                0,   False, lambda mi: make_case(offense="Shoplift (M)", crime_type="Theft", miles=mi)),
+    ("Petty Theft",             0,   False, lambda mi: make_case(offense="Petty Theft (M)", crime_type="Theft", miles=mi)),
+    ("484 Theft",               0,   False, lambda mi: make_case(offense="484 Theft (M)", crime_type="Theft", miles=mi)),
+    ("ALARM-BURGLARY",          0,   False, lambda mi: make_incident(call_type="ALARM - BURGLARY", call_type_desc="Alarm Responses", miles=mi)),
+    ("Burglary Alarm",          0,   False, lambda mi: make_incident(call_type="Burglary Alarm", call_type_desc="Alarm Responses", miles=mi)),
 
     # ── Non-property: NO at any distance (~1000+/mo) ──
-    ("Traffic Stop",            "0mi",  False, lambda: make_incident(call_type="Traffic Stop", call_type_desc="Traffic", lat=AT_0MI)),
-    ("Medical Aid",             "0mi",  False, lambda: make_incident(call_type="Medical Aid", call_type_desc="Medical", lat=AT_0MI)),
-    ("Welfare Check",           "0mi",  False, lambda: make_incident(call_type="Welfare Check", call_type_desc="Other Calls for Service", lat=AT_0MI)),
-    ("Assault",                 "0mi",  False, lambda: make_case(offense="Assault (F)", crime_type="Violent Crime", lat=AT_0MI)),
-    ("DUI",                     "0mi",  False, lambda: make_incident(call_type="DUI", call_type_desc="Traffic", lat=AT_0MI)),
-    ("Noise Complaint",         "0mi",  False, lambda: make_incident(call_type="Noise Complaint", call_type_desc="Other Calls for Service", lat=AT_0MI)),
-    ("Suspicious Circumstances","0mi",  False, lambda: make_incident(call_type="Suspicious Circumstances", call_type_desc="Suspicious Circumstances", lat=AT_0MI)),
-    ("Drug paraphernalia",      "0mi",  False, lambda: make_case(offense="Possess unlawful paraphernalia (M)", crime_type="Drugs or Alcohol", lat=AT_0MI)),
+    ("Traffic Stop",            0,   False, lambda mi: make_incident(call_type="Traffic Stop", call_type_desc="Traffic", miles=mi)),
+    ("Medical Aid",             0,   False, lambda mi: make_incident(call_type="Medical Aid", call_type_desc="Medical", miles=mi)),
+    ("Welfare Check",           0,   False, lambda mi: make_incident(call_type="Welfare Check", call_type_desc="Other Calls for Service", miles=mi)),
+    ("Assault",                 0,   False, lambda mi: make_case(offense="Assault (F)", crime_type="Violent Crime", miles=mi)),
+    ("DUI",                     0,   False, lambda mi: make_incident(call_type="DUI", call_type_desc="Traffic", miles=mi)),
+    ("Noise Complaint",         0,   False, lambda mi: make_incident(call_type="Noise Complaint", call_type_desc="Other Calls for Service", miles=mi)),
+    ("Suspicious Circumstances",0,   False, lambda mi: make_incident(call_type="Suspicious Circumstances", call_type_desc="Suspicious Circumstances", miles=mi)),
+    ("Drug paraphernalia",      0,   False, lambda mi: make_case(offense="Possess unlawful paraphernalia (M)", crime_type="Drugs or Alcohol", miles=mi)),
 ]
 
 
@@ -204,43 +205,43 @@ class TestWouldAlert(unittest.TestCase):
     pass
 
 
-for _name, _dist, _expected, _builder in ALERT_CASES:
-    def _make_test(name=_name, dist=_dist, builder=_builder, expected=_expected):
+for _name, _miles, _expected, _builder in ALERT_CASES:
+    def _make_test(name=_name, miles=_miles, builder=_builder, expected=_expected):
         def test(self):
-            item = builder()
+            item = builder(miles)
             result = would_alert(item)
-            self.assertEqual(result, expected, f"{name} @ {dist}: expected {expected}, got {result}")
+            self.assertEqual(result, expected, f"{name} @ {miles}mi: expected {expected}, got {result}")
         return test
-    safe = (_name + "_" + _dist).lower().replace(' ', '_').replace('-', '_').replace('.', '_')
+    safe = f"{_name}_{_miles}mi".lower().replace(' ', '_').replace('-', '_').replace('.', '_')
     setattr(TestWouldAlert, f"test_{safe}", _make_test())
 
 
 class TestDistancePresets(unittest.TestCase):
-    """Verify our lat offsets produce the expected distances."""
+    """Verify lat_at() produces the expected distances."""
 
     def test_0mi(self):
-        self.assertAlmostEqual(haversine_m(AT_0MI, LNG, MENLO_OAKS_LAT, MENLO_OAKS_LNG), 0, places=0)
+        dist = haversine_m(lat_at(0), MENLO_OAKS_LNG, MENLO_OAKS_LAT, MENLO_OAKS_LNG)
+        self.assertAlmostEqual(dist, 0, places=0)
 
     def test_01mi_within_quarter(self):
-        dist = haversine_m(AT_01MI, LNG, MENLO_OAKS_LAT, MENLO_OAKS_LNG)
+        dist = haversine_m(lat_at(0.1), MENLO_OAKS_LNG, MENLO_OAKS_LAT, MENLO_OAKS_LNG)
         self.assertLess(dist, QUARTER_MILE_M, f"{dist:.0f}m should be < {QUARTER_MILE_M}m (0.25mi)")
 
     def test_05mi_outside_quarter_inside_3mi(self):
-        dist = haversine_m(AT_05MI, LNG, MENLO_OAKS_LAT, MENLO_OAKS_LNG)
+        dist = haversine_m(lat_at(0.5), MENLO_OAKS_LNG, MENLO_OAKS_LAT, MENLO_OAKS_LNG)
         self.assertGreater(dist, QUARTER_MILE_M, f"{dist:.0f}m should be > {QUARTER_MILE_M}m (0.25mi)")
         self.assertLess(dist, THREE_MILES_M, f"{dist:.0f}m should be < {THREE_MILES_M}m (3mi)")
 
     def test_2mi_inside_3mi(self):
-        dist = haversine_m(AT_2MI, LNG, MENLO_OAKS_LAT, MENLO_OAKS_LNG)
+        dist = haversine_m(lat_at(2), MENLO_OAKS_LNG, MENLO_OAKS_LAT, MENLO_OAKS_LNG)
         self.assertLess(dist, THREE_MILES_M, f"{dist:.0f}m should be < {THREE_MILES_M}m (3mi)")
 
     def test_4mi_outside_3mi(self):
-        dist = haversine_m(AT_4MI, LNG, MENLO_OAKS_LAT, MENLO_OAKS_LNG)
+        dist = haversine_m(lat_at(4), MENLO_OAKS_LNG, MENLO_OAKS_LAT, MENLO_OAKS_LNG)
         self.assertGreater(dist, THREE_MILES_M, f"{dist:.0f}m should be > {THREE_MILES_M}m (3mi)")
 
     def test_missing_coords(self):
-        item = make_incident(lat=None)
-        item["xCoord"] = None
+        item = {"_source": "incident", "yCoord": None, "xCoord": None}
         within, _ = item_within_menlo_oaks(item)
         self.assertFalse(within)
 
