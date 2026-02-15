@@ -38,7 +38,6 @@ AT_01MI  = MENLO_OAKS_LAT + 0.00145      # 0.1mi — inside 0.25mi
 AT_05MI  = MENLO_OAKS_LAT + 0.00725      # 0.5mi — outside 0.25mi, inside 3mi
 AT_2MI   = MENLO_OAKS_LAT + 0.029        # 2mi   — inside 3mi
 AT_4MI   = MENLO_OAKS_LAT + 0.058        # 4mi   — outside 3mi
-AT_25MI  = MENLO_OAKS_LAT + 0.36         # 25mi  — far away
 
 
 def make_incident(call_type="", call_type_desc="", lat=AT_0MI, prefix="menlopark"):
@@ -76,99 +75,127 @@ def would_alert(item):
     return True
 
 
-# ┌──────────────────────────────────────────────────────────────────────────┐
-# │  FULL ALERT TABLE — crime type × distance → alert yes/no               │
-# │                                                                          │
-# │  Crime type               │ Distance │ Alert? │ Why                     │
-# │  ─────────────────────────┼──────────┼────────┼──────────────────────── │
-# │  Property crimes (3mi radius, ~25/mo)                                    │
-# │  Burglary - Residential   │  0mi     │  YES   │ within 3mi             │
-# │  Burglary - Commercial    │  2mi     │  YES   │ within 3mi             │
-# │  Burglary - Vehicle       │  0.5mi   │  YES   │ within 3mi             │
-# │  Grand Theft              │  2mi     │  YES   │ within 3mi             │
-# │  Theft From Vehicle       │  0mi     │  YES   │ within 3mi             │
-# │  Stolen Vehicle           │  2mi     │  YES   │ within 3mi             │
-# │  Fraud                    │  0.5mi   │  YES   │ within 3mi             │
-# │  Identity Theft           │  0mi     │  YES   │ within 3mi             │
-# │  Forgery                  │  0mi     │  YES   │ within 3mi             │
-# │  Embezzlement             │  0mi     │  YES   │ within 3mi             │
-# │  Larceny                  │  0mi     │  YES   │ within 3mi             │
-# │  Vandalism                │  0mi     │  YES   │ within 3mi             │
-# │  Arson                    │  0mi     │  YES   │ within 3mi             │
-# │  Burglary - Residential   │  4mi     │  NO    │ outside 3mi            │
-# │  Grand Theft              │  4mi     │  NO    │ outside 3mi            │
-# │  ─────────────────────────┼──────────┼────────┼──────────────────────── │
-# │  Suspicious activity (0.25mi radius, ~60/mo)                             │
-# │  Suspicious Person        │  0.1mi   │  YES   │ within 0.25mi          │
-# │  Prowler                  │  0.1mi   │  YES   │ within 0.25mi          │
-# │  Trespass                 │  0.1mi   │  YES   │ within 0.25mi          │
-# │  Suspicious Person        │  0.5mi   │  NO    │ outside 0.25mi         │
-# │  Prowler                  │  2mi     │  NO    │ outside 0.25mi         │
-# │  Trespass                 │  4mi     │  NO    │ outside 3mi entirely   │
-# │  ─────────────────────────┼──────────┼────────┼──────────────────────── │
-# │  Excluded (any distance, ~107/mo)                                        │
-# │  Shoplift                 │  0mi     │  NO    │ excluded by EXCLUDE_RE │
-# │  Petty Theft              │  0mi     │  NO    │ excluded by EXCLUDE_RE │
-# │  484 Theft                │  0mi     │  NO    │ excluded by EXCLUDE_RE │
-# │  ALARM - BURGLARY         │  0mi     │  NO    │ excluded by EXCLUDE_RE │
-# │  Burglary Alarm           │  0mi     │  NO    │ excluded by EXCLUDE_RE │
-# │  ─────────────────────────┼──────────┼────────┼──────────────────────── │
-# │  Non-property (any distance, ~1000+/mo)                                  │
-# │  Traffic Stop             │  0mi     │  NO    │ not in ALERT_RE        │
-# │  Medical Aid              │  0mi     │  NO    │ not in ALERT_RE        │
-# │  Welfare Check            │  0mi     │  NO    │ not in ALERT_RE        │
-# │  Assault                  │  0mi     │  NO    │ not in ALERT_RE        │
-# │  DUI                      │  0mi     │  NO    │ not in ALERT_RE        │
-# │  Noise Complaint          │  0mi     │  NO    │ not in ALERT_RE        │
-# │  Suspicious Circumstances │  0mi     │  NO    │ not in ALERT_RE        │
-# │  Drug paraphernalia       │  0mi     │  NO    │ not in ALERT_RE        │
-# └──────────────────────────────────────────────────────────────────────────┘
+# ┌──────────────────────────────────────────────────────────────────────────────┐
+# │  FULL ALERT TABLE — crime type × distance → alert yes/no                    │
+# │                                                                              │
+# │  Crime type               │ Dist  │ Alert? │ Why                            │
+# │  ─────────────────────────┼───────┼────────┼─────────────────────────────── │
+# │  Property crimes (3mi radius, ~25/mo)                                        │
+# │  Burglary - Residential   │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Burglary - Residential   │ 2mi   │  YES   │ property crime within 3mi     │
+# │  Burglary - Residential   │ 4mi   │  NO    │ property crime outside 3mi    │
+# │  Burglary - Commercial    │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Burglary - Commercial    │ 4mi   │  NO    │ property crime outside 3mi    │
+# │  Burglary - Vehicle       │ 0.5mi │  YES   │ property crime within 3mi     │
+# │  Burglary - Vehicle       │ 4mi   │  NO    │ property crime outside 3mi    │
+# │  Grand Theft              │ 2mi   │  YES   │ property crime within 3mi     │
+# │  Grand Theft              │ 4mi   │  NO    │ property crime outside 3mi    │
+# │  Theft From Vehicle       │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Theft From Vehicle       │ 4mi   │  NO    │ property crime outside 3mi    │
+# │  Stolen Vehicle           │ 2mi   │  YES   │ property crime within 3mi     │
+# │  Stolen Vehicle           │ 4mi   │  NO    │ property crime outside 3mi    │
+# │  Fraud                    │ 0.5mi │  YES   │ property crime within 3mi     │
+# │  Fraud                    │ 4mi   │  NO    │ property crime outside 3mi    │
+# │  Identity Theft           │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Identity Theft           │ 4mi   │  NO    │ property crime outside 3mi    │
+# │  Forgery                  │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Forgery                  │ 4mi   │  NO    │ property crime outside 3mi    │
+# │  Embezzlement             │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Embezzlement             │ 4mi   │  NO    │ property crime outside 3mi    │
+# │  Larceny                  │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Larceny                  │ 4mi   │  NO    │ property crime outside 3mi    │
+# │  Vandalism                │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Vandalism                │ 4mi   │  NO    │ property crime outside 3mi    │
+# │  Arson                    │ 0mi   │  YES   │ property crime within 3mi     │
+# │  Arson                    │ 4mi   │  NO    │ property crime outside 3mi    │
+# │  ─────────────────────────┼───────┼────────┼─────────────────────────────── │
+# │  Suspicious activity (0.25mi radius, ~60/mo)                                 │
+# │  Suspicious Person        │ 0.1mi │  YES   │ suspicious within 0.25mi      │
+# │  Suspicious Person        │ 0.5mi │  NO    │ suspicious outside 0.25mi     │
+# │  Suspicious Person        │ 4mi   │  NO    │ suspicious outside 3mi        │
+# │  Prowler                  │ 0.1mi │  YES   │ suspicious within 0.25mi      │
+# │  Prowler                  │ 0.5mi │  NO    │ suspicious outside 0.25mi     │
+# │  Prowler                  │ 4mi   │  NO    │ suspicious outside 3mi        │
+# │  Trespass                 │ 0.1mi │  YES   │ suspicious within 0.25mi      │
+# │  Trespass                 │ 0.5mi │  NO    │ suspicious outside 0.25mi     │
+# │  Trespass                 │ 4mi   │  NO    │ suspicious outside 3mi        │
+# │  ─────────────────────────┼───────┼────────┼─────────────────────────────── │
+# │  Excluded (any distance, ~107/mo)                                            │
+# │  Shoplift                 │ 0mi   │  NO    │ excluded by EXCLUDE_RE        │
+# │  Petty Theft              │ 0mi   │  NO    │ excluded by EXCLUDE_RE        │
+# │  484 Theft                │ 0mi   │  NO    │ excluded by EXCLUDE_RE        │
+# │  ALARM - BURGLARY         │ 0mi   │  NO    │ excluded by EXCLUDE_RE        │
+# │  Burglary Alarm           │ 0mi   │  NO    │ excluded by EXCLUDE_RE        │
+# │  ─────────────────────────┼───────┼────────┼─────────────────────────────── │
+# │  Non-property (any distance, ~1000+/mo)                                      │
+# │  Traffic Stop             │ 0mi   │  NO    │ not in ALERT_RE               │
+# │  Medical Aid              │ 0mi   │  NO    │ not in ALERT_RE               │
+# │  Welfare Check            │ 0mi   │  NO    │ not in ALERT_RE               │
+# │  Assault                  │ 0mi   │  NO    │ not in ALERT_RE               │
+# │  DUI                      │ 0mi   │  NO    │ not in ALERT_RE               │
+# │  Noise Complaint          │ 0mi   │  NO    │ not in ALERT_RE               │
+# │  Suspicious Circumstances │ 0mi   │  NO    │ not in ALERT_RE               │
+# │  Drug paraphernalia       │ 0mi   │  NO    │ not in ALERT_RE               │
+# └──────────────────────────────────────────────────────────────────────────────┘
 
 # --- (name, distance, alert?, builder) ---
 ALERT_CASES = [
-    # ── Property crimes: alert within 3mi (~25/mo) ──
-    ("Burglary-Residential @0mi",   True,  lambda: make_case(offense="Burglary - Residential (F)", crime_type="Burglary", lat=AT_0MI)),
-    ("Burglary-Commercial @2mi",    True,  lambda: make_case(offense="Burglary - Commercial (F)", crime_type="Burglary", lat=AT_2MI)),
-    ("Burglary-Vehicle @0.5mi",     True,  lambda: make_case(offense="Burglary - Vehicle (F)", crime_type="Burglary", lat=AT_05MI)),
-    ("Grand Theft @2mi",            True,  lambda: make_case(offense="Grand Theft (F)", crime_type="Theft", lat=AT_2MI)),
-    ("Theft From Vehicle @0mi",     True,  lambda: make_case(offense="Theft From Vehicle", crime_type="Theft", lat=AT_0MI)),
-    ("Stolen Vehicle @2mi",         True,  lambda: make_case(offense="Stolen Vehicle (F)", crime_type="Theft", lat=AT_2MI)),
-    ("Fraud @0.5mi",                True,  lambda: make_case(offense="Fraud (M)", crime_type="Fraud", lat=AT_05MI)),
-    ("Identity Theft @0mi",         True,  lambda: make_case(offense="Identity Theft (F)", crime_type="Fraud", lat=AT_0MI)),
-    ("Forgery @0mi",                True,  lambda: make_case(offense="Forgery (F)", crime_type="Fraud", lat=AT_0MI)),
-    ("Embezzlement @0mi",           True,  lambda: make_case(offense="Embezzlement (F)", crime_type="Fraud", lat=AT_0MI)),
-    ("Larceny @0mi",                True,  lambda: make_case(offense="Larceny (M)", crime_type="Theft", lat=AT_0MI)),
-    ("Vandalism @0mi",              True,  lambda: make_case(offense="Vandalism (M)", crime_type="Property Crime", lat=AT_0MI)),
-    ("Arson @0mi",                  True,  lambda: make_case(offense="Arson (F)", crime_type="Property Crime", lat=AT_0MI)),
-    # ── Property crimes: NO outside 3mi ──
-    ("Burglary-Residential @4mi",   False, lambda: make_case(offense="Burglary - Residential (F)", crime_type="Burglary", lat=AT_4MI)),
-    ("Grand Theft @4mi",            False, lambda: make_case(offense="Grand Theft (F)", crime_type="Theft", lat=AT_4MI)),
+    # ── Property crimes: YES within 3mi, NO outside 3mi (~25/mo) ──
+    ("Burglary-Residential",   "0mi",   True,  lambda: make_case(offense="Burglary - Residential (F)", crime_type="Burglary", lat=AT_0MI)),
+    ("Burglary-Residential",   "2mi",   True,  lambda: make_case(offense="Burglary - Residential (F)", crime_type="Burglary", lat=AT_2MI)),
+    ("Burglary-Residential",   "4mi",   False, lambda: make_case(offense="Burglary - Residential (F)", crime_type="Burglary", lat=AT_4MI)),
+    ("Burglary-Commercial",    "0mi",   True,  lambda: make_case(offense="Burglary - Commercial (F)", crime_type="Burglary", lat=AT_0MI)),
+    ("Burglary-Commercial",    "4mi",   False, lambda: make_case(offense="Burglary - Commercial (F)", crime_type="Burglary", lat=AT_4MI)),
+    ("Burglary-Vehicle",       "0.5mi", True,  lambda: make_case(offense="Burglary - Vehicle (F)", crime_type="Burglary", lat=AT_05MI)),
+    ("Burglary-Vehicle",       "4mi",   False, lambda: make_case(offense="Burglary - Vehicle (F)", crime_type="Burglary", lat=AT_4MI)),
+    ("Grand Theft",            "2mi",   True,  lambda: make_case(offense="Grand Theft (F)", crime_type="Theft", lat=AT_2MI)),
+    ("Grand Theft",            "4mi",   False, lambda: make_case(offense="Grand Theft (F)", crime_type="Theft", lat=AT_4MI)),
+    ("Theft From Vehicle",     "0mi",   True,  lambda: make_case(offense="Theft From Vehicle", crime_type="Theft", lat=AT_0MI)),
+    ("Theft From Vehicle",     "4mi",   False, lambda: make_case(offense="Theft From Vehicle", crime_type="Theft", lat=AT_4MI)),
+    ("Stolen Vehicle",         "2mi",   True,  lambda: make_case(offense="Stolen Vehicle (F)", crime_type="Theft", lat=AT_2MI)),
+    ("Stolen Vehicle",         "4mi",   False, lambda: make_case(offense="Stolen Vehicle (F)", crime_type="Theft", lat=AT_4MI)),
+    ("Fraud",                  "0.5mi", True,  lambda: make_case(offense="Fraud (M)", crime_type="Fraud", lat=AT_05MI)),
+    ("Fraud",                  "4mi",   False, lambda: make_case(offense="Fraud (M)", crime_type="Fraud", lat=AT_4MI)),
+    ("Identity Theft",         "0mi",   True,  lambda: make_case(offense="Identity Theft (F)", crime_type="Fraud", lat=AT_0MI)),
+    ("Identity Theft",         "4mi",   False, lambda: make_case(offense="Identity Theft (F)", crime_type="Fraud", lat=AT_4MI)),
+    ("Forgery",                "0mi",   True,  lambda: make_case(offense="Forgery (F)", crime_type="Fraud", lat=AT_0MI)),
+    ("Forgery",                "4mi",   False, lambda: make_case(offense="Forgery (F)", crime_type="Fraud", lat=AT_4MI)),
+    ("Embezzlement",           "0mi",   True,  lambda: make_case(offense="Embezzlement (F)", crime_type="Fraud", lat=AT_0MI)),
+    ("Embezzlement",           "4mi",   False, lambda: make_case(offense="Embezzlement (F)", crime_type="Fraud", lat=AT_4MI)),
+    ("Larceny",                "0mi",   True,  lambda: make_case(offense="Larceny (M)", crime_type="Theft", lat=AT_0MI)),
+    ("Larceny",                "4mi",   False, lambda: make_case(offense="Larceny (M)", crime_type="Theft", lat=AT_4MI)),
+    ("Vandalism",              "0mi",   True,  lambda: make_case(offense="Vandalism (M)", crime_type="Property Crime", lat=AT_0MI)),
+    ("Vandalism",              "4mi",   False, lambda: make_case(offense="Vandalism (M)", crime_type="Property Crime", lat=AT_4MI)),
+    ("Arson",                  "0mi",   True,  lambda: make_case(offense="Arson (F)", crime_type="Property Crime", lat=AT_0MI)),
+    ("Arson",                  "4mi",   False, lambda: make_case(offense="Arson (F)", crime_type="Property Crime", lat=AT_4MI)),
 
-    # ── Suspicious activity: alert within 0.25mi only (~60/mo) ──
-    ("Suspicious Person @0.1mi",    True,  lambda: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances", lat=AT_01MI)),
-    ("Prowler @0.1mi",              True,  lambda: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances", lat=AT_01MI)),
-    ("Trespass @0.1mi",             True,  lambda: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service", lat=AT_01MI)),
-    # ── Suspicious activity: NO outside 0.25mi ──
-    ("Suspicious Person @0.5mi",    False, lambda: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances", lat=AT_05MI)),
-    ("Prowler @2mi",                False, lambda: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances", lat=AT_2MI)),
-    ("Trespass @4mi",               False, lambda: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service", lat=AT_4MI)),
+    # ── Suspicious activity: YES within 0.25mi, NO outside (~60/mo) ──
+    ("Suspicious Person",      "0.1mi", True,  lambda: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances", lat=AT_01MI)),
+    ("Suspicious Person",      "0.5mi", False, lambda: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances", lat=AT_05MI)),
+    ("Suspicious Person",      "4mi",   False, lambda: make_incident(call_type="Suspicious Person", call_type_desc="Suspicious Circumstances", lat=AT_4MI)),
+    ("Prowler",                "0.1mi", True,  lambda: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances", lat=AT_01MI)),
+    ("Prowler",                "0.5mi", False, lambda: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances", lat=AT_05MI)),
+    ("Prowler",                "4mi",   False, lambda: make_incident(call_type="Prowler", call_type_desc="Suspicious Circumstances", lat=AT_4MI)),
+    ("Trespass",               "0.1mi", True,  lambda: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service", lat=AT_01MI)),
+    ("Trespass",               "0.5mi", False, lambda: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service", lat=AT_05MI)),
+    ("Trespass",               "4mi",   False, lambda: make_incident(call_type="Trespass", call_type_desc="Other Calls for Service", lat=AT_4MI)),
 
     # ── Excluded: NO at any distance (~107/mo) ──
-    ("Shoplift @0mi",               False, lambda: make_case(offense="Shoplift (M)", crime_type="Theft", lat=AT_0MI)),
-    ("Petty Theft @0mi",            False, lambda: make_case(offense="Petty Theft (M)", crime_type="Theft", lat=AT_0MI)),
-    ("484 Theft @0mi",              False, lambda: make_case(offense="484 Theft (M)", crime_type="Theft", lat=AT_0MI)),
-    ("ALARM-BURGLARY @0mi",         False, lambda: make_incident(call_type="ALARM - BURGLARY", call_type_desc="Alarm Responses", lat=AT_0MI)),
-    ("Burglary Alarm @0mi",         False, lambda: make_incident(call_type="Burglary Alarm", call_type_desc="Alarm Responses", lat=AT_0MI)),
+    ("Shoplift",               "0mi",   False, lambda: make_case(offense="Shoplift (M)", crime_type="Theft", lat=AT_0MI)),
+    ("Petty Theft",            "0mi",   False, lambda: make_case(offense="Petty Theft (M)", crime_type="Theft", lat=AT_0MI)),
+    ("484 Theft",              "0mi",   False, lambda: make_case(offense="484 Theft (M)", crime_type="Theft", lat=AT_0MI)),
+    ("ALARM-BURGLARY",         "0mi",   False, lambda: make_incident(call_type="ALARM - BURGLARY", call_type_desc="Alarm Responses", lat=AT_0MI)),
+    ("Burglary Alarm",         "0mi",   False, lambda: make_incident(call_type="Burglary Alarm", call_type_desc="Alarm Responses", lat=AT_0MI)),
 
     # ── Non-property: NO at any distance (~1000+/mo) ──
-    ("Traffic Stop @0mi",            False, lambda: make_incident(call_type="Traffic Stop", call_type_desc="Traffic", lat=AT_0MI)),
-    ("Medical Aid @0mi",             False, lambda: make_incident(call_type="Medical Aid", call_type_desc="Medical", lat=AT_0MI)),
-    ("Welfare Check @0mi",           False, lambda: make_incident(call_type="Welfare Check", call_type_desc="Other Calls for Service", lat=AT_0MI)),
-    ("Assault @0mi",                 False, lambda: make_case(offense="Assault (F)", crime_type="Violent Crime", lat=AT_0MI)),
-    ("DUI @0mi",                     False, lambda: make_incident(call_type="DUI", call_type_desc="Traffic", lat=AT_0MI)),
-    ("Noise Complaint @0mi",         False, lambda: make_incident(call_type="Noise Complaint", call_type_desc="Other Calls for Service", lat=AT_0MI)),
-    ("Suspicious Circumstances @0mi",False, lambda: make_incident(call_type="Suspicious Circumstances", call_type_desc="Suspicious Circumstances", lat=AT_0MI)),
-    ("Drug paraphernalia @0mi",      False, lambda: make_case(offense="Possess unlawful paraphernalia (M)", crime_type="Drugs or Alcohol", lat=AT_0MI)),
+    ("Traffic Stop",            "0mi",  False, lambda: make_incident(call_type="Traffic Stop", call_type_desc="Traffic", lat=AT_0MI)),
+    ("Medical Aid",             "0mi",  False, lambda: make_incident(call_type="Medical Aid", call_type_desc="Medical", lat=AT_0MI)),
+    ("Welfare Check",           "0mi",  False, lambda: make_incident(call_type="Welfare Check", call_type_desc="Other Calls for Service", lat=AT_0MI)),
+    ("Assault",                 "0mi",  False, lambda: make_case(offense="Assault (F)", crime_type="Violent Crime", lat=AT_0MI)),
+    ("DUI",                     "0mi",  False, lambda: make_incident(call_type="DUI", call_type_desc="Traffic", lat=AT_0MI)),
+    ("Noise Complaint",         "0mi",  False, lambda: make_incident(call_type="Noise Complaint", call_type_desc="Other Calls for Service", lat=AT_0MI)),
+    ("Suspicious Circumstances","0mi",  False, lambda: make_incident(call_type="Suspicious Circumstances", call_type_desc="Suspicious Circumstances", lat=AT_0MI)),
+    ("Drug paraphernalia",      "0mi",  False, lambda: make_case(offense="Possess unlawful paraphernalia (M)", crime_type="Drugs or Alcohol", lat=AT_0MI)),
 ]
 
 
@@ -177,14 +204,14 @@ class TestWouldAlert(unittest.TestCase):
     pass
 
 
-for _name, _expected, _builder in ALERT_CASES:
-    def _make_test(name=_name, builder=_builder, expected=_expected):
+for _name, _dist, _expected, _builder in ALERT_CASES:
+    def _make_test(name=_name, dist=_dist, builder=_builder, expected=_expected):
         def test(self):
             item = builder()
             result = would_alert(item)
-            self.assertEqual(result, expected, f"{name}: expected {expected}, got {result}")
+            self.assertEqual(result, expected, f"{name} @ {dist}: expected {expected}, got {result}")
         return test
-    safe = _name.lower().replace(' ', '_').replace('-', '_').replace('@', '_at_').replace('.', '_')
+    safe = (_name + "_" + _dist).lower().replace(' ', '_').replace('-', '_').replace('.', '_')
     setattr(TestWouldAlert, f"test_{safe}", _make_test())
 
 
