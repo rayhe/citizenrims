@@ -9,6 +9,7 @@ import math
 import os
 import re
 import smtplib
+import subprocess
 from datetime import datetime, timedelta, timezone
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -48,8 +49,33 @@ EXCLUDE_RE = re.compile(
     re.IGNORECASE,
 )
 
+def load_config():
+    """Decrypt config.enc with CONFIG_PASSPHRASE env var. Returns dict or {}."""
+    passphrase = os.environ.get("CONFIG_PASSPHRASE", "")
+    if not passphrase:
+        return {}
+    enc_path = os.path.join(BASE_DIR, "config.enc")
+    if not os.path.exists(enc_path):
+        return {}
+    try:
+        result = subprocess.run(
+            ["openssl", "enc", "-aes-256-cbc", "-d", "-pbkdf2",
+             "-in", enc_path, "-pass", f"pass:{passphrase}"],
+            capture_output=True, timeout=5,
+        )
+        if result.returncode == 0:
+            return json.loads(result.stdout)
+    except Exception:
+        pass
+    return {}
+
+
+_config = load_config()
+
 ALERT_RECIPIENTS = [
-    r.strip() for r in os.environ.get("ALERT_RECIPIENTS", "").split(",") if r.strip()
+    r.strip() for r in
+    (_config.get("ALERT_RECIPIENTS") or os.environ.get("ALERT_RECIPIENTS", "ray@rayhe.net")).split(",")
+    if r.strip()
 ]
 
 MAP_URL = "https://rayhe.github.io/citizenrims/public/"
