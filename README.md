@@ -109,13 +109,30 @@ Every alert attempt (sent or failed) is appended to `alert_log.json` with:
 
 #### Configuration
 
+**SMTP credentials** (GitHub Actions secrets):
 ```
 ALERT_EMAIL_USER      # Gmail SMTP username
 ALERT_EMAIL_PASSWORD  # Gmail app password
-ALERT_RECIPIENTS      # Comma-separated email addresses
 ```
 
-All three must be set for emails to send. If any are missing, alerts are skipped silently.
+**Recipients** are stored in `config.enc`, an AES-256-CBC encrypted JSON file committed to the repo. This keeps email addresses out of the public repo while remaining readable (unlike write-only GitHub secrets).
+
+To read current recipients:
+```bash
+openssl enc -aes-256-cbc -d -pbkdf2 -in config.enc -pass pass:<passphrase>
+```
+
+To update recipients:
+```bash
+# Decrypt to plaintext
+openssl enc -aes-256-cbc -d -pbkdf2 -in config.enc -out config.json -pass pass:<passphrase>
+# Edit config.json
+# Re-encrypt
+openssl enc -aes-256-cbc -salt -pbkdf2 -in config.json -out config.enc -pass pass:<passphrase>
+# Commit config.enc (config.json is gitignored)
+```
+
+The passphrase is stored as the `CONFIG_PASSPHRASE` GitHub Actions secret. If decryption fails or no passphrase is set, falls back to `ray@rayhe.net`.
 
 ### Menlo Oaks polygon boundary
 
