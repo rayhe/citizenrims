@@ -42,5 +42,16 @@
     "distance_mi": 2.21,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8971cc7f82csm124725956d6.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-16T17:03:47.884937+00:00",
+    "id": "case-smcsheriff-26-01251",
+    "subject": "[MOSI] Possess stolen vehicle/vessel/etc (F) near ANNETTE AV / ROLISON RD \u2014 1.3mi from Menlo Oaks (High)",
+    "street": "ANNETTE AV / ROLISON RD",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.33,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12742c64282sm13431466c88.5 - gsmtp')"
   }
 ]
