@@ -31,5 +31,16 @@
     "distance_mi": 1.77,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bacb658531sm8056649eec.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-16T01:26:19.103284+00:00",
+    "id": "case-smcsheriff-26-00812",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near WARRINGTON AV \u2014 2.2mi from Menlo Oaks (High)",
+    "street": "WARRINGTON AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.21,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8971cc7f82csm124725956d6.4 - gsmtp')"
   }
 ]
