@@ -119,5 +119,16 @@
     "distance_mi": 0.6,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bacb658fc4sm13607277eec.22 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-17T06:11:52.012221+00:00",
+    "id": "inc-paloalto-PP260470082",
+    "subject": "[MOSI] 459R near BRYANT ST / WAVERLEY ST \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "BRYANT ST / WAVERLEY ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 0.86,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb2b0bc162sm1462977585a.2 - gsmtp')"
   }
 ]
