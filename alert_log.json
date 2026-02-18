@@ -284,5 +284,16 @@
     "distance_mi": 1.23,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb67df1fdbsm480051985a.48 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-18T19:37:06.202246+00:00",
+    "id": "inc-menlopark-202602180012",
+    "subject": "[MOSI] Grand Theft near SHARON RD \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "SHARON RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb3d7650c3sm1574010885a.43 - gsmtp')"
   }
 ]
