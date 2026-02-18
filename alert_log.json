@@ -207,5 +207,27 @@
     "distance_mi": 1.2,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb2b0e1bdbsm1681571485a.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-18T04:56:53.475506+00:00",
+    "id": "case-atherton-26-37",
+    "subject": "[MOSI] Make/pass/etc ficticious check with intent to defraud (F) near EL CAMINO REAL \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.94,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8971cdd1541sm184589256d6.49 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-18T04:56:53.759386+00:00",
+    "id": "case-atherton-26-50",
+    "subject": "[MOSI] Get credit/etc others id - Identity theft (F) near WALNUT AV \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "WALNUT AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.2,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb45f13a61sm1171359585a.7 - gsmtp')"
   }
 ]
