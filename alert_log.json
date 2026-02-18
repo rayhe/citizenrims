@@ -229,5 +229,27 @@
     "distance_mi": 1.2,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb45f13a61sm1171359585a.7 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-18T07:52:06.503998+00:00",
+    "id": "case-menlopark-26-366",
+    "subject": "[MOSI] Recovered Locally Stolen Vehicle near MANHATTAN AV/WOODLAND AV \u2014 1.2mi from Menlo Oaks (High)",
+    "street": "MANHATTAN AV/WOODLAND AV",
+    "city": "East Palo Alto",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.23,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8971cc957c8sm193047156d6.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-18T07:52:07.028695+00:00",
+    "id": "case-smcsheriff-26-00971",
+    "subject": "[MOSI] Vandalism:deface property (M) near SWEENEY AV \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "SWEENEY AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.48,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb3e89dc23sm1454831085a.20 - gsmtp')"
   }
 ]
