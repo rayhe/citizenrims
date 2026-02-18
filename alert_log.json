@@ -273,5 +273,16 @@
     "distance_mi": 1.36,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12742c6430asm19813105c88.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-18T14:15:38.310678+00:00",
+    "id": "inc-menlopark-202602170104",
+    "subject": "[MOSI] Recovered Stolen Vehicle near MANHATTAN AV \u2014 1.2mi from Menlo Oaks (High)",
+    "street": "MANHATTAN AV",
+    "city": "East Palo Alto",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.23,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb67df1fdbsm480051985a.48 - gsmtp')"
   }
 ]
