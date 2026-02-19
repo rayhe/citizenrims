@@ -361,5 +361,16 @@
     "distance_mi": 2.81,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12742cad9desm20654092c88.11 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-19T17:47:36.790343+00:00",
+    "id": "inc-menlopark-202602190011",
+    "subject": "[MOSI] Vandalism near WILLOW RD \u2014 0.4mi from Menlo Oaks (Medium)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.42,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bacb66addcsm21522919eec.24 - gsmtp')"
   }
 ]
