@@ -317,5 +317,16 @@
     "distance_mi": 1.09,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8971cca7299sm224929216d6.22 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-19T02:19:57.448725+00:00",
+    "id": "inc-menlopark-202602180052",
+    "subject": "[MOSI] Vandalism near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12742cc9376sm23603442c88.16 - gsmtp')"
   }
 ]
