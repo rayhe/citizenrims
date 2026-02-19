@@ -328,5 +328,16 @@
     "distance_mi": 1.04,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12742cc9376sm23603442c88.16 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-19T03:22:55.690672+00:00",
+    "id": "inc-paloalto-PP260490063",
+    "subject": "[MOSI] 487 near WAVERLEY ST / COWPER ST \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "WAVERLEY ST / COWPER ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.12,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb3916f4d7sm1948269685a.6 - gsmtp')"
   }
 ]
