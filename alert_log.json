@@ -339,5 +339,16 @@
     "distance_mi": 1.12,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb3916f4d7sm1948269685a.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-19T09:08:05.742107+00:00",
+    "id": "inc-paloalto-PP260490095",
+    "subject": "[MOSI] 459A near ASH ST / PERAL LN \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "ASH ST / PERAL LN",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.8,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12742cbc900sm25015358c88.14 - gsmtp')"
   }
 ]
