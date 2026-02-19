@@ -806,6 +806,8 @@ function buildHeatmap(tableId, grid, dow, rowTotals, colTotals, grand, maxVal) {
 }
 
 let timelineChart = null;
+let chartLabels = [];
+let chartIsWeekend = [];
 function updateChart(markers) {
   const now = new Date();
   let days, cutoff;
@@ -841,12 +843,20 @@ function updateChart(markers) {
     else dayBuckets[idx].night++;
   });
 
-  const labels = dayBuckets.map(b => {
+  // Include month in labels when span > 14 days
+  const showMonth = days > 14;
+  chartLabels = dayBuckets.map(b => {
     const dow = b.date.toLocaleDateString(undefined, { weekday: 'short' });
     const day = b.date.getDate();
+    if (showMonth) {
+      const mon = b.date.toLocaleDateString(undefined, { month: 'short' });
+      return `${dow} ${mon} ${day}`;
+    }
     return `${dow} ${day}`;
   });
-  const isWeekend = dayBuckets.map(b => { const d = b.date.getDay(); return d === 0 || d === 6; });
+  chartIsWeekend = dayBuckets.map(b => { const d = b.date.getDay(); return d === 0 || d === 6; });
+  const labels = chartLabels;
+  const isWeekend = chartIsWeekend;
 
   document.getElementById('chart-title').textContent = `Activity by watch (${activeDays > 0 ? days + 'd' : 'all'})`;
 
@@ -882,7 +892,7 @@ function updateChart(markers) {
       tooltip: {
         mode: 'index',
         callbacks: {
-          title: items => labels[items[0].dataIndex] + (isWeekend[items[0].dataIndex] ? ' (weekend)' : ''),
+          title: items => chartLabels[items[0].dataIndex] + (chartIsWeekend[items[0].dataIndex] ? ' (weekend)' : ''),
           footer: items => 'Total: ' + items.reduce((s, i) => s + i.raw, 0),
         },
       },
@@ -907,6 +917,9 @@ function updateChart(markers) {
       timelineChart.data.datasets[i].data = ds.data;
       timelineChart.data.datasets[i].backgroundColor = ds.backgroundColor;
     });
+    timelineChart.options.scales.x.ticks.color = chartOpts.scales.x.ticks.color;
+    timelineChart.options.scales.x.ticks.maxTicksLimit = chartOpts.scales.x.ticks.maxTicksLimit;
+    timelineChart.options.scales.x.ticks.font.size = chartOpts.scales.x.ticks.font.size;
     timelineChart.update('none');
     if (overlayChart && document.getElementById('chart-overlay').classList.contains('active')) {
       openChartOverlay();
