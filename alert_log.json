@@ -372,5 +372,27 @@
     "distance_mi": 0.42,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bacb66addcsm21522919eec.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-20T02:09:27.900444+00:00",
+    "id": "inc-paloalto-PP260500068",
+    "subject": "[MOSI] 459C near CASTILLEJA AVE / MARIPOSA AVE \u2014 1.9mi from Menlo Oaks (High)",
+    "street": "CASTILLEJA AVE / MARIPOSA AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.86,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb2b1f5669sm2203569785a.34 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-20T02:09:28.410589+00:00",
+    "id": "case-menlopark-26-387",
+    "subject": "[MOSI] Obtain money/etc by false pretenses [over $400] (F) near SPRUCE AV \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "SPRUCE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.18,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb3916f4d7sm2242906485a.6 - gsmtp')"
   }
 ]
