@@ -394,5 +394,27 @@
     "distance_mi": 1.18,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb3916f4d7sm2242906485a.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-20T04:02:03.291021+00:00",
+    "id": "inc-menlopark-202602190061",
+    "subject": "[MOSI] Vehicle Tampering near MADERA AV \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "MADERA AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.16,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bacb66b746sm27153807eec.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-20T04:02:03.928679+00:00",
+    "id": "inc-paloalto-PP260500084",
+    "subject": "[MOSI] 594 near LELAND AVE / STANFORD AVE \u2014 2.4mi from Menlo Oaks (Medium)",
+    "street": "LELAND AVE / STANFORD AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.45,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bacb65780dsm22365577eec.21 - gsmtp')"
   }
 ]
