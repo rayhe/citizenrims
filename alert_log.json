@@ -416,5 +416,16 @@
     "distance_mi": 2.45,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bacb65780dsm22365577eec.21 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-20T07:44:04.988872+00:00",
+    "id": "case-smcsheriff-26-01039",
+    "subject": "[MOSI] Grand theft from person - All other larceny (M) near MIDDLEFIELD RD \u2014 1.7mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Menlo Park",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.72,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb3d7650c3sm1948425285a.43 - gsmtp')"
   }
 ]
