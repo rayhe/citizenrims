@@ -427,5 +427,16 @@
     "distance_mi": 1.72,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb3d7650c3sm1948425285a.43 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-20T12:23:19.986755+00:00",
+    "id": "case-menlopark-26-390",
+    "subject": "[MOSI] Tamper with vehicle - Motor vehicle parts/accessories (M) near MADERA AV \u2014 0.2mi from Menlo Oaks (High)",
+    "street": "MADERA AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.16,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bacb543e8dsm23716251eec.5 - gsmtp')"
   }
 ]
