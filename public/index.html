@@ -101,6 +101,8 @@
   .agencies { list-style: none; }
   .agencies li { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 0.82rem; }
   .agencies li:last-child { border: none; }
+  .agencies a { color: #1a73e8; text-decoration: none; font-weight: 500; }
+  .agencies a:hover { text-decoration: underline; }
   .badge { display: inline-block; font-size: 0.62rem; padding: 2px 6px; border-radius: 4px; margin-left: 5px; vertical-align: middle; font-weight: 500; }
   .badge-inc { background: #e3f2fd; color: #1565c0; }
   .badge-case { background: #fce4ec; color: #c62828; }
@@ -284,10 +286,10 @@
     <div>
       <h2>Agencies</h2>
       <ul class="agencies">
-        <li>Menlo Park PD <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
-        <li>Atherton PD <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
-        <li>Palo Alto PD <span class="badge badge-inc">incidents</span></li>
-        <li>SMC Sheriff <span class="badge badge-case">cases only</span></li>
+        <li><a href="https://menlopark.citizenrims.com" target="_blank" rel="noopener">Menlo Park PD</a> <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
+        <li><a href="https://atherton.citizenrims.com" target="_blank" rel="noopener">Atherton PD</a> <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
+        <li><a href="https://gis.cityofpaloalto.org/server/rest/services/PublicSafety/AgencyCommonEvent/MapServer/2/query" target="_blank" rel="noopener">Palo Alto PD</a> <span class="badge badge-inc">incidents</span></li>
+        <li><a href="https://smcsheriff.citizenrims.com" target="_blank" rel="noopener">SMC Sheriff</a> <span class="badge badge-case">cases only</span></li>
       </ul>
     </div>
     <div>
