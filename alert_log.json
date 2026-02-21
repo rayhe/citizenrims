@@ -438,5 +438,16 @@
     "distance_mi": 0.16,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bacb543e8dsm23716251eec.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-21T00:56:40.330803+00:00",
+    "id": "case-menlopark-26-391",
+    "subject": "[MOSI] Theft of personal property - From building (M) near WAVERLEY ST \u2014 0.5mi from Menlo Oaks (High)",
+    "street": "WAVERLEY ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.53,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8997e243211sm6103876d6.31 - gsmtp')"
   }
 ]
