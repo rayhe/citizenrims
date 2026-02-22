@@ -537,5 +537,16 @@
     "distance_mi": 1.82,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb8d101ceesm396657185a.34 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-22T07:26:39.036832+00:00",
+    "id": "inc-menlopark-202602210050",
+    "subject": "[MOSI] Grand Theft near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.73,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8997e75a410sm35635076d6.46 - gsmtp')"
   }
 ]
