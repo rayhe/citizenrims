@@ -515,5 +515,16 @@
     "distance_mi": 0.81,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5070d6dd96fsm25040371cf.28 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-22T01:24:26.427355+00:00",
+    "id": "inc-paloalto-PP260520060",
+    "subject": "[MOSI] 487 near COASTLAND DR / COASTLAND DR \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "COASTLAND DR / COASTLAND DR",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.66,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8997cba2437sm33367146d6.23 - gsmtp')"
   }
 ]
