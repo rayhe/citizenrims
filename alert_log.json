@@ -581,5 +581,16 @@
     "distance_mi": 1.14,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb8d10788csm663675485a.40 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-23T08:45:43.698097+00:00",
+    "id": "inc-paloalto-PP260530073",
+    "subject": "[MOSI] 459A near LYTTON AVE / BRYANT ST \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "LYTTON AVE / BRYANT ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.03,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1276af7b4c7sm7431082c88.9 - gsmtp')"
   }
 ]
