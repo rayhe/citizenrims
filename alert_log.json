@@ -570,5 +570,16 @@
     "distance_mi": 0.11,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8997e7383e9sm47091616d6.45 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-23T07:59:40.793753+00:00",
+    "id": "inc-paloalto-PP260530068",
+    "subject": "[MOSI] 459A near GILMAN ST / WAVERLEY ST \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "GILMAN ST / WAVERLEY ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.14,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb8d10788csm663675485a.40 - gsmtp')"
   }
 ]
