@@ -614,5 +614,49 @@
     "distance_mi": 1.83,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8997e77aedasm61902196d6.53 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-23T18:29:57.460890+00:00",
+    "id": "inc-menlopark-202602230021",
+    "subject": "[MOSI] Suspicious Person near BAY RD \u2014 0.0mi from Menlo Oaks (High)",
+    "street": "BAY RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.01,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8997e62f222sm73482256d6.37 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-23T18:29:57.675328+00:00",
+    "id": "inc-menlopark-202602230023",
+    "subject": "[MOSI] Suspicious Person near MADERA AV \u2014 0.2mi from Menlo Oaks (High)",
+    "street": "MADERA AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.16,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8997e247b7bsm72960426d6.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-23T18:29:57.905154+00:00",
+    "id": "inc-menlopark-202602230020",
+    "subject": "[MOSI] Grand Theft near ROBIN WY \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "ROBIN WY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.5,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5070d6a1f14sm71583851cf.20 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-23T18:29:58.143052+00:00",
+    "id": "case-menlopark-26-407",
+    "subject": "[MOSI] Grnd Thft:prop/Etc $400+ near ROBIN WAY \u2014 0.5mi from Menlo Oaks (High)",
+    "street": "ROBIN WAY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.5,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5070d6a1ddasm75030931cf.21 - gsmtp')"
   }
 ]
