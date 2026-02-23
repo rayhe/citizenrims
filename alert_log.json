@@ -592,5 +592,16 @@
     "distance_mi": 1.03,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1276af7b4c7sm7431082c88.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-23T09:08:45.317643+00:00",
+    "id": "inc-paloalto-PP260530079",
+    "subject": "[MOSI] 459A near WAVERLEY ST / HAMILTON AVE \u2014 1.2mi from Menlo Oaks (High)",
+    "street": "WAVERLEY ST / HAMILTON AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.15,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb8d060846sm638836185a.14 - gsmtp')"
   }
 ]
