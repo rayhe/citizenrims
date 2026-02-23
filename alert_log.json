@@ -603,5 +603,16 @@
     "distance_mi": 1.15,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cb8d060846sm638836185a.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-23T09:58:58.908306+00:00",
+    "id": "case-atherton-26-58",
+    "subject": "[MOSI] Burglary:first degree (F) near AUSTIN AV \u2014 1.8mi from Menlo Oaks (High)",
+    "street": "AUSTIN AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.83,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8997e77aedasm61902196d6.53 - gsmtp')"
   }
 ]
