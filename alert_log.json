@@ -746,5 +746,16 @@
     "distance_mi": 1.46,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bd7dbe77absm8445486eec.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-25T23:49:42.102483+00:00",
+    "id": "case-menlopark-26-421",
+    "subject": "[MOSI] Theft of personal property - From building (M) near WILLOW RD \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.57,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-4160cf9906dsm394369fac.6 - gsmtp')"
   }
 ]
