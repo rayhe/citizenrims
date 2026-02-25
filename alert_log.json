@@ -724,5 +724,27 @@
     "distance_mi": 2.39,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5070d6df762sm114296551cf.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-25T09:08:37.520749+00:00",
+    "id": "inc-paloalto-PP260550088",
+    "subject": "[MOSI] 459A near EMERSON ST / CHANNING AVE \u2014 1.5mi from Menlo Oaks (High)",
+    "street": "EMERSON ST / CHANNING AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.47,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1276af102d9sm11849216c88.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-25T09:08:38.202214+00:00",
+    "id": "inc-paloalto-PP260550090",
+    "subject": "[MOSI] 459A near HIGH ST / CHANNING AVE \u2014 1.5mi from Menlo Oaks (High)",
+    "street": "HIGH ST / CHANNING AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.46,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bd7dbe77absm8445486eec.19 - gsmtp')"
   }
 ]
