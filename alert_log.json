@@ -713,5 +713,16 @@
     "distance_mi": 0.51,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bdc2ab135csm112173eec.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-25T06:15:23.593863+00:00",
+    "id": "inc-paloalto-PP260550068",
+    "subject": "[MOSI] 10851 near CHANNING AVE / EMBARCADERO RD \u2014 2.4mi from Menlo Oaks (High)",
+    "street": "CHANNING AVE / EMBARCADERO RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.39,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5070d6df762sm114296551cf.29 - gsmtp')"
   }
 ]
