@@ -779,5 +779,16 @@
     "distance_mi": 0.78,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-899c73a3392sm16220416d6.53 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-26T19:12:43.928779+00:00",
+    "id": "inc-menlopark-202602260022",
+    "subject": "[MOSI] Grand Theft near WILLOW RD \u2014 0.3mi from Menlo Oaks (Medium)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.34,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-899c73a0ab8sm25208226d6.47 - gsmtp')"
   }
 ]
