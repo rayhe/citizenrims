@@ -790,5 +790,16 @@
     "distance_mi": 0.34,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-899c73a0ab8sm25208226d6.47 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-26T19:51:56.284772+00:00",
+    "id": "inc-atherton-202602260014",
+    "subject": "[MOSI] FRAUD / FALSE PERSONATION near FLETCHER DR \u2014 3.0mi from Menlo Oaks (Medium)",
+    "street": "FLETCHER DR",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 2.97,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-679f2d9b7bfsm2058031eaf.12 - gsmtp')"
   }
 ]
