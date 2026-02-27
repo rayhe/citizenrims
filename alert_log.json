@@ -856,5 +856,16 @@
     "distance_mi": 1.27,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cbbf6730afsm519660385a.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-27T17:53:06.183420+00:00",
+    "id": "case-menlopark-26-417",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near HAVEN AVE \u2014 1.4mi from Menlo Oaks (High)",
+    "street": "HAVEN AVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.35,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12789a43885sm6588022c88.12 - gsmtp')"
   }
 ]
