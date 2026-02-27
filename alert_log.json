@@ -834,5 +834,16 @@
     "distance_mi": 1.06,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-679f2bfee3csm2791055eaf.7 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-27T05:40:03.756705+00:00",
+    "id": "inc-paloalto-PP260570090",
+    "subject": "[MOSI] 459R near CENTER DR / NEWELL RD \u2014 1.7mi from Menlo Oaks (High)",
+    "street": "CENTER DR / NEWELL RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.66,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-899c7159c15sm37040776d6.2 - gsmtp')"
   }
 ]
