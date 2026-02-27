@@ -845,5 +845,16 @@
     "distance_mi": 1.66,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-899c7159c15sm37040776d6.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-27T11:49:42.264138+00:00",
+    "id": "inc-paloalto-PP260570131",
+    "subject": "[MOSI] 594 near ALMA ST / HIGH ST \u2014 1.3mi from Menlo Oaks (Medium)",
+    "street": "ALMA ST / HIGH ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.27,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cbbf6730afsm519660385a.13 - gsmtp')"
   }
 ]
