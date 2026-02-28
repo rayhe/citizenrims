@@ -955,5 +955,16 @@
     "distance_mi": 1.19,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bdd1f4658esm5333067eec.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-28T14:42:12.482027+00:00",
+    "id": "inc-paloalto-PP260580118",
+    "subject": "[MOSI] 487 near TOWN AND COUNTRY VLG / KINGSLEY AVE \u2014 1.7mi from Menlo Oaks (Medium)",
+    "street": "TOWN AND COUNTRY VLG / KINGSLEY AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.73,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-679f2bcd3c5sm5419011eaf.1 - gsmtp')"
   }
 ]
