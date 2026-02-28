@@ -944,5 +944,16 @@
     "distance_mi": 1.34,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bdd1f23c1csm4989870eec.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-28T08:13:32.306341+00:00",
+    "id": "inc-paloalto-PP260580094",
+    "subject": "[MOSI] 459C near HAMILTON AVE / FOREST AVE \u2014 1.2mi from Menlo Oaks (High)",
+    "street": "HAMILTON AVE / FOREST AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.19,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bdd1f4658esm5333067eec.25 - gsmtp')"
   }
 ]
