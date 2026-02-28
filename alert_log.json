@@ -933,5 +933,16 @@
     "distance_mi": 0.85,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50744990e15sm54926421cf.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-28T05:54:09.963516+00:00",
+    "id": "inc-paloalto-PP260580074",
+    "subject": "[MOSI] 459R near CHANNING AVE / ADDISON AVE \u2014 1.3mi from Menlo Oaks (High)",
+    "street": "CHANNING AVE / ADDISON AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.34,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bdd1f23c1csm4989870eec.18 - gsmtp')"
   }
 ]
