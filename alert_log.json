@@ -900,5 +900,16 @@
     "distance_mi": 0.74,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-899c7159b44sm52456736d6.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-28T01:15:37.874363+00:00",
+    "id": "inc-menlopark-202602270047",
+    "subject": "[MOSI] Grand Theft near ALMA ST \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "ALMA ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cbbf736bffsm573623785a.50 - gsmtp')"
   }
 ]
