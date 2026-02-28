@@ -911,5 +911,27 @@
     "distance_mi": 0.78,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cbbf736bffsm573623785a.50 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-28T02:58:05.474852+00:00",
+    "id": "inc-menlopark-202602270054",
+    "subject": "[MOSI] Grand Theft near SANTA CRUZ AV \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "SANTA CRUZ AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cbbf6541f1sm603880185a.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-28T02:58:05.710814+00:00",
+    "id": "case-menlopark-26-437",
+    "subject": "[MOSI] Grand theft:money/labor/property - From motor vehicle (F) near SANTA CRUZ AV \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "SANTA CRUZ AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50744990e15sm54926421cf.10 - gsmtp')"
   }
 ]
