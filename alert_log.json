@@ -966,5 +966,16 @@
     "distance_mi": 1.73,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-679f2bcd3c5sm5419011eaf.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-02-28T20:25:37.881985+00:00",
+    "id": "inc-paloalto-PP260590020",
+    "subject": "[MOSI] 10851 near PEAR LN / PEAR LN \u2014 1.3mi from Menlo Oaks (High)",
+    "street": "PEAR LN / PEAR LN",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.32,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-507449630a0sm69725531cf.6 - gsmtp')"
   }
 ]
