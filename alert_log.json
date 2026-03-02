@@ -1010,5 +1010,16 @@
     "distance_mi": 2.42,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89a07f690c1sm662776d6.44 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-02T23:52:58.382143+00:00",
+    "id": "inc-menlopark-202603020057",
+    "subject": "[MOSI] Fraud near DEL NORTE AV \u2014 0.4mi from Menlo Oaks (Medium)",
+    "street": "DEL NORTE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.35,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cbbf71a8cesm1278573685a.38 - gsmtp')"
   }
 ]
