@@ -1098,5 +1098,16 @@
     "distance_mi": 0.53,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bdd1cefd7esm15181928eec.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-03T23:12:03.864264+00:00",
+    "id": "case-menlopark-26-462",
+    "subject": "[MOSI] Grnd Thft:prop/Etc $400+ near CHASE BANK ATM \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "CHASE BANK ATM",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bdd1e02f95sm13876935eec.13 - gsmtp')"
   }
 ]
