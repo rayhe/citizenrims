@@ -1065,5 +1065,16 @@
     "distance_mi": 0.98,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-507449b4dc0sm120567891cf.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-03T08:05:20.321194+00:00",
+    "id": "inc-paloalto-PP260610123",
+    "subject": "[MOSI] 459A near ALMA VILLAGE CIR / W MEADOW DR \u2014 1.2mi from Menlo Oaks (High)",
+    "street": "ALMA VILLAGE CIR / W MEADOW DR",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.2,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-127899eab46sm15829579c88.8 - gsmtp')"
   }
 ]
