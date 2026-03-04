@@ -12,6 +12,7 @@ Deployed via GitHub Pages. GitHub Actions runs `generate.py` every 5 minutes to 
 | Atherton PD | `atherton` | CitizenRIMS | Yes | Yes |
 | Palo Alto PD | `paloalto` | ArcGIS REST | Yes | No |
 | San Mateo County Sheriff | `smcsheriff` | CitizenRIMS | No | Yes |
+| Redwood City PD | `redwoodcity` | CitizenRIMS | Yes | Yes |
 
 Palo Alto PD has CitizenRIMS data feeds disabled, so we pull from their [public ArcGIS endpoint](https://gis.cityofpaloalto.org/server/rest/services/PublicSafety/AgencyCommonEvent/MapServer/2) instead.
 

@@ -23,7 +23,7 @@ OUT_DIR = os.path.join(BASE_DIR, "public")
 ALERTED_PATH = os.path.join(BASE_DIR, "alerted.json")
 ALERT_LOG_PATH = os.path.join(BASE_DIR, "alert_log.json")
 
-AGENCIES = ["menlopark", "atherton", "smcsheriff"]
+AGENCIES = ["menlopark", "atherton", "smcsheriff", "redwoodcity"]
 
 PA_BASE = "https://gis.cityofpaloalto.org/server/rest/services/PublicSafety/AgencyCommonEvent/MapServer/2/query"
 
@@ -452,7 +452,7 @@ def send_alert(item, dist_m):
       <a href="{MAP_URL}" style="display:inline-block;background:#1a1a2e;color:#fff;padding:10px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px">View on Map</a>
     </div>
   </div>
-  <p style="text-align:center;color:#aaa;font-size:11px;margin-top:12px">Crime Feed — Menlo Park, Atherton, Palo Alto &amp; SMC Sheriff</p>
+  <p style="text-align:center;color:#aaa;font-size:11px;margin-top:12px">Crime Feed — Menlo Park, Atherton, Palo Alto, Redwood City &amp; SMC Sheriff</p>
 </div>"""
 
     msg = MIMEMultipart("alternative")

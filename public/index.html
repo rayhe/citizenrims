@@ -198,6 +198,7 @@
     <button class="filter-btn" data-filter="atherton">Atherton</button>
     <button class="filter-btn" data-filter="paloalto">Palo Alto</button>
     <button class="filter-btn" data-filter="smcsheriff">SMC Sheriff</button>
+    <button class="filter-btn" data-filter="redwoodcity">Redwood City</button>
     <span class="filter-sep"></span>
     <button class="geo-btn" id="geo-menlooaks">Menlo Oaks 3mi</button>
     <span class="filter-sep"></span>
@@ -290,6 +291,7 @@
         <li><a href="https://atherton.citizenrims.com" target="_blank" rel="noopener">Atherton PD</a> <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
         <li><a href="https://gis.cityofpaloalto.org/server/rest/services/PublicSafety/AgencyCommonEvent/MapServer/2/query" target="_blank" rel="noopener">Palo Alto PD</a> <span class="badge badge-inc">incidents</span></li>
         <li><a href="https://smcsheriff.citizenrims.com" target="_blank" rel="noopener">SMC Sheriff</a> <span class="badge badge-case">cases only</span></li>
+        <li><a href="https://redwoodcity.citizenrims.com" target="_blank" rel="noopener">Redwood City PD</a> <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
       </ul>
     </div>
     <div>
@@ -319,6 +321,7 @@ const COLORS = {
   atherton:   { incident: '#34a853', case: '#ff6d00' },
   paloalto:   { incident: '#00897b', case: '#00897b' },
   smcsheriff: { incident: '#9c27b0', case: '#9c27b0' },
+  redwoodcity: { incident: '#e91e63', case: '#c2185b' },
 };
 
 // severity → marker diameter in px
@@ -695,7 +698,7 @@ function applyFilters() {
       else if (activeFilter === 'property') show = PROPERTY_RE.test(m._crimeText);
       else if (activeFilter === 'burglary') show = BURGLARY_RE.test(m._crimeText) && !BURGLARY_EXCLUDE.test(m._crimeText);
       else if (activeFilter === 'alerts') show = ALERT_RE.test(m._crimeText) && !EXCLUDE_RE.test(m._crimeText);
-      else if (activeFilter === 'menlopark' || activeFilter === 'atherton' || activeFilter === 'paloalto' || activeFilter === 'smcsheriff') show = m._prefix === activeFilter;
+      else if (activeFilter === 'menlopark' || activeFilter === 'atherton' || activeFilter === 'paloalto' || activeFilter === 'smcsheriff' || activeFilter === 'redwoodcity') show = m._prefix === activeFilter;
     }
     // geo filter (AND)
     if (show && geoMenloOaks) {
