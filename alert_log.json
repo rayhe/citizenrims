@@ -1725,5 +1725,16 @@
     "distance_mi": 1.67,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2be1731b6b6sm7374782eec.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-04T20:17:16.174379+00:00",
+    "id": "inc-menlopark-202603040049",
+    "subject": "[MOSI] Grand Theft near FREMONT ST \u2014 1.3mi from Menlo Oaks (Medium)",
+    "street": "FREMONT ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.25,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cbbf6f940fsm1735775885a.23 - gsmtp')"
   }
 ]
