@@ -1758,5 +1758,16 @@
     "distance_mi": 1.25,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cbbf65921bsm1716936185a.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-05T00:48:10.526362+00:00",
+    "id": "case-menlopark-26-473",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (M) near BAYFRONT EX/WILLOW RD \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "BAYFRONT EX/WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.01,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2be2f5f1f4dsm2272115eec.25 - gsmtp')"
   }
 ]
