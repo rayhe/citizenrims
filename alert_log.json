@@ -1769,5 +1769,16 @@
     "distance_mi": 1.01,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2be2f5f1f4dsm2272115eec.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-05T03:13:08.522613+00:00",
+    "id": "inc-menlopark-202603040064",
+    "subject": "[MOSI] Grand Theft near BAYFRONT EX \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "BAYFRONT EX",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-899c716caebsm169582176d6.15 - gsmtp')"
   }
 ]
