@@ -1835,5 +1835,16 @@
     "distance_mi": 1.08,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bdd1f7e955sm18548656eec.32 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-06T04:45:11.755930+00:00",
+    "id": "inc-menlopark-202603050076",
+    "subject": "[MOSI] Fraud near ELM ST \u2014 0.6mi from Menlo Oaks (Medium)",
+    "street": "ELM ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.59,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cd6f48408asm23608385a.9 - gsmtp')"
   }
 ]
