@@ -1857,5 +1857,16 @@
     "distance_mi": 0.85,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-128c3f43593sm2491552c88.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-06T23:13:12.347160+00:00",
+    "id": "inc-paloalto-PP260650057",
+    "subject": "[MOSI] 459C near BIRCH ST / ASH ST \u2014 2.7mi from Menlo Oaks (High)",
+    "street": "BIRCH ST / ASH ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.72,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2be4f96aa32sm2099725eec.26 - gsmtp')"
   }
 ]
