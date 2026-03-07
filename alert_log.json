@@ -1890,5 +1890,16 @@
     "distance_mi": 2.78,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2be4f948631sm4247428eec.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-07T22:51:14.138040+00:00",
+    "id": "inc-menlopark-202603070029",
+    "subject": "[MOSI] Grand Theft near HAMILTON AV \u2014 0.4mi from Menlo Oaks (Medium)",
+    "street": "HAMILTON AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.41,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-128c3f433d2sm4018759c88.10 - gsmtp')"
   }
 ]
