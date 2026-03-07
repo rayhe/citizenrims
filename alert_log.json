@@ -1868,5 +1868,16 @@
     "distance_mi": 2.72,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2be4f96aa32sm2099725eec.26 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-07T08:20:16.702276+00:00",
+    "id": "case-smcsheriff-26-01316",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near SPRING ST \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "SPRING ST",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.6,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89a3173c581sm34737356d6.53 - gsmtp')"
   }
 ]
