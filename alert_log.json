@@ -1912,5 +1912,16 @@
     "distance_mi": 1.1,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89a3140dc74sm46916076d6.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-08T18:30:21.408973+00:00",
+    "id": "case-smcsheriff-26-01235",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near SANTA CLARA AV \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "SANTA CLARA AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.94,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cd6f55232fsm531864585a.36 - gsmtp')"
   }
 ]
