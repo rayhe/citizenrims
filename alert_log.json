@@ -1967,5 +1967,27 @@
     "distance_mi": 2.78,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89a57c34a59sm4877756d6.45 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-09T21:36:50.994441+00:00",
+    "id": "inc-menlopark-202603090036",
+    "subject": "[MOSI] Fraud near WILLOW RD \u2014 0.6mi from Menlo Oaks (Medium)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.57,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-508f6555807sm69459231cf.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-09T21:36:51.205117+00:00",
+    "id": "inc-paloalto-PP260680040",
+    "subject": "[MOSI] 459R near COWPER ST / WEBSTER ST \u2014 1.4mi from Menlo Oaks (High)",
+    "street": "COWPER ST / WEBSTER ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.39,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89a57bfaca9sm6048046d6.28 - gsmtp')"
   }
 ]
