@@ -2055,5 +2055,27 @@
     "distance_mi": 1.52,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cd7e3d00dasm627060085a.45 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-10T20:33:58.201691+00:00",
+    "id": "inc-redwoodcity-202603100100",
+    "subject": "[MOSI] Stolen Vehicle near EL CAMINO REAL \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.82,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2be4f82850fsm17332500eec.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-10T20:33:58.767722+00:00",
+    "id": "case-redwoodcity-R26-03-0057",
+    "subject": "[MOSI] Vandalism ($400 or more) (M) near MIDDLEFIELD RD/WILLOW ST \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD/WILLOW ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.74,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-128c3f43593sm16143426c88.9 - gsmtp')"
   }
 ]
