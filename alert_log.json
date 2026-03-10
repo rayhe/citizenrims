@@ -2044,5 +2044,16 @@
     "distance_mi": 1.88,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89a57a31cfcsm23538756d6.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-10T16:39:09.657746+00:00",
+    "id": "case-redwoodcity-R26-02-0460",
+    "subject": "[MOSI] Vandalism:deface property (F) near ROLISON RD \u2014 1.5mi from Menlo Oaks (Medium)",
+    "street": "ROLISON RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.52,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cd7e3d00dasm627060085a.45 - gsmtp')"
   }
 ]
