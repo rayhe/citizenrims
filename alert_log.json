@@ -2077,5 +2077,16 @@
     "distance_mi": 2.74,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-128c3f43593sm16143426c88.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-10T22:56:56.482406+00:00",
+    "id": "inc-menlopark-202603100026",
+    "subject": "[MOSI] Fraud near YALE RD \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "YALE RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.21,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50939ecead9sm2114651cf.14 - gsmtp')"
   }
 ]
