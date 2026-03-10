@@ -2033,5 +2033,16 @@
     "distance_mi": 0.23,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-128c3f59566sm12873920c88.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-10T15:49:17.682342+00:00",
+    "id": "case-smcsheriff-26-01922",
+    "subject": "[MOSI] Arson:property (F) near 5TH AV / SEMICIRCULAR RD \u2014 1.9mi from Menlo Oaks (High)",
+    "street": "5TH AV / SEMICIRCULAR RD",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.88,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89a57a31cfcsm23538756d6.13 - gsmtp')"
   }
 ]
