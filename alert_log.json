@@ -2165,5 +2165,27 @@
     "distance_mi": 0.96,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89a65d2160asm30199916d6.52 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-12T19:38:36.193837+00:00",
+    "id": "case-menlopark-26-508",
+    "subject": "[MOSI] Personate to get money/property [over $400] - Impersonation (F) near YALE RD \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "YALE RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.21,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cda21100adsm419665985a.31 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-12T19:38:36.632979+00:00",
+    "id": "case-redwoodcity-R26-02-0280",
+    "subject": "[MOSI] Burglary:second degree - Motor vehicle parts/accessories (F) near EAST BAYSHORE RD \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "EAST BAYSHORE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.76,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cda2173217sm483365185a.51 - gsmtp')"
   }
 ]
