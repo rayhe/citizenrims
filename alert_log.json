@@ -2198,5 +2198,16 @@
     "distance_mi": 0.57,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5093a146218sm39958661cf.30 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-12T23:41:42.149381+00:00",
+    "id": "inc-menlopark-202603120065",
+    "subject": "[MOSI] Fraud near HENDERSON AV \u2014 0.0mi from Menlo Oaks (Medium)",
+    "street": "HENDERSON AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.02,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2beab52702asm273693eec.16 - gsmtp')"
   }
 ]
