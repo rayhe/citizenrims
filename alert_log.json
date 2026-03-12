@@ -2143,5 +2143,16 @@
     "distance_mi": 0.69,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89a65bd5274sm20278076d6.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-12T01:59:18.662139+00:00",
+    "id": "inc-menlopark-202603110071",
+    "subject": "[MOSI] Fraud near SANTA CRUZ AV \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "SANTA CRUZ AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cda2151db2sm239778985a.44 - gsmtp')"
   }
 ]
