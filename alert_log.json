@@ -2231,5 +2231,27 @@
     "distance_mi": 0.75,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2bead5a07d6sm459431eec.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-13T06:00:30.071736+00:00",
+    "id": "inc-menlopark-202603120097",
+    "subject": "[MOSI] Robbery near INDEPENDENCE DR \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "INDEPENDENCE DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89a65d0a7b6sm50980146d6.44 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-13T06:00:30.281939+00:00",
+    "id": "case-menlopark-26-535",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near MENLO AV \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "MENLO AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.75,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cda2173217sm591544685a.51 - gsmtp')"
   }
 ]
