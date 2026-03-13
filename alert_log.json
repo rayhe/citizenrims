@@ -2308,5 +2308,16 @@
     "distance_mi": 0.24,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cda21100adsm696271985a.31 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-13T23:43:49.227428+00:00",
+    "id": "case-redwoodcity-R26-03-6022",
+    "subject": "[MOSI] Vandalism ($400 or more) (F) near WILLOW ST \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "WILLOW ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.76,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cda1fe19d3sm655443585a.19 - gsmtp')"
   }
 ]
