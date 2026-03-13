@@ -2253,5 +2253,16 @@
     "distance_mi": 0.75,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cda2173217sm591544685a.51 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-13T09:25:48.349950+00:00",
+    "id": "case-menlopark-26-538",
+    "subject": "[MOSI] Possess stolen vehicle/vessel/etc (F) near BAYFRONT EX/MARSH RD \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "BAYFRONT EX/MARSH RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.07,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89a65cd5b2esm54997286d6.33 - gsmtp')"
   }
 ]
