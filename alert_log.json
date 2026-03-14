@@ -2385,5 +2385,27 @@
     "distance_mi": 2.21,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cda211036bsm988631985a.23 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-14T23:13:29.323952+00:00",
+    "id": "inc-menlopark-202603140026",
+    "subject": "[MOSI] Grand Theft near OAK GROVE AV \u2014 0.6mi from Menlo Oaks (Medium)",
+    "street": "OAK GROVE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5093a11cc4esm100770181cf.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-14T23:13:29.581338+00:00",
+    "id": "case-menlopark-26-547",
+    "subject": "[MOSI] Personate to get money/property [over $400] - Impersonation (F) near OAK GROVE AV \u2014 0.6mi from Menlo Oaks (Medium)",
+    "street": "OAK GROVE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89a65c071d4sm86305106d6.21 - gsmtp')"
   }
 ]
