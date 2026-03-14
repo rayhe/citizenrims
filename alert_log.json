@@ -2341,5 +2341,27 @@
     "distance_mi": 0.84,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-67bc8efae1asm6458719eaf.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-14T04:08:56.230110+00:00",
+    "id": "inc-paloalto-PP260720096",
+    "subject": "[MOSI] 487 near PISTACHE PL / SHOPPING CENTER WAY \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "PISTACHE PL / SHOPPING CENTER WAY",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.09,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c098cbd4dasm1616205eec.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-14T04:08:56.887051+00:00",
+    "id": "case-menlopark-26-543",
+    "subject": "[MOSI] Obtain money/etc by false pretenses [over $400] (F) near LORELEI LN \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "LORELEI LN",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.84,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-128f6385030sm4150213c88.10 - gsmtp')"
   }
 ]
