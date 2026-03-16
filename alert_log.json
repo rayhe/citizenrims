@@ -2495,5 +2495,27 @@
     "distance_mi": 2.48,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cdaac435dbsm1100508685a.16 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-16T18:30:06.303289+00:00",
+    "id": "inc-paloalto-PP260750013",
+    "subject": "[MOSI] ARSON near EVERETT AVE / RAMONA ST \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "EVERETT AVE / RAMONA ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 0.93,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cda2112f5bsm1476002785a.32 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-16T18:30:06.771911+00:00",
+    "id": "inc-paloalto-PP260750014",
+    "subject": "[MOSI] ARSON near EVERETT AVE / RAMONA ST \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "EVERETT AVE / RAMONA ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 0.97,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89a65c0d327sm126953596d6.22 - gsmtp')"
   }
 ]
