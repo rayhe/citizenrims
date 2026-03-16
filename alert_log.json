@@ -2484,5 +2484,16 @@
     "distance_mi": 1.21,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89a65cfc409sm114177096d6.35 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-16T17:32:24.182530+00:00",
+    "id": "case-smcsheriff-26-01454",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near SWEENEY AV \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "SWEENEY AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.48,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cdaac435dbsm1100508685a.16 - gsmtp')"
   }
 ]
