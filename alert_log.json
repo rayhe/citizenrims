@@ -2528,5 +2528,27 @@
     "distance_mi": 1.99,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89a65c0d327sm127434676d6.22 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-16T22:14:10.180583+00:00",
+    "id": "inc-menlopark-202603160059",
+    "subject": "[MOSI] Fraud near MENALTO AV \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "MENALTO AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.76,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89c3e8f6b15sm56339496d6.30 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-16T22:14:10.633273+00:00",
+    "id": "case-menlopark-26-557",
+    "subject": "[MOSI] Forge/alter vehicle registration/etc (M) near WILLOW RD/RR TRACKS \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "WILLOW RD/RR TRACKS",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.73,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89c4c018f5esm40092746d6.45 - gsmtp')"
   }
 ]
