@@ -2583,5 +2583,16 @@
     "distance_mi": 0.46,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cda1fc474dsm1532786185a.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-17T12:31:54.804508+00:00",
+    "id": "case-atherton-26-79",
+    "subject": "[MOSI] Burglary:first degree (F) near OAK GROVE AV \u2014 0.3mi from Menlo Oaks (High)",
+    "street": "OAK GROVE AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.33,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89c47178746sm61212666d6.25 - gsmtp')"
   }
 ]
