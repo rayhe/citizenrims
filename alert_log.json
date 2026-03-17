@@ -2561,5 +2561,16 @@
     "distance_mi": 0.5,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cda2152a41sm1320580685a.43 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-17T00:00:30.106235+00:00",
+    "id": "inc-paloalto-PP260750060",
+    "subject": "[MOSI] 487 near EMBARCADERO RD / EMBARCADERO RD \u2014 1.7mi from Menlo Oaks (Medium)",
+    "street": "EMBARCADERO RD / EMBARCADERO RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.74,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c0bbe04304sm10009693eec.23 - gsmtp')"
   }
 ]
