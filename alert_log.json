@@ -2792,5 +2792,27 @@
     "distance_mi": 0.96,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c0e536894bsm6332139eec.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-18T23:33:13.955353+00:00",
+    "id": "case-redwoodcity-R26-03-0085",
+    "subject": "[MOSI] Vandalism ($400 or more) (F) near PINE ST \u2014 3.0mi from Menlo Oaks (Medium)",
+    "street": "PINE ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89c6ba0348fsm31965266d6.47 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-18T23:33:14.212011+00:00",
+    "id": "case-redwoodcity-R26-03-0233",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near CHEW ST/SPRUCE ST \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "CHEW ST/SPRUCE ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.92,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89c6b9ce6cfsm38412476d6.24 - gsmtp')"
   }
 ]
