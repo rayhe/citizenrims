@@ -2836,5 +2836,16 @@
     "distance_mi": 2.36,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cfad162845sm341595285a.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-19T15:23:56.022963+00:00",
+    "id": "case-redwoodcity-R26-03-0188",
+    "subject": "[MOSI] Get credit/etc others id - Identity theft (F) near CYPRESS ST \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "CYPRESS ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c0e53bc9dbsm8432927eec.11 - gsmtp')"
   }
 ]
