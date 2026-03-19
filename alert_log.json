@@ -2847,5 +2847,38 @@
     "distance_mi": 2.78,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c0e53bc9dbsm8432927eec.11 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-19T20:38:10.499207+00:00",
+    "id": "case-redwoodcity-R26-03-6044",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near PAGE ST \u2014 1.5mi from Menlo Oaks (Medium)",
+    "street": "PAGE ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.53,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7d7eadd17d9sm494062a34.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-19T20:38:10.940400+00:00",
+    "id": "case-redwoodcity-R26-03-6050",
+    "subject": "[MOSI] Burglary:first degree - From motor vehicle (F) near EL CAMINO REAL \u2014 2.7mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.7,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7d7eae62322sm412012a34.26 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-19T20:38:11.408710+00:00",
+    "id": "case-redwoodcity-R26-03-6059",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near BROADWAY \u2014 2.0mi from Menlo Oaks (Medium)",
+    "street": "BROADWAY",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.03,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-41c149103b0sm69416fac.5 - gsmtp')"
   }
 ]
