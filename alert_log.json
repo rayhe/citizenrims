@@ -2814,5 +2814,16 @@
     "distance_mi": 2.92,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89c6b9ce6cfsm38412476d6.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-19T00:49:45.025440+00:00",
+    "id": "case-redwoodcity-R26-03-0060",
+    "subject": "[MOSI] Theft of prop after prior - Motor vehicle parts/accessories (F) near BAY RD \u2014 1.8mi from Menlo Oaks (Medium)",
+    "street": "BAY RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.81,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cfad1b895bsm389995285a.40 - gsmtp')"
   }
 ]
