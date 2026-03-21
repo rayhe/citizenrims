@@ -2935,5 +2935,16 @@
     "distance_mi": 1.23,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12a736b952asm4121493c88.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-21T03:29:00.560682+00:00",
+    "id": "case-atherton-26-83",
+    "subject": "[MOSI] Tamper with vehicle - Destruction/damage/vandalism of property (M) near LLOYDEN DR \u2014 1.6mi from Menlo Oaks (Medium)",
+    "street": "LLOYDEN DR",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.61,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89c85381a8asm41179156d6.49 - gsmtp')"
   }
 ]
