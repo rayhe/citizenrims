@@ -2946,5 +2946,16 @@
     "distance_mi": 1.61,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89c85381a8asm41179156d6.49 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-21T06:46:21.714702+00:00",
+    "id": "inc-paloalto-PP260790110",
+    "subject": "[MOSI] 594 near BRYANT ST / FLORENCE ST \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "BRYANT ST / FLORENCE ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.06,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89c8533573asm37435586d6.24 - gsmtp')"
   }
 ]
