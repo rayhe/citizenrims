@@ -2990,5 +2990,16 @@
     "distance_mi": 0.24,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cfc8f926e0sm614294185a.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-22T18:34:56.924188+00:00",
+    "id": "case-smcsheriff-26-01985",
+    "subject": "[MOSI] Burglary:second degree (F) near 5TH AV \u2014 1.9mi from Menlo Oaks (High)",
+    "street": "5TH AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.94,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cfc90b4a7fsm588784585a.32 - gsmtp')"
   }
 ]
