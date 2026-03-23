@@ -3023,5 +3023,16 @@
     "distance_mi": 1.93,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89c8534f6dfsm76496326d6.37 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-23T05:38:49.595082+00:00",
+    "id": "case-smcsheriff-26-01945",
+    "subject": "[MOSI] Display on vehicle/present to officer unlawful registration (M) near WOODSIDE RD / CYPRESS ST \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "WOODSIDE RD / CYPRESS ST",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.82,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89c8536afb4sm93270306d6.42 - gsmtp')"
   }
 ]
