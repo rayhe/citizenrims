@@ -3012,5 +3012,16 @@
     "distance_mi": 1.84,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c10b17d1ddsm10563082eec.11 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-23T04:12:25.223633+00:00",
+    "id": "case-smcsheriff-26-02002",
+    "subject": "[MOSI] Personate to get money/property - Identity theft (M) near 4TH AV \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "4TH AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.93,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89c8534f6dfsm76496326d6.37 - gsmtp')"
   }
 ]
