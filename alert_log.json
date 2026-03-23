@@ -3111,5 +3111,38 @@
     "distance_mi": 2.69,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c10b14caf3sm18464659eec.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-23T23:58:38.052999+00:00",
+    "id": "inc-redwoodcity-202603230120",
+    "subject": "[MOSI] Burglary Commercial Report near ROLISON RD \u2014 1.3mi from Menlo Oaks (High)",
+    "street": "ROLISON RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.26,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cfc8f926e0sm985044185a.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-23T23:58:38.423057+00:00",
+    "id": "case-atherton-26-72",
+    "subject": "[MOSI] Obtain money/etc by false pretenses [over $400] (F) near HOLBROOK LN \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "HOLBROOK LN",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.22,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50b36cb2c63sm98736121cf.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-23T23:58:38.778263+00:00",
+    "id": "case-atherton-26-80",
+    "subject": "[MOSI] Obtain money/etc by false pretenses [over $400] (F) near ROBLEDA DR \u2014 2.3mi from Menlo Oaks (Medium)",
+    "street": "ROBLEDA DR",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 2.33,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cfc8f5dabasm937285685a.3 - gsmtp')"
   }
 ]
