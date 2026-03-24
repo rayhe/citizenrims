@@ -3221,5 +3221,16 @@
     "distance_mi": 2.58,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89c8521521dsm126702966d6.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-24T21:25:21.004779+00:00",
+    "id": "case-menlopark-26-611",
+    "subject": "[MOSI] Tamper with vehicle - Motor vehicle parts/accessories (M) near SAN LUIS DR \u2014 0.3mi from Menlo Oaks (High)",
+    "street": "SAN LUIS DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.28,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12a733b49afsm12783079c88.2 - gsmtp')"
   }
 ]
