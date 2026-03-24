@@ -3144,5 +3144,38 @@
     "distance_mi": 2.33,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cfc8f5dabasm937285685a.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-24T03:11:07.304590+00:00",
+    "id": "inc-menlopark-202603230078",
+    "subject": "[MOSI] Grand Theft near OAK GROVE AV \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "OAK GROVE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c10aefd778sm18873986eec.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-24T03:11:07.833174+00:00",
+    "id": "case-menlopark-26-606",
+    "subject": "[MOSI] Take vehicle without owners consent - Motor vehicle theft (M) near OAK GROVE AV \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "OAK GROVE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c10b2e6c30sm13574805eec.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-24T03:11:08.389648+00:00",
+    "id": "case-atherton-26-91",
+    "subject": "[MOSI] Obtain money/etc by false pretenses [over $400] (F) near TUSCALOOSA AV \u2014 2.1mi from Menlo Oaks (Medium)",
+    "street": "TUSCALOOSA AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 2.06,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c10b2cde3bsm13961354eec.20 - gsmtp')"
   }
 ]
