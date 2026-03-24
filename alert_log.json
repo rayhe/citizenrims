@@ -3177,5 +3177,16 @@
     "distance_mi": 2.06,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c10b2cde3bsm13961354eec.20 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-24T15:08:45.920036+00:00",
+    "id": "case-smcsheriff-26-02177",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near STANFORD AV \u2014 2.3mi from Menlo Oaks (High)",
+    "street": "STANFORD AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.3,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cfc90bb7f0sm1068045385a.38 - gsmtp')"
   }
 ]
