@@ -3210,5 +3210,16 @@
     "distance_mi": 0.07,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c10b2ce04asm16318639eec.21 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-24T21:09:17.100497+00:00",
+    "id": "case-smcsheriff-26-01722",
+    "subject": "[MOSI] Grand theft - Motor vehicle parts/accessories (F) near CAMINO A LOS CERROS \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "CAMINO A LOS CERROS",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.58,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89c8521521dsm126702966d6.8 - gsmtp')"
   }
 ]
