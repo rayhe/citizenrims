@@ -3342,5 +3342,16 @@
     "distance_mi": 0.6,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89cd5a22711sm9428696d6.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-25T23:15:04.658298+00:00",
+    "id": "inc-paloalto-PP260840048",
+    "subject": "[MOSI] 487 near RAMONA ST / BRYANT ST \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "RAMONA ST / BRYANT ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.24,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8d00e3d656fsm101242585a.17 - gsmtp')"
   }
 ]
