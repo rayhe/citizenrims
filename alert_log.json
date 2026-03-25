@@ -3287,5 +3287,16 @@
     "distance_mi": 1.11,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50b6f8bc1b1sm41321061cf.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-25T09:25:39.165647+00:00",
+    "id": "inc-paloalto-PP260830114",
+    "subject": "[MOSI] 459A near UNIVERSITY AVE / HAMILTON AVE \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "UNIVERSITY AVE / HAMILTON AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.07,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-41c1497485esm16371286fac.8 - gsmtp')"
   }
 ]
