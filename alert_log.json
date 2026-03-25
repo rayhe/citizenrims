@@ -3298,5 +3298,16 @@
     "distance_mi": 1.07,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-41c1497485esm16371286fac.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-25T10:56:32.519044+00:00",
+    "id": "inc-redwoodcity-202603250016",
+    "subject": "[MOSI] Recovered Stolen Vehicle near UNION AV \u2014 3.0mi from Menlo Oaks (High)",
+    "street": "UNION AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.97,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8cfc8f5d128sm1277056285a.8 - gsmtp')"
   }
 ]
