@@ -3243,5 +3243,16 @@
     "distance_mi": 0.2,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c15517eaf6sm3807098eec.28 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-25T06:34:44.955132+00:00",
+    "id": "case-smcsheriff-26-02072",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near 2ND AV \u2014 2.0mi from Menlo Oaks (Medium)",
+    "street": "2ND AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.02,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c10aefd778sm23708024eec.0 - gsmtp')"
   }
 ]
