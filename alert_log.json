@@ -3331,5 +3331,16 @@
     "distance_mi": 2.8,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-41cc7bb2309sm314763fac.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-25T21:42:04.526668+00:00",
+    "id": "case-menlopark-26-622",
+    "subject": "[MOSI] Display on vehicle/present to officer unlawful registration (M) near BAYFRONT EX/CHILCO ST \u2014 0.6mi from Menlo Oaks (Medium)",
+    "street": "BAYFRONT EX/CHILCO ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.6,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89cd5a22711sm9428696d6.27 - gsmtp')"
   }
 ]
