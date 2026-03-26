@@ -3386,5 +3386,16 @@
     "distance_mi": 1.08,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12aa72492e7sm3220275c88.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-26T19:01:07.851433+00:00",
+    "id": "case-redwoodcity-R26-03-0414",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near ROLISON RD \u2014 1.8mi from Menlo Oaks (Medium)",
+    "street": "ROLISON RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.84,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8d00e4ce917sm404925985a.31 - gsmtp')"
   }
 ]
