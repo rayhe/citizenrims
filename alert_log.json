@@ -3474,5 +3474,16 @@
     "distance_mi": 1.06,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c16ec257b4sm4604339eec.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-27T13:56:14.216674+00:00",
+    "id": "inc-redwoodcity-202603270026",
+    "subject": "[MOSI] Burglary-Vehicle Report near 5TH AV \u2014 1.8mi from Menlo Oaks (High)",
+    "street": "5TH AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50b923aca3esm49682401cf.26 - gsmtp')"
   }
 ]
