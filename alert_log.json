@@ -3507,5 +3507,16 @@
     "distance_mi": 0.64,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50bb2e4a97asm8160201cf.30 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-28T09:19:45.630612+00:00",
+    "id": "inc-menlopark-202603270065",
+    "subject": "[MOSI] Grand Theft near RAVENSWOOD AV \u2014 0.6mi from Menlo Oaks (Medium)",
+    "street": "RAVENSWOOD AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.61,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c3c10361e7sm1763475eec.0 - gsmtp')"
   }
 ]
