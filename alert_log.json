@@ -3496,5 +3496,16 @@
     "distance_mi": 0.64,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-46a9fef82absm233160b6e.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-28T02:18:58.463289+00:00",
+    "id": "inc-menlopark-202603270070",
+    "subject": "[MOSI] Grand Theft near OAK GROVE AV \u2014 0.6mi from Menlo Oaks (Medium)",
+    "street": "OAK GROVE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50bb2e4a97asm8160201cf.30 - gsmtp')"
   }
 ]
