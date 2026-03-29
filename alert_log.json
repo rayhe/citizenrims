@@ -3573,5 +3573,27 @@
     "distance_mi": 1.35,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c3c41c1513sm4737046eec.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-29T19:02:12.477485+00:00",
+    "id": "inc-redwoodcity-202603290030",
+    "subject": "[MOSI] Stolen Vehicle near CHESTNUT ST \u2014 3.0mi from Menlo Oaks (High)",
+    "street": "CHESTNUT ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.99,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50bb2c67ffasm43900151cf.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-29T19:02:12.922968+00:00",
+    "id": "inc-paloalto-PP260880027",
+    "subject": "[MOSI] 10851 near RAMONA ST / BRYANT ST \u2014 1.2mi from Menlo Oaks (High)",
+    "street": "RAMONA ST / BRYANT ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.22,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8d028073afesm416699785a.37 - gsmtp')"
   }
 ]
