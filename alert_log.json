@@ -3529,5 +3529,16 @@
     "distance_mi": 0.94,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89ecc1922dfsm23800026d6.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-29T00:56:20.683357+00:00",
+    "id": "inc-paloalto-PP260870056",
+    "subject": "[MOSI] 594 near EMBARCADERO RD / DEAD END \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "EMBARCADERO RD / DEAD END",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.84,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c3c46a0d06sm3200421eec.10 - gsmtp')"
   }
 ]
