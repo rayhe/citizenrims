@@ -3760,5 +3760,27 @@
     "distance_mi": 2.95,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c3c3bda13csm8370721eec.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-30T23:17:53.574334+00:00",
+    "id": "inc-menlopark-202603300051",
+    "subject": "[MOSI] Fraud near COTTON ST \u2014 1.7mi from Menlo Oaks (Medium)",
+    "street": "COTTON ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.69,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89f3b6a3c6asm68658486d6.26 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-30T23:17:53.833672+00:00",
+    "id": "case-redwoodcity-R26-03-0147",
+    "subject": "[MOSI] Vandalism:deface property (M) near ENCINA AV \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "ENCINA AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.52,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8d027edb8e0sm856648885a.8 - gsmtp')"
   }
 ]
