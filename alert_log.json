@@ -3672,5 +3672,16 @@
     "distance_mi": 0.64,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89ed0521d64sm64219876d6.49 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-30T18:00:23.663628+00:00",
+    "id": "inc-redwoodcity-202603300057",
+    "subject": "[MOSI] ID Theft near ROSE AV \u2014 1.4mi from Menlo Oaks (Medium)",
+    "street": "ROSE AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.35,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8d0280428d1sm676643585a.25 - gsmtp')"
   }
 ]
