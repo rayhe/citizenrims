@@ -3650,5 +3650,16 @@
     "distance_mi": 1.19,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89ecf865efbsm56234726d6.38 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-30T14:27:40.863222+00:00",
+    "id": "case-atherton-26-82",
+    "subject": "[MOSI] Grand theft:money/labor/property - Motor vehicle parts/accessories (F) near LLOYDEN PARK LN \u2014 1.8mi from Menlo Oaks (Medium)",
+    "street": "LLOYDEN PARK LN",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.79,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12ab97efb42sm11413576c88.7 - gsmtp')"
   }
 ]
