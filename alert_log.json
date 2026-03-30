@@ -3617,5 +3617,16 @@
     "distance_mi": 0.64,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89ecc095786sm47916406d6.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-30T00:03:24.016505+00:00",
+    "id": "case-smcsheriff-26-01597",
+    "subject": "[MOSI] Obtain credit/etc:use others id - Identity theft (M) near 3RD AV \u2014 2.0mi from Menlo Oaks (Medium)",
+    "street": "3RD AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-67e231ae46csm3681796eaf.11 - gsmtp')"
   }
 ]
