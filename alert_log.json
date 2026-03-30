@@ -3683,5 +3683,49 @@
     "distance_mi": 1.35,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8d0280428d1sm676643585a.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-30T19:29:22.078623+00:00",
+    "id": "inc-menlopark-202603300032",
+    "subject": "[MOSI] Grand Theft near HAVEN AV \u2014 1.4mi from Menlo Oaks (Medium)",
+    "street": "HAVEN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.35,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12abbe21787sm7848751c88.11 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-30T19:29:22.739359+00:00",
+    "id": "inc-menlopark-202603300038",
+    "subject": "[MOSI] Vehicle Tampering near ROBLE AV \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "ROBLE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.94,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c3c79722e0sm8450703eec.31 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-30T19:29:23.411856+00:00",
+    "id": "case-menlopark-26-674",
+    "subject": "[MOSI] Mail/etc theft/etc - All other larceny (F) near OAK GROVE AV \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "OAK GROVE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c3c6e9d38fsm9548251eec.23 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-30T19:29:24.041627+00:00",
+    "id": "case-redwoodcity-R26-03-0438",
+    "subject": "[MOSI] Burglary:second degree - From building (F) near ROLISON RD \u2014 1.3mi from Menlo Oaks (High)",
+    "street": "ROLISON RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.26,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c3c46a0a84sm7774645eec.9 - gsmtp')"
   }
 ]
