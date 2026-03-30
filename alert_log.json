@@ -3749,5 +3749,16 @@
     "distance_mi": 1.35,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89ec6ec2266sm74022006d6.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-30T22:20:25.939813+00:00",
+    "id": "inc-redwoodcity-202603300134",
+    "subject": "[MOSI] Vandalism near BROADWAY \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "BROADWAY",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.95,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c3c3bda13csm8370721eec.6 - gsmtp')"
   }
 ]
