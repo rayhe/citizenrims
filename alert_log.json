@@ -3881,5 +3881,16 @@
     "distance_mi": 0.82,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c3c68b2ff2sm10065089eec.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-31T22:34:13.499832+00:00",
+    "id": "inc-redwoodcity-202603310111",
+    "subject": "[MOSI] Burglary-Vehicle Report near BAY RD \u2014 1.6mi from Menlo Oaks (High)",
+    "street": "BAY RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.55,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c3c3bd9894sm11346946eec.4 - gsmtp')"
   }
 ]
