@@ -3782,5 +3782,27 @@
     "distance_mi": 2.52,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8d027edb8e0sm856648885a.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-31T00:55:20.653542+00:00",
+    "id": "inc-menlopark-202603300066",
+    "subject": "[MOSI] Fraud near WILLOW RD \u2014 0.6mi from Menlo Oaks (Medium)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.59,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c3c68b399bsm8517935eec.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-31T00:55:21.295046+00:00",
+    "id": "case-menlopark-26-676",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near ROBLE AV \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "ROBLE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.94,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c3c3bda07asm8448739eec.1 - gsmtp')"
   }
 ]
