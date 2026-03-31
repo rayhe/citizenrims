@@ -3892,5 +3892,27 @@
     "distance_mi": 1.55,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c3c3bd9894sm11346946eec.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-31T23:37:41.593036+00:00",
+    "id": "case-atherton-26-111",
+    "subject": "[MOSI] Personate to get money/property [over $400] - Impersonation (F) near TOYON RD \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "TOYON RD",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.2,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50bb2e687ebsm102357301cf.31 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-31T23:37:41.830429+00:00",
+    "id": "case-smcsheriff-26-02017",
+    "subject": "[MOSI] Arson:property (F) near WARRINGTON AV \u2014 2.2mi from Menlo Oaks (High)",
+    "street": "WARRINGTON AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.24,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50bb2ddb083sm99808711cf.15 - gsmtp')"
   }
 ]
