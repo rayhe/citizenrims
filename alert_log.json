@@ -3804,5 +3804,27 @@
     "distance_mi": 0.94,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2c3c3bda07asm8448739eec.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-31T01:36:20.227258+00:00",
+    "id": "case-menlopark-26-680",
+    "subject": "[MOSI] Personate to get money/property [over $400] - False pretenses/swindle/confidence game (F) near COTTON ST \u2014 1.7mi from Menlo Oaks (Medium)",
+    "street": "COTTON ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.69,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-67e2308f212sm5868876eaf.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-03-31T01:36:20.644027+00:00",
+    "id": "case-menlopark-26-684",
+    "subject": "[MOSI] Personate to get money/property [over $400] - False pretenses/swindle/confidence game (F) near WILLOW RD \u2014 0.6mi from Menlo Oaks (Medium)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.59,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-46aa036505dsm5886549b6e.10 - gsmtp')"
   }
 ]
