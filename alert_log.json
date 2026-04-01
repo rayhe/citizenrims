@@ -3914,5 +3914,16 @@
     "distance_mi": 2.24,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50bb2ddb083sm99808711cf.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-01T06:55:12.927503+00:00",
+    "id": "case-smcsheriff-26-02073",
+    "subject": "[MOSI] Vandalism:deface property (M) near 2ND AV \u2014 2.0mi from Menlo Oaks (Medium)",
+    "street": "2ND AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.02,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89ecf286fc1sm136655286d6.31 - gsmtp')"
   }
 ]
