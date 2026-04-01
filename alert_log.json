@@ -3936,5 +3936,16 @@
     "distance_mi": 2.98,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-89ecfd520a6sm103677846d6.41 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-01T16:20:18.622905+00:00",
+    "id": "inc-redwoodcity-202604010023",
+    "subject": "[MOSI] Burglary - Vehicle near KANSAS ST \u2014 3.0mi from Menlo Oaks (High)",
+    "street": "KANSAS ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.96,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ca79e1d53fsm136952eec.11 - gsmtp')"
   }
 ]
