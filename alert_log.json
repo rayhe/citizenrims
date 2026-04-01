@@ -3969,5 +3969,27 @@
     "distance_mi": 0.73,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8a596e03febsm4588866d6.38 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-01T20:42:47.245065+00:00",
+    "id": "case-smcsheriff-26-02461",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near CAMINO DE LOS ROBLES \u2014 2.3mi from Menlo Oaks (Medium)",
+    "street": "CAMINO DE LOS ROBLES",
+    "city": "Menlo Park",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.27,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ca792f3f54sm645607eec.7 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-01T20:42:47.740303+00:00",
+    "id": "case-smcsheriff-26-02552",
+    "subject": "[MOSI] Vandalism:deface property (M) near EDISON WY \u2014 1.7mi from Menlo Oaks (Medium)",
+    "street": "EDISON WY",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.7,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12bedd4e623sm723079c88.3 - gsmtp')"
   }
 ]
