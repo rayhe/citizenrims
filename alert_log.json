@@ -4112,5 +4112,27 @@
     "distance_mi": 2.97,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2cba62d7590sm940009eec.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-02T18:03:07.138556+00:00",
+    "id": "case-menlopark-26-642",
+    "subject": "[MOSI] Personate to get money/property [over $400] - False pretenses/swindle/confidence game (F) near SANTA CRUZ AV \u2014 2.4mi from Menlo Oaks (Medium)",
+    "street": "SANTA CRUZ AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.38,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8a596a0a655sm28174786d6.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-02T18:03:07.557645+00:00",
+    "id": "case-menlopark-26-652",
+    "subject": "[MOSI] Grand theft:money/labor/property - From motor vehicle (F) near UNIVERSITY AV/PURDUE AV \u2014 1.4mi from Menlo Oaks (High)",
+    "street": "UNIVERSITY AV/PURDUE AV",
+    "city": "East Palo Alto",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.37,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50d4b885b69sm27298871cf.22 - gsmtp')"
   }
 ]
