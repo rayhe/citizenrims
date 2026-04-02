@@ -4013,5 +4013,16 @@
     "distance_mi": 2.7,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7dba7183dfesm1323605a34.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-02T03:28:57.238275+00:00",
+    "id": "case-smcsheriff-26-01908",
+    "subject": "[MOSI] Vandalism:deface property (F) near MIDDLEFIELD RD \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.48,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ca78df8942sm2034893eec.2 - gsmtp')"
   }
 ]
