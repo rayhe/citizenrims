@@ -4068,5 +4068,16 @@
     "distance_mi": 1.01,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ca7cf010d7sm1914628eec.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-02T15:13:57.386628+00:00",
+    "id": "case-redwoodcity-R26-03-0555",
+    "subject": "[MOSI] Grand theft:money/labor/property - From coin-op machine/device (F) near BROADWAY \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "BROADWAY",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.95,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2cba62d7590sm544076eec.24 - gsmtp')"
   }
 ]
