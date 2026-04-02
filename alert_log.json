@@ -4079,5 +4079,27 @@
     "distance_mi": 2.95,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2cba62d7590sm544076eec.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-02T16:55:57.693584+00:00",
+    "id": "inc-menlopark-202604020018",
+    "subject": "[MOSI] Fraud near LINFIELD DR \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "LINFIELD DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.49,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8d2a8647b4esm256348085a.32 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-02T16:55:58.077798+00:00",
+    "id": "case-menlopark-26-711",
+    "subject": "[MOSI] Acquire/possess personal id info w/intent defraud w/pr - Identity theft (F) near LINFIELD DR \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "LINFIELD DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.49,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8d2a5392ce8sm294095585a.7 - gsmtp')"
   }
 ]
