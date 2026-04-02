@@ -4035,5 +4035,27 @@
     "distance_mi": 2.42,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ca7cf1271asm2405050eec.26 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-02T08:38:23.039582+00:00",
+    "id": "inc-paloalto-PP260910122",
+    "subject": "[MOSI] 459A near WAVERLEY ST / KIPLING ST \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "WAVERLEY ST / KIPLING ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 0.99,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ca78df5ed3sm1883090eec.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-02T08:38:23.528337+00:00",
+    "id": "inc-paloalto-PP260910124",
+    "subject": "[MOSI] 459A near LYTTON AVE / PAULSEN LN \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "LYTTON AVE / PAULSEN LN",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.03,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ca7c20c151sm2064780eec.19 - gsmtp')"
   }
 ]
