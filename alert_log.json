@@ -4233,5 +4233,16 @@
     "distance_mi": 2.58,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 71dfb90a1353d-56d9bce02f3sm7238780e0c.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-03T22:10:22.143176+00:00",
+    "id": "inc-atherton-202604030013",
+    "subject": "[MOSI] VANDALISM near LOGAN LN \u2014 2.3mi from Menlo Oaks (Medium)",
+    "street": "LOGAN LN",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 2.32,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2cb7ec57f9dsm4176772eec.11 - gsmtp')"
   }
 ]
