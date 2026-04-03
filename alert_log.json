@@ -4200,5 +4200,16 @@
     "distance_mi": 2.58,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-46d92a53169sm2750921b6e.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-03T15:10:31.225124+00:00",
+    "id": "case-atherton-26-116",
+    "subject": "[MOSI] Appropriate lost property - All other larceny (M) near DINKELSPIEL STATION LN \u2014 1.3mi from Menlo Oaks (Medium)",
+    "street": "DINKELSPIEL STATION LN",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.31,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8a596a0a3cbsm52547146d6.25 - gsmtp')"
   }
 ]
