@@ -4189,5 +4189,16 @@
     "distance_mi": 0.55,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8a593cec807sm37143766d6.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-03T02:34:40.177098+00:00",
+    "id": "inc-redwoodcity-202604020154",
+    "subject": "[MOSI] ID Theft near FLYNN AV \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "FLYNN AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.58,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-46d92a53169sm2750921b6e.10 - gsmtp')"
   }
 ]
