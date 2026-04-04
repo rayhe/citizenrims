@@ -4255,5 +4255,16 @@
     "distance_mi": 0.8,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8d4b8ca0665sm208404785a.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-04T17:06:07.543254+00:00",
+    "id": "inc-redwoodcity-202604040040",
+    "subject": "[MOSI] Burglary Commercial Report near MIDDLEFIELD RD \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.75,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8d2a5f47b3bsm654165885a.20 - gsmtp')"
   }
 ]
