@@ -4244,5 +4244,16 @@
     "distance_mi": 2.32,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2cb7ec57f9dsm4176772eec.11 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-04T00:51:12.847917+00:00",
+    "id": "case-menlopark-26-567",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near ARTISAN WY \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "ARTISAN WY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.8,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8d4b8ca0665sm208404785a.3 - gsmtp')"
   }
 ]
