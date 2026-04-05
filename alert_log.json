@@ -4277,5 +4277,16 @@
     "distance_mi": 2.7,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8a596ff778esm78028846d6.39 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-05T06:02:04.456071+00:00",
+    "id": "inc-redwoodcity-202604040148",
+    "subject": "[MOSI] Stolen Vehicle near KENTFIELD AV \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "KENTFIELD AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.91,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50d4b1a3fc7sm108930221cf.5 - gsmtp')"
   }
 ]
