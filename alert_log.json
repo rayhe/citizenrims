@@ -4288,5 +4288,16 @@
     "distance_mi": 2.91,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50d4b1a3fc7sm108930221cf.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-05T22:52:31.558451+00:00",
+    "id": "inc-paloalto-PP260950029",
+    "subject": "[MOSI] 10851 near CHANNING AVE / DE SOTO DR \u2014 1.8mi from Menlo Oaks (High)",
+    "street": "CHANNING AVE / DE SOTO DR",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.79,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ca793ea2f2sm11070201eec.9 - gsmtp')"
   }
 ]
