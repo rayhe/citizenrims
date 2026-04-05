@@ -4299,5 +4299,38 @@
     "distance_mi": 1.79,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ca793ea2f2sm11070201eec.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-05T23:19:56.948004+00:00",
+    "id": "inc-menlopark-202604050041",
+    "subject": "[MOSI] Vandalism near ALMANOR AV \u2014 0.0mi from Menlo Oaks (Medium)",
+    "street": "ALMANOR AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.01,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50d4d4a034asm95654591cf.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-05T23:19:57.200327+00:00",
+    "id": "inc-redwoodcity-202604050084",
+    "subject": "[MOSI] Vandalism near EL CAMINO REAL \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.82,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8d2a5d5a096sm940130885a.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-05T23:19:57.470749+00:00",
+    "id": "case-smcsheriff-26-02493",
+    "subject": "[MOSI] Burglary:first degree (F) near BELLAIR WY \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "BELLAIR WY",
+    "city": "Menlo Park",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.75,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8a596915794sm105604966d6.30 - gsmtp')"
   }
 ]
