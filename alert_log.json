@@ -4332,5 +4332,16 @@
     "distance_mi": 2.75,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8a596915794sm105604966d6.30 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-06T14:35:20.139913+00:00",
+    "id": "case-atherton-26-96",
+    "subject": "[MOSI] Thft eldr/depn adlt $950+ - False pretenses/swindle/confidence game (F) near BROADACRES RD \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "BROADACRES RD",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 2.8,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-7a36e832ef8sm53873637b3.13 - gsmtp')"
   }
 ]
