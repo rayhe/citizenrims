@@ -4343,5 +4343,27 @@
     "distance_mi": 2.8,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-7a36e832ef8sm53873637b3.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-06T17:31:55.999793+00:00",
+    "id": "case-smcsheriff-26-02591",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near FAIR OAKS AV/WARRINGTON AV \u2014 2.2mi from Menlo Oaks (High)",
+    "street": "FAIR OAKS AV/WARRINGTON AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.22,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8d2a8647b4esm1125015785a.32 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-06T17:31:56.383385+00:00",
+    "id": "case-smcsheriff-26-02592",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near WARRINGTON AV \u2014 2.2mi from Menlo Oaks (High)",
+    "street": "WARRINGTON AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.24,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8d526e26c19sm718507985a.18 - gsmtp')"
   }
 ]
