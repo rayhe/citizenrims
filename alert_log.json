@@ -4365,5 +4365,16 @@
     "distance_mi": 2.24,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8d526e26c19sm718507985a.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-06T19:09:38.991711+00:00",
+    "id": "case-menlopark-26-729",
+    "subject": "[MOSI] Grand theft:money/labor/property - From building (F) near WAVERLEY ST \u2014 0.5mi from Menlo Oaks (High)",
+    "street": "WAVERLEY ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.53,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ca7c20b195sm13358360eec.16 - gsmtp')"
   }
 ]
