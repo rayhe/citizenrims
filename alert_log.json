@@ -4376,5 +4376,16 @@
     "distance_mi": 0.53,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ca7c20b195sm13358360eec.16 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-06T22:06:56.012225+00:00",
+    "id": "case-redwoodcity-R26-04-0085",
+    "subject": "[MOSI] Forge/alter vehicle registration/etc (M) near GORDON ST/KANDLE WY \u2014 3.0mi from Menlo Oaks (Medium)",
+    "street": "GORDON ST/KANDLE WY",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50d82afc7d5sm71096661cf.30 - gsmtp')"
   }
 ]
