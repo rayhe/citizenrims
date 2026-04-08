@@ -4409,5 +4409,16 @@
     "distance_mi": 0.03,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2cf2be19f85sm13167451eec.30 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-08T08:09:36.909935+00:00",
+    "id": "inc-redwoodcity-202604070137",
+    "subject": "[MOSI] Stolen Vehicle near CHELSEA WY \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "CHELSEA WY",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.77,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2d2d5409fd1sm2382934eec.13 - gsmtp')"
   }
 ]
