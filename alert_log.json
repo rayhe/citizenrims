@@ -4431,5 +4431,27 @@
     "distance_mi": 2.95,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50d63962a65sm135950781cf.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-08T21:26:10.646625+00:00",
+    "id": "case-redwoodcity-R26-03-0573",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (M) near EL CAMINO REAL \u2014 3.0mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.95,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ca7c20b2b1sm23515466eec.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-08T21:26:11.287433+00:00",
+    "id": "case-redwoodcity-R26-04-0004",
+    "subject": "[MOSI] Burglary:second degree - Burglary/breaking and entering (M) near KANSAS ST \u2014 3.0mi from Menlo Oaks (High)",
+    "street": "KANSAS ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.96,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12bedd70f18sm20571094c88.6 - gsmtp')"
   }
 ]
