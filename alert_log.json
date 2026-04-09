@@ -4585,5 +4585,16 @@
     "distance_mi": 0.94,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7dc26907f82sm459009a34.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-09T20:48:08.999447+00:00",
+    "id": "case-menlopark-26-751",
+    "subject": "[MOSI] Burglary:second degree - Motor vehicle parts/accessories (M) near 1954A MENALTO AVE \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "1954A MENALTO AVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8ddb992eddfsm41184385a.44 - gsmtp')"
   }
 ]
