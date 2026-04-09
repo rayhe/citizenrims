@@ -4552,5 +4552,16 @@
     "distance_mi": 2.53,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2d55f5c6afdsm287953eec.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-09T18:34:49.428686+00:00",
+    "id": "case-redwoodcity-R26-04-0113",
+    "subject": "[MOSI] Obtain money/etc by false pretenses (M) near EAST BAYSHORE RD \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "EAST BAYSHORE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-423ddb9c504sm341022fac.15 - gsmtp')"
   }
 ]
