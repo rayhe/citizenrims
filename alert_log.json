@@ -4530,5 +4530,27 @@
     "distance_mi": 1.53,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2d2cb4a7cdbsm9817584eec.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-09T16:17:23.263683+00:00",
+    "id": "case-menlopark-26-748",
+    "subject": "[MOSI] Burglary:second degree - From building (M) near HAVEN AV \u2014 1.4mi from Menlo Oaks (High)",
+    "street": "HAVEN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.35,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2d561cd3138sm261063eec.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-09T16:17:23.861015+00:00",
+    "id": "case-redwoodcity-R26-04-0124",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near MEADOW LN \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "MEADOW LN",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.53,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2d55f5c6afdsm287953eec.4 - gsmtp')"
   }
 ]
