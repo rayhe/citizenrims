@@ -4508,5 +4508,16 @@
     "distance_mi": 0.34,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7dba73d8126sm15078453a34.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-09T01:19:10.757889+00:00",
+    "id": "case-smcsheriff-26-02279",
+    "subject": "[MOSI] Vandalism:damage property (F) near 4TH AV \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "4TH AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.93,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8a5933333d0sm212684886d6.1 - gsmtp')"
   }
 ]
