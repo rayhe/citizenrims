@@ -4673,5 +4673,27 @@
     "distance_mi": 0.29,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12c346fb031sm4724086c88.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-10T22:47:55.173251+00:00",
+    "id": "case-menlopark-26-759",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near SAN ANDREAS DRIVE \u2014 0.3mi from Menlo Oaks (High)",
+    "street": "SAN ANDREAS DRIVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.34,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8ddb5f88861sm309125885a.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-10T22:47:55.418947+00:00",
+    "id": "case-menlopark-26-760",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near ROBLE AVE APT 1 \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "ROBLE AVE APT 1",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ac849e35afsm44544576d6.3 - gsmtp')"
   }
 ]
