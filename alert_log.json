@@ -4629,5 +4629,16 @@
     "distance_mi": 1.3,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8deeac8aed0sm23482985a.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-10T18:52:50.893530+00:00",
+    "id": "inc-paloalto-PP261000013",
+    "subject": "[MOSI] 487 near AMARILLO AVE / METRO CIR \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "AMARILLO AVE / METRO CIR",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.82,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12c345b5b9dsm4167476c88.7 - gsmtp')"
   }
 ]
