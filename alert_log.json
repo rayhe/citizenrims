@@ -4607,5 +4607,16 @@
     "distance_mi": 0.5,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-423ddb23b07sm811803fac.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-10T03:45:11.877739+00:00",
+    "id": "inc-menlopark-202604090068",
+    "subject": "[MOSI] Fraud near COLEMAN PL \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "COLEMAN PL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.24,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-423ddb9c504sm1408986fac.15 - gsmtp')"
   }
 ]
