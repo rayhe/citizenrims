@@ -4618,5 +4618,16 @@
     "distance_mi": 0.24,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-423ddb9c504sm1408986fac.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-10T16:10:02.182995+00:00",
+    "id": "inc-redwoodcity-202604100016",
+    "subject": "[MOSI] Burglary-Vehicle Report near PAGE ST \u2014 1.3mi from Menlo Oaks (High)",
+    "street": "PAGE ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.3,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8deeac8aed0sm23482985a.29 - gsmtp')"
   }
 ]
