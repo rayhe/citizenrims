@@ -4706,5 +4706,16 @@
     "distance_mi": 2.95,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8ddb8d6e661sm350523085a.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-11T07:55:23.387902+00:00",
+    "id": "inc-paloalto-PP261000066",
+    "subject": "[MOSI] 487 near PISTACHE PL / SHOPPING CENTER WAY \u2014 1.4mi from Menlo Oaks (Medium)",
+    "street": "PISTACHE PL / SHOPPING CENTER WAY",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.43,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8ddb8d6b84esm404677185a.28 - gsmtp')"
   }
 ]
