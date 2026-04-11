@@ -4728,5 +4728,16 @@
     "distance_mi": 2.85,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12c345a9623sm7048165c88.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-11T22:48:29.764516+00:00",
+    "id": "inc-menlopark-202604110027",
+    "subject": "[MOSI] Vandalism near WAVERLEY ST \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "WAVERLEY ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.53,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2d851e5bb3csm715128eec.1 - gsmtp')"
   }
 ]
