@@ -4761,5 +4761,16 @@
     "distance_mi": 1.99,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50dd539b428sm61828781cf.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-12T08:31:23.734707+00:00",
+    "id": "inc-atherton-202604110022",
+    "subject": "[MOSI] BURGLARY - RESIDENTIAL/COMMERCIAL near CATALPA DR \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "CATALPA DR",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.74,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ac84caace4sm65802436d6.39 - gsmtp')"
   }
 ]
