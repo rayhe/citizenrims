@@ -4783,5 +4783,16 @@
     "distance_mi": 0.74,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2d5629b31f5sm12308239eec.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-12T17:22:59.937260+00:00",
+    "id": "case-smcsheriff-26-02269",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near NOTTINGHAM AV \u2014 2.5mi from Menlo Oaks (High)",
+    "street": "NOTTINGHAM AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.46,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50dd561a34asm70196131cf.26 - gsmtp')"
   }
 ]
