@@ -4794,5 +4794,16 @@
     "distance_mi": 2.46,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50dd561a34asm70196131cf.26 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-13T05:13:29.131912+00:00",
+    "id": "inc-menlopark-202604120039",
+    "subject": "[MOSI] Grand Theft near MENLO AV \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "MENLO AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8ddb9738cd3sm798614585a.40 - gsmtp')"
   }
 ]
