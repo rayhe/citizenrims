@@ -4882,5 +4882,16 @@
     "distance_mi": 2.76,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-7b76621668asm10417117b3.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-15T21:35:43.660085+00:00",
+    "id": "inc-menlopark-202604150018",
+    "subject": "[MOSI] Vandalism near PIERCE RD \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "PIERCE RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.24,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ae6cb9ecc5sm21579056d6.23 - gsmtp')"
   }
 ]
