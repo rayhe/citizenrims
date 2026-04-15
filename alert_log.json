@@ -4838,5 +4838,16 @@
     "distance_mi": 2.25,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8aca1bee6ecsm78474226d6.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-15T07:42:51.228580+00:00",
+    "id": "case-menlopark-26-795",
+    "subject": "[MOSI] Forge/alter vehicle registration/etc (M) near CRANE ST \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "CRANE ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.97,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2de8c605883sm1484063eec.10 - gsmtp')"
   }
 ]
