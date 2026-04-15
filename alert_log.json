@@ -4871,5 +4871,16 @@
     "distance_mi": 2.77,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12c5e6a8496sm2361127c88.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-15T16:16:06.613191+00:00",
+    "id": "case-smcsheriff-26-03001",
+    "subject": "[MOSI] Possess drivers license/identification to commit forgery - False pretenses/swindle/confidence game (F) near VETERANS BLVD / WOODSIDE RD \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "VETERANS BLVD / WOODSIDE RD",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.76,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-7b76621668asm10417117b3.4 - gsmtp')"
   }
 ]
