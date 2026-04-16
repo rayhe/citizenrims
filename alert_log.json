@@ -4948,5 +4948,16 @@
     "distance_mi": 0.33,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2de8fd54ef0sm8748720eec.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-16T22:46:18.696356+00:00",
+    "id": "case-menlopark-26-803",
+    "subject": "[MOSI] Personate to get money/property [over $400] - Identity theft (F) near OAK CT \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "OAK CT",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.73,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2e4c3f4fdf2sm42310eec.1 - gsmtp')"
   }
 ]
