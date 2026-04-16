@@ -4904,5 +4904,16 @@
     "distance_mi": 2.02,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8e4eed6ed8asm413381785a.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-16T17:37:33.813764+00:00",
+    "id": "case-menlopark-26-766",
+    "subject": "[MOSI] Mail/etc theft/etc - All other larceny (F) near SHARON PARK DR \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "SHARON PARK DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8e4eed6ef20sm427233985a.8 - gsmtp')"
   }
 ]
