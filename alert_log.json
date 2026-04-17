@@ -4959,5 +4959,16 @@
     "distance_mi": 0.73,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2e4c3f4fdf2sm42310eec.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-17T03:54:34.172593+00:00",
+    "id": "inc-paloalto-PP261060070",
+    "subject": "[MOSI] 594 near LANE 12 W / HAMILTON AVE \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "LANE 12 W / HAMILTON AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.17,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12c749d322csm531403c88.4 - gsmtp')"
   }
 ]
