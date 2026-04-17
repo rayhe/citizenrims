@@ -4970,5 +4970,16 @@
     "distance_mi": 1.17,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12c749d322csm531403c88.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-17T08:59:32.624656+00:00",
+    "id": "inc-paloalto-PP261060105",
+    "subject": "[MOSI] 487 near UNIVERSITY CIR / ALMA ST \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "UNIVERSITY CIR / ALMA ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.2,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8b02e035b0asm1560856d6.22 - gsmtp')"
   }
 ]
