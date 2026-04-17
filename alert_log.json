@@ -4992,5 +4992,27 @@
     "distance_mi": 0.32,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8e7d5fec81bsm188579285a.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-17T19:45:49.731085+00:00",
+    "id": "inc-atherton-202604170009",
+    "subject": "[MOSI] FRAUD / FALSE PERSONATION near LLOYDEN DR \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "LLOYDEN DR",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.05,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-479a016de0esm1584744b6e.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-17T19:45:50.181198+00:00",
+    "id": "case-smcsheriff-26-02951",
+    "subject": "[MOSI] Vandalism:damage property (F) near 4TH AV \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "4TH AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.93,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-42b930480bbsm1865959fac.4 - gsmtp')"
   }
 ]
