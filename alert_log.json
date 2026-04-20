@@ -5058,5 +5058,16 @@
     "distance_mi": 1.51,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8e7d5fe9638sm659476685a.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-20T05:12:45.846672+00:00",
+    "id": "case-smcsheriff-26-02910",
+    "subject": "[MOSI] Use false citizenship/etc documents - Counterfeiting/forgery (F) near FAIR OAKS AV / 5TH AV \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "FAIR OAKS AV / 5TH AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.86,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2e539fa6134sm13291202eec.3 - gsmtp')"
   }
 ]
