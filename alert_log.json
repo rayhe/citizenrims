@@ -5080,5 +5080,16 @@
     "distance_mi": 0.76,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3613fa8e5d3sm4848939a91.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-20T17:16:21.653207+00:00",
+    "id": "case-redwoodcity-R26-04-0299",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near ROLISON RD \u2014 1.7mi from Menlo Oaks (Medium)",
+    "street": "ROLISON RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.68,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-4799fead505sm7312580b6e.2 - gsmtp')"
   }
 ]
