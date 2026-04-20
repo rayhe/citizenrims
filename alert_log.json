@@ -5091,5 +5091,16 @@
     "distance_mi": 1.68,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-4799fead505sm7312580b6e.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-20T20:41:27.563336+00:00",
+    "id": "case-smcsheriff-26-02702",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near 9TH AV \u2014 1.6mi from Menlo Oaks (Medium)",
+    "street": "9TH AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8b02ae7df88sm90103396d6.35 - gsmtp')"
   }
 ]
