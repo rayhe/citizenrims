@@ -5146,5 +5146,38 @@
     "distance_mi": 1.12,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ea8e4b373dsm2755546eec.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-21T18:28:26.357317+00:00",
+    "id": "case-menlopark-26-796",
+    "subject": "[MOSI] Personate to get money/property [over $400] - False pretenses/swindle/confidence game (F) near SANTA CRUZ AV \u2014 2.3mi from Menlo Oaks (Medium)",
+    "street": "SANTA CRUZ AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.3,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2e79c2954f6sm17675831eec.30 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-21T18:28:26.984381+00:00",
+    "id": "case-redwoodcity-R26-04-6027",
+    "subject": "[MOSI] Obtain credit/etc:use others id - Identity theft (M) near HAVEN AV \u2014 1.4mi from Menlo Oaks (Medium)",
+    "street": "HAVEN AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.41,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2e539fa244csm19410307eec.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-21T18:28:27.512129+00:00",
+    "id": "case-redwoodcity-R26-04-6033",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near BROADWAY \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "BROADWAY",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2e539fa244csm19410346eec.2 - gsmtp')"
   }
 ]
