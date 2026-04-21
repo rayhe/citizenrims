@@ -5179,5 +5179,16 @@
     "distance_mi": 2.64,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2e539fa244csm19410346eec.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-21T21:22:05.082536+00:00",
+    "id": "inc-redwoodcity-202604210086",
+    "subject": "[MOSI] Forgery near PAGE ST \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "PAGE ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.21,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8e7d64cce76sm1217601385a.14 - gsmtp')"
   }
 ]
