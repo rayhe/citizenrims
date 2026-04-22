@@ -5201,5 +5201,38 @@
     "distance_mi": 1.23,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8b02ac4685csm113733456d6.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-22T01:04:32.795223+00:00",
+    "id": "case-redwoodcity-R26-04-6044",
+    "subject": "[MOSI] Vandalism:damage property (M) near BAY RD \u2014 2.2mi from Menlo Oaks (Medium)",
+    "street": "BAY RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.17,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8e7d93c3083sm1159185085a.35 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-22T01:04:32.996828+00:00",
+    "id": "case-redwoodcity-R26-04-6051",
+    "subject": "[MOSI] Vandalism:damage property (M) near KANDLE WY \u2014 3.0mi from Menlo Oaks (Medium)",
+    "street": "KANDLE WY",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8e7d93c2fffsm1164806285a.36 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-22T01:04:33.223020+00:00",
+    "id": "case-redwoodcity-R26-04-6052",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near NEWCASTLE DR \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "NEWCASTLE DR",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.68,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-50e6123c3d7sm58615031cf.12 - gsmtp')"
   }
 ]
