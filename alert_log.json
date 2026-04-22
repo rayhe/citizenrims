@@ -5256,5 +5256,16 @@
     "distance_mi": 0.78,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2e53d9b056fsm30367297eec.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-22T18:44:06.971173+00:00",
+    "id": "case-smcsheriff-26-02737",
+    "subject": "[MOSI] Tamper with vehicle - Motor vehicle parts/accessories (M) near COLUMBIA AV \u2014 2.0mi from Menlo Oaks (Medium)",
+    "street": "COLUMBIA AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.01,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8b02ae79733sm137984806d6.33 - gsmtp')"
   }
 ]
