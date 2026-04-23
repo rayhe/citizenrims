@@ -5377,5 +5377,16 @@
     "distance_mi": 1.21,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8e7d93c2fffsm1630058085a.36 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-23T22:46:35.106914+00:00",
+    "id": "case-menlopark-26-844",
+    "subject": "[MOSI] Grnd Thft:prop/Etc $400+ near MENLO AVE \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "MENLO AVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8e7d3204cc6sm1738399885a.0 - gsmtp')"
   }
 ]
