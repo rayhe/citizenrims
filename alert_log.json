@@ -5333,5 +5333,16 @@
     "distance_mi": 0.08,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8b02ac68e76sm160006246d6.11 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-23T18:44:09.126989+00:00",
+    "id": "case-menlopark-26-843",
+    "subject": "[MOSI] Get credit/etc others id - Identity theft (F) near SEMINARY DR \u2014 0.1mi from Menlo Oaks (Medium)",
+    "street": "SEMINARY DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.08,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2e53dcb487bsm29303938eec.31 - gsmtp')"
   }
 ]
