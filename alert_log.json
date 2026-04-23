@@ -5311,5 +5311,16 @@
     "distance_mi": 2.33,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8b02ac4513asm147068336d6.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-23T17:18:38.037058+00:00",
+    "id": "inc-redwoodcity-202604230014",
+    "subject": "[MOSI] Stolen Vehicle near MANZANITA ST \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "MANZANITA ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.83,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8eb3aa60b99sm1380392785a.42 - gsmtp')"
   }
 ]
