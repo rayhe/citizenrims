@@ -5322,5 +5322,16 @@
     "distance_mi": 2.83,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8eb3aa60b99sm1380392785a.42 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-23T17:52:22.080657+00:00",
+    "id": "inc-menlopark-202604230031",
+    "subject": "[MOSI] Fraud near SEMINARY DR \u2014 0.1mi from Menlo Oaks (Medium)",
+    "street": "SEMINARY DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.08,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8b02ac68e76sm160006246d6.11 - gsmtp')"
   }
 ]
