@@ -5300,5 +5300,16 @@
     "distance_mi": 2.34,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12dbaab165bsm6315503c88.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-23T07:42:48.256551+00:00",
+    "id": "inc-paloalto-PP261120103",
+    "subject": "[MOSI] 459C near SANTA RITA AVE / SANTA RITA AVE \u2014 2.3mi from Menlo Oaks (High)",
+    "street": "SANTA RITA AVE / SANTA RITA AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.33,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8b02ac4513asm147068336d6.1 - gsmtp')"
   }
 ]
