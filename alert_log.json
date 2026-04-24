@@ -5421,5 +5421,16 @@
     "distance_mi": 2.9,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8b02ae61332sm166227106d6.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-24T11:21:10.874761+00:00",
+    "id": "inc-paloalto-PP261140002",
+    "subject": "[MOSI] 459A near TOWN AND COUNTRY VLG / EMBARCADERO RD \u2014 1.6mi from Menlo Oaks (High)",
+    "street": "TOWN AND COUNTRY VLG / EMBARCADERO RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.62,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8e7d8edb7acsm1980017185a.28 - gsmtp')"
   }
 ]
