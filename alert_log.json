@@ -5399,5 +5399,16 @@
     "distance_mi": 0.5,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8eb9becc72dsm1285241585a.34 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-24T01:05:26.514486+00:00",
+    "id": "inc-menlopark-202604230069",
+    "subject": "[MOSI] Fraud near SAN ANTONIO ST \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "SAN ANTONIO ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.86,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8e7d5fe8ed1sm1775535885a.8 - gsmtp')"
   }
 ]
