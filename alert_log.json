@@ -5443,5 +5443,27 @@
     "distance_mi": 1.36,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7dcd56bd0e4sm12745924a34.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-24T21:51:26.754207+00:00",
+    "id": "inc-menlopark-202604240040",
+    "subject": "[MOSI] Grand Theft near JEFFERSON DR \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "JEFFERSON DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.87,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2e53ccce0f5sm33628163eec.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-24T21:51:27.400260+00:00",
+    "id": "case-menlopark-26-853",
+    "subject": "[MOSI] Burglary:second degree - From building (F) near JEFFERSON DRIVE \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "JEFFERSON DRIVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.88,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2e79c2954f6sm37259586eec.30 - gsmtp')"
   }
 ]
