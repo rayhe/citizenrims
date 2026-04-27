@@ -5608,5 +5608,27 @@
     "distance_mi": 2.95,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6962b40d504sm6129567eaf.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-27T21:09:57.706859+00:00",
+    "id": "inc-paloalto-PP261170030",
+    "subject": "[MOSI] 594 near UNIVERSITY AVE / HAMILTON AVE \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "UNIVERSITY AVE / HAMILTON AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.15,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5100da66174sm2322851cf.7 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-27T21:09:58.069503+00:00",
+    "id": "case-redwoodcity-R26-04-0392",
+    "subject": "[MOSI] Vandalism less than $400 (M) near EL CAMINO REAL \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.7,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5100db88da6sm2082841cf.26 - gsmtp')"
   }
 ]
