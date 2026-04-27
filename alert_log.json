@@ -5630,5 +5630,16 @@
     "distance_mi": 2.7,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5100db88da6sm2082841cf.26 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-27T23:12:25.703390+00:00",
+    "id": "case-redwoodcity-R26-04-0426",
+    "subject": "[MOSI] Vandalism:damage property (F) near CHARTER ST \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "CHARTER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.66,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-433efb816e4sm620856fac.1 - gsmtp')"
   }
 ]
