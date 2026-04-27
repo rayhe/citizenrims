@@ -5586,5 +5586,16 @@
     "distance_mi": 1.02,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-42b934a2dd1sm30329594fac.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-27T14:59:01.909777+00:00",
+    "id": "case-smcsheriff-26-03290",
+    "subject": "[MOSI] Get credit/etc others id - Identity theft (F) near 5TH AV / EL CAMINO REAL \u2014 2.0mi from Menlo Oaks (Medium)",
+    "street": "5TH AV / EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.01,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7dcc953e39asm20289893a34.15 - gsmtp')"
   }
 ]
