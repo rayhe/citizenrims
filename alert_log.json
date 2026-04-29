@@ -5773,5 +5773,16 @@
     "distance_mi": 2.95,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ed1bf6d524sm4032228eec.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-29T22:28:08.702358+00:00",
+    "id": "inc-paloalto-PP261190045",
+    "subject": "[MOSI] 459R near BRYANT ST / PALO ALTO AVE \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "BRYANT ST / PALO ALTO AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 0.7,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5101ae985f4sm34947641cf.28 - gsmtp')"
   }
 ]
