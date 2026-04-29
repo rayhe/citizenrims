@@ -5718,5 +5718,16 @@
     "distance_mi": 1.02,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8f939a93224sm127393685a.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-29T13:42:20.029332+00:00",
+    "id": "case-smcsheriff-26-03364",
+    "subject": "[MOSI] Poss id of 10+ persn dfrd - Identity theft (F) near FAIR OAKS AV / 8TH AV \u2014 1.7mi from Menlo Oaks (Medium)",
+    "street": "FAIR OAKS AV / 8TH AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.68,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ed1c0e9a89sm2984575eec.31 - gsmtp')"
   }
 ]
