@@ -5740,5 +5740,16 @@
     "distance_mi": 1.94,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ed1be7e4besm3840258eec.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-29T19:00:47.199533+00:00",
+    "id": "case-redwoodcity-R26-04-0378",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near MANZANITA ST \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "MANZANITA ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.83,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ed1c09ad3asm3396822eec.21 - gsmtp')"
   }
 ]
