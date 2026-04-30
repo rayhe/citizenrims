@@ -5806,5 +5806,27 @@
     "distance_mi": 0.73,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8fbb3742dfasm28711985a.28 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-30T19:57:09.444082+00:00",
+    "id": "case-menlopark-26-888",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near WOODLAND AV \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "WOODLAND AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.73,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8b53c1dc658sm379846d6.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-04-30T19:57:09.743499+00:00",
+    "id": "case-menlopark-26-890",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near WOODLAND AV \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "WOODLAND AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.74,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8fbf0c6ab87sm2824185a.16 - gsmtp')"
   }
 ]
