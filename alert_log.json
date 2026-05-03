@@ -5916,5 +5916,16 @@
     "distance_mi": 0.78,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8fc29383f59sm560818485a.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-03T03:11:42.230724+00:00",
+    "id": "case-atherton-26-154",
+    "subject": "[MOSI] Grand theft:money/labor/property - From building (F) near VALPARAISO AV \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "VALPARAISO AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.13,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-43454d53a55sm6844451fac.16 - gsmtp')"
   }
 ]
