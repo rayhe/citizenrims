@@ -5971,5 +5971,16 @@
     "distance_mi": 1.07,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8b538c13fc6sm111907506d6.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-04T21:59:22.126008+00:00",
+    "id": "inc-menlopark-202605040025",
+    "subject": "[MOSI] Embezzlement near PIERCE RD \u2014 0.3mi from Menlo Oaks (Medium)",
+    "street": "PIERCE RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.29,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8fc29a80784sm1171135485a.12 - gsmtp')"
   }
 ]
