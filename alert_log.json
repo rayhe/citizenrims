@@ -5949,5 +5949,16 @@
     "distance_mi": 2.54,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8b5391e344fsm87411576d6.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-04T03:04:00.244452+00:00",
+    "id": "inc-paloalto-PP261230048",
+    "subject": "[MOSI] 459R near GREER RD / CHANNING AVE \u2014 2.4mi from Menlo Oaks (High)",
+    "street": "GREER RD / CHANNING AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.38,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2ee3b29b2e0sm14486279eec.16 - gsmtp')"
   }
 ]
