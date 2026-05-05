@@ -5982,5 +5982,16 @@
     "distance_mi": 0.29,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8fc29a80784sm1171135485a.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-05T15:34:30.866230+00:00",
+    "id": "case-redwoodcity-R26-05-0027",
+    "subject": "[MOSI] Remove shopping/laundry cart (M) near HAZEL AV/MADRONE ST \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "HAZEL AV/MADRONE ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.81,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8b53c0e6d72sm169461126d6.26 - gsmtp')"
   }
 ]
