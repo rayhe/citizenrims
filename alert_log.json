@@ -6004,5 +6004,16 @@
     "distance_mi": 0.24,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-7bd66559e92sm66817047b3.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-05T17:59:30.484829+00:00",
+    "id": "case-redwoodcity-R26-05-0029",
+    "subject": "[MOSI] Vandalism:deface property (M) near EL CAMINO REAL \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.57,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-12df8278e7dsm20048674c88.2 - gsmtp')"
   }
 ]
