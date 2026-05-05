@@ -6037,5 +6037,27 @@
     "distance_mi": 0.24,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8b538b1dbd2sm179635876d6.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-05T23:18:37.413726+00:00",
+    "id": "case-redwoodcity-R26-05-6014",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near EAST BAYSHORE RD \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "EAST BAYSHORE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2f56d8c2912sm1083953eec.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-05T23:18:37.840334+00:00",
+    "id": "case-redwoodcity-R26-05-6015",
+    "subject": "[MOSI] Vandalism ($400 or more) (F) near ULMER CT \u2014 2.4mi from Menlo Oaks (Medium)",
+    "street": "ULMER CT",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.39,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2f56d8c45acsm1067883eec.13 - gsmtp')"
   }
 ]
