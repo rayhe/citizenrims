@@ -6114,5 +6114,16 @@
     "distance_mi": 1.99,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-bc55ecff7d4sm85101666b.43 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-06T14:37:45.709162+00:00",
+    "id": "case-redwoodcity-R26-05-0075",
+    "subject": "[MOSI] Receive/etc known stolen property (F) near VETERANS BL/WOODSIDE RD \u2014 2.7mi from Menlo Oaks (High)",
+    "street": "VETERANS BL/WOODSIDE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.75,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-131f9679db9sm3516755c88.1 - gsmtp')"
   }
 ]
