@@ -6158,5 +6158,16 @@
     "distance_mi": 1.06,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-131f968999fsm5236997c88.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-07T08:19:43.394773+00:00",
+    "id": "inc-paloalto-PP261260128",
+    "subject": "[MOSI] 459A near COWPER ST / TASSO ST \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "COWPER ST / TASSO ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 0.93,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-434ca5af84csm9213873fac.12 - gsmtp')"
   }
 ]
