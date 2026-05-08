@@ -6169,5 +6169,16 @@
     "distance_mi": 0.93,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-434ca5af84csm9213873fac.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-08T01:06:30.688359+00:00",
+    "id": "inc-redwoodcity-202605070092",
+    "subject": "[MOSI] Stolen Vehicle near JONES CT \u2014 1.6mi from Menlo Oaks (High)",
+    "street": "JONES CT",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.58,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1327865a1a4sm162141c88.10 - gsmtp')"
   }
 ]
