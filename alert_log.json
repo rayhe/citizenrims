@@ -6191,5 +6191,16 @@
     "distance_mi": 1.25,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5148e62eff2sm9435331cf.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-08T20:03:58.209521+00:00",
+    "id": "case-smcsheriff-26-03434",
+    "subject": "[MOSI] Get credit/etc others id - Impersonation (F) near FRANKS LN \u2014 2.3mi from Menlo Oaks (Medium)",
+    "street": "FRANKS LN",
+    "city": "Menlo Park",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.34,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8bdf9081f49sm51872186d6.41 - gsmtp')"
   }
 ]
