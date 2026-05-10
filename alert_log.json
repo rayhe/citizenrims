@@ -6279,5 +6279,16 @@
     "distance_mi": 1.14,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2f888d3af4esm9050207eec.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-10T09:43:02.472078+00:00",
+    "id": "inc-paloalto-PP261290113",
+    "subject": "[MOSI] 594 near CALIFORNIA AVE / SHERMAN AVE \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "CALIFORNIA AVE / SHERMAN AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.76,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8fc2cd04de9sm2822716485a.44 - gsmtp')"
   }
 ]
