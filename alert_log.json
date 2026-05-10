@@ -6312,5 +6312,16 @@
     "distance_mi": 1.98,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-907b966f1b1sm853082485a.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-10T20:23:32.895454+00:00",
+    "id": "inc-paloalto-PP261300017",
+    "subject": "[MOSI] 459R near WAVERLEY ST / KIPLING ST \u2014 3.0mi from Menlo Oaks (High)",
+    "street": "WAVERLEY ST / KIPLING ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.96,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2f88885b87dsm12931691eec.21 - gsmtp')"
   }
 ]
