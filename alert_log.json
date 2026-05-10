@@ -6257,5 +6257,16 @@
     "distance_mi": 2.99,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8bf3a3401b1sm58229336d6.22 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-10T06:45:45.333654+00:00",
+    "id": "inc-paloalto-PP261290091",
+    "subject": "[MOSI] 487 near EL CAMINO REAL / YALE ST \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL / YALE ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.6,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7e367be2aa5sm4404950a34.4 - gsmtp')"
   }
 ]
