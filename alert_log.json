@@ -6235,5 +6235,16 @@
     "distance_mi": 2.93,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2f888c3b301sm6207815eec.23 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-10T01:15:35.644588+00:00",
+    "id": "inc-menlopark-202605090042",
+    "subject": "[MOSI] Burglary near TRINITY DR \u2014 3.0mi from Menlo Oaks (High)",
+    "street": "TRINITY DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.99,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-907b87bd789sm696459685a.27 - gsmtp')"
   }
 ]
