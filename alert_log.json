@@ -6290,5 +6290,16 @@
     "distance_mi": 2.76,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8fc2cd04de9sm2822716485a.44 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-10T12:49:46.206272+00:00",
+    "id": "case-smcsheriff-26-03401",
+    "subject": "[MOSI] Vandalism:deface property (M) near EL CAMINO REAL \u2014 2.3mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.25,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1327865a1a4sm10304338c88.10 - gsmtp')"
   }
 ]
