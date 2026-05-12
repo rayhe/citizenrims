@@ -6433,5 +6433,27 @@
     "distance_mi": 2.51,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-69b25e0e79asm7560026eaf.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-12T19:06:57.436293+00:00",
+    "id": "inc-menlopark-202605120028",
+    "subject": "[MOSI] Fraud near LAUREL ST \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "LAUREL ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.51,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1327865700asm20113376c88.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-12T19:06:57.919356+00:00",
+    "id": "inc-menlopark-202605120036",
+    "subject": "[MOSI] Vandalism near OBRIEN DR \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "OBRIEN DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.93,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2f88914523csm18741598eec.29 - gsmtp')"
   }
 ]
