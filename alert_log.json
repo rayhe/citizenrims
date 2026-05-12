@@ -6400,5 +6400,16 @@
     "distance_mi": 1.62,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-8fc2c91e11fsm3166102685a.40 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-12T02:44:05.816390+00:00",
+    "id": "inc-menlopark-202605110073",
+    "subject": "[MOSI] Vandalism near ALMA ST \u2014 0.6mi from Menlo Oaks (Medium)",
+    "street": "ALMA ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13278210d40sm20769884c88.4 - gsmtp')"
   }
 ]
