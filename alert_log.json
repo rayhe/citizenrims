@@ -6411,5 +6411,16 @@
     "distance_mi": 0.64,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13278210d40sm20769884c88.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-12T04:06:34.476368+00:00",
+    "id": "inc-paloalto-PP261310073",
+    "subject": "[MOSI] IDTHEFT near LYTTON AVE / UNIVERSITY AVE \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "LYTTON AVE / UNIVERSITY AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 0.93,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-47c76986f87sm21608690b6e.13 - gsmtp')"
   }
 ]
