@@ -6488,5 +6488,16 @@
     "distance_mi": 2.82,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-435570ac625sm15203542fac.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-13T17:50:50.797381+00:00",
+    "id": "case-menlopark-26-965",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near MIDDLEFIELD RD \u2014 0.5mi from Menlo Oaks (High)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.49,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5148fa78723sm148020511cf.3 - gsmtp')"
   }
 ]
