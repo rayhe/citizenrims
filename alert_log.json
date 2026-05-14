@@ -6532,5 +6532,27 @@
     "distance_mi": 0.16,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51645688c13sm5281981cf.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-14T04:38:48.177895+00:00",
+    "id": "case-menlopark-26-972",
+    "subject": "[MOSI] Display on vehicle/present to officer unlawful registration (M) near BAYFRONT EX/UNIVERSITY AV \u2014 1.5mi from Menlo Oaks (Medium)",
+    "street": "BAYFRONT EX/UNIVERSITY AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.54,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30293e2ea78sm1694850eec.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-14T04:38:48.631781+00:00",
+    "id": "case-atherton-26-161",
+    "subject": "[MOSI] Possess personal identifying info with intent to defraud - False pretenses/swindle/confidence game (M) near STEVICK DR \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "STEVICK DR",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 2.93,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30293e2e6a9sm1656252eec.2 - gsmtp')"
   }
 ]
