@@ -6565,5 +6565,38 @@
     "distance_mi": 1.31,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-910bc83f926sm162153085a.30 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-14T16:19:18.377597+00:00",
+    "id": "inc-redwoodcity-202605140074",
+    "subject": "[MOSI] Grand Theft near MIDDLEFIELD RD \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-910bab32bd0sm286664785a.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-14T16:19:18.661375+00:00",
+    "id": "case-redwoodcity-R26-04-0483",
+    "subject": "[MOSI] Vandalism:deface property (M) near HOOVER ST \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "HOOVER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.91,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8c90c161928sm27048536d6.44 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-14T16:19:18.945782+00:00",
+    "id": "case-redwoodcity-R26-05-0167",
+    "subject": "[MOSI] Vandalism:deface property (F) near WILLOW ST \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "WILLOW ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.74,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51645856d4esm20119941cf.27 - gsmtp')"
   }
 ]
