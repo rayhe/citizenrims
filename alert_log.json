@@ -6620,5 +6620,16 @@
     "distance_mi": 0.56,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30296dcb6e9sm4466147eec.16 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-14T20:55:01.950051+00:00",
+    "id": "inc-redwoodcity-202605140141",
+    "subject": "[MOSI] Vandalism near 10TH AV \u2014 1.5mi from Menlo Oaks (Medium)",
+    "street": "10TH AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.52,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-516460cda02sm26364971cf.18 - gsmtp')"
   }
 ]
