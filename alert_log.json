@@ -6664,5 +6664,38 @@
     "distance_mi": 0.94,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-910bab3ad15sm489627285a.16 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-15T18:12:46.151243+00:00",
+    "id": "inc-menlopark-202605150014",
+    "subject": "[MOSI] Vandalism near HACKER WY \u2014 1.4mi from Menlo Oaks (Medium)",
+    "street": "HACKER WY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.4,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ca214cb980sm1469286d6.38 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-15T18:12:46.611343+00:00",
+    "id": "inc-menlopark-202605150019",
+    "subject": "[MOSI] Grand Theft near MENLO AV \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "MENLO AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8c90bb80e7bsm58540716d6.33 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-15T18:12:47.109312+00:00",
+    "id": "case-menlopark-26-982",
+    "subject": "[MOSI] Grand theft:money/labor/property - From motor vehicle (F) near MENLO AVE \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "MENLO AVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-910bad2dd8esm618950585a.19 - gsmtp')"
   }
 ]
