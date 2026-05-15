@@ -6631,5 +6631,16 @@
     "distance_mi": 1.52,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-516460cda02sm26364971cf.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-15T04:29:17.733788+00:00",
+    "id": "case-smcsheriff-26-03368",
+    "subject": "[MOSI] Tamper with vehicle - Destruction/damage/vandalism of property (M) near HURLINGAME AV \u2014 2.4mi from Menlo Oaks (Medium)",
+    "street": "HURLINGAME AV",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.36,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-134cc2351c3sm7865308c88.11 - gsmtp')"
   }
 ]
