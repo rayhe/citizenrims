@@ -6697,5 +6697,16 @@
     "distance_mi": 0.85,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-910bad2dd8esm618950585a.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-15T22:19:55.646103+00:00",
+    "id": "inc-paloalto-PP261350033",
+    "subject": "[MOSI] 487 near N CALIFORNIA AVE / OREGON AVE \u2014 2.4mi from Menlo Oaks (Medium)",
+    "street": "N CALIFORNIA AVE / OREGON AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.43,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-516456d5c4dsm56423111cf.12 - gsmtp')"
   }
 ]
