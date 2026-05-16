@@ -6730,5 +6730,16 @@
     "distance_mi": 0.88,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30296dcb6e9sm10056369eec.16 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-16T01:13:52.786930+00:00",
+    "id": "inc-paloalto-PP261350050",
+    "subject": "[MOSI] 594 near COLORADO AVE / SAN CARLOS CT \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "COLORADO AVE / SAN CARLOS CT",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.92,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-516456c0a42sm62834661cf.10 - gsmtp')"
   }
 ]
