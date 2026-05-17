@@ -6785,5 +6785,16 @@
     "distance_mi": 1.29,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-910bc83f926sm999703485a.30 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-17T20:25:43.125111+00:00",
+    "id": "inc-paloalto-PP261370030",
+    "subject": "[MOSI] 487 near LYTTON AVE / LANE 20 E \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "LYTTON AVE / LANE 20 E",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 0.97,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ca361aabe0sm31868496d6.44 - gsmtp')"
   }
 ]
