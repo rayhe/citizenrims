@@ -6851,5 +6851,38 @@
     "distance_mi": 0.4,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ca361a92c7sm62484256d6.42 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-18T23:06:44.074501+00:00",
+    "id": "case-redwoodcity-R26-05-0266",
+    "subject": "[MOSI] Defraud innkeeper -$950 (M) near EL CAMINO REAL \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.57,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30293e2ea6dsm15155623eec.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-18T23:06:44.518259+00:00",
+    "id": "case-redwoodcity-R26-05-0278",
+    "subject": "[MOSI] Obtain money by fraud:cards/etc (M) near EL CAMINO REAL \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.7,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30293e2ea78sm14706059eec.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-18T23:06:44.955703+00:00",
+    "id": "case-redwoodcity-R26-05-0283",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near OXFORD ST/REGENT CT \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "OXFORD ST/REGENT CT",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.9,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-134cc3490bcsm18171759c88.15 - gsmtp')"
   }
 ]
