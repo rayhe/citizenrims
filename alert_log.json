@@ -6939,5 +6939,27 @@
     "distance_mi": 1.91,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-302944ffdf0sm17671445eec.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-19T23:15:37.841879+00:00",
+    "id": "case-redwoodcity-R26-05-0111",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near JONES CT \u2014 1.6mi from Menlo Oaks (Medium)",
+    "street": "JONES CT",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.58,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-516456b6856sm178846721cf.7 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-19T23:15:38.300487+00:00",
+    "id": "case-redwoodcity-R26-05-0221",
+    "subject": "[MOSI] Vandalism:deface property (F) near 10TH AV \u2014 1.5mi from Menlo Oaks (Medium)",
+    "street": "10TH AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.52,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51645687d30sm189350421cf.4 - gsmtp')"
   }
 ]
