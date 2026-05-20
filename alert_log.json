@@ -6972,5 +6972,16 @@
     "distance_mi": 2.36,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ca360b362fsm114794666d6.22 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-20T07:38:21.203533+00:00",
+    "id": "inc-paloalto-PP261390127",
+    "subject": "[MOSI] 459A near COWPER ST / HAMILTON AVE \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "COWPER ST / HAMILTON AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.12,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-302977a9474sm18280020eec.25 - gsmtp')"
   }
 ]
