@@ -6983,5 +6983,16 @@
     "distance_mi": 1.12,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-302977a9474sm18280020eec.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-20T20:19:17.323695+00:00",
+    "id": "inc-redwoodcity-202605200069",
+    "subject": "[MOSI] Burglary-Vehicle Report near BROADWAY \u2014 2.0mi from Menlo Oaks (High)",
+    "street": "BROADWAY",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-7cc9bc0cce3sm57201607b3.29 - gsmtp')"
   }
 ]
