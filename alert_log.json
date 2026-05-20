@@ -6994,5 +6994,16 @@
     "distance_mi": 1.98,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-7cc9bc0cce3sm57201607b3.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-20T22:20:31.870475+00:00",
+    "id": "inc-menlopark-202605200052",
+    "subject": "[MOSI] Fraud near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.71,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-134cc2351c3sm30321663c88.11 - gsmtp')"
   }
 ]
