@@ -6961,5 +6961,16 @@
     "distance_mi": 1.52,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51645687d30sm189350421cf.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-20T06:19:21.750694+00:00",
+    "id": "case-smcsheriff-26-03344",
+    "subject": "[MOSI] Vandalism:damage property (F) near HURLINGAME AV \u2014 2.4mi from Menlo Oaks (Medium)",
+    "street": "HURLINGAME AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.36,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ca360b362fsm114794666d6.22 - gsmtp')"
   }
 ]
