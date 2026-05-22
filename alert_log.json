@@ -7060,5 +7060,16 @@
     "distance_mi": 0.51,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-914bb904832sm149814785a.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-22T16:05:50.077339+00:00",
+    "id": "case-redwoodcity-R26-05-0335",
+    "subject": "[MOSI] Burglary:second degree - Motor vehicle parts/accessories (F) near BROADWAY \u2014 2.0mi from Menlo Oaks (High)",
+    "street": "BROADWAY",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30451f1f38bsm1267563eec.9 - gsmtp')"
   }
 ]
