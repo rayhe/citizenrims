@@ -532,27 +532,51 @@ def main():
 
     # Merge with existing archive (indefinite retention)
     os.makedirs(OUT_DIR, exist_ok=True)
-    archive_path = os.path.join(OUT_DIR, "feed.json")
-    if os.path.exists(archive_path):
-        try:
-            with open(archive_path) as f:
-                archive = json.load(f)
-            seen = {}
-            for item in archive.get("incidents", []):
-                seen[item_id(item)] = item
-            for item in archive.get("cases", []):
-                seen[item_id(item)] = item
-            archived = len(seen)
-            # Fresh data wins (overwrites stale copies)
-            for item in all_incidents:
-                seen[item_id(item)] = item
-            for item in all_cases:
-                seen[item_id(item)] = item
-            all_incidents = [v for v in seen.values() if v.get("_source") == "incident"]
-            all_cases = [v for v in seen.values() if v.get("_source") == "case"]
-            print(f"  Archive: {archived} existing + {len(seen) - archived} new = {len(seen)} total")
-        except (json.JSONDecodeError, KeyError) as e:
-            print(f"  WARN: could not load archive: {e}")
+    data_dir = os.path.join(OUT_DIR, "data")
+    seen = {}
+    archived = 0
+
+    # Load from monthly split files first (new format)
+    if os.path.isdir(data_dir):
+        import glob
+        for month_file in sorted(glob.glob(os.path.join(data_dir, "*.json"))):
+            try:
+                with open(month_file) as f:
+                    month_data = json.load(f)
+                for item in month_data.get("incidents", []):
+                    seen[item_id(item)] = item
+                for item in month_data.get("cases", []):
+                    seen[item_id(item)] = item
+            except (json.JSONDecodeError, KeyError) as e:
+                print(f"  WARN: could not load {month_file}: {e}")
+        archived = len(seen)
+        print(f"  Loaded {archived} items from monthly archive files")
+
+    # Fallback: load from legacy monolithic feed.json (migration path)
+    if not seen:
+        archive_path = os.path.join(OUT_DIR, "feed.json")
+        if os.path.exists(archive_path):
+            try:
+                with open(archive_path) as f:
+                    archive = json.load(f)
+                for item in archive.get("incidents", []):
+                    seen[item_id(item)] = item
+                for item in archive.get("cases", []):
+                    seen[item_id(item)] = item
+                archived = len(seen)
+                print(f"  Loaded {archived} items from legacy feed.json")
+            except (json.JSONDecodeError, KeyError) as e:
+                print(f"  WARN: could not load archive: {e}")
+
+    if seen:
+        # Fresh data wins (overwrites stale copies)
+        for item in all_incidents:
+            seen[item_id(item)] = item
+        for item in all_cases:
+            seen[item_id(item)] = item
+        all_incidents = [v for v in seen.values() if v.get("_source") == "incident"]
+        all_cases = [v for v in seen.values() if v.get("_source") == "case"]
+        print(f"  Archive: {archived} existing + {len(seen) - archived} new = {len(seen)} total")
 
     meta = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -564,13 +588,72 @@ def main():
 
     def write(name, data):
         path = os.path.join(OUT_DIR, name)
+        os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, "w") as f:
             json.dump(data, f, separators=(",", ":"), default=str)
-        print(f"  Wrote {path} ({os.path.getsize(path)} bytes)")
+        size = os.path.getsize(path)
+        print(f"  Wrote {path} ({size} bytes, {size/1048576:.1f} MiB)")
 
-    write("feed.json", {"meta": meta, "incidents": all_incidents, "cases": all_cases})
-    write("incidents.json", {"meta": meta, "incidents": all_incidents})
-    write("cases.json", {"meta": meta, "cases": all_cases})
+    # --- Monthly split ---
+    def item_month(item):
+        """Extract YYYY-MM from an item's date fields."""
+        dt = item.get("incidentDate") or item.get("reportDate") or item.get("occurrence1Date") or ""
+        if len(dt) >= 7:
+            return dt[:7]
+        return "unknown"
+
+    # Bucket items by month
+    from collections import defaultdict
+    month_incidents = defaultdict(list)
+    month_cases = defaultdict(list)
+    for item in all_incidents:
+        month_incidents[item_month(item)].append(item)
+    for item in all_cases:
+        month_cases[item_month(item)].append(item)
+
+    all_months = sorted(set(list(month_incidents.keys()) + list(month_cases.keys())))
+    # Drop "unknown" month bucket if present
+    all_months = [m for m in all_months if m != "unknown"]
+
+    data_dir = os.path.join(OUT_DIR, "data")
+    os.makedirs(data_dir, exist_ok=True)
+
+    # Clean up old month files that are no longer needed
+    import glob
+    existing_month_files = set(os.path.basename(p) for p in glob.glob(os.path.join(data_dir, "*.json")))
+    expected_month_files = set(f"{m}.json" for m in all_months)
+    for stale in existing_month_files - expected_month_files:
+        stale_path = os.path.join(data_dir, stale)
+        os.remove(stale_path)
+        print(f"  Removed stale {stale_path}")
+
+    for month in all_months:
+        mi = month_incidents.get(month, [])
+        mc = month_cases.get(month, [])
+        month_meta = {
+            "generated_at": meta["generated_at"],
+            "month": month,
+            "agencies": all_agencies,
+            "incident_count": len(mi),
+            "case_count": len(mc),
+        }
+        write(f"data/{month}.json", {"meta": month_meta, "incidents": mi, "cases": mc})
+
+    # Write manifest (small file listing available months)
+    manifest = {
+        "meta": meta,
+        "months": all_months,
+    }
+    write("manifest.json", manifest)
+
+    # Write legacy feed.json, incidents.json, cases.json pointing to new structure
+    # Keep them small — just meta + pointer to monthly files
+    legacy_meta = dict(meta)
+    legacy_meta["split"] = "monthly"
+    legacy_meta["manifest"] = "manifest.json"
+    write("feed.json", {"meta": legacy_meta, "months": all_months, "incidents": [], "cases": []})
+    write("incidents.json", {"meta": legacy_meta, "months": all_months, "incidents": []})
+    write("cases.json", {"meta": legacy_meta, "months": all_months, "cases": []})
 
     print("Checking alerts...")
     check_alerts(all_incidents, all_cases)

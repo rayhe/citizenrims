@@ -609,18 +609,48 @@ function updateLastUpdated() {
 }
 
 async function loadData() {
-  const resp = await fetch('feed.json');
-  const feedData = await resp.json();
+  // Load manifest to discover available monthly files
+  let allIncidents = [];
+  let allCases = [];
+  let meta = {};
 
+  try {
+    const manifestResp = await fetch('manifest.json');
+    const manifest = await manifestResp.json();
+    meta = manifest.meta;
 
+    // Load all month files in parallel
+    const monthFetches = manifest.months.map(async (month) => {
+      try {
+        const resp = await fetch(`data/${month}.json`);
+        return await resp.json();
+      } catch (e) {
+        console.warn(`Failed to load data/${month}.json:`, e);
+        return { incidents: [], cases: [] };
+      }
+    });
+    const monthResults = await Promise.all(monthFetches);
+    for (const monthData of monthResults) {
+      allIncidents.push(...(monthData.incidents || []));
+      allCases.push(...(monthData.cases || []));
+    }
+  } catch (e) {
+    // Fallback: try legacy monolithic feed.json
+    console.warn('manifest.json not found, falling back to feed.json');
+    const resp = await fetch('feed.json');
+    const feedData = await resp.json();
+    meta = feedData.meta;
+    allIncidents = feedData.incidents || [];
+    allCases = feedData.cases || [];
+  }
 
-  if (feedData.meta.generated_at) {
-    const raw = feedData.meta.generated_at;
+  if (meta.generated_at) {
+    const raw = meta.generated_at;
     lastRefreshDate = new Date(raw.match(/[Z+\-]\d/) ? raw : raw + 'Z');
     updateLastUpdated();
   }
 
-  const items = [...feedData.incidents, ...feedData.cases];
+  const items = [...allIncidents, ...allCases];
   items.forEach(item => {
     if (!item.yCoord || !item.xCoord) return;
     const prefix = item._prefix;
