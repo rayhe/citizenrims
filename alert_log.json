@@ -7181,5 +7181,16 @@
     "distance_mi": 1.55,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-914bb8cec5bsm1081152885a.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-25T21:55:48.557132+00:00",
+    "id": "case-smcsheriff-26-04206",
+    "subject": "[MOSI] Vandalism:damage property (M) near NORTHSIDE AV \u2014 2.1mi from Menlo Oaks (Medium)",
+    "street": "NORTHSIDE AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.13,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-516d8cb8da8sm103495651cf.20 - gsmtp')"
   }
 ]
