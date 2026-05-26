@@ -7247,5 +7247,16 @@
     "distance_mi": 0.24,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7e6065e6aabsm9129164a34.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-26T13:37:04.903836+00:00",
+    "id": "case-menlopark-26-1064",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near PIERCE RD \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "PIERCE RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.24,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8cc80deae74sm141750376d6.11 - gsmtp')"
   }
 ]
