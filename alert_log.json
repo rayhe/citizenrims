@@ -7291,5 +7291,27 @@
     "distance_mi": 2.82,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2beb5695c40sm121733245ad.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-26T21:13:16.279412+00:00",
+    "id": "inc-redwoodcity-202605260043",
+    "subject": "[MOSI] Vandalism near 2ND AV \u2014 2.0mi from Menlo Oaks (Medium)",
+    "street": "2ND AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.0,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51706a0ebbdsm28140571cf.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-26T21:13:16.703021+00:00",
+    "id": "case-redwoodcity-R26-05-0412",
+    "subject": "[MOSI] Vandalism:deface property (M) near EAST BAYSHORE RD \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "EAST BAYSHORE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.49,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51706adc446sm26908381cf.15 - gsmtp')"
   }
 ]
