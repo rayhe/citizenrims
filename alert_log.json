@@ -7203,5 +7203,16 @@
     "distance_mi": 2.21,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30481ad4cd3sm5667236eec.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-26T04:50:35.237701+00:00",
+    "id": "case-smcsheriff-26-03791",
+    "subject": "[MOSI] Forge/alter vehicle registration/etc (M) near MIDDLEFIELD RD / 4TH AV \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD / 4TH AV",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.94,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30451f3feadsm12560073eec.13 - gsmtp')"
   }
 ]
