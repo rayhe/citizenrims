@@ -7280,5 +7280,16 @@
     "distance_mi": 2.35,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30452461cb5sm15716231eec.31 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-26T19:06:43.537289+00:00",
+    "id": "case-redwoodcity-R26-05-0401",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Embezzlement (F) near EL CAMINO REAL \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.82,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2beb5695c40sm121733245ad.5 - gsmtp')"
   }
 ]
