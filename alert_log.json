@@ -7192,5 +7192,16 @@
     "distance_mi": 2.13,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-516d8cb8da8sm103495651cf.20 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-26T03:23:43.581825+00:00",
+    "id": "case-smcsheriff-26-03994",
+    "subject": "[MOSI] Obtain money/etc by false pretenses [over $400] (F) near HAMPSHIRE AVE \u2014 2.2mi from Menlo Oaks (Medium)",
+    "street": "HAMPSHIRE AVE",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.21,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30481ad4cd3sm5667236eec.27 - gsmtp')"
   }
 ]
