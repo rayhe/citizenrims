@@ -7313,5 +7313,27 @@
     "distance_mi": 2.49,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51706adc446sm26908381cf.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-26T21:55:12.396132+00:00",
+    "id": "inc-paloalto-PP261460041",
+    "subject": "[MOSI] 10851 near ALMA ST / HIGH ST \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "ALMA ST / HIGH ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.06,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30452230b25sm14541772eec.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-26T21:55:13.097272+00:00",
+    "id": "case-redwoodcity-R26-05-0214",
+    "subject": "[MOSI] Grand theft:money/labor/property - Pocket-picking (F) near MIDDLEFIELD RD \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-136b3706ad6sm7216125c88.13 - gsmtp')"
   }
 ]
