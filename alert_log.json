@@ -7412,5 +7412,16 @@
     "distance_mi": 1.91,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30451f3feadsm17527598eec.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-27T21:19:10.512864+00:00",
+    "id": "case-menlopark-26-1079",
+    "subject": "[MOSI] Grnd Thft:prop/Etc $400+ near MERRILL ST. \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "MERRILL ST.",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.67,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-304535ae870sm13736458eec.19 - gsmtp')"
   }
 ]
