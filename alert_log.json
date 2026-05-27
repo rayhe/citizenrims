@@ -7357,5 +7357,27 @@
     "distance_mi": 2.58,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51706b08199sm33977041cf.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-27T04:56:57.972641+00:00",
+    "id": "inc-paloalto-PP261460090",
+    "subject": "[MOSI] 594 near BRYANT ST / WAVERLEY ST \u2014 1.4mi from Menlo Oaks (Medium)",
+    "street": "BRYANT ST / WAVERLEY ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.37,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8cc812e2018sm161160416d6.28 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-27T04:56:58.510574+00:00",
+    "id": "case-menlopark-26-1072",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near HAVEN AV \u2014 1.4mi from Menlo Oaks (High)",
+    "street": "HAVEN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.35,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-914f8810a50sm401603685a.41 - gsmtp')"
   }
 ]
