@@ -7434,5 +7434,16 @@
     "distance_mi": 1.14,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30451ef5492sm13579901eec.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-27T22:44:23.212379+00:00",
+    "id": "inc-menlopark-202605270067",
+    "subject": "[MOSI] Fraud near OBRIEN DR \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "OBRIEN DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.88,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30452255234sm17525723eec.20 - gsmtp')"
   }
 ]
