@@ -7379,5 +7379,16 @@
     "distance_mi": 1.35,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-914f8810a50sm401603685a.41 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-27T15:58:51.221694+00:00",
+    "id": "inc-menlopark-202605270014",
+    "subject": "[MOSI] Grand Theft near MERRILL ST \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "MERRILL ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.67,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-517069ed9f9sm46782501cf.1 - gsmtp')"
   }
 ]
