@@ -7445,5 +7445,16 @@
     "distance_mi": 0.88,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30452255234sm17525723eec.20 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-28T01:12:38.461458+00:00",
+    "id": "case-menlopark-26-1088",
+    "subject": "[MOSI] Personate to get money/property [over $400] - False pretenses/swindle/confidence game (F) near OBRIEN DR \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "OBRIEN DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.88,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51706af1779sm58460341cf.22 - gsmtp')"
   }
 ]
