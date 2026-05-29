@@ -7533,5 +7533,27 @@
     "distance_mi": 2.13,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5172eb590e2sm6706011cf.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-29T10:46:56.886812+00:00",
+    "id": "inc-redwoodcity-202605280181",
+    "subject": "[MOSI] Graffiti near WOODSIDE RD \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "WOODSIDE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.84,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-304ed5b9be7sm1040925eec.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-29T10:46:57.374826+00:00",
+    "id": "case-atherton-26-157",
+    "subject": "[MOSI] Commit mail theft - All other larceny (M) near MAPLE AV \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "MAPLE AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.97,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-304ed30fff3sm984735eec.12 - gsmtp')"
   }
 ]
