@@ -7522,5 +7522,16 @@
     "distance_mi": 2.42,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-842132fdfe9sm51647b3a.42 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-29T02:19:56.453370+00:00",
+    "id": "case-smcsheriff-26-03614",
+    "subject": "[MOSI] Theft of personal property - From motor vehicle (M) near BERKSHIRE AV \u2014 2.1mi from Menlo Oaks (Medium)",
+    "street": "BERKSHIRE AV",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.13,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5172eb590e2sm6706011cf.17 - gsmtp')"
   }
 ]
