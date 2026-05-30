@@ -7588,5 +7588,16 @@
     "distance_mi": 0.74,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-91532445a83sm344265785a.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-30T02:07:26.081427+00:00",
+    "id": "inc-menlopark-202605290016",
+    "subject": "[MOSI] Fraud near OKEEFE ST \u2014 0.4mi from Menlo Oaks (Medium)",
+    "street": "OKEEFE ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.42,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9153244de53sm395761585a.8 - gsmtp')"
   }
 ]
