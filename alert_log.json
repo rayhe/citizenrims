@@ -7610,5 +7610,27 @@
     "distance_mi": 0.24,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-137b37cd5basm2665063c88.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-30T09:01:22.509339+00:00",
+    "id": "inc-paloalto-PP261490145",
+    "subject": "[MOSI] 459A near RAMONA ST / BRYANT ST \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "RAMONA ST / BRYANT ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.11,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-304ed53d14fsm3542439eec.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-05-30T09:01:23.199367+00:00",
+    "id": "case-menlopark-26-1110",
+    "subject": "[MOSI] Get credit/etc others id - False pretenses/swindle/confidence game (F) near COLEMAN PL \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "COLEMAN PL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.24,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-137b35a6019sm2515645c88.2 - gsmtp')"
   }
 ]
