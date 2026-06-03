@@ -7753,5 +7753,16 @@
     "distance_mi": 0.24,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9158a3d2384sm63308985a.39 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-03T02:29:47.798174+00:00",
+    "id": "inc-redwoodcity-202606020193",
+    "subject": "[MOSI] Arson Fire near MANZANITA ST \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "MANZANITA ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3074db55f60sm1662135eec.6 - gsmtp')"
   }
 ]
