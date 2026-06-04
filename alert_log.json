@@ -7852,5 +7852,16 @@
     "distance_mi": 2.32,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ceccdb94b5sm58249516d6.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-04T19:28:53.538607+00:00",
+    "id": "inc-menlopark-202606040041",
+    "subject": "[MOSI] Trespassing near BERKELEY AV \u2014 0.2mi from Menlo Oaks (High)",
+    "street": "BERKELEY AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.19,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ceccdb9fc0sm60657756d6.17 - gsmtp')"
   }
 ]
