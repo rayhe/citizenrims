@@ -7841,5 +7841,16 @@
     "distance_mi": 0.87,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9158a3c764asm528770085a.37 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-04T16:50:30.593381+00:00",
+    "id": "case-smcsheriff-26-04466",
+    "subject": "[MOSI] Burglary:second degree (F) near EL CAMINO REAL \u2014 2.3mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.32,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ceccdb94b5sm58249516d6.15 - gsmtp')"
   }
 ]
