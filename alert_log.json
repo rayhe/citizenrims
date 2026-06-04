@@ -7830,5 +7830,16 @@
     "distance_mi": 0.2,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51775c07f0dsm44423521cf.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-04T08:41:00.641350+00:00",
+    "id": "inc-menlopark-202606030101",
+    "subject": "[MOSI] Vandalism near COLLEGE AV \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "COLLEGE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.87,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9158a3c764asm528770085a.37 - gsmtp')"
   }
 ]
