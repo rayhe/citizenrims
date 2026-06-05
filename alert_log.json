@@ -7863,5 +7863,27 @@
     "distance_mi": 0.19,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ceccdb9fc0sm60657756d6.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-05T02:19:33.171439+00:00",
+    "id": "inc-menlopark-202606040067",
+    "subject": "[MOSI] Vandalism near COLLEGE AV \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "COLLEGE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.87,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-c85df04ff24sm6542222a12.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-05T02:19:33.573332+00:00",
+    "id": "inc-atherton-202606040030",
+    "subject": "[MOSI] FRAUD / FALSE PERSONATION near ADAM WY \u2014 2.0mi from Menlo Oaks (Medium)",
+    "street": "ADAM WY",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 2.0,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-36f714e26afsm4634779a91.17 - gsmtp')"
   }
 ]
