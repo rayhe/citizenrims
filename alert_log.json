@@ -7929,5 +7929,27 @@
     "distance_mi": 0.57,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9158a00a4f4sm1240799685a.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-06T17:43:33.251336+00:00",
+    "id": "inc-menlopark-202606060012",
+    "subject": "[MOSI] Grand Theft near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3074dba9d43sm10433442eec.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-06T17:43:33.883227+00:00",
+    "id": "inc-menlopark-202606060018",
+    "subject": "[MOSI] Vandalism near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.73,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3074db560d7sm15560360eec.5 - gsmtp')"
   }
 ]
