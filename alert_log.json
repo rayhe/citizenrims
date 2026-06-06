@@ -7962,5 +7962,16 @@
     "distance_mi": 2.28,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8cecd051facsm115361056d6.32 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-06T20:44:45.689526+00:00",
+    "id": "case-menlopark-26-1163",
+    "subject": "[MOSI] Grand theft:money/labor/property - From building (F) near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51775dcf367sm113503331cf.25 - gsmtp')"
   }
 ]
