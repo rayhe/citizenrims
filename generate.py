@@ -10,6 +10,7 @@ import os
 import re
 import smtplib
 import subprocess
+import time
 from datetime import datetime, timedelta, timezone
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -82,14 +83,21 @@ MAP_URL = "https://rayhe.github.io/citizenrims/public/"
 
 
 def get_token():
-    req = Request(
-        f"{API_BASE}/api/v1/auth/citizen",
-        method="POST",
-        headers={"Content-Length": "0"},
-        data=b"",
-    )
-    with urlopen(req, timeout=10) as resp:
-        return json.loads(resp.read())["token"]
+    for attempt in range(3):
+        try:
+            req = Request(
+                f"{API_BASE}/api/v1/auth/citizen",
+                method="POST",
+                headers={"Content-Length": "0"},
+                data=b"",
+            )
+            with urlopen(req, timeout=10) as resp:
+                return json.loads(resp.read())["token"]
+        except (HTTPError, URLError, ConnectionError, OSError, TimeoutError) as e:
+            if attempt == 2:
+                raise
+            print(f"  Token retry {attempt + 1}/3 after {type(e).__name__}: {e}")
+            time.sleep(2 * (attempt + 1))
 
 
 def api_get(path, params, token):
@@ -102,16 +110,32 @@ def api_get(path, params, token):
         return json.loads(resp.read())
 
 
+def api_get_retry(path, params, token, retries=3, delay=2):
+    """api_get with retry on transient network errors."""
+    for attempt in range(retries):
+        try:
+            return api_get(path, params, token)
+        except (HTTPError, URLError, ConnectionError, OSError, TimeoutError) as e:
+            if attempt == retries - 1:
+                raise
+            print(f"    Retry {attempt + 1}/{retries} after {type(e).__name__}: {e}")
+            time.sleep(delay * (attempt + 1))
+
+
 def date_str(dt):
     return dt.strftime("%a %b %d %Y")
 
 
 def fetch_agency(prefix, token, days):
-    config = api_get(
-        "/api/v1/AgencyConfig/AgencyConfigGetByUrlPrefix",
-        {"citizenRimsUrlPrefix": prefix},
-        token,
-    )
+    try:
+        config = api_get_retry(
+            "/api/v1/AgencyConfig/AgencyConfigGetByUrlPrefix",
+            {"citizenRimsUrlPrefix": prefix},
+            token,
+        )
+    except (HTTPError, URLError, ConnectionError, OSError, TimeoutError) as e:
+        print(f"  WARN: config fetch failed for {prefix}: {e}")
+        return [], []
     end = datetime.now()
     start = end - timedelta(days=days)
     agency_name = config.get("agencySiteName", prefix)
@@ -126,7 +150,7 @@ def fetch_agency(prefix, token, days):
         if groups:
             types = ",".join(g["groupFieldName"] for g in groups)
             try:
-                items = api_get("/api/v1/Incident", {
+                items = api_get_retry("/api/v1/Incident", {
                     "agencyId": agency_id,
                     "primaryAgencyId": primary_id,
                     "startDate": date_str(start),
@@ -141,7 +165,7 @@ def fetch_agency(prefix, token, days):
                     item["_agency"] = agency_name
                     item["_prefix"] = prefix
                 incidents = items
-            except HTTPError as e:
+            except (HTTPError, URLError, ConnectionError, OSError, TimeoutError) as e:
                 print(f"  WARN: incidents failed for {prefix}: {e}")
 
     cases = []
@@ -150,7 +174,7 @@ def fetch_agency(prefix, token, days):
         if groups:
             types = ",".join(g["groupFieldName"] for g in groups)
             try:
-                items = api_get("/api/v1/Case", {
+                items = api_get_retry("/api/v1/Case", {
                     "agencyId": agency_id,
                     "primaryAgencyId": primary_id,
                     "startDate": date_str(start),
@@ -165,7 +189,7 @@ def fetch_agency(prefix, token, days):
                     item["_agency"] = agency_name
                     item["_prefix"] = prefix
                 cases = items
-            except HTTPError as e:
+            except (HTTPError, URLError, ConnectionError, OSError, TimeoutError) as e:
                 print(f"  WARN: cases failed for {prefix}: {e}")
 
     return incidents, cases
