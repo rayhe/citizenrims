@@ -8017,5 +8017,49 @@
     "distance_mi": 0.67,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51775a2f5d7sm168279871cf.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-08T16:22:32.378891+00:00",
+    "id": "inc-menlopark-202606070072",
+    "subject": "[MOSI] Grand Theft near SHARON PARK DR \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "SHARON PARK DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8cecd277070sm167989016d6.48 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-08T16:22:32.867622+00:00",
+    "id": "case-menlopark-26-1172",
+    "subject": "[MOSI] Theft by use of access card information - Credit card/atm (M) near MADERA AV \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "MADERA AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.16,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5179dd9d908sm94003181cf.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-08T16:22:33.299084+00:00",
+    "id": "case-menlopark-26-1174",
+    "subject": "[MOSI] Grand theft from person - Pocket-picking (F) near SHARON PARK DR \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "SHARON PARK DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51795d46f12sm101949771cf.16 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-08T16:22:33.799264+00:00",
+    "id": "case-smcsheriff-26-03949",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near HAMPSHIRE AV / FAIR OAKS AV \u2014 2.2mi from Menlo Oaks (High)",
+    "street": "HAMPSHIRE AV / FAIR OAKS AV",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.18,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51775c07e91sm159450611cf.4 - gsmtp')"
   }
 ]
