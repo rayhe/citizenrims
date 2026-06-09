@@ -8105,5 +8105,16 @@
     "distance_mi": 0.2,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9158a00840dsm2090526885a.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-09T04:51:59.708140+00:00",
+    "id": "case-menlopark-26-1187",
+    "subject": "[MOSI] Theft by use of access card information - Credit card/atm (F) near MENLO AV \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "MENLO AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8cecd26e9e3sm185782736d6.46 - gsmtp')"
   }
 ]
