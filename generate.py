@@ -16,7 +16,8 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from urllib.request import Request, urlopen
 from urllib.parse import urlencode
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
+from http.client import IncompleteRead
 
 API_BASE = "https://api.v1.citizenrims.com"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -116,6 +117,29 @@ def api_get_retry(path, params, token, retries=3, delay=2):
         try:
             return api_get(path, params, token)
         except (HTTPError, URLError, ConnectionError, OSError, TimeoutError) as e:
+            if attempt == retries - 1:
+                raise
+            print(f"    Retry {attempt + 1}/{retries} after {type(e).__name__}: {e}")
+            time.sleep(delay * (attempt + 1))
+
+
+def api_post(path, body, token):
+    import requests as _req
+    url = f"{API_BASE}{path}"
+    resp = _req.post(url, json=body, headers={
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/json",
+    }, timeout=60)
+    resp.raise_for_status()
+    return resp.json()
+
+
+def api_post_retry(path, body, token, retries=3, delay=2):
+    """api_post with retry on transient network errors."""
+    for attempt in range(retries):
+        try:
+            return api_post(path, body, token)
+        except Exception as e:
             if attempt == retries - 1:
                 raise
             print(f"    Retry {attempt + 1}/{retries} after {type(e).__name__}: {e}")
@@ -265,6 +289,20 @@ def fetch_paloalto(days):
         })
 
     return incidents
+
+
+def fetch_arrests(token):
+    """Fetch SMC Sheriff arrests via POST API. Returns list of arrest records."""
+    try:
+        arrests = api_post_retry("/api/v1/Arrest/GetArrests", {"agencyId": 349}, token)
+        for item in arrests:
+            item["_source"] = "arrest"
+            item["_agency"] = "San Mateo County Sheriff's Office"
+            item["_prefix"] = "smcsheriff"
+        return arrests
+    except (HTTPError, URLError, ConnectionError, OSError, TimeoutError) as e:
+        print(f"  WARN: arrests fetch failed: {e}")
+        return []
 
 
 def haversine_m(lat1, lon1, lat2, lon2):
@@ -552,6 +590,14 @@ def main():
     except Exception as e:
         print(f"  WARN: Palo Alto fetch failed: {e}")
 
+    print("  smcsheriff arrests...")
+    try:
+        arrests = fetch_arrests(token)
+        print(f"    {len(arrests)} arrests")
+    except Exception as e:
+        arrests = []
+        print(f"  WARN: arrest fetch failed: {e}")
+
     all_agencies = AGENCIES + ["paloalto"]
 
     # Merge with existing archive (indefinite retention)
@@ -678,6 +724,37 @@ def main():
     write("feed.json", {"meta": legacy_meta, "months": all_months, "incidents": [], "cases": []})
     write("incidents.json", {"meta": legacy_meta, "months": all_months, "incidents": []})
     write("cases.json", {"meta": legacy_meta, "months": all_months, "cases": []})
+
+    # --- Arrest archive (cumulative, since API only shows last 30 days) ---
+    ARRESTS_PATH = os.path.join(OUT_DIR, "arrests.json")
+    arrest_archive = {}
+    if os.path.exists(ARRESTS_PATH):
+        try:
+            with open(ARRESTS_PATH) as f:
+                existing = json.load(f)
+            for a in existing.get("arrests", []):
+                arrest_archive[a["casePersonId"]] = a
+            print(f"  Loaded {len(arrest_archive)} existing arrests from archive")
+        except (json.JSONDecodeError, KeyError) as e:
+            print(f"  WARN: could not load arrest archive: {e}")
+
+    # Merge fresh data (fresh wins for updates)
+    for a in arrests:
+        arrest_archive[a["casePersonId"]] = a
+
+    all_arrests = sorted(
+        arrest_archive.values(),
+        key=lambda a: (a.get("arrestDate", ""), a.get("arrestTime", 0)),
+        reverse=True,
+    )
+
+    arrest_meta = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "total_arrests": len(all_arrests),
+        "oldest_arrest": min((a.get("arrestDate", "")[:10] for a in all_arrests), default=""),
+        "newest_arrest": max((a.get("arrestDate", "")[:10] for a in all_arrests), default=""),
+    }
+    write("arrests.json", {"meta": arrest_meta, "arrests": all_arrests})
 
     print("Checking alerts...")
     check_alerts(all_incidents, all_cases)

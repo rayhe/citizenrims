@@ -12,6 +12,7 @@ Endpoints:
     GET /                Combined feed (incidents + cases) from all agencies
     GET /incidents       Incidents only
     GET /cases           Cases only
+    GET /arrests         SMC Sheriff arrest data (cumulative archive)
     GET /agencies        Agency configuration info
 """
 
@@ -79,6 +80,17 @@ class CitizenRIMSClient:
         })
         with urlopen(req, timeout=30) as resp:
             return json.loads(resp.read())
+
+    def _api_post(self, path, body):
+        import requests as _req
+        url = f"{API_BASE}{path}"
+        token = self.token_manager.get_token()
+        resp = _req.post(url, json=body, headers={
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/json",
+        }, timeout=60)
+        resp.raise_for_status()
+        return resp.json()
 
     def get_agency_config(self, prefix):
         if prefix in self._agency_configs:
@@ -157,6 +169,19 @@ class CitizenRIMSClient:
             print(f"[WARN] Failed to fetch cases for {prefix}: {e}")
             return []
 
+    def fetch_arrests(self):
+        """Fetch SMC Sheriff arrests via POST API."""
+        try:
+            items = self._api_post("/api/v1/Arrest/GetArrests", {"agencyId": 349})
+            for item in items:
+                item["_source"] = "arrest"
+                item["_agency"] = "San Mateo County Sheriff's Office"
+                item["_prefix"] = "smcsheriff"
+            return items
+        except (HTTPError, URLError) as e:
+            print(f"[WARN] Failed to fetch arrests: {e}")
+            return []
+
     def fetch_all(self):
         all_incidents = []
         all_cases = []
@@ -164,7 +189,9 @@ class CitizenRIMSClient:
             print(f"  Fetching {prefix}...")
             all_incidents.extend(self.fetch_incidents(prefix))
             all_cases.extend(self.fetch_cases(prefix))
-        return all_incidents, all_cases
+        print("  Fetching arrests...")
+        arrests = self.fetch_arrests()
+        return all_incidents, all_cases, arrests
 
 
 class DataStore:
@@ -173,6 +200,8 @@ class DataStore:
         self.refresh_interval = refresh_interval
         self._incidents = []
         self._cases = []
+        self._arrest_archive = {}  # casePersonId -> arrest record (cumulative)
+        self._arrests = []
         self._last_refresh = None
         self._lock = threading.Lock()
 
@@ -189,12 +218,22 @@ class DataStore:
     def _refresh(self):
         print(f"[{datetime.now().isoformat()}] Refreshing data...")
         try:
-            incidents, cases = self.client.fetch_all()
+            incidents, cases, arrests = self.client.fetch_all()
             with self._lock:
                 self._incidents = incidents
                 self._cases = cases
+                # Merge arrests into cumulative archive
+                for a in arrests:
+                    cpid = a.get("casePersonId")
+                    if cpid is not None:
+                        self._arrest_archive[cpid] = a
+                self._arrests = sorted(
+                    self._arrest_archive.values(),
+                    key=lambda a: (a.get("arrestDate", ""), a.get("arrestTime", 0)),
+                    reverse=True,
+                )
                 self._last_refresh = datetime.now().isoformat()
-            print(f"  Got {len(incidents)} incidents, {len(cases)} cases")
+            print(f"  Got {len(incidents)} incidents, {len(cases)} cases, {len(arrests)} arrests ({len(self._arrest_archive)} total archived)")
         except Exception as e:
             print(f"[ERROR] Refresh failed: {e}")
 
@@ -206,12 +245,17 @@ class DataStore:
         with self._lock:
             return list(self._cases)
 
+    def get_arrests(self):
+        with self._lock:
+            return list(self._arrests)
+
     def get_meta(self):
         with self._lock:
             return {
                 "last_refresh": self._last_refresh,
                 "incident_count": len(self._incidents),
                 "case_count": len(self._cases),
+                "arrest_count": len(self._arrests),
             }
 
 
@@ -238,6 +282,11 @@ class FeedHandler(BaseHTTPRequestHandler):
             data = {
                 "meta": self.store.get_meta(),
                 "cases": self.store.get_cases(),
+            }
+        elif path == "/arrests":
+            data = {
+                "meta": self.store.get_meta(),
+                "arrests": self.store.get_arrests(),
             }
         elif path == "/agencies":
             data = {
@@ -302,6 +351,7 @@ def main():
     print("  GET /           - All data (incidents + cases)")
     print("  GET /incidents  - Incidents only")
     print("  GET /cases      - Cases only")
+    print("  GET /arrests    - SMC Sheriff arrests (cumulative)")
     print("  GET /agencies   - Agency info")
     print("  ?agency=menlopark,atherton  - Filter by agency")
     print()

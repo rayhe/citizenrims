@@ -118,6 +118,29 @@
   footer { text-align: center; padding: 18px 14px; color: #aaa; font-size: 0.7rem; border-top: 1px solid #e0e0e0; }
   footer a { color: #888; }
 
+  /* Arrests section */
+  .arrests-section { display: none; padding: 0; background: #f5f6f8; }
+  .arrests-section.active { display: block; }
+  .arrests-header { background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%); color: #fff; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .arrests-header h2 { margin: 0; font-size: 1rem; font-weight: 700; }
+  .arrests-stats { display: flex; gap: 16px; font-size: 0.78rem; color: rgba(255,255,255,0.8); }
+  .arrests-controls { padding: 10px 14px; background: #fff; border-bottom: 1px solid #eee; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .arrests-search { flex: 1; min-width: 160px; padding: 6px 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 0.82rem; outline: none; font-family: system-ui; }
+  .arrests-search:focus { border-color: #7b1fa2; box-shadow: 0 0 0 2px rgba(123,31,162,0.15); }
+  .arrests-table-wrap { max-height: 70vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  .arrests-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+  .arrests-table thead { position: sticky; top: 0; z-index: 1; }
+  .arrests-table th { background: #f5f5f5; padding: 8px 10px; text-align: left; font-weight: 600; color: #555; border-bottom: 2px solid #ddd; white-space: nowrap; cursor: pointer; user-select: none; }
+  .arrests-table th:hover { background: #eee; }
+  .arrests-table td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; color: #333; vertical-align: top; }
+  .arrests-table tr:hover { background: #f9f4ff; }
+  .arrests-table .charge-cell { max-width: 280px; }
+  .arrests-table .charge-tag { display: inline-block; background: #f3e5f5; color: #6a1b9a; padding: 1px 6px; border-radius: 4px; font-size: 0.7rem; margin: 1px 2px; white-space: nowrap; }
+  .arrests-table .name-cell { font-weight: 600; white-space: nowrap; }
+  .arrests-table .date-cell { white-space: nowrap; }
+  .arrests-count-badge { background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 10px; font-size: 0.72rem; margin-left: 6px; }
+  .arrests-empty { padding: 24px; text-align: center; color: #999; font-size: 0.85rem; }
+
   /* Modern popup */
   .leaflet-popup-content-wrapper { border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); padding: 0; }
   .leaflet-popup-content { margin: 0; font: 12px/1.5 system-ui, -apple-system, sans-serif; }
@@ -193,6 +216,7 @@
     <button class="filter-btn" data-filter="property">Property</button>
     <button class="filter-btn" data-filter="burglary">Burglary</button>
     <button class="filter-btn" data-filter="alerts">Alerts</button>
+    <button class="filter-btn" id="arrests-btn" style="background:#7b1fa2;color:#fff;border-color:#7b1fa2">🔒 Arrests</button>
     <span class="filter-sep"></span>
     <button class="filter-btn" data-filter="menlopark">Menlo Park</button>
     <button class="filter-btn" data-filter="atherton">Atherton</button>
@@ -282,6 +306,37 @@
   </div>
 </div>
 
+<div class="arrests-section" id="arrests-section">
+  <div class="arrests-header">
+    <h2>🔒 SMC Sheriff Arrests <span class="arrests-count-badge" id="arrests-total-badge">—</span></h2>
+    <div class="arrests-stats">
+      <span id="arrests-range"></span>
+      <span id="arrests-updated"></span>
+    </div>
+  </div>
+  <div class="arrests-controls">
+    <input type="text" class="arrests-search" id="arrests-search" placeholder="Search name, charge, street…" />
+    <span style="font-size:0.72rem;color:#999" id="arrests-showing"></span>
+  </div>
+  <div class="arrests-table-wrap">
+    <table class="arrests-table" id="arrests-table">
+      <thead>
+        <tr>
+          <th data-sort="arrestDate">Date ▼</th>
+          <th data-sort="fullName">Name</th>
+          <th data-sort="age">Age</th>
+          <th>Sex</th>
+          <th>Street</th>
+          <th>Charges</th>
+          <th data-sort="actionTakenDescription">Action</th>
+          <th>Case #</th>
+        </tr>
+      </thead>
+      <tbody id="arrests-tbody"></tbody>
+    </table>
+  </div>
+</div>
+
 <div class="info-section">
   <div class="info-grid">
     <div>
@@ -290,7 +345,7 @@
         <li><a href="https://menlopark.citizenrims.com" target="_blank" rel="noopener">Menlo Park PD</a> <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
         <li><a href="https://atherton.citizenrims.com" target="_blank" rel="noopener">Atherton PD</a> <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
         <li><a href="https://gis.cityofpaloalto.org/server/rest/services/PublicSafety/AgencyCommonEvent/MapServer/2/query" target="_blank" rel="noopener">Palo Alto PD</a> <span class="badge badge-inc">incidents</span></li>
-        <li><a href="https://smcsheriff.citizenrims.com" target="_blank" rel="noopener">SMC Sheriff</a> <span class="badge badge-case">cases only</span></li>
+        <li><a href="https://smcsheriff.citizenrims.com" target="_blank" rel="noopener">SMC Sheriff</a> <span class="badge badge-case">cases</span><span class="badge" style="background:#f3e5f5;color:#7b1fa2">arrests</span></li>
         <li><a href="https://redwoodcity.citizenrims.com" target="_blank" rel="noopener">Redwood City PD</a> <span class="badge badge-inc">incidents</span><span class="badge badge-case">cases</span></li>
       </ul>
     </div>
@@ -300,6 +355,7 @@
         <li><a href="feed.json">feed.json</a> <span class="desc">— All data</span></li>
         <li><a href="incidents.json">incidents.json</a> <span class="desc">— Incidents only</span></li>
         <li><a href="cases.json">cases.json</a> <span class="desc">— Cases only</span></li>
+        <li><a href="arrests.json">arrests.json</a> <span class="desc">— SMC Sheriff arrests (cumulative archive)</span></li>
       </ul>
     </div>
   </div>
@@ -1188,6 +1244,146 @@ loadData().then(() => {
   }
 });
 setInterval(updateLastUpdated, 60000);
+
+// --- Arrests section ---
+let arrestsData = [];
+let arrestsSortKey = 'arrestDate';
+let arrestsSortAsc = false;
+
+async function loadArrests() {
+  try {
+    const resp = await fetch('arrests.json');
+    const data = await resp.json();
+    arrestsData = data.arrests || [];
+    const meta = data.meta || {};
+    document.getElementById('arrests-total-badge').textContent = arrestsData.length.toLocaleString();
+    const oldest = meta.oldest_arrest || '';
+    const newest = meta.newest_arrest || '';
+    if (oldest && newest) {
+      document.getElementById('arrests-range').textContent = `${oldest} — ${newest}`;
+    }
+    if (meta.generated_at) {
+      const d = new Date(meta.generated_at.match(/[Z+\-]\d/) ? meta.generated_at : meta.generated_at + 'Z');
+      document.getElementById('arrests-updated').textContent = 'Updated: ' + d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+    }
+    renderArrests();
+  } catch (e) {
+    console.warn('arrests.json not found:', e);
+    document.getElementById('arrests-tbody').innerHTML = '<tr><td colspan="8" class="arrests-empty">No arrest data available yet</td></tr>';
+  }
+}
+
+function fmtArrestDate(dateStr) {
+  if (!dateStr) return '';
+  const d = new Date(dateStr.endsWith('Z') ? dateStr : dateStr + 'Z');
+  if (isNaN(d)) return dateStr.split('T')[0];
+  return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+function renderArrests() {
+  const q = (document.getElementById('arrests-search').value || '').toLowerCase().trim();
+  let filtered = arrestsData;
+  if (q) {
+    filtered = arrestsData.filter(a => {
+      const text = [
+        a.fullName, a.firstName, a.lastName,
+        a.street, a.blockNumber,
+        a.chargeDescription1, a.chargeDescription2, a.chargeDescription3,
+        a.charge1, a.charge2, a.charge3,
+        a.caseNumber, a.actionTakenDescription,
+      ].filter(Boolean).join(' ').toLowerCase();
+      return text.includes(q);
+    });
+  }
+
+  // Sort
+  filtered.sort((a, b) => {
+    let va = a[arrestsSortKey] ?? '';
+    let vb = b[arrestsSortKey] ?? '';
+    if (arrestsSortKey === 'age') {
+      va = Number(va) || 0;
+      vb = Number(vb) || 0;
+    } else {
+      va = String(va).toLowerCase();
+      vb = String(vb).toLowerCase();
+    }
+    if (va < vb) return arrestsSortAsc ? -1 : 1;
+    if (va > vb) return arrestsSortAsc ? 1 : -1;
+    return 0;
+  });
+
+  document.getElementById('arrests-showing').textContent =
+    q ? `${filtered.length} of ${arrestsData.length}` : `${filtered.length} total`;
+
+  const tbody = document.getElementById('arrests-tbody');
+  if (!filtered.length) {
+    tbody.innerHTML = '<tr><td colspan="8" class="arrests-empty">No matching arrests</td></tr>';
+    return;
+  }
+
+  // Cap display at 500 for performance
+  const display = filtered.slice(0, 500);
+  tbody.innerHTML = display.map(a => {
+    const charges = [a.chargeDescription1, a.chargeDescription2, a.chargeDescription3]
+      .filter(Boolean)
+      .map(c => `<span class="charge-tag">${c}</span>`)
+      .join(' ');
+    const street = [a.blockNumber, a.street].filter(Boolean).join(' ');
+    const dateStr = fmtArrestDate(a.arrestDate);
+    return `<tr>
+      <td class="date-cell">${dateStr}</td>
+      <td class="name-cell">${a.fullName || [a.firstName, a.lastName].filter(Boolean).join(' ') || '—'}</td>
+      <td>${a.age ?? '—'}</td>
+      <td>${a.sex || '—'}</td>
+      <td>${street || '—'}</td>
+      <td class="charge-cell">${charges || '—'}</td>
+      <td>${a.actionTakenDescription || a.actionTaken || '—'}</td>
+      <td>${a.caseNumber || '—'}</td>
+    </tr>`;
+  }).join('');
+
+  if (filtered.length > 500) {
+    tbody.innerHTML += `<tr><td colspan="8" class="arrests-empty">Showing 500 of ${filtered.length} — narrow your search</td></tr>`;
+  }
+}
+
+// Arrests search
+document.getElementById('arrests-search').addEventListener('input', renderArrests);
+
+// Arrests table sort
+document.getElementById('arrests-table').querySelector('thead').addEventListener('click', e => {
+  const th = e.target.closest('th[data-sort]');
+  if (!th) return;
+  const key = th.dataset.sort;
+  if (arrestsSortKey === key) {
+    arrestsSortAsc = !arrestsSortAsc;
+  } else {
+    arrestsSortKey = key;
+    arrestsSortAsc = key === 'fullName'; // names ascending by default, dates descending
+  }
+  // Update header arrows
+  document.querySelectorAll('#arrests-table th[data-sort]').forEach(h => {
+    const arrow = h.dataset.sort === arrestsSortKey ? (arrestsSortAsc ? ' ▲' : ' ▼') : '';
+    h.textContent = h.textContent.replace(/ [▲▼]$/, '') + arrow;
+  });
+  renderArrests();
+});
+
+// Arrests toggle button
+document.getElementById('arrests-btn').addEventListener('click', () => {
+  const section = document.getElementById('arrests-section');
+  const btn = document.getElementById('arrests-btn');
+  const isActive = section.classList.toggle('active');
+  btn.style.opacity = isActive ? '1' : '0.7';
+  if (isActive) {
+    // Load arrests data if not already loaded
+    if (!arrestsData.length) loadArrests();
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
+
+// Preload arrests data
+loadArrests();
 </script>
 
 </body>
