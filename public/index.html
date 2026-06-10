@@ -308,7 +308,7 @@
 
 <div class="arrests-section" id="arrests-section">
   <div class="arrests-header">
-    <h2>🔒 SMC Sheriff Arrests <span class="arrests-count-badge" id="arrests-total-badge">—</span></h2>
+    <h2>🔒 Arrests <span class="arrests-count-badge" id="arrests-total-badge">—</span></h2>
     <div class="arrests-stats">
       <span id="arrests-range"></span>
       <span id="arrests-updated"></span>
@@ -323,6 +323,7 @@
       <thead>
         <tr>
           <th data-sort="arrestDate">Date ▼</th>
+          <th data-sort="_agency">Agency</th>
           <th data-sort="fullName">Name</th>
           <th data-sort="age">Age</th>
           <th>Sex</th>
@@ -355,7 +356,7 @@
         <li><a href="feed.json">feed.json</a> <span class="desc">— All data</span></li>
         <li><a href="incidents.json">incidents.json</a> <span class="desc">— Incidents only</span></li>
         <li><a href="cases.json">cases.json</a> <span class="desc">— Cases only</span></li>
-        <li><a href="arrests.json">arrests.json</a> <span class="desc">— SMC Sheriff arrests (cumulative archive)</span></li>
+        <li><a href="arrests.json">arrests.json</a> <span class="desc">— Arrests: MP, Atherton, RWC, SMC Sheriff (cumulative archive)</span></li>
       </ul>
     </div>
   </div>
@@ -1270,7 +1271,7 @@ async function loadArrests() {
     renderArrests();
   } catch (e) {
     console.warn('arrests.json not found:', e);
-    document.getElementById('arrests-tbody').innerHTML = '<tr><td colspan="8" class="arrests-empty">No arrest data available yet</td></tr>';
+    document.getElementById('arrests-tbody').innerHTML = '<tr><td colspan="9" class="arrests-empty">No arrest data available yet</td></tr>';
   }
 }
 
@@ -1288,7 +1289,7 @@ function renderArrests() {
     filtered = arrestsData.filter(a => {
       const text = [
         a.fullName, a.firstName, a.lastName,
-        a.street, a.blockNumber,
+        a.street, a.blockNumber, a._agency,
         a.chargeDescription1, a.chargeDescription2, a.chargeDescription3,
         a.charge1, a.charge2, a.charge3,
         a.caseNumber, a.actionTakenDescription,
@@ -1318,7 +1319,7 @@ function renderArrests() {
 
   const tbody = document.getElementById('arrests-tbody');
   if (!filtered.length) {
-    tbody.innerHTML = '<tr><td colspan="8" class="arrests-empty">No matching arrests</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="9" class="arrests-empty">No matching arrests</td></tr>';
     return;
   }
 
@@ -1331,8 +1332,10 @@ function renderArrests() {
       .join(' ');
     const street = [a.blockNumber, a.street].filter(Boolean).join(' ');
     const dateStr = fmtArrestDate(a.arrestDate);
+    const agencyShort = (a._agency || '').replace(/ Police Department| Office/g, '').replace("San Mateo County Sheriff's", 'SMC Sheriff');
     return `<tr>
       <td class="date-cell">${dateStr}</td>
+      <td style="font-size:0.7rem;color:#888;white-space:nowrap">${agencyShort}</td>
       <td class="name-cell">${a.fullName || [a.firstName, a.lastName].filter(Boolean).join(' ') || '—'}</td>
       <td>${a.age ?? '—'}</td>
       <td>${a.sex || '—'}</td>
@@ -1344,7 +1347,7 @@ function renderArrests() {
   }).join('');
 
   if (filtered.length > 500) {
-    tbody.innerHTML += `<tr><td colspan="8" class="arrests-empty">Showing 500 of ${filtered.length} — narrow your search</td></tr>`;
+    tbody.innerHTML += `<tr><td colspan="9" class="arrests-empty">Showing 500 of ${filtered.length} — narrow your search</td></tr>`;
   }
 }
 

@@ -291,18 +291,33 @@ def fetch_paloalto(days):
     return incidents
 
 
+ARREST_AGENCIES = [
+    {"prefix": "menlopark", "agencyId": 797, "name": "Menlo Park Police Department"},
+    {"prefix": "atherton", "agencyId": 192, "name": "Atherton Police Department"},
+    {"prefix": "redwoodcity", "agencyId": 717, "name": "Redwood City Police Department"},
+    {"prefix": "smcsheriff", "agencyId": 349, "name": "San Mateo County Sheriff's Office"},
+]
+
+
 def fetch_arrests(token):
-    """Fetch SMC Sheriff arrests via POST API. Returns list of arrest records."""
-    try:
-        arrests = api_post_retry("/api/v1/Arrest/GetArrests", {"agencyId": 349}, token)
-        for item in arrests:
-            item["_source"] = "arrest"
-            item["_agency"] = "San Mateo County Sheriff's Office"
-            item["_prefix"] = "smcsheriff"
-        return arrests
-    except (HTTPError, URLError, ConnectionError, OSError, TimeoutError) as e:
-        print(f"  WARN: arrests fetch failed: {e}")
-        return []
+    """Fetch arrests from all agencies with arrests enabled."""
+    all_arrests = []
+    for agency in ARREST_AGENCIES:
+        try:
+            arrests = api_post_retry(
+                "/api/v1/Arrest/GetArrests",
+                {"agencyId": agency["agencyId"]},
+                token,
+            )
+            for item in arrests:
+                item["_source"] = "arrest"
+                item["_agency"] = agency["name"]
+                item["_prefix"] = agency["prefix"]
+            all_arrests.extend(arrests)
+            print(f"    {agency['prefix']}: {len(arrests)} arrests")
+        except (HTTPError, URLError, ConnectionError, OSError, TimeoutError) as e:
+            print(f"    WARN: {agency['prefix']} arrests fetch failed: {e}")
+    return all_arrests
 
 
 def haversine_m(lat1, lon1, lat2, lon2):
@@ -590,10 +605,10 @@ def main():
     except Exception as e:
         print(f"  WARN: Palo Alto fetch failed: {e}")
 
-    print("  smcsheriff arrests...")
+    print("  Arrests (all agencies)...")
     try:
         arrests = fetch_arrests(token)
-        print(f"    {len(arrests)} arrests")
+        print(f"    {len(arrests)} total arrests")
     except Exception as e:
         arrests = []
         print(f"  WARN: arrest fetch failed: {e}")

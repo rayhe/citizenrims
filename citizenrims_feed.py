@@ -169,18 +169,27 @@ class CitizenRIMSClient:
             print(f"[WARN] Failed to fetch cases for {prefix}: {e}")
             return []
 
+    ARREST_AGENCIES = [
+        {"prefix": "menlopark", "agencyId": 797, "name": "Menlo Park Police Department"},
+        {"prefix": "atherton", "agencyId": 192, "name": "Atherton Police Department"},
+        {"prefix": "redwoodcity", "agencyId": 717, "name": "Redwood City Police Department"},
+        {"prefix": "smcsheriff", "agencyId": 349, "name": "San Mateo County Sheriff's Office"},
+    ]
+
     def fetch_arrests(self):
-        """Fetch SMC Sheriff arrests via POST API."""
-        try:
-            items = self._api_post("/api/v1/Arrest/GetArrests", {"agencyId": 349})
-            for item in items:
-                item["_source"] = "arrest"
-                item["_agency"] = "San Mateo County Sheriff's Office"
-                item["_prefix"] = "smcsheriff"
-            return items
-        except (HTTPError, URLError) as e:
-            print(f"[WARN] Failed to fetch arrests: {e}")
-            return []
+        """Fetch arrests from all agencies with arrests enabled."""
+        all_arrests = []
+        for agency in self.ARREST_AGENCIES:
+            try:
+                items = self._api_post("/api/v1/Arrest/GetArrests", {"agencyId": agency["agencyId"]})
+                for item in items:
+                    item["_source"] = "arrest"
+                    item["_agency"] = agency["name"]
+                    item["_prefix"] = agency["prefix"]
+                all_arrests.extend(items)
+            except (HTTPError, URLError) as e:
+                print(f"[WARN] Failed to fetch {agency['prefix']} arrests: {e}")
+        return all_arrests
 
     def fetch_all(self):
         all_incidents = []
