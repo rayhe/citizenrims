@@ -679,6 +679,7 @@ async function loadData() {
     const monthFetches = manifest.months.map(async (month) => {
       try {
         const resp = await fetch(`data/${month}.json`);
+        if (!resp.ok) { console.warn(`data/${month}.json returned ${resp.status}`); return { incidents: [], cases: [] }; }
         return await resp.json();
       } catch (e) {
         console.warn(`Failed to load data/${month}.json:`, e);
