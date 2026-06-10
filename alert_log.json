@@ -8171,5 +8171,16 @@
     "distance_mi": 0.42,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7e726c2ae05sm9354787a34.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-10T20:04:51.449119+00:00",
+    "id": "inc-menlopark-202606100029",
+    "subject": "[MOSI] Auto Burglary near MIDDLE AV \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "MIDDLE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9158a2359ecsm2541035285a.14 - gsmtp')"
   }
 ]
