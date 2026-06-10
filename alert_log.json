@@ -8160,5 +8160,16 @@
     "distance_mi": 2.64,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8cecd06d600sm224885736d6.35 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-10T12:05:37.338686+00:00",
+    "id": "case-menlopark-26-1201",
+    "subject": "[MOSI] Recovered Locally Stolen Vehicle near CHILCO ST \u2014 0.4mi from Menlo Oaks (High)",
+    "street": "CHILCO ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.42,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7e726c2ae05sm9354787a34.15 - gsmtp')"
   }
 ]
