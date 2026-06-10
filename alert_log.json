@@ -8182,5 +8182,16 @@
     "distance_mi": 0.78,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9158a2359ecsm2541035285a.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-10T21:03:58.137389+00:00",
+    "id": "case-menlopark-26-1208",
+    "subject": "[MOSI] Burglary - Motor vehicle parts/accessories (F) near MIDDLE AV \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "MIDDLE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51775c2e2casm223066851cf.9 - gsmtp')"
   }
 ]
