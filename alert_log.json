@@ -8237,5 +8237,27 @@
     "distance_mi": 0.87,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9160b035a34sm217242485a.38 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-11T18:20:20.632724+00:00",
+    "id": "inc-menlopark-202606110011",
+    "subject": "[MOSI] Stolen Vehicle near SHARON RD \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "SHARON RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9160b02f758sm251295885a.36 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-11T18:20:21.094923+00:00",
+    "id": "case-menlopark-26-1218",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near SHARON RD \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "SHARON RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9160b03b485sm253545385a.39 - gsmtp')"
   }
 ]
