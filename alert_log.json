@@ -8193,5 +8193,16 @@
     "distance_mi": 0.78,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51775c2e2casm223066851cf.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-11T02:27:17.445833+00:00",
+    "id": "inc-atherton-202606100047",
+    "subject": "[MOSI] ATTEMPTED BURGLARY near RITTENHOUSE AV \u2014 1.7mi from Menlo Oaks (High)",
+    "street": "RITTENHOUSE AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.75,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-843380c9307sm178727b3a.29 - gsmtp')"
   }
 ]
