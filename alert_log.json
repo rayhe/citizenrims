@@ -8204,5 +8204,16 @@
     "distance_mi": 1.75,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-843380c9307sm178727b3a.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-11T07:06:19.410658+00:00",
+    "id": "case-smcsheriff-26-04403",
+    "subject": "[MOSI] Vandalism:damage property (F) near NORTHSIDE AVE/2ND ST \u2014 2.1mi from Menlo Oaks (Medium)",
+    "street": "NORTHSIDE AVE/2ND ST",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.06,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-377a676f702sm955431a91.1 - gsmtp')"
   }
 ]
