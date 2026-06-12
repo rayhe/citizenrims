@@ -556,8 +556,15 @@ const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
 function fmtDate(iso) {
   if (!iso) return '';
-  const d = new Date(iso.endsWith('Z') ? iso : iso + 'Z');
+  const d = parseLocalDate(iso);
   return isNaN(d) ? iso.split('T')[0] : d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+// Parse date string as local time unless it already has a timezone indicator
+function parseLocalDate(s) {
+  if (!s) return new Date(NaN);
+  if (s.includes('Z') || /[+-]\d{2}:\d{2}$/.test(s)) return new Date(s);
+  return new Date(s.replace('T', ' '));
 }
 
 function popupCardHtml(item, crimeConf) {
@@ -575,7 +582,7 @@ function popupCardHtml(item, crimeConf) {
   const ago = (() => {
     const raw = item.incidentDate || item.reportDate || item.occurrence1Date;
     if (!raw) return '';
-    const d = new Date(raw.endsWith('Z') ? raw : raw + 'Z');
+    const d = parseLocalDate(raw);
     return isNaN(d) ? '' : timeAgo(d);
   })();
   return `<div class="popup-card">
@@ -704,7 +711,7 @@ async function loadData() {
 
   if (meta.generated_at) {
     const raw = meta.generated_at;
-    lastRefreshDate = new Date(raw.match(/[Z+\-]\d/) ? raw : raw + 'Z');
+    lastRefreshDate = parseLocalDate(raw);
     updateLastUpdated();
   }
 
@@ -725,7 +732,7 @@ async function loadData() {
     marker._crimeConf = crimeConf;
     marker._crimeText = [item.callType, item.callTypeDescription, item.crimeType, item.crimeClassification, item.offenseDescription1].filter(Boolean).join(' ');
     const dateStr = item.incidentDate || item.reportDate || item.occurrence1Date || '';
-    marker._itemDate = dateStr ? new Date(dateStr.endsWith('Z') ? dateStr : dateStr + 'Z') : null;
+    marker._itemDate = dateStr ? parseLocalDate(dateStr) : null;
     // Extract raw hour from local time fields (avoid UTC conversion)
     const rawTime = item.incidentTime || '';
     const rawHourMatch = rawTime ? rawTime.match(/^(\d{1,2})/) : dateStr.match(/T(\d{2})/);
@@ -1048,7 +1055,7 @@ document.getElementById('geo-menlooaks').classList.toggle('active', geoMenloOaks
 toggleMenloOaksPoly();
 
 document.querySelector('.filter-bar').addEventListener('click', e => {
-  if (e.target.classList.contains('filter-btn')) {
+  if (e.target.classList.contains('filter-btn') && e.target.dataset.filter) {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     e.target.classList.add('active');
     activeFilter = e.target.dataset.filter;
@@ -1265,7 +1272,7 @@ async function loadArrests() {
       document.getElementById('arrests-range').textContent = `${oldest} — ${newest}`;
     }
     if (meta.generated_at) {
-      const d = new Date(meta.generated_at.match(/[Z+\-]\d/) ? meta.generated_at : meta.generated_at + 'Z');
+      const d = parseLocalDate(meta.generated_at);
       document.getElementById('arrests-updated').textContent = 'Updated: ' + d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
     }
     renderArrests();
@@ -1277,7 +1284,7 @@ async function loadArrests() {
 
 function fmtArrestDate(dateStr) {
   if (!dateStr) return '';
-  const d = new Date(dateStr.endsWith('Z') ? dateStr : dateStr + 'Z');
+  const d = parseLocalDate(dateStr);
   if (isNaN(d)) return dateStr.split('T')[0];
   return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
 }
