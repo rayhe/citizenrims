@@ -8325,5 +8325,16 @@
     "distance_mi": 0.18,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8d301b2cf04sm13630646d6.16 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-12T17:56:50.053997+00:00",
+    "id": "inc-menlopark-202606120031",
+    "subject": "[MOSI] Stolen Vehicle near PRINCETON RD \u2014 1.3mi from Menlo Oaks (High)",
+    "street": "PRINCETON RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.26,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-91619f2d6a5sm272718485a.20 - gsmtp')"
   }
 ]
