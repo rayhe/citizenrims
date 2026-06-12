@@ -8281,5 +8281,27 @@
     "distance_mi": 0.57,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-517fb7dad21sm3454251cf.22 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-12T00:19:04.980841+00:00",
+    "id": "inc-menlopark-202606110047",
+    "subject": "[MOSI] Fraud near ROSEFIELD WY \u2014 1.6mi from Menlo Oaks (Medium)",
+    "street": "ROSEFIELD WY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3081eb95450sm1280796eec.28 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-12T00:19:05.508990+00:00",
+    "id": "inc-redwoodcity-202606110152",
+    "subject": "[MOSI] Grand Theft near WOODSIDE RD \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "WOODSIDE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.83,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3081e5d0849sm1066524eec.7 - gsmtp')"
   }
 ]
