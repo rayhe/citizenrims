@@ -8402,5 +8402,16 @@
     "distance_mi": 3.0,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-91619ed8c83sm442500485a.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-13T11:00:28.547120+00:00",
+    "id": "case-menlopark-26-1240",
+    "subject": "[MOSI] Display on vehicle/present to officer unlawful registration (M) near UNIVERSITY AVE/OBRIEN DR \u2014 1.3mi from Menlo Oaks (Medium)",
+    "street": "UNIVERSITY AVE/OBRIEN DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.29,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-c8661b5ab99sm4007309a12.6 - gsmtp')"
   }
 ]
