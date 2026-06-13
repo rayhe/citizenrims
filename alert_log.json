@@ -8413,5 +8413,16 @@
     "distance_mi": 1.29,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-c8661b5ab99sm4007309a12.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-13T20:22:50.475631+00:00",
+    "id": "case-menlopark-26-1236",
+    "subject": "[MOSI] Personate to get money/property [over $400] - False pretenses/swindle/confidence game (F) near SANTA CRUZ AV \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "SANTA CRUZ AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-8434b055095sm6802633b3a.57 - gsmtp')"
   }
 ]
