@@ -8380,5 +8380,16 @@
     "distance_mi": 2.21,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8d304577bb6sm39599126d6.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-13T07:55:30.134678+00:00",
+    "id": "inc-redwoodcity-202606120230",
+    "subject": "[MOSI] Burglary - Vehicle near WOODSIDE RD \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "WOODSIDE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-517fb84188asm45778461cf.29 - gsmtp')"
   }
 ]
