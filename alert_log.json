@@ -8358,5 +8358,27 @@
     "distance_mi": 0.58,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-517fb79df4dsm34723171cf.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-13T01:22:20.585383+00:00",
+    "id": "inc-menlopark-202606120072",
+    "subject": "[MOSI] Fraud near SANTA CRUZ AV \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "SANTA CRUZ AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8d302114676sm40695036d6.20 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-13T01:22:21.223025+00:00",
+    "id": "case-smcsheriff-26-04417",
+    "subject": "[MOSI] Grand theft:money/labor/property - From building (F) near HAMPSHIRE AV \u2014 2.2mi from Menlo Oaks (Medium)",
+    "street": "HAMPSHIRE AV",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.21,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8d304577bb6sm39599126d6.27 - gsmtp')"
   }
 ]
