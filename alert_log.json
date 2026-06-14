@@ -8424,5 +8424,16 @@
     "distance_mi": 0.78,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-8434b055095sm6802633b3a.57 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-14T20:38:52.354577+00:00",
+    "id": "inc-menlopark-202606140022",
+    "subject": "[MOSI] Auto Burglary near POLITZER DR \u2014 1.9mi from Menlo Oaks (High)",
+    "street": "POLITZER DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.87,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3081e5fefecsm12171708eec.13 - gsmtp')"
   }
 ]
