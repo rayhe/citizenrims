@@ -8435,5 +8435,16 @@
     "distance_mi": 1.87,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3081e5fefecsm12171708eec.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-14T23:39:18.603509+00:00",
+    "id": "case-menlopark-26-1244",
+    "subject": "[MOSI] Burglary:first degree - Burglary/breaking and entering (F) near POLITZER DR \u2014 1.9mi from Menlo Oaks (High)",
+    "street": "POLITZER DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.87,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-517fb83e8e6sm92699551cf.28 - gsmtp')"
   }
 ]
