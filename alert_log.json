@@ -8468,5 +8468,16 @@
     "distance_mi": 1.91,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8d9f5b8e73csm13004616d6.49 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-15T23:42:19.284292+00:00",
+    "id": "case-redwoodcity-R26-06-0184",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near SPRUCE ST/CHEW ST \u2014 1.5mi from Menlo Oaks (Medium)",
+    "street": "SPRUCE ST/CHEW ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.53,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8d9f132178csm15591646d6.7 - gsmtp')"
   }
 ]
