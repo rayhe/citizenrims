@@ -8523,5 +8523,27 @@
     "distance_mi": 2.89,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-91619ed7857sm1538574485a.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-16T21:34:39.910700+00:00",
+    "id": "inc-menlopark-202606160038",
+    "subject": "[MOSI] Vehicle Tampering near CENTRAL AV \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "CENTRAL AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.68,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-517fb64202asm153149551cf.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-16T21:34:40.380292+00:00",
+    "id": "case-menlopark-26-1041",
+    "subject": "[MOSI] Tamper with vehicle - Motor vehicle parts/accessories (M) near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.74,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-517fb61f596sm151658131cf.3 - gsmtp')"
   }
 ]
