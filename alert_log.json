@@ -8545,5 +8545,27 @@
     "distance_mi": 0.74,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-517fb61f596sm151658131cf.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-16T22:22:26.073961+00:00",
+    "id": "inc-menlopark-202606160054",
+    "subject": "[MOSI] Stolen Vehicle near SHARON RD \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "SHARON RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-517fb544533sm150195911cf.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-16T22:22:26.267946+00:00",
+    "id": "inc-paloalto-PP261660108",
+    "subject": "[MOSI] 487 near SCOTT ST / WAVERLEY ST \u2014 1.4mi from Menlo Oaks (Medium)",
+    "street": "SCOTT ST / WAVERLEY ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.44,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8d9f1fb4bdasm45116336d6.20 - gsmtp')"
   }
 ]
