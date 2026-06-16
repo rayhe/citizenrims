@@ -8490,5 +8490,38 @@
     "distance_mi": 2.63,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-517fb7ec47asm149669851cf.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-16T20:31:47.486131+00:00",
+    "id": "case-menlopark-26-1257",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-517fb83db58sm147957841cf.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-16T20:31:48.015694+00:00",
+    "id": "case-redwoodcity-R26-06-0222",
+    "subject": "[MOSI] Utter/etc forge/etc vehicle registration/etc (M) near SHASTA ST \u2014 3.0mi from Menlo Oaks (Medium)",
+    "street": "SHASTA ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9161a055046sm1567104385a.41 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-16T20:31:48.467121+00:00",
+    "id": "case-redwoodcity-R26-06-0229",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near HESS RD \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "HESS RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.89,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-91619ed7857sm1538574485a.4 - gsmtp')"
   }
 ]
