@@ -8622,5 +8622,16 @@
     "distance_mi": 1.35,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1384b8f9927sm16627605c88.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-17T22:49:42.423626+00:00",
+    "id": "inc-menlopark-202606170056",
+    "subject": "[MOSI] Fraud near BERKELEY AV \u2014 0.0mi from Menlo Oaks (Medium)",
+    "street": "BERKELEY AV",
+    "city": "UNINCORPORATED AREA-SAN MATEO COUNTY",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.0,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1384b96d6c4sm18050804c88.9 - gsmtp')"
   }
 ]
