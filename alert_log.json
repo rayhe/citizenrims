@@ -8633,5 +8633,27 @@
     "distance_mi": 0.0,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1384b96d6c4sm18050804c88.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-18T16:08:47.575863+00:00",
+    "id": "case-menlopark-26-1272",
+    "subject": "[MOSI] Theft of personal property - From building (M) near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30c0039b6e5sm716518eec.21 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-18T16:08:48.383934+00:00",
+    "id": "case-menlopark-26-1273",
+    "subject": "[MOSI] Theft of personal property - From building (M) near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30bd01b768bsm6204629eec.13 - gsmtp')"
   }
 ]
