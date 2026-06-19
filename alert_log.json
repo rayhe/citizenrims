@@ -8743,5 +8743,16 @@
     "distance_mi": 0.65,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30c0682ce4bsm1766282eec.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-19T23:56:55.439406+00:00",
+    "id": "case-menlopark-26-1293",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near EL CAMINO REAL B511 \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL B511",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.74,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-139add6d76dsm867504c88.12 - gsmtp')"
   }
 ]
