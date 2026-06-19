@@ -8732,5 +8732,16 @@
     "distance_mi": 2.27,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-519e4e62ae6sm14865491cf.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-19T10:30:15.950310+00:00",
+    "id": "case-menlopark-26-1290",
+    "subject": "[MOSI] Arson:structure/forest land (F) near ALMA ST \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "ALMA ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.65,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30c0682ce4bsm1766282eec.12 - gsmtp')"
   }
 ]
