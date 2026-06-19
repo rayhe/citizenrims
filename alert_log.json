@@ -8699,5 +8699,16 @@
     "distance_mi": 2.49,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-920a19160f2sm110430385a.21 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-19T05:15:53.068637+00:00",
+    "id": "inc-redwoodcity-202606180153",
+    "subject": "[MOSI] Grand Theft near MIDDLEFIELD RD \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-920a1819fa5sm133458885a.20 - gsmtp')"
   }
 ]
