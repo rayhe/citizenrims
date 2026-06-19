@@ -8677,5 +8677,27 @@
     "distance_mi": 2.32,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9161a006e50sm2066781885a.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-19T03:26:02.579393+00:00",
+    "id": "inc-menlopark-202606180080",
+    "subject": "[MOSI] Fraud near SHARON RD \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "SHARON RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-920a18157fbsm110364385a.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-19T03:26:02.754082+00:00",
+    "id": "inc-redwoodcity-202606180137",
+    "subject": "[MOSI] ID Theft near EAST BAYSHORE RD \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "EAST BAYSHORE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.49,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-920a19160f2sm110430385a.21 - gsmtp')"
   }
 ]
