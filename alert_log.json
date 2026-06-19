@@ -8710,5 +8710,27 @@
     "distance_mi": 2.64,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-920a1819fa5sm133458885a.20 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-19T08:54:17.936064+00:00",
+    "id": "case-smcsheriff-26-04768",
+    "subject": "[MOSI] Forge/alter vehicle registration/etc (M) near BAY RD \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "BAY RD",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.72,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8de630d8704sm16209996d6.47 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-19T08:54:18.171497+00:00",
+    "id": "case-smcsheriff-26-04771",
+    "subject": "[MOSI] Forge/alter vehicle registration/etc (M) near NORTHSIDE AV / WARRINGTON AV \u2014 2.3mi from Menlo Oaks (Medium)",
+    "street": "NORTHSIDE AV / WARRINGTON AV",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.27,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-519e4e62ae6sm14865491cf.9 - gsmtp')"
   }
 ]
