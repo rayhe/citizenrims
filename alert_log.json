@@ -8842,5 +8842,16 @@
     "distance_mi": 2.86,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7e944008fe7sm3552672a34.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-21T22:32:09.656387+00:00",
+    "id": "case-smcsheriff-26-04590",
+    "subject": "[MOSI] Theft of personal property - From motor vehicle (M) near DAPHNE WY \u2014 2.3mi from Menlo Oaks (Medium)",
+    "street": "DAPHNE WY",
+    "city": "East Palo Alto",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.27,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8df81fcb55csm75078316d6.34 - gsmtp')"
   }
 ]
