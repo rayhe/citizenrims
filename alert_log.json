@@ -8897,5 +8897,27 @@
     "distance_mi": 0.85,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-921d7f5127fsm877441485a.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-22T07:34:04.077086+00:00",
+    "id": "inc-atherton-202606210057",
+    "subject": "[MOSI] SUSPICIOUS PERSON near EDGE RD \u2014 0.1mi from Menlo Oaks (High)",
+    "street": "EDGE RD",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.08,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-921d824a407sm832637685a.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-22T07:34:04.361681+00:00",
+    "id": "case-smcsheriff-26-04443",
+    "subject": "[MOSI] Burglary:first degree (F) near DEXTER AV \u2014 2.0mi from Menlo Oaks (High)",
+    "street": "DEXTER AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.05,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8df7f0180d3sm87259806d6.3 - gsmtp')"
   }
 ]
