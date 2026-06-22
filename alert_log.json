@@ -8952,5 +8952,27 @@
     "distance_mi": 2.32,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-4472f0eb8adsm6505939fac.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-22T20:50:33.137720+00:00",
+    "id": "inc-paloalto-PP261730041",
+    "subject": "[MOSI] ARSON near KINGS LN / PITMAN AVE \u2014 1.7mi from Menlo Oaks (High)",
+    "street": "KINGS LN / PITMAN AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.66,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51a51a9a3a4sm6758531cf.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-22T20:50:33.375726+00:00",
+    "id": "case-redwoodcity-R26-06-0304",
+    "subject": "[MOSI] Vandalism:deface property (M) near WOODSIDE RD \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "WOODSIDE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.84,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51a51ae8ee7sm6883961cf.24 - gsmtp')"
   }
 ]
