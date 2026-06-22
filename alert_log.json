@@ -8853,5 +8853,27 @@
     "distance_mi": 2.27,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8df81fcb55csm75078316d6.34 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-22T01:27:52.559842+00:00",
+    "id": "inc-menlopark-202606210035",
+    "subject": "[MOSI] Stolen Vehicle near HAVEN AV \u2014 1.6mi from Menlo Oaks (High)",
+    "street": "HAVEN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.57,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30c1bdffa83sm10537907eec.23 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-22T01:27:53.225645+00:00",
+    "id": "inc-paloalto-PP261720035",
+    "subject": "[MOSI] 594 near NONE / BIRCH ST \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "NONE / BIRCH ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.7,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30c1ba1f14fsm8033438eec.5 - gsmtp')"
   }
 ]
