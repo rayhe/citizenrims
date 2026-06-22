@@ -8886,5 +8886,16 @@
     "distance_mi": 1.8,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8e231613af9sm22002296d6.38 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-22T05:38:10.541366+00:00",
+    "id": "case-menlopark-26-1308",
+    "subject": "[MOSI] Theft of personal property - Purse-snatching (M) near MENLO AV \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "MENLO AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-921d7f5127fsm877441485a.17 - gsmtp')"
   }
 ]
