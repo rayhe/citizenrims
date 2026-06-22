@@ -8930,5 +8930,27 @@
     "distance_mi": 2.97,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-921db065113sm918195685a.34 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-22T19:48:19.084496+00:00",
+    "id": "case-redwoodcity-R26-06-0333",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near ROLISON RD \u2014 1.5mi from Menlo Oaks (Medium)",
+    "street": "ROLISON RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.52,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-4472f0464a6sm6573950fac.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-22T19:48:19.499895+00:00",
+    "id": "case-redwoodcity-R26-06-0339",
+    "subject": "[MOSI] Grand theft:money/labor/property - From building (F) near EL CAMINO REAL \u2014 2.3mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.32,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-4472f0eb8adsm6505939fac.18 - gsmtp')"
   }
 ]
