@@ -9095,5 +9095,27 @@
     "distance_mi": 0.99,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-139add6d76dsm14883077c88.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-23T20:55:12.909121+00:00",
+    "id": "inc-paloalto-PP261740031",
+    "subject": "[MOSI] 594 near SHERIDAN AVE / EL CAMINO REAL \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "SHERIDAN AVE / EL CAMINO REAL",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.92,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51a51a9c6b6sm31113651cf.16 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-23T20:55:13.131429+00:00",
+    "id": "case-smcsheriff-26-04963",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near DEVONSHIRE AV \u2014 2.4mi from Menlo Oaks (Medium)",
+    "street": "DEVONSHIRE AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.4,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51a51a9c533sm32636701cf.14 - gsmtp')"
   }
 ]
