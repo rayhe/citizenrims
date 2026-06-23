@@ -9018,5 +9018,16 @@
     "distance_mi": 1.07,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-925fda62876sm167804685a.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-23T04:46:03.077174+00:00",
+    "id": "inc-paloalto-PP261730096",
+    "subject": "[MOSI] 594 near ROSS RD / DEAD END \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "ROSS RD / DEAD END",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.53,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30c430553d1sm6663579eec.11 - gsmtp')"
   }
 ]
