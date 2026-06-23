@@ -9117,5 +9117,16 @@
     "distance_mi": 2.4,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51a51a9c533sm32636701cf.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-23T22:05:30.853465+00:00",
+    "id": "inc-redwoodcity-202606230123",
+    "subject": "[MOSI] Forgery near HAVEN AV \u2014 1.6mi from Menlo Oaks (Medium)",
+    "street": "HAVEN AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.55,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2c7444a9c5asm111856855ad.74 - gsmtp')"
   }
 ]
