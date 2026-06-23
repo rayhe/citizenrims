@@ -9040,5 +9040,16 @@
     "distance_mi": 1.5,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8df81cdd8e2sm124292716d6.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-23T15:22:51.029799+00:00",
+    "id": "case-menlopark-26-1321",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near CENTRAL AVE \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "CENTRAL AVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.65,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 956f58d0204a3-66314b6cdb3sm5383552d50.8 - gsmtp')"
   }
 ]
