@@ -9073,5 +9073,27 @@
     "distance_mi": 0.13,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92600b83658sm340910985a.43 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-23T19:18:12.812901+00:00",
+    "id": "inc-redwoodcity-202606230100",
+    "subject": "[MOSI] Vandalism near BROADWAY \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "BROADWAY",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.69,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30c1ba57db7sm16857462eec.7 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-23T19:18:13.515966+00:00",
+    "id": "inc-paloalto-PP261740020",
+    "subject": "[MOSI] 487 near MIDDLEFIELD RD / FULTON ST \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD / FULTON ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 0.99,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-139add6d76dsm14883077c88.12 - gsmtp')"
   }
 ]
