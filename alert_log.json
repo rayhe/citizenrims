@@ -9062,5 +9062,16 @@
     "distance_mi": 2.82,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-926004ac1b8sm312136985a.36 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-23T18:31:12.353378+00:00",
+    "id": "inc-menlopark-202606230036",
+    "subject": "[MOSI] Vehicle Tampering near SANTA MONICA AV \u2014 0.1mi from Menlo Oaks (Medium)",
+    "street": "SANTA MONICA AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.13,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92600b83658sm340910985a.43 - gsmtp')"
   }
 ]
