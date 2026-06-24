@@ -9161,5 +9161,38 @@
     "distance_mi": 2.23,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-c0c5e998dcbsm655519766b.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-24T16:32:13.814234+00:00",
+    "id": "inc-menlopark-202606240019",
+    "subject": "[MOSI] Vehicle Tampering near LIVE OAK AV \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "LIVE OAK AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.97,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2c7f5ac899esm2054665ad.7 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-24T16:32:14.394841+00:00",
+    "id": "inc-redwoodcity-202606240025",
+    "subject": "[MOSI] Vandalism near CENTER ST \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "CENTER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-845a40d2459sm2597105b3a.32 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-24T16:32:15.021157+00:00",
+    "id": "inc-redwoodcity-202606240028",
+    "subject": "[MOSI] Vandalism near CENTER ST \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "CENTER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.65,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2c7f5ac88dcsm2007725ad.12 - gsmtp')"
   }
 ]
