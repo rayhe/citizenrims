@@ -9128,5 +9128,16 @@
     "distance_mi": 1.55,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2c7444a9c5asm111856855ad.74 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-24T04:40:38.709940+00:00",
+    "id": "inc-redwoodcity-202606230176",
+    "subject": "[MOSI] Grand Theft near HOOVER ST \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "HOOVER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.9,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8df81cde303sm144893886d6.25 - gsmtp')"
   }
 ]
