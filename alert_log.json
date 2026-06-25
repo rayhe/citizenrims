@@ -9260,5 +9260,16 @@
     "distance_mi": 2.85,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-139d8f6d2e4sm2526645c88.7 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-25T01:21:35.502589+00:00",
+    "id": "inc-paloalto-PP261750062",
+    "subject": "[MOSI] 594 near LYTTON AVE / PAULSEN LN \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "LYTTON AVE / PAULSEN LN",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.02,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-925fe235092sm691850985a.21 - gsmtp')"
   }
 ]
