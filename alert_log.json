@@ -9326,5 +9326,16 @@
     "distance_mi": 1.62,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30c7c58831asm12737300eec.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-26T01:17:10.098743+00:00",
+    "id": "inc-paloalto-PP261760062",
+    "subject": "[MOSI] 594 near EMBARCADERO RD / SAINT FRANCIS DR \u2014 2.4mi from Menlo Oaks (Medium)",
+    "street": "EMBARCADERO RD / SAINT FRANCIS DR",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.36,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51a514b5413sm84546451cf.4 - gsmtp')"
   }
 ]
