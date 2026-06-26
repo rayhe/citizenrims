@@ -9370,5 +9370,16 @@
     "distance_mi": 1.84,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8df81cde303sm221204876d6.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-26T19:47:49.355263+00:00",
+    "id": "inc-redwoodcity-202606260020",
+    "subject": "[MOSI] Vandalism near EAST BAYSHORE RD \u2014 2.4mi from Menlo Oaks (Medium)",
+    "street": "EAST BAYSHORE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.38,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-926005a18bfsm1227808885a.37 - gsmtp')"
   }
 ]
