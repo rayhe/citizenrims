@@ -9359,5 +9359,16 @@
     "distance_mi": 2.81,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-925fe040904sm1199225785a.20 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-26T17:50:02.629455+00:00",
+    "id": "inc-redwoodcity-202606260030",
+    "subject": "[MOSI] Burglary-Vehicle Report near ROLISON RD \u2014 1.8mi from Menlo Oaks (High)",
+    "street": "ROLISON RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.84,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8df81cde303sm221204876d6.25 - gsmtp')"
   }
 ]
