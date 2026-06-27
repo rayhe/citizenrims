@@ -9436,5 +9436,27 @@
     "distance_mi": 1.98,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30c7c8afc91sm23350353eec.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-27T03:19:26.701576+00:00",
+    "id": "inc-redwoodcity-202606260157",
+    "subject": "[MOSI] Burglary-Vehicle Report near BAY RD \u2014 2.0mi from Menlo Oaks (High)",
+    "street": "BAY RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8df82c62eedsm238270006d6.47 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-27T03:19:26.908084+00:00",
+    "id": "inc-paloalto-PP261770085",
+    "subject": "[MOSI] 459C near FOREST AVE / HOMER AVE \u2014 1.2mi from Menlo Oaks (High)",
+    "street": "FOREST AVE / HOMER AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.2,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51a51b12242sm109195631cf.29 - gsmtp')"
   }
 ]
