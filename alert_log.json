@@ -9403,5 +9403,27 @@
     "distance_mi": 0.84,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8df7f604c56sm227105076d6.16 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-27T00:02:26.051665+00:00",
+    "id": "case-menlopark-26-1354",
+    "subject": "[MOSI] Theft of personal property - Motor vehicle parts/accessories (M) near ROBLE AVE \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "ROBLE AVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-4472efb37fesm16892928fac.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-27T00:02:26.508141+00:00",
+    "id": "case-menlopark-26-1355",
+    "subject": "[MOSI] Burglary:second degree - All other larceny (M) near CONSTITUTION DRIVE \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DRIVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.02,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-493553624desm2325313b6e.14 - gsmtp')"
   }
 ]
