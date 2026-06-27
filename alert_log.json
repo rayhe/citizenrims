@@ -9480,5 +9480,16 @@
     "distance_mi": 1.0,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92600b83658sm1395058485a.43 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-27T08:15:57.095049+00:00",
+    "id": "inc-menlopark-202606260043",
+    "subject": "[MOSI] Burglary near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8df82c62eedsm245627246d6.47 - gsmtp')"
   }
 ]
