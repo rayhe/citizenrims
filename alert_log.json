@@ -9502,5 +9502,27 @@
     "distance_mi": 2.62,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8eb437e504asm25124486d6.7 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-27T20:40:33.148924+00:00",
+    "id": "inc-redwoodcity-202606270049",
+    "subject": "[MOSI] Tamper W/Vehicle near SPRING ST \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "SPRING ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.54,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30c7c199561sm36845553eec.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-27T20:40:33.627816+00:00",
+    "id": "inc-paloalto-PP261780020",
+    "subject": "[MOSI] 459R near LYTTON AVE / UNIVERSITY AVE \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "LYTTON AVE / UNIVERSITY AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 0.88,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-139d8f6acf9sm31151916c88.6 - gsmtp')"
   }
 ]
