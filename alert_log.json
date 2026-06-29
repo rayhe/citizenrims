@@ -9557,5 +9557,27 @@
     "distance_mi": 1.68,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30c9c456cf5sm32985757eec.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-29T16:04:18.430224+00:00",
+    "id": "case-menlopark-26-1307",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near HAVEN AV \u2014 1.6mi from Menlo Oaks (Medium)",
+    "street": "HAVEN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.57,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-448db9cfb7esm145798fac.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-29T16:04:18.881063+00:00",
+    "id": "case-redwoodcity-R26-06-0524",
+    "subject": "[MOSI] Vandalism ($400 or more) (F) near ROLISON RD \u2014 1.5mi from Menlo Oaks (Medium)",
+    "street": "ROLISON RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.52,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-448db93e2a4sm151365fac.3 - gsmtp')"
   }
 ]
