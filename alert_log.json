@@ -9590,5 +9590,27 @@
     "distance_mi": 2.49,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e622ec3a6sm37074285a.31 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-29T19:29:44.172341+00:00",
+    "id": "case-smcsheriff-26-04651",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near WESTMORELAND AV/NORTHUMBERLAND AV \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "WESTMORELAND AV/NORTHUMBERLAND AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.5,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13b2ab21932sm534559c88.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-29T19:29:44.740010+00:00",
+    "id": "case-smcsheriff-26-04786",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near HURLINGAME AV \u2014 2.4mi from Menlo Oaks (Medium)",
+    "street": "HURLINGAME AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.36,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30ee3205796sm487722eec.23 - gsmtp')"
   }
 ]
