@@ -9612,5 +9612,49 @@
     "distance_mi": 2.36,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30ee3205796sm487722eec.23 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-29T20:55:43.150080+00:00",
+    "id": "case-smcsheriff-26-04573",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near 3RD AV \u2014 2.0mi from Menlo Oaks (Medium)",
+    "street": "3RD AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30ee3265ab6sm807620eec.30 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-29T20:55:43.840740+00:00",
+    "id": "case-smcsheriff-26-04936",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near PACIFIC AV \u2014 2.3mi from Menlo Oaks (Medium)",
+    "street": "PACIFIC AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.29,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13b2abbb44csm958315c88.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-29T20:55:44.417239+00:00",
+    "id": "case-smcsheriff-26-05011",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near 3RD AV \u2014 2.0mi from Menlo Oaks (Medium)",
+    "street": "3RD AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.97,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30ee2f5c4c3sm918627eec.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-29T20:55:45.024307+00:00",
+    "id": "case-smcsheriff-26-05016",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near HAMPSHIRE AV \u2014 2.2mi from Menlo Oaks (Medium)",
+    "street": "HAMPSHIRE AV",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.21,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30ee2f584bdsm949986eec.4 - gsmtp')"
   }
 ]
