@@ -9656,5 +9656,16 @@
     "distance_mi": 2.21,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30ee2f584bdsm949986eec.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-30T01:20:43.568194+00:00",
+    "id": "inc-atherton-202606290051",
+    "subject": "[MOSI] FRAUD / FALSE PERSONATION near ISABELLA AV \u2014 1.3mi from Menlo Oaks (Medium)",
+    "street": "ISABELLA AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.3,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e62344043sm111144085a.37 - gsmtp')"
   }
 ]
