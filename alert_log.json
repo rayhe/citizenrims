@@ -9744,5 +9744,16 @@
     "distance_mi": 2.36,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13b2abcd5edsm14617469c88.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-30T23:08:58.460413+00:00",
+    "id": "case-menlopark-26-1389",
+    "subject": "[MOSI] Tamper with vehicle - Motor vehicle parts/accessories (M) near CAMBRIDGE AV \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "CAMBRIDGE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.91,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-44c685abff2sm183971fac.15 - gsmtp')"
   }
 ]
