@@ -9667,5 +9667,16 @@
     "distance_mi": 1.3,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e62344043sm111144085a.37 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-06-30T03:25:31.838063+00:00",
+    "id": "inc-menlopark-202606290067",
+    "subject": "[MOSI] Burglary near LIVE OAK AV \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "LIVE OAK AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.74,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e622e8d9fsm134913785a.22 - gsmtp')"
   }
 ]
