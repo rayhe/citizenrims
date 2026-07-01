@@ -9788,5 +9788,16 @@
     "distance_mi": 0.71,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-44cbec93a70sm177640fac.11 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-01T18:08:22.103261+00:00",
+    "id": "inc-menlopark-202607010029",
+    "subject": "[MOSI] Fraud near INDEPENDENCE DR \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "INDEPENDENCE DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8f46f304533sm3712166d6.18 - gsmtp')"
   }
 ]
