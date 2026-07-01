@@ -9821,5 +9821,16 @@
     "distance_mi": 1.04,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e801626c3sm54154285a.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-01T22:04:59.093779+00:00",
+    "id": "case-redwoodcity-R26-06-0555",
+    "subject": "[MOSI] Burglary:first degree - All other larceny (F) near POPLAR AV \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "POPLAR AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.92,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e801bbeb5sm57912985a.47 - gsmtp')"
   }
 ]
