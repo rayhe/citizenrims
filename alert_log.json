@@ -9766,5 +9766,16 @@
     "distance_mi": 0.91,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13b2ab2e0e3sm12760205c88.7 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-01T02:13:07.746594+00:00",
+    "id": "case-smcsheriff-26-04504",
+    "subject": "[MOSI] Vandalism:deface property (M) near 5TH AV \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "5TH AV",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.88,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8f39ac4afdesm1550756d6.48 - gsmtp')"
   }
 ]
