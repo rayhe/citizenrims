@@ -9832,5 +9832,71 @@
     "distance_mi": 2.92,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e801bbeb5sm57912985a.47 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-01T23:08:08.026406+00:00",
+    "id": "case-menlopark-26-1400",
+    "subject": "[MOSI] Theft of personal property - From building (M) near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e80162029sm68257385a.26 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-01T23:08:08.198022+00:00",
+    "id": "case-menlopark-26-1401",
+    "subject": "[MOSI] Burglary:second degree - From building (M) near CONSTITUTION DR. \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR.",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.02,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e801626c3sm74828185a.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-01T23:08:08.405818+00:00",
+    "id": "case-redwoodcity-R26-06-0438",
+    "subject": "[MOSI] Vandalism:deface property (F) near CENTER ST \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "CENTER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.65,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51c30c67294sm2568821cf.30 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-01T23:08:08.630758+00:00",
+    "id": "case-redwoodcity-R26-06-0439",
+    "subject": "[MOSI] Vandalism:deface property (F) near CENTER ST \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "CENTER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e801b9f64sm70416585a.42 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-01T23:08:08.916566+00:00",
+    "id": "case-redwoodcity-R26-06-0467",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near GORDON ST \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "GORDON ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.91,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8f471813d25sm10385806d6.26 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-01T23:08:09.128871+00:00",
+    "id": "case-redwoodcity-R26-06-0489",
+    "subject": "[MOSI] Vandalism:damage property (F) near EAST BAYSHORE RD/DOUGLAS CT \u2014 2.4mi from Menlo Oaks (Medium)",
+    "street": "EAST BAYSHORE RD/DOUGLAS CT",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.38,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e801bbcd3sm71219185a.46 - gsmtp')"
   }
 ]
