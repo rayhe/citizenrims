@@ -9997,5 +9997,38 @@
     "distance_mi": 1.19,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8f471813d49sm37267996d6.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-02T23:44:39.183213+00:00",
+    "id": "inc-menlopark-202607020042",
+    "subject": "[MOSI] Fraud near COLEMAN AV \u2014 0.1mi from Menlo Oaks (Medium)",
+    "street": "COLEMAN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.11,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8f46e27d137sm39414026d6.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-02T23:44:39.371664+00:00",
+    "id": "inc-menlopark-202607020044",
+    "subject": "[MOSI] Vandalism near WILLOW RD \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51c42038c4bsm557891cf.31 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-02T23:44:39.591352+00:00",
+    "id": "case-menlopark-26-1409",
+    "subject": "[MOSI] Get credit/etc others id - False pretenses/swindle/confidence game (F) near COLEMAN AV \u2014 0.1mi from Menlo Oaks (Medium)",
+    "street": "COLEMAN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.11,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e90b800ccsm10539685a.8 - gsmtp')"
   }
 ]
