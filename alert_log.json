@@ -10041,5 +10041,27 @@
     "distance_mi": 0.46,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30f0b7b9873sm14382868eec.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-03T05:01:39.430419+00:00",
+    "id": "inc-menlopark-202607020062",
+    "subject": "[MOSI] Vandalism near UNIVERSITY DR \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "UNIVERSITY DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.08,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e90ca90a5sm69048485a.32 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-03T05:01:39.962342+00:00",
+    "id": "case-menlopark-26-1375",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near SHERWOOD WY \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "SHERWOOD WY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.56,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e90d0011fsm76267185a.45 - gsmtp')"
   }
 ]
