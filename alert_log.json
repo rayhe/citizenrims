@@ -10063,5 +10063,27 @@
     "distance_mi": 0.56,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e90d0011fsm76267185a.45 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-03T19:44:12.002734+00:00",
+    "id": "inc-paloalto-PP261840015",
+    "subject": "[MOSI] 487 near PISTACHE PL / SHOPPING CENTER WAY \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "PISTACHE PL / SHOPPING CENTER WAY",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.16,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51c41d2ac6esm22212531cf.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-03T19:44:12.199742+00:00",
+    "id": "inc-paloalto-PP261840017",
+    "subject": "[MOSI] 10851 near RAMONA ST / BRYANT ST \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "RAMONA ST / BRYANT ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.13,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8f46f20f565sm63292606d6.19 - gsmtp')"
   }
 ]
