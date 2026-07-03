@@ -10030,5 +10030,16 @@
     "distance_mi": 0.11,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e90b800ccsm10539685a.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-03T01:18:41.833538+00:00",
+    "id": "inc-menlopark-202607020053",
+    "subject": "[MOSI] Fraud near HOLLYBURNE AV \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "HOLLYBURNE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.46,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30f0b7b9873sm14382868eec.4 - gsmtp')"
   }
 ]
