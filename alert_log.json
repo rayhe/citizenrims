@@ -10096,5 +10096,16 @@
     "distance_mi": 1.7,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13b3ececfe4sm27339752c88.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-04T01:20:21.721770+00:00",
+    "id": "case-smcsheriff-26-05122",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near MPM 30.0 \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "MPM 30.0",
+    "city": "Palo Alto",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 0.93,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-847f6d7a935sm514813b3a.47 - gsmtp')"
   }
 ]
