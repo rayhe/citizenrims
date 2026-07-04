@@ -10107,5 +10107,16 @@
     "distance_mi": 0.93,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-847f6d7a935sm514813b3a.47 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-04T22:39:18.153212+00:00",
+    "id": "inc-paloalto-PP261850029",
+    "subject": "[MOSI] 594 near GREER RD / TANLAND DR \u2014 3.0mi from Menlo Oaks (Medium)",
+    "street": "GREER RD / TANLAND DR",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.95,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51c41abb484sm52130751cf.4 - gsmtp')"
   }
 ]
