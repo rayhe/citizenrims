@@ -10129,5 +10129,16 @@
     "distance_mi": 0.58,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8f46e27d555sm106406206d6.7 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-05T14:02:51.548893+00:00",
+    "id": "case-menlopark-26-1428",
+    "subject": "[MOSI] Burglary:first degree (F) near CARLTON AV \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "CARLTON AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.58,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e90ccdd5csm703328085a.36 - gsmtp')"
   }
 ]
