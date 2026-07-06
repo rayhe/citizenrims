@@ -10228,5 +10228,27 @@
     "distance_mi": 1.89,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8f46e27d53fsm145592516d6.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-06T21:55:53.420364+00:00",
+    "id": "case-redwoodcity-R26-06-0347",
+    "subject": "[MOSI] Grand theft:money/labor/property - From building (F) near MIDDLEFIELD RD \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-31174a8bc08sm778586eec.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-06T21:55:54.050488+00:00",
+    "id": "case-redwoodcity-R26-07-0081",
+    "subject": "[MOSI] Burglary:second degree - Motor vehicle parts/accessories (F) near MANZANITA ST/SHASTA ST \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "MANZANITA ST/SHASTA ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.84,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-311747f5975sm710856eec.4 - gsmtp')"
   }
 ]
