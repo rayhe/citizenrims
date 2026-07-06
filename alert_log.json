@@ -10151,5 +10151,16 @@
     "distance_mi": 2.84,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30f3b252222sm27636928eec.23 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-06T01:16:22.857938+00:00",
+    "id": "case-smcsheriff-26-05085",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near SPRING ST \u2014 1.4mi from Menlo Oaks (High)",
+    "street": "SPRING ST",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.39,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30f44fba9a4sm22013590eec.10 - gsmtp')"
   }
 ]
