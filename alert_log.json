@@ -10162,5 +10162,27 @@
     "distance_mi": 1.39,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-30f44fba9a4sm22013590eec.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-06T05:38:58.469797+00:00",
+    "id": "inc-menlopark-202607050040",
+    "subject": "[MOSI] Graffiti Abatement near E CREEK DR \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "E CREEK DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.83,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-c9e92b83bd9sm5365033a12.31 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-06T05:38:59.153859+00:00",
+    "id": "inc-paloalto-PP261860074",
+    "subject": "[MOSI] 487 near DEAD END / COLORADO AVE \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "DEAD END / COLORADO AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.81,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3812baf131esm3088301a91.0 - gsmtp')"
   }
 ]
