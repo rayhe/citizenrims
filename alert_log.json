@@ -10184,5 +10184,27 @@
     "distance_mi": 2.81,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3812baf131esm3088301a91.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-06T18:30:15.106154+00:00",
+    "id": "inc-redwoodcity-202607060031",
+    "subject": "[MOSI] Stolen Vehicle near MIDDLEFIELD RD \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.83,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-847f6d4d000sm4243019b3a.34 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-06T18:30:15.692374+00:00",
+    "id": "inc-paloalto-PP261870023",
+    "subject": "[MOSI] 459R near LINCOLN AVE / KINGSLEY AVE \u2014 1.6mi from Menlo Oaks (High)",
+    "street": "LINCOLN AVE / KINGSLEY AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2cad712706esm55093675ad.20 - gsmtp')"
   }
 ]
