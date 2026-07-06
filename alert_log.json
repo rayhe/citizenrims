@@ -10206,5 +10206,27 @@
     "distance_mi": 1.64,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2cad712706esm55093675ad.20 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-06T20:28:14.324194+00:00",
+    "id": "inc-menlopark-202607060023",
+    "subject": "[MOSI] Fraud near WILLOW RD \u2014 0.4mi from Menlo Oaks (Medium)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.35,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51c41abe73csm105769641cf.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-06T20:28:14.531703+00:00",
+    "id": "inc-paloalto-PP261870035",
+    "subject": "[MOSI] 594 near GUINDA ST / NEWELL RD \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "GUINDA ST / NEWELL RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.89,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8f46e27d53fsm145592516d6.5 - gsmtp')"
   }
 ]
