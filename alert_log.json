@@ -10305,5 +10305,49 @@
     "distance_mi": 0.82,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8f46f20f565sm168374876d6.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-07T23:38:46.571302+00:00",
+    "id": "inc-menlopark-202607070041",
+    "subject": "[MOSI] Grand Theft near CLAREMONT WY \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "CLAREMONT WY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.65,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-31174839f89sm13186768eec.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-07T23:38:46.989896+00:00",
+    "id": "case-menlopark-26-1443",
+    "subject": "[MOSI] Theft of personal property - From building (M) near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-31174839f89sm13186820eec.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-07T23:38:47.778255+00:00",
+    "id": "case-menlopark-26-1444",
+    "subject": "[MOSI] Theft of personal property - From building (M) near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-311748394acsm12955011eec.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-07T23:38:48.253990+00:00",
+    "id": "case-menlopark-26-1449",
+    "subject": "[MOSI] Get credit/etc others id - False pretenses/swindle/confidence game (F) near CLAREMONT WY \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "CLAREMONT WY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.65,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-31174a9e2f2sm12808357eec.25 - gsmtp')"
   }
 ]
