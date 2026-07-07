@@ -10283,5 +10283,27 @@
     "distance_mi": 2.57,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-847f6d496besm4977457b3a.36 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-07T18:09:41.193061+00:00",
+    "id": "inc-menlopark-202607070019",
+    "subject": "[MOSI] Fraud near REYNA PL \u2014 1.5mi from Menlo Oaks (Medium)",
+    "street": "REYNA PL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.5,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51c41ab77e7sm120318561cf.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-07T18:09:41.364520+00:00",
+    "id": "inc-atherton-202607070009",
+    "subject": "[MOSI] BURGLARY - RESIDENTIAL/COMMERCIAL near JAMES AV \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "JAMES AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.82,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8f46f20f565sm168374876d6.19 - gsmtp')"
   }
 ]
