@@ -10261,5 +10261,16 @@
     "distance_mi": 2.69,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8f46f112547sm144445536d6.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-07T04:27:57.694924+00:00",
+    "id": "inc-redwoodcity-202607060112",
+    "subject": "[MOSI] Stolen Vehicle near MIDDLEFIELD RD \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.83,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-31174a5b26csm3174726eec.15 - gsmtp')"
   }
 ]
