@@ -10404,5 +10404,16 @@
     "distance_mi": 1.02,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6a36a8d90d9sm1901896eaf.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-08T15:29:37.008009+00:00",
+    "id": "case-atherton-26-228",
+    "subject": "[MOSI] Attempt Stolen Vehicle DO NOT USE near PARKWOOD DR \u2014 0.0mi from Menlo Oaks (High)",
+    "street": "PARKWOOD DR",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.01,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51c41db4fb5sm134569521cf.25 - gsmtp')"
   }
 ]
