@@ -10349,5 +10349,27 @@
     "distance_mi": 0.65,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-31174a9e2f2sm12808357eec.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-08T04:30:51.818133+00:00",
+    "id": "inc-menlopark-202607070055",
+    "subject": "[MOSI] Fraud near EL CAMINO REAL \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.75,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8f471813c8dsm175119886d6.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-08T04:30:52.017638+00:00",
+    "id": "inc-atherton-202607070074",
+    "subject": "[MOSI] VANDALISM near PARKWOOD DR \u2014 0.0mi from Menlo Oaks (Medium)",
+    "street": "PARKWOOD DR",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.01,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8f46e188c30sm176169526d6.6 - gsmtp')"
   }
 ]
