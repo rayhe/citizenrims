@@ -10448,5 +10448,49 @@
     "distance_mi": 2.62,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-311747f7293sm22690858eec.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-08T22:26:59.157385+00:00",
+    "id": "inc-menlopark-202607080056",
+    "subject": "[MOSI] Grand Theft near ARTISAN WY \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "ARTISAN WY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.8,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e90b800efsm1466642485a.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-08T22:26:59.353742+00:00",
+    "id": "inc-paloalto-PP261890044",
+    "subject": "[MOSI] 459R near KENT PL / CHANNING AVE \u2014 1.5mi from Menlo Oaks (High)",
+    "street": "KENT PL / CHANNING AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.51,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ffd50e0576sm3145656d6.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-08T22:26:59.571222+00:00",
+    "id": "case-menlopark-26-1458",
+    "subject": "[MOSI] Burglary:second degree - All other larceny (F) near WAVERLEY STREET \u2014 0.5mi from Menlo Oaks (High)",
+    "street": "WAVERLEY STREET",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.53,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ffd50e082csm3347506d6.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-08T22:26:59.784179+00:00",
+    "id": "case-menlopark-26-1460",
+    "subject": "[MOSI] Burglary:second degree - All other larceny (M) near ARTISAN WAY \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "ARTISAN WAY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.8,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92e90b7fc3asm1475393485a.9 - gsmtp')"
   }
 ]
