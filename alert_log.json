@@ -10393,5 +10393,16 @@
     "distance_mi": 1.02,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-4a1b07e329dsm1356863b6e.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-08T13:01:44.760702+00:00",
+    "id": "inc-menlopark-202607070070",
+    "subject": "[MOSI] Burglary near HARVARD AV \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "HARVARD AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.02,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6a36a8d90d9sm1901896eaf.15 - gsmtp')"
   }
 ]
