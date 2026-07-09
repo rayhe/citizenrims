@@ -10558,5 +10558,27 @@
     "distance_mi": 0.53,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3119c2a7bb5sm5018117eec.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-09T08:39:57.302895+00:00",
+    "id": "inc-menlopark-202607080014",
+    "subject": "[MOSI] Burglary near WAVERLEY ST \u2014 0.5mi from Menlo Oaks (High)",
+    "street": "WAVERLEY ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.53,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2ccc9d1e5d0sm40859595ad.42 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-09T08:39:57.803257+00:00",
+    "id": "inc-menlopark-202607080075",
+    "subject": "[MOSI] Burglary near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-38a5622ae99sm803716a91.14 - gsmtp')"
   }
 ]
