@@ -10514,5 +10514,49 @@
     "distance_mi": 1.04,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3119c2a7bb5sm4578779eec.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-09T01:12:56.156850+00:00",
+    "id": "inc-menlopark-202607080073",
+    "subject": "[MOSI] Auto Burglary near POPE ST \u2014 0.5mi from Menlo Oaks (High)",
+    "street": "POPE ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.53,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-311a6115e61sm705261eec.22 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-09T01:12:56.777340+00:00",
+    "id": "inc-redwoodcity-202607080070",
+    "subject": "[MOSI] Forgery near HORGAN AV \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "HORGAN AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.76,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-31174ac178dsm25655729eec.28 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-09T01:12:57.512793+00:00",
+    "id": "inc-paloalto-PP261890066",
+    "subject": "[MOSI] 459A near KELLOGG AVE / EMBARCADERO RD \u2014 1.7mi from Menlo Oaks (High)",
+    "street": "KELLOGG AVE / EMBARCADERO RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.72,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3119d5cf176sm3645779eec.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-09T01:12:58.163683+00:00",
+    "id": "case-menlopark-26-1463",
+    "subject": "[MOSI] Burglary:first degree - Motor vehicle parts/accessories (F) near POPE ST \u2014 0.5mi from Menlo Oaks (High)",
+    "street": "POPE ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.53,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3119c2a7bb5sm5018117eec.25 - gsmtp')"
   }
 ]
