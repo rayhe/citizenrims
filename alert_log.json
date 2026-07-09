@@ -10635,5 +10635,38 @@
     "distance_mi": 2.44,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ffd87c8d4csm28159026d6.44 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-09T22:59:03.718221+00:00",
+    "id": "inc-menlopark-202607090037",
+    "subject": "[MOSI] Embezzlement near SANTA CRUZ AV \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "SANTA CRUZ AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7ebcb3f2b86sm5102963a34.26 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-09T22:59:04.153750+00:00",
+    "id": "case-redwoodcity-R26-07-6009",
+    "subject": "[MOSI] Obtain credit/etc:use others id - Identity theft (M) near EAST BAYSHORE RD \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "EAST BAYSHORE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.49,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7ebcb2bc0d0sm5241367a34.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-09T22:59:04.580670+00:00",
+    "id": "case-redwoodcity-R26-07-6010",
+    "subject": "[MOSI] Vandalism ($400 or more) (F) near EL CAMINO REAL \u2014 2.4mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.42,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7ebcb3f2b86sm5102990a34.26 - gsmtp')"
   }
 ]
