@@ -10602,5 +10602,38 @@
     "distance_mi": 2.95,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13b6593c76dsm34070710c88.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-09T21:50:31.137227+00:00",
+    "id": "inc-menlopark-202607090035",
+    "subject": "[MOSI] Burglary near WILLOW RD \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.93,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ffd82ea9casm26505666d6.42 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-09T21:50:31.393465+00:00",
+    "id": "case-redwoodcity-R26-06-0531",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near 15TH AV \u2014 1.3mi from Menlo Oaks (Medium)",
+    "street": "15TH AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.29,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ffd87c8d4csm28159006d6.44 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-09T21:50:31.572933+00:00",
+    "id": "case-redwoodcity-R26-06-0539",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near SCOTT AV/BURBANK AV \u2014 2.4mi from Menlo Oaks (Medium)",
+    "street": "SCOTT AV/BURBANK AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.44,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ffd87c8d4csm28159026d6.44 - gsmtp')"
   }
 ]
