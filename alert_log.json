@@ -10668,5 +10668,38 @@
     "distance_mi": 2.42,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7ebcb3f2b86sm5102990a34.26 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-10T00:12:06.773051+00:00",
+    "id": "case-menlopark-26-1473",
+    "subject": "[MOSI] Burglary:second degree - From building (M) near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ffd50df5edsm29053936d6.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-10T00:12:06.982865+00:00",
+    "id": "case-menlopark-26-1474",
+    "subject": "[MOSI] Burglary:second degree - From building (M) near CONSTITUTION DRIVE \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DRIVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92ee5d5fc4dsm67479685a.40 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-10T00:12:07.149357+00:00",
+    "id": "case-redwoodcity-R26-07-6019",
+    "subject": "[MOSI] Obtain credit/etc:use others id - Identity theft (M) near HORGAN AV \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "HORGAN AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.76,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ffd56c4b91sm28946636d6.19 - gsmtp')"
   }
 ]
