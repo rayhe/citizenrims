@@ -10789,5 +10789,16 @@
     "distance_mi": 1.08,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6a37b58f98csm4721767eaf.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-11T01:03:45.457636+00:00",
+    "id": "inc-paloalto-PP261910048",
+    "subject": "[MOSI] 594 near EL CAMINO REAL / URBAN LN \u2014 1.5mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL / URBAN LN",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.5,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3119d5cf176sm21999896eec.12 - gsmtp')"
   }
 ]
