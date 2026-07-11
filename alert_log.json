@@ -10822,5 +10822,16 @@
     "distance_mi": 1.12,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51caab6ed34sm36095411cf.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-11T23:14:12.280744+00:00",
+    "id": "inc-paloalto-PP261920036",
+    "subject": "[MOSI] 459R near ASH ST / EL CAMINO REAL \u2014 2.4mi from Menlo Oaks (High)",
+    "street": "ASH ST / EL CAMINO REAL",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.45,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13b659d7c8bsm58521878c88.12 - gsmtp')"
   }
 ]
