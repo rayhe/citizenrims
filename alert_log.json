@@ -10811,5 +10811,16 @@
     "distance_mi": 2.91,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51caaf671e2sm31891181cf.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-11T13:44:22.437971+00:00",
+    "id": "inc-paloalto-PP261920005",
+    "subject": "[MOSI] 594 near LINCOLN AVE / UNIVERSITY AVE \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "LINCOLN AVE / UNIVERSITY AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.12,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51caab6ed34sm36095411cf.4 - gsmtp')"
   }
 ]
