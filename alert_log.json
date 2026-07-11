@@ -10800,5 +10800,16 @@
     "distance_mi": 1.5,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3119d5cf176sm21999896eec.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-11T08:23:02.434113+00:00",
+    "id": "inc-redwoodcity-202607100191",
+    "subject": "[MOSI] Stolen Vehicle near SPRUCE ST \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "SPRUCE ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.91,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51caaf671e2sm31891181cf.25 - gsmtp')"
   }
 ]
