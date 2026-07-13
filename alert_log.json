@@ -10932,5 +10932,16 @@
     "distance_mi": 2.85,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7ebcb2bae7fsm15081650a34.21 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-13T22:25:54.134797+00:00",
+    "id": "inc-redwoodcity-202607130084",
+    "subject": "[MOSI] Vandalism near CENTER ST \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "CENTER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.67,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13b9bb8682bsm13865955c88.10 - gsmtp')"
   }
 ]
