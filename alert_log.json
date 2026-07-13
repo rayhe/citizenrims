@@ -10943,5 +10943,16 @@
     "distance_mi": 2.67,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13b9bb8682bsm13865955c88.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-13T23:25:35.712001+00:00",
+    "id": "inc-redwoodcity-202607130091",
+    "subject": "[MOSI] Grand Theft near ATHERWOOD AV \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "ATHERWOOD AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51caafd8b4fsm99275311cf.31 - gsmtp')"
   }
 ]
