@@ -10899,5 +10899,38 @@
     "distance_mi": 1.98,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7ebcb3f6826sm13465467a34.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-13T21:25:13.782985+00:00",
+    "id": "inc-redwoodcity-202607130065",
+    "subject": "[MOSI] Grand Theft near ATHERWOOD AV \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "ATHERWOOD AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-451916d5cebsm14874704fac.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-13T21:25:14.210588+00:00",
+    "id": "inc-redwoodcity-202607130055",
+    "subject": "[MOSI] Grand Theft near WOODSIDE RD \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "WOODSIDE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.91,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-451ff78897asm7923577fac.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-13T21:25:14.738011+00:00",
+    "id": "case-menlopark-26-1498",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near SHARON PARK DR \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "SHARON PARK DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7ebcb2bae7fsm15081650a34.21 - gsmtp')"
   }
 ]
