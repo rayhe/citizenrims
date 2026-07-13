@@ -10877,5 +10877,16 @@
     "distance_mi": 1.04,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-311747f5975sm60843926eec.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-13T15:35:08.643534+00:00",
+    "id": "case-redwoodcity-R26-06-0497",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near 2ND AV \u2014 2.0mi from Menlo Oaks (High)",
+    "street": "2ND AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84a4f7e9711sm25300b3a.50 - gsmtp')"
   }
 ]
