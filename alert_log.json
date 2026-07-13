@@ -10888,5 +10888,16 @@
     "distance_mi": 1.98,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84a4f7e9711sm25300b3a.50 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-13T17:34:12.954363+00:00",
+    "id": "inc-redwoodcity-202607130025",
+    "subject": "[MOSI] Graffiti near 2ND AV \u2014 2.0mi from Menlo Oaks (Medium)",
+    "street": "2ND AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7ebcb3f6826sm13465467a34.27 - gsmtp')"
   }
 ]
