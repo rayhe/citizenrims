@@ -11031,5 +11031,38 @@
     "distance_mi": 2.85,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84a4f819b5esm1249859b3a.60 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-14T16:03:23.370085+00:00",
+    "id": "case-menlopark-26-1503",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near MENLO AV \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "MENLO AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-313b4cbafa1sm77871466eec.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-14T16:03:23.873963+00:00",
+    "id": "case-menlopark-26-1505",
+    "subject": "[MOSI] Burglary:second degree - From building (M) near JEFFERSON DRIVE \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "JEFFERSON DRIVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.88,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-313f031ae9esm10499072eec.21 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-14T16:03:24.380419+00:00",
+    "id": "case-atherton-26-235",
+    "subject": "[MOSI] Receive/etc known stolen property (M) near EL CAMINO REAL/BUCKTHORN WY \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL/BUCKTHORN WY",
+    "city": "MENLO PARK",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.14,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-313b4b97661sm50089570eec.7 - gsmtp')"
   }
 ]
