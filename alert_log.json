@@ -10976,5 +10976,16 @@
     "distance_mi": 1.15,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92ee5b8ea22sm1239309685a.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-14T03:49:46.939539+00:00",
+    "id": "inc-paloalto-PP261940096",
+    "subject": "[MOSI] IDTHEFT near HOMER AVE / CHANNING AVE \u2014 1.3mi from Menlo Oaks (Medium)",
+    "street": "HOMER AVE / CHANNING AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.33,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-311935fd091sm53266613eec.24 - gsmtp')"
   }
 ]
