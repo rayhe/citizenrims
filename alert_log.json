@@ -10987,5 +10987,38 @@
     "distance_mi": 1.33,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-311935fd091sm53266613eec.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-14T08:22:51.332669+00:00",
+    "id": "inc-menlopark-202607130097",
+    "subject": "[MOSI] Vandalism near VALPARAISO AV \u2014 1.3mi from Menlo Oaks (Medium)",
+    "street": "VALPARAISO AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.35,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13b924258a2sm66820116c88.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-14T08:22:51.877470+00:00",
+    "id": "inc-atherton-202607130082",
+    "subject": "[MOSI] POSSESSION OF STOLEN PROPERTY near EL CAMINO REAL \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "MENLO PARK",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.14,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-311747f5975sm72760361eec.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-14T08:22:52.396080+00:00",
+    "id": "inc-redwoodcity-202607140003",
+    "subject": "[MOSI] Stolen Vehicle near ROLISON RD \u2014 1.5mi from Menlo Oaks (High)",
+    "street": "ROLISON RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.52,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13b9081d5c3sm27403866c88.9 - gsmtp')"
   }
 ]
