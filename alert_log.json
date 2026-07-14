@@ -11130,5 +11130,27 @@
     "distance_mi": 1.04,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-51caace31a4sm126130871cf.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-14T22:39:58.099858+00:00",
+    "id": "inc-menlopark-202607140106",
+    "subject": "[MOSI] Fraud near MENLO AV \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "MENLO AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ffd5bbb1e1sm179772556d6.22 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-14T22:39:58.357976+00:00",
+    "id": "case-menlopark-26-1514",
+    "subject": "[MOSI] Get credit/etc others id - False pretenses/swindle/confidence game (F) near MENLO AVENUE \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "MENLO AVENUE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-92ee5b4a0a6sm1599841985a.8 - gsmtp')"
   }
 ]
