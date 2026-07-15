@@ -11196,5 +11196,16 @@
     "distance_mi": 1.89,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 956f58d0204a3-668200b2326sm946023d50.20 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-15T17:57:18.250937+00:00",
+    "id": "case-menlopark-26-1515",
+    "subject": "[MOSI] Theft of personal property - Embezzlement (M) near HILL AV \u2014 0.4mi from Menlo Oaks (High)",
+    "street": "HILL AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.41,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ffd5bbb1e1sm199791876d6.22 - gsmtp')"
   }
 ]
