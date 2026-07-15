@@ -11174,5 +11174,27 @@
     "distance_mi": 2.64,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ffd56c06e1sm194592756d6.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-15T16:45:19.756524+00:00",
+    "id": "inc-redwoodcity-202607150038",
+    "subject": "[MOSI] Stolen Vehicle near HOOVER ST \u2014 1.7mi from Menlo Oaks (High)",
+    "street": "HOOVER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.72,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-81e6be9834dsm173535017b3.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-15T16:45:21.135014+00:00",
+    "id": "case-smcsheriff-26-05400",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near STATE HIGHWAY 82 HWY/BROADWAY \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "STATE HIGHWAY 82 HWY/BROADWAY",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.89,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 956f58d0204a3-668200b2326sm946023d50.20 - gsmtp')"
   }
 ]
