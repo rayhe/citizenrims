@@ -11229,5 +11229,16 @@
     "distance_mi": 1.04,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-38e39bc2c2esm214171a91.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-16T08:57:55.164128+00:00",
+    "id": "case-atherton-26-227",
+    "subject": "[MOSI] Burglary:first degree - All other larceny (F) near JAMES AV \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "JAMES AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.82,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ffd82e8ffdsm218484406d6.37 - gsmtp')"
   }
 ]
