@@ -11273,5 +11273,27 @@
     "distance_mi": 1.98,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13ce2ddfb35sm8136035c88.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-17T23:08:14.577401+00:00",
+    "id": "case-menlopark-26-1533",
+    "subject": "[MOSI] Burglary:second degree - From building (M) near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-31429fdbd45sm10511819eec.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-17T23:08:15.251927+00:00",
+    "id": "case-redwoodcity-R26-07-6063",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (M) near BROADWAY \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "BROADWAY",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3142a02b7f2sm10722704eec.13 - gsmtp')"
   }
 ]
