@@ -11350,5 +11350,16 @@
     "distance_mi": 0.18,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3142a1e348bsm23685885eec.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-19T22:10:01.235084+00:00",
+    "id": "inc-paloalto-PP262000024",
+    "subject": "[MOSI] 459R near PARK BLVD / PARK BLVD \u2014 2.7mi from Menlo Oaks (High)",
+    "street": "PARK BLVD / PARK BLVD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.68,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5214f01654fsm61036701cf.19 - gsmtp')"
   }
 ]
