@@ -11405,5 +11405,27 @@
     "distance_mi": 3.0,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3142a210571sm39854543eec.31 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-20T20:00:29.841255+00:00",
+    "id": "case-smcsheriff-26-05741",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near BAY RD \u2014 2.1mi from Menlo Oaks (High)",
+    "street": "BAY RD",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.08,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-4568e625105sm9652742fac.11 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-20T20:00:30.427810+00:00",
+    "id": "case-redwoodcity-R26-07-0338",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near UNION AV \u2014 3.0mi from Menlo Oaks (Medium)",
+    "street": "UNION AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.97,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-4a4d3607ea1sm8056432b6e.0 - gsmtp')"
   }
 ]
