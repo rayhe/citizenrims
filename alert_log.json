@@ -11438,5 +11438,16 @@
     "distance_mi": 1.3,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-930b5304a99sm961433585a.20 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-20T23:17:59.763061+00:00",
+    "id": "case-menlopark-26-1553",
+    "subject": "[MOSI] Burglary:first degree (F) near BALLARD LN \u2014 0.4mi from Menlo Oaks (High)",
+    "street": "BALLARD LN",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.45,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-930b52dff03sm976643585a.9 - gsmtp')"
   }
 ]
