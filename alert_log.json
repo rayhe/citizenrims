@@ -11570,5 +11570,16 @@
     "distance_mi": 1.98,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-907ba8d484esm5739396d6.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-21T22:31:46.987110+00:00",
+    "id": "case-menlopark-26-1560",
+    "subject": "[MOSI] Get credit/etc others id - Impersonation (F) near OCONNOR ST \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "OCONNOR ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.91,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-45766f16dfcsm671883fac.7 - gsmtp')"
   }
 ]
