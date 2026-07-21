@@ -11581,5 +11581,16 @@
     "distance_mi": 0.91,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-45766f16dfcsm671883fac.7 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-21T23:33:21.736205+00:00",
+    "id": "case-menlopark-26-1565",
+    "subject": "[MOSI] Burglary:second degree - From building (M) near CONSTITUTION DR APT 721 \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR APT 721",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.02,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13d13002f39sm434594c88.1 - gsmtp')"
   }
 ]
