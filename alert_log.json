@@ -11526,5 +11526,49 @@
     "distance_mi": 0.58,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13ce2cbb69bsm37410861c88.11 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-21T21:36:11.265018+00:00",
+    "id": "inc-menlopark-202607210034",
+    "subject": "[MOSI] Fraud near OCONNOR ST \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "OCONNOR ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.91,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-907ba9e18aesm5516616d6.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-21T21:36:11.524901+00:00",
+    "id": "inc-paloalto-PP262020030",
+    "subject": "[MOSI] 594 near CASTILLEJA AVE / LELAND AVE \u2014 2.3mi from Menlo Oaks (Medium)",
+    "street": "CASTILLEJA AVE / LELAND AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.34,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-930b542d1e5sm1235231085a.23 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-21T21:36:11.781700+00:00",
+    "id": "inc-paloalto-PP262020052",
+    "subject": "[MOSI] 10851 near GENG RD / FABER PL \u2014 2.7mi from Menlo Oaks (High)",
+    "street": "GENG RD / FABER PL",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.75,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-930b5491329sm1201912685a.44 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-21T21:36:12.062415+00:00",
+    "id": "case-redwoodcity-R26-07-0217",
+    "subject": "[MOSI] Vandalism:deface property (M) near 2ND AV \u2014 2.0mi from Menlo Oaks (Medium)",
+    "street": "2ND AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-907ba8d484esm5739396d6.14 - gsmtp')"
   }
 ]
