@@ -11625,5 +11625,38 @@
     "distance_mi": 2.99,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84e175f3180sm1025519b3a.56 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-22T17:54:24.306886+00:00",
+    "id": "inc-menlopark-202607220021",
+    "subject": "[MOSI] Burglary near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.74,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84e1760025esm1717514b3a.57 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-22T17:54:24.759910+00:00",
+    "id": "case-menlopark-26-1570",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near HANNA WAY \u2014 0.0mi from Menlo Oaks (High)",
+    "street": "HANNA WAY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-38ea7aa85c3sm1406616a91.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-22T17:54:25.175679+00:00",
+    "id": "case-menlopark-26-1571",
+    "subject": "[MOSI] Burglary:second degree - From building (M) near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.74,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2cf8efa388fsm18841685ad.12 - gsmtp')"
   }
 ]
