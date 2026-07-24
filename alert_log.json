@@ -11702,5 +11702,16 @@
     "distance_mi": 0.68,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7ee29e13a4csm6421827a34.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-24T19:03:02.863655+00:00",
+    "id": "inc-menlopark-202607240019",
+    "subject": "[MOSI] Burglary near CHESTNUT ST \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "CHESTNUT ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.9,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13d13003f12sm48123957c88.2 - gsmtp')"
   }
 ]
