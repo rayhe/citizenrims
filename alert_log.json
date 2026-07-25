@@ -11713,5 +11713,27 @@
     "distance_mi": 0.9,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13d13003f12sm48123957c88.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-25T01:12:27.610013+00:00",
+    "id": "inc-redwoodcity-202607240139",
+    "subject": "[MOSI] Recovered Stolen Vehicle near JONES CT \u2014 1.6mi from Menlo Oaks (High)",
+    "street": "JONES CT",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.58,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-932de63239bsm42908985a.30 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-25T01:12:28.207687+00:00",
+    "id": "case-menlopark-26-1581",
+    "subject": "[MOSI] Burglary:first degree (F) near CHESTNUT ST \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "CHESTNUT ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.9,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-529a2989b24sm10568141cf.15 - gsmtp')"
   }
 ]
