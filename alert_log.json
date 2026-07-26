@@ -11746,5 +11746,16 @@
     "distance_mi": 2.01,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2cfde80f50asm7183975ad.77 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-26T11:01:38.863325+00:00",
+    "id": "case-menlopark-26-1592",
+    "subject": "[MOSI] Theft of personal property - From building (M) near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.69,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-529a27cdc4csm34163081cf.2 - gsmtp')"
   }
 ]
