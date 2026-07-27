@@ -11768,5 +11768,16 @@
     "distance_mi": 2.8,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-314bc419c52sm25056467eec.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-27T08:23:51.264652+00:00",
+    "id": "case-smcsheriff-26-05766",
+    "subject": "[MOSI] Appropriate lost property (M) near WOODSIDE RD \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "WOODSIDE RD",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.84,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-529a27cd8c5sm49977381cf.6 - gsmtp')"
   }
 ]
