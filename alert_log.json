@@ -11757,5 +11757,16 @@
     "distance_mi": 0.69,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-529a27cdc4csm34163081cf.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-27T01:14:04.357153+00:00",
+    "id": "inc-redwoodcity-202607260062",
+    "subject": "[MOSI] Stolen Vehicle near EAST BAYSHORE RD \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "EAST BAYSHORE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.8,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-314bc419c52sm25056467eec.10 - gsmtp')"
   }
 ]
