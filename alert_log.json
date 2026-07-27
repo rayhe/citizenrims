@@ -11801,5 +11801,16 @@
     "distance_mi": 0.71,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-45767486cf6sm15975900fac.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-27T19:50:00.835475+00:00",
+    "id": "case-smcsheriff-26-05568",
+    "subject": "[MOSI] Burglary:second degree (F) near SPRING ST \u2014 2.3mi from Menlo Oaks (High)",
+    "street": "SPRING ST",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.29,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-907e835c7e7sm72668156d6.0 - gsmtp')"
   }
 ]
