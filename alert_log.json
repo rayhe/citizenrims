@@ -11812,5 +11812,16 @@
     "distance_mi": 2.29,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-907e835c7e7sm72668156d6.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-28T15:31:50.676459+00:00",
+    "id": "inc-redwoodcity-202607280019",
+    "subject": "[MOSI] Stolen Vehicle near HOOVER ST \u2014 2.0mi from Menlo Oaks (High)",
+    "street": "HOOVER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-932de63500csm892859185a.24 - gsmtp')"
   }
 ]
