@@ -11856,5 +11856,16 @@
     "distance_mi": 0.61,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-31504cc6936sm1972851eec.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-28T22:17:14.194340+00:00",
+    "id": "case-menlopark-26-1600",
+    "subject": "[MOSI] Grnd Thft:prop/Etc $400+ near CONCORD DRIVE \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "CONCORD DRIVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.71,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-9081dc47158sm9466086d6.8 - gsmtp')"
   }
 ]
