@@ -11823,5 +11823,38 @@
     "distance_mi": 1.98,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-932de63500csm892859185a.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-28T21:12:41.407790+00:00",
+    "id": "inc-menlopark-202607280064",
+    "subject": "[MOSI] Grand Theft near CONCORD DR \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "CONCORD DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.71,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13e7271f010sm2131437c88.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-28T21:12:42.175666+00:00",
+    "id": "case-menlopark-26-1582",
+    "subject": "[MOSI] Theft of personal property - Motor vehicle parts/accessories (M) near WILLIAM CT \u2014 2.0mi from Menlo Oaks (High)",
+    "street": "WILLIAM CT",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.01,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-31504b15f77sm2297218eec.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-28T21:12:42.940729+00:00",
+    "id": "case-menlopark-26-1585",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near LAUREL AV \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "LAUREL AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.61,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-31504cc6936sm1972851eec.17 - gsmtp')"
   }
 ]
