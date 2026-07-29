@@ -11889,5 +11889,16 @@
     "distance_mi": 2.7,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7f00d2d8112sm1630060a34.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-29T15:24:54.342428+00:00",
+    "id": "case-redwoodcity-R26-07-0484",
+    "subject": "[MOSI] Vandalism ($400 or more) (F) near MIDDLEFIELD RD \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-529e2dd45ffsm20289651cf.22 - gsmtp')"
   }
 ]
