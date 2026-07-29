@@ -11900,5 +11900,16 @@
     "distance_mi": 2.64,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-529e2dd45ffsm20289651cf.22 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-29T16:47:23.252776+00:00",
+    "id": "case-smcsheriff-26-05473",
+    "subject": "[MOSI] Burglary:first degree (F) near 5TH AV \u2014 1.9mi from Menlo Oaks (High)",
+    "street": "5TH AV",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.88,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-31504d2ec2asm13629888eec.21 - gsmtp')"
   }
 ]
