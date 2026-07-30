@@ -11988,5 +11988,27 @@
     "distance_mi": 0.11,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-81fb8a8feb5sm643527b3.31 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-30T00:59:00.135542+00:00",
+    "id": "inc-menlopark-202607290053",
+    "subject": "[MOSI] Grand Theft near SONOMA AV \u2014 0.0mi from Menlo Oaks (Medium)",
+    "street": "SONOMA AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.0,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-933d336e4ddsm298413285a.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-30T00:59:00.420030+00:00",
+    "id": "case-menlopark-26-1611",
+    "subject": "[MOSI] Obtain money/etc by false pretenses [over $400] (F) near COLEMAN AV \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "COLEMAN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.18,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-933e712d40bsm291757485a.27 - gsmtp')"
   }
 ]
