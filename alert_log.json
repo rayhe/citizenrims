@@ -12098,5 +12098,16 @@
     "distance_mi": 2.64,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-934970af709sm23689885a.20 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-31T15:31:53.100337+00:00",
+    "id": "case-atherton-26-259",
+    "subject": "[MOSI] Embezzlement $950+ (F) near FAIR OAKS LN \u2014 1.4mi from Menlo Oaks (Medium)",
+    "street": "FAIR OAKS LN",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.36,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13fab4cb50dsm7331271c88.10 - gsmtp')"
   }
 ]
