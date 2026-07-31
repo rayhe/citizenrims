@@ -12142,5 +12142,27 @@
     "distance_mi": 2.7,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13fab14475asm5936112c88.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-31T21:19:08.357340+00:00",
+    "id": "case-menlopark-26-1624",
+    "subject": "[MOSI] Burglary:second degree - From building (M) near JEFFERSON DR \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "JEFFERSON DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.87,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-cbe3963ddb8sm1045183a12.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-31T21:19:08.770416+00:00",
+    "id": "case-menlopark-26-1618",
+    "subject": "[MOSI] Make/pass/etc ficticious check with intent to defraud (F) near PRINCETON RD \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "PRINCETON RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.22,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84edc2d7bbdsm939633b3a.47 - gsmtp')"
   }
 ]
