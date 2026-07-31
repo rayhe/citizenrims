@@ -12109,5 +12109,27 @@
     "distance_mi": 1.36,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-13fab4cb50dsm7331271c88.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-31T18:42:47.633367+00:00",
+    "id": "inc-menlopark-202607310014",
+    "subject": "[MOSI] Burglary near JEFFERSON DR \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "JEFFERSON DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.87,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7f18f076e56sm1294792a34.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-31T18:42:48.098294+00:00",
+    "id": "inc-menlopark-202607310021",
+    "subject": "[MOSI] Embezzlement near WILLOW RD \u2014 0.4mi from Menlo Oaks (Medium)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.36,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6ae3a31d93esm1544991eaf.14 - gsmtp')"
   }
 ]
