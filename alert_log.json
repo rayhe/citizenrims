@@ -12164,5 +12164,16 @@
     "distance_mi": 1.22,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84edc2d7bbdsm939633b3a.47 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-07-31T22:27:15.288672+00:00",
+    "id": "case-menlopark-26-1626",
+    "subject": "[MOSI] Embezzlement $950+ (F) near WILLOW RD \u2014 0.4mi from Menlo Oaks (High)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.36,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-81fda626e53sm265837b3.11 - gsmtp')"
   }
 ]
