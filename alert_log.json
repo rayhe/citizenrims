@@ -12186,5 +12186,16 @@
     "distance_mi": 2.85,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52b4e64df9bsm23342621cf.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-01T15:34:52.035047+00:00",
+    "id": "inc-menlopark-202608010006",
+    "subject": "[MOSI] Auto Burglary near VAN BUREN RD \u2014 0.3mi from Menlo Oaks (High)",
+    "street": "VAN BUREN RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.31,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84edc2d7b97sm1743864b3a.43 - gsmtp')"
   }
 ]
