@@ -12175,5 +12175,16 @@
     "distance_mi": 0.36,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-81fda626e53sm265837b3.11 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-01T07:05:18.403953+00:00",
+    "id": "inc-redwoodcity-202607310196",
+    "subject": "[MOSI] Vandalism near WOODSIDE RD \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "WOODSIDE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52b4e64df9bsm23342621cf.0 - gsmtp')"
   }
 ]
