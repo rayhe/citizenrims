@@ -12263,5 +12263,27 @@
     "distance_mi": 0.24,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52b4eb6a84csm46041821cf.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-02T21:48:59.461482+00:00",
+    "id": "case-menlopark-26-1641",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near MENLO OAKS DR/PIERCE RD \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "MENLO OAKS DR/PIERCE RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.24,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-81fccf9555dsm45867307b3.20 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-02T21:48:59.930529+00:00",
+    "id": "case-menlopark-26-1642",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near ALPINE AV \u2014 0.3mi from Menlo Oaks (Medium)",
+    "street": "ALPINE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.32,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-81fda626e53sm30448387b3.11 - gsmtp')"
   }
 ]
