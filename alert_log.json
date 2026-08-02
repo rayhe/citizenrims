@@ -12241,5 +12241,27 @@
     "distance_mi": 0.39,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-908434a2c2asm50314136d6.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-02T17:43:54.697020+00:00",
+    "id": "inc-menlopark-202608020008",
+    "subject": "[MOSI] Stolen Vehicle near ALPINE AV \u2014 0.3mi from Menlo Oaks (High)",
+    "street": "ALPINE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.32,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-908435ece91sm58771286d6.42 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-02T17:43:54.969515+00:00",
+    "id": "inc-menlopark-202608020006",
+    "subject": "[MOSI] Burglary near MENLO OAKS DR \u2014 0.2mi from Menlo Oaks (High)",
+    "street": "MENLO OAKS DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.24,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52b4eb6a84csm46041821cf.18 - gsmtp')"
   }
 ]
