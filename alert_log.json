@@ -12307,5 +12307,16 @@
     "distance_mi": 2.09,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52b4e81fdd9sm65954981cf.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-03T23:39:42.382874+00:00",
+    "id": "case-smcsheriff-26-05865",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near SPRING ST \u2014 2.3mi from Menlo Oaks (Medium)",
+    "street": "SPRING ST",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.29,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9349c199c2asm769123685a.28 - gsmtp')"
   }
 ]
