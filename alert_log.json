@@ -12296,5 +12296,16 @@
     "distance_mi": 0.69,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84edbe7a243sm3563861b3a.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-03T18:22:56.146498+00:00",
+    "id": "case-smcsheriff-26-05436",
+    "subject": "[MOSI] Grand theft:money/labor/property - Motor vehicle theft (M) near MIDDLEFIELD RD \u2014 2.1mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.09,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52b4e81fdd9sm65954981cf.9 - gsmtp')"
   }
 ]
