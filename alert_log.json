@@ -12318,5 +12318,38 @@
     "distance_mi": 2.29,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9349c199c2asm769123685a.28 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-04T04:25:47.702996+00:00",
+    "id": "inc-menlopark-202608030070",
+    "subject": "[MOSI] Burglary near LAUREL PL \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "LAUREL PL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.76,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2d04b0eb5a3sm46580935ad.46 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-04T04:25:48.046688+00:00",
+    "id": "inc-menlopark-202608030064",
+    "subject": "[MOSI] Suspicious Person near VAN BUREN RD \u2014 0.2mi from Menlo Oaks (High)",
+    "street": "VAN BUREN RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.24,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-cbe39ea9a40sm4272678a12.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-04T04:25:48.421203+00:00",
+    "id": "inc-paloalto-202608030399",
+    "subject": "[MOSI] 487 near PISTACHE PL/SHOPPING CENTER WAY \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "PISTACHE PL/SHOPPING CENTER WAY",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2d04b0ea128sm46486075ad.40 - gsmtp')"
   }
 ]
