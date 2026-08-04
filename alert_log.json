@@ -12351,5 +12351,38 @@
     "distance_mi": 1.04,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2d04b0ea128sm46486075ad.40 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-04T07:11:48.576614+00:00",
+    "id": "inc-paloalto-202608030414",
+    "subject": "[MOSI] 459A near FLORENCE ST/WAVERLEY ST \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "FLORENCE ST/WAVERLEY ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.09,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84edc2d7c03sm4633200b3a.50 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-04T07:11:49.100768+00:00",
+    "id": "inc-paloalto-202608030415",
+    "subject": "[MOSI] 459A near HOMER AVE/CHANNING AVE \u2014 1.4mi from Menlo Oaks (High)",
+    "street": "HOMER AVE/CHANNING AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.42,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-cbe39ea0a73sm4635808a12.23 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-04T07:11:49.743814+00:00",
+    "id": "case-menlopark-26-1654",
+    "subject": "[MOSI] Burglary:first degree (F) near LAUREL PL \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "LAUREL PL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.76,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-38fec1209ebsm860486a91.9 - gsmtp')"
   }
 ]
