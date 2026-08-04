@@ -12395,5 +12395,27 @@
     "distance_mi": 0.45,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-93641703aa0sm108838885a.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-04T19:15:02.352215+00:00",
+    "id": "inc-menlopark-202608040019",
+    "subject": "[MOSI] Fraud near COLLEGE AV \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "COLLEGE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.87,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-93641756bb5sm152433285a.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-04T19:15:02.723305+00:00",
+    "id": "case-menlopark-26-1658",
+    "subject": "[MOSI] Get credit/etc others id - Identity theft (F) near COLLEGE AV \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "COLLEGE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.87,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-936418e2f7dsm146063185a.35 - gsmtp')"
   }
 ]
