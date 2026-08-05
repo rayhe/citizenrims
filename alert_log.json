@@ -12483,5 +12483,16 @@
     "distance_mi": 2.85,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3903d1ad274sm505629a91.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-05T06:10:09.952375+00:00",
+    "id": "inc-paloalto-202608040414",
+    "subject": "[MOSI] 459A near FULTON ST/PALO ALTO AVE \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "FULTON ST/PALO ALTO AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 0.81,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-390392aee23sm1944137a91.15 - gsmtp')"
   }
 ]
