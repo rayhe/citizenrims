@@ -12450,5 +12450,38 @@
     "distance_mi": 2.57,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-315867d4929sm8391116eec.30 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-05T00:13:08.449513+00:00",
+    "id": "case-menlopark-26-1661",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near HERITAGE PL \u2014 0.3mi from Menlo Oaks (High)",
+    "street": "HERITAGE PL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.31,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-38fee066b9fsm2369668a91.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-05T00:13:08.927432+00:00",
+    "id": "case-redwoodcity-R26-07-0543",
+    "subject": "[MOSI] Forge/alter vehicle registration/etc (M) near FRIENDLY CT/15TH AV \u2014 1.4mi from Menlo Oaks (Medium)",
+    "street": "FRIENDLY CT/15TH AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.37,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-cbe708c0ebesm374718a12.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-05T00:13:09.345248+00:00",
+    "id": "case-redwoodcity-R26-07-0545",
+    "subject": "[MOSI] Vandalism:deface property (M) near WOODSIDE RD \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "WOODSIDE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3903d1ad274sm505629a91.0 - gsmtp')"
   }
 ]
