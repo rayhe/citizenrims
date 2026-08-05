@@ -12494,5 +12494,27 @@
     "distance_mi": 0.81,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-390392aee23sm1944137a91.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-05T15:26:01.115371+00:00",
+    "id": "inc-paloalto-202608050051",
+    "subject": "[MOSI] 10851 near WAVERLEY ST/COWPER ST \u2014 2.7mi from Menlo Oaks (High)",
+    "street": "WAVERLEY ST/COWPER ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.72,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-82013452634sm23046847b3.34 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-05T15:26:01.728316+00:00",
+    "id": "case-redwoodcity-R26-08-0069",
+    "subject": "[MOSI] Burglary:second degree - From building (F) near HAZEL AV \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "HAZEL AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.81,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 956f58d0204a3-669915f3dd6sm3399515d50.10 - gsmtp')"
   }
 ]
