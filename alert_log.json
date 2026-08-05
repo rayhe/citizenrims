@@ -12538,5 +12538,27 @@
     "distance_mi": 0.73,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-315a1e0b5cesm2418737eec.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-05T22:38:30.772482+00:00",
+    "id": "inc-paloalto-202608050240",
+    "subject": "[MOSI] 594 near LANE 20 W/UNIVERSITY AVE \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "LANE 20 W/UNIVERSITY AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.05,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-820134d8ed2sm29069887b3.45 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-05T22:38:31.304018+00:00",
+    "id": "case-menlopark-26-1670",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near MENALTO AVE \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "MENALTO AVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.76,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-82013472530sm28706717b3.35 - gsmtp')"
   }
 ]
