@@ -12615,5 +12615,126 @@
     "distance_mi": 1.65,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52ce8975b3dsm41273781cf.30 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-06T22:28:59.144891+00:00",
+    "id": "inc-menlopark-202608060021",
+    "subject": "[MOSI] Burglary near LAUREL ST \u2014 0.5mi from Menlo Oaks (High)",
+    "street": "LAUREL ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.53,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-315bca46471sm653565eec.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-06T22:28:59.810555+00:00",
+    "id": "inc-menlopark-202608060026",
+    "subject": "[MOSI] Vehicle Tampering near LENNOX AV \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "LENNOX AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.8,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-14101b7ad29sm490909c88.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-06T22:29:00.549085+00:00",
+    "id": "inc-menlopark-202608060012",
+    "subject": "[MOSI] Vandalism near SHERIDAN DR \u2014 0.4mi from Menlo Oaks (Medium)",
+    "street": "SHERIDAN DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.43,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-141018f18d6sm675933c88.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-06T22:29:01.281624+00:00",
+    "id": "inc-atherton-202608060028",
+    "subject": "[MOSI] GRAND THEFT near JAMES AV \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "JAMES AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.82,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-315bca464e0sm656307eec.16 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-06T22:29:01.960076+00:00",
+    "id": "inc-redwoodcity-202608060084",
+    "subject": "[MOSI] Burglary-Vehicle Report near 17TH AV \u2014 1.2mi from Menlo Oaks (High)",
+    "street": "17TH AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.18,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-315bc667a0bsm914314eec.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-06T22:29:02.665999+00:00",
+    "id": "inc-redwoodcity-202608060044",
+    "subject": "[MOSI] Vandalism near CHARTER ST \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "CHARTER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.63,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-315bca45b5bsm676150eec.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-06T22:29:03.298764+00:00",
+    "id": "inc-redwoodcity-202608060026",
+    "subject": "[MOSI] Stolen Vehicle near EAST BAYSHORE RD \u2014 2.5mi from Menlo Oaks (High)",
+    "street": "EAST BAYSHORE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.49,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-141019b4244sm562105c88.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-06T22:29:03.780098+00:00",
+    "id": "inc-redwoodcity-202608060038",
+    "subject": "[MOSI] Stolen Vehicle near EAST BAYSHORE RD \u2014 2.5mi from Menlo Oaks (High)",
+    "street": "EAST BAYSHORE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.49,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-315bca46471sm654199eec.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-06T22:29:04.392886+00:00",
+    "id": "inc-paloalto-202608060144",
+    "subject": "[MOSI] 594 near CHANNING AVE/ADDISON AVE \u2014 1.3mi from Menlo Oaks (Medium)",
+    "street": "CHANNING AVE/ADDISON AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.29,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-315bc89025asm670309eec.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-06T22:29:05.171426+00:00",
+    "id": "case-menlopark-26-1676",
+    "subject": "[MOSI] Tamper with vehicle - Motor vehicle parts/accessories (M) near LENNOX AV \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "LENNOX AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.8,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-315bc635e2bsm733475eec.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-06T22:29:05.800523+00:00",
+    "id": "case-redwoodcity-R26-07-0526",
+    "subject": "[MOSI] Theft by use of access card information - Credit card/atm (F) near BROADWAY \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "BROADWAY",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.51,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-315bca84754sm845615eec.21 - gsmtp')"
   }
 ]
