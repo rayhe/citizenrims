@@ -12593,5 +12593,27 @@
     "distance_mi": 0.31,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-82013c49127sm37768147b3.32 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-06T15:59:43.177190+00:00",
+    "id": "inc-redwoodcity-202608060027",
+    "subject": "[MOSI] Stolen Vehicle near EAST BAYSHORE RD \u2014 2.5mi from Menlo Oaks (High)",
+    "street": "EAST BAYSHORE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.49,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-9087ffbccd6sm54599516d6.16 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-06T15:59:43.454964+00:00",
+    "id": "inc-paloalto-202608060044",
+    "subject": "[MOSI] 459R near SHARON CT/NEWELL RD \u2014 1.6mi from Menlo Oaks (High)",
+    "street": "SHARON CT/NEWELL RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.65,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52ce8975b3dsm41273781cf.30 - gsmtp')"
   }
 ]
