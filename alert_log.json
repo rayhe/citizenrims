@@ -12571,5 +12571,27 @@
     "distance_mi": 2.09,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-39085e133edsm934117a91.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-06T13:40:21.585708+00:00",
+    "id": "inc-menlopark-202608060003",
+    "subject": "[MOSI] Vehicle Tampering near MARCUSSEN DR \u2014 0.3mi from Menlo Oaks (Medium)",
+    "street": "MARCUSSEN DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.31,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-82013452634sm39330337b3.34 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-06T13:40:22.140007+00:00",
+    "id": "case-menlopark-26-1673",
+    "subject": "[MOSI] Tamper with vehicle - Motor vehicle parts/accessories (M) near MARCUSSEN DR \u2014 0.3mi from Menlo Oaks (High)",
+    "street": "MARCUSSEN DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.31,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-82013c49127sm37768147b3.32 - gsmtp')"
   }
 ]
