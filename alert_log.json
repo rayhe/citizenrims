@@ -12769,5 +12769,27 @@
     "distance_mi": 0.23,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3925ff24b91sm3637419a91.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-07T23:42:32.184864+00:00",
+    "id": "case-redwoodcity-R26-07-0397",
+    "subject": "[MOSI] Forge/alter vehicle registration/etc (M) near 17TH STREET \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "17TH STREET",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.21,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-315be86d3d1sm12481290eec.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-07T23:42:32.845342+00:00",
+    "id": "case-redwoodcity-R26-07-0412",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near DANBURY LANE \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "DANBURY LANE",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.76,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-315be86d3fcsm12069573eec.4 - gsmtp')"
   }
 ]
