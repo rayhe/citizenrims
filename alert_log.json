@@ -12813,5 +12813,27 @@
     "distance_mi": 1.04,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-cbe8f35b3adsm1946637a12.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-08T16:40:14.668848+00:00",
+    "id": "case-menlopark-26-1686",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-4b1af06d882sm2684605b6e.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-08T16:40:15.169074+00:00",
+    "id": "case-menlopark-26-1687",
+    "subject": "[MOSI] Burglary:first degree (F) near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-4b1af63b07dsm2463539b6e.13 - gsmtp')"
   }
 ]
