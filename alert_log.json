@@ -12835,5 +12835,16 @@
     "distance_mi": 1.04,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-4b1af63b07dsm2463539b6e.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-08T17:07:39.445324+00:00",
+    "id": "inc-paloalto-202608080098",
+    "subject": "[MOSI] 594 near LELAND AVE/STANFORD AVE \u2014 2.3mi from Menlo Oaks (Medium)",
+    "street": "LELAND AVE/STANFORD AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.31,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9366e229792sm406994285a.31 - gsmtp')"
   }
 ]
