@@ -12890,5 +12890,16 @@
     "distance_mi": 1.4,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-14101a60867sm19754689c88.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-09T03:55:35.515316+00:00",
+    "id": "inc-menlopark-202608080039",
+    "subject": "[MOSI] Vandalism near MIDDLE AV \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "MIDDLE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.99,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84f5a553071sm2439865b3a.43 - gsmtp')"
   }
 ]
