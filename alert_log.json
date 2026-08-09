@@ -12901,5 +12901,16 @@
     "distance_mi": 0.99,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84f5a553071sm2439865b3a.43 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-09T22:20:36.604507+00:00",
+    "id": "case-atherton-26-272",
+    "subject": "[MOSI] Grand theft:stolen copper materials - From building (F) near JAMES AV \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "JAMES AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.82,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-908a91d8070sm57309966d6.19 - gsmtp')"
   }
 ]
