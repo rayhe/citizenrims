@@ -13000,5 +13000,16 @@
     "distance_mi": 0.83,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52d1659c1e4sm81078321cf.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-10T23:42:44.773592+00:00",
+    "id": "case-menlopark-26-1699",
+    "subject": "[MOSI] Recovered Locally Stolen Vehicle near CENTRAL AV \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "CENTRAL AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.68,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-141018f18d6sm43319935c88.0 - gsmtp')"
   }
 ]
