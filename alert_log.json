@@ -12923,5 +12923,38 @@
     "distance_mi": 1.19,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-390b376c5c6sm5038833a91.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-10T15:31:59.059634+00:00",
+    "id": "inc-redwoodcity-202608080155",
+    "subject": "[MOSI] Burglary - Vehicle near BROADWAY \u2014 2.6mi from Menlo Oaks (High)",
+    "street": "BROADWAY",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.58,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84f5a51e9f0sm4262037b3a.28 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-10T15:31:59.584221+00:00",
+    "id": "case-redwoodcity-R26-08-0120",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near CHARTER ST \u2014 2.6mi from Menlo Oaks (High)",
+    "street": "CHARTER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.57,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-cbe8f372b5bsm4199409a12.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-10T15:32:00.018373+00:00",
+    "id": "case-redwoodcity-R26-08-0147",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near BROADWAY/CHARTER ST \u2014 2.6mi from Menlo Oaks (High)",
+    "street": "BROADWAY/CHARTER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.58,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-390b150ef29sm6532248a91.1 - gsmtp')"
   }
 ]
