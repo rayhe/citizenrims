@@ -13077,5 +13077,27 @@
     "distance_mi": 0.37,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-141244734f3sm2114843c88.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-11T21:09:32.560244+00:00",
+    "id": "inc-menlopark-202608110037",
+    "subject": "[MOSI] Fraud near BLUERIDGE AV \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "BLUERIDGE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.9,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-90a6c29e124sm7793166d6.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-11T21:09:32.840050+00:00",
+    "id": "case-menlopark-26-1711",
+    "subject": "[MOSI] Personate to get money/property [over $400] - Impersonation (F) near BLUERIDGE AV \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "BLUERIDGE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.9,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-936a847286bsm193527185a.3 - gsmtp')"
   }
 ]
