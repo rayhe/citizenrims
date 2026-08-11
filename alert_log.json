@@ -13033,5 +13033,16 @@
     "distance_mi": 0.83,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84f5a3a18a5sm4453146b3a.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-11T02:37:23.767119+00:00",
+    "id": "inc-paloalto-202608100264",
+    "subject": "[MOSI] 10851 near FOREST AVE/PITMAN AVE \u2014 1.4mi from Menlo Oaks (High)",
+    "street": "FOREST AVE/PITMAN AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.4,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52d57c08cbfsm1412391cf.22 - gsmtp')"
   }
 ]
