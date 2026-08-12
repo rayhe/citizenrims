@@ -13110,5 +13110,16 @@
     "distance_mi": 0.37,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84fb1d250f9sm687383b3a.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-12T16:31:44.842501+00:00",
+    "id": "case-redwoodcity-R26-07-0528",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near EL CAMINO REAL \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84fb1f24a47sm1287767b3a.42 - gsmtp')"
   }
 ]
