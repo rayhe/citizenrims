@@ -13099,5 +13099,16 @@
     "distance_mi": 2.9,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-936a847286bsm193527185a.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-12T07:56:39.364085+00:00",
+    "id": "inc-menlopark-202608110025",
+    "subject": "[MOSI] Burglary near KENT PL \u2014 0.4mi from Menlo Oaks (High)",
+    "street": "KENT PL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.37,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84fb1d250f9sm687383b3a.17 - gsmtp')"
   }
 ]
