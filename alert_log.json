@@ -13154,5 +13154,16 @@
     "distance_mi": 0.66,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2d37c260076sm1887295ad.35 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-13T02:45:23.244393+00:00",
+    "id": "inc-menlopark-202608120059",
+    "subject": "[MOSI] Fraud near LAUREL ST \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "LAUREL ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.51,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-cbef722b616sm350941a12.28 - gsmtp')"
   }
 ]
