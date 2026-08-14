@@ -13187,5 +13187,16 @@
     "distance_mi": 2.78,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3931cefe8efsm2508331a91.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-14T00:07:12.583565+00:00",
+    "id": "inc-redwoodcity-202608130119",
+    "subject": "[MOSI] Stolen Vehicle near 2ND AV \u2014 2.0mi from Menlo Oaks (High)",
+    "street": "2ND AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.99,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-141387c6f95sm3279768c88.6 - gsmtp')"
   }
 ]
