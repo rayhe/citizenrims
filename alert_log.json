@@ -13308,5 +13308,38 @@
     "distance_mi": 1.04,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-141388bd5a7sm26789889c88.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-15T16:38:54.093512+00:00",
+    "id": "inc-redwoodcity-202608150025",
+    "subject": "[MOSI] Burglary-Vehicle Report near FRIENDLY CT \u2014 1.4mi from Menlo Oaks (High)",
+    "street": "FRIENDLY CT",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.39,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7f3e86285e4sm3856962a34.16 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-15T16:38:54.552000+00:00",
+    "id": "inc-redwoodcity-202608150027",
+    "subject": "[MOSI] Burglary-Vehicle Report near FRIENDLY CT \u2014 1.4mi from Menlo Oaks (High)",
+    "street": "FRIENDLY CT",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.39,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-45e8f976bfesm5415201fac.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-15T16:38:55.021835+00:00",
+    "id": "case-menlopark-26-1738",
+    "subject": "[MOSI] Burglary:first degree (F) near OAK GROVE AV \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "OAK GROVE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.87,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6b0d963f345sm4787123eaf.7 - gsmtp')"
   }
 ]
