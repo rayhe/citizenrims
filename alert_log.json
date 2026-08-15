@@ -13264,5 +13264,27 @@
     "distance_mi": 1.08,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-320ea8fe3cdsm8019182eec.28 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-15T01:55:30.873810+00:00",
+    "id": "inc-menlopark-202608140067",
+    "subject": "[MOSI] Fraud near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-141387accdbsm18481684c88.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-15T01:55:31.626813+00:00",
+    "id": "inc-menlopark-202608140069",
+    "subject": "[MOSI] Fraud near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-320e9df03e1sm9400429eec.16 - gsmtp')"
   }
 ]
