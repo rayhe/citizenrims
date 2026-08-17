@@ -13418,5 +13418,16 @@
     "distance_mi": 2.8,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-90a93548b24sm67749806d6.36 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-17T18:59:21.625277+00:00",
+    "id": "inc-redwoodcity-202608170074",
+    "subject": "[MOSI] Burglary-Vehicle Report near ANNETTE AV \u2014 1.3mi from Menlo Oaks (High)",
+    "street": "ANNETTE AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.31,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-840f306cbdesm8165077b3.34 - gsmtp')"
   }
 ]
