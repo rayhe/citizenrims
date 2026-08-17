@@ -13429,5 +13429,16 @@
     "distance_mi": 1.31,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-840f306cbdesm8165077b3.34 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-17T21:11:16.768534+00:00",
+    "id": "inc-menlopark-202608170021",
+    "subject": "[MOSI] Vandalism near BAYFRONT EX \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "BAYFRONT EX",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.76,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-45f22a7ab83sm2048051fac.4 - gsmtp')"
   }
 ]
