@@ -13462,5 +13462,16 @@
     "distance_mi": 2.8,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3267c897e37sm12273084eec.28 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-18T07:07:32.901420+00:00",
+    "id": "case-smcsheriff-26-06271",
+    "subject": "[MOSI] Theft of prop after prior - All other larceny (F) near SAN CARLOS AV \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "SAN CARLOS AV",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.84,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6b1165cd4f0sm3843255eaf.4 - gsmtp')"
   }
 ]
