@@ -13440,5 +13440,16 @@
     "distance_mi": 2.76,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-45f22a7ab83sm2048051fac.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-18T01:09:12.955083+00:00",
+    "id": "case-smcsheriff-26-06020",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near DOUGLAS AV \u2014 2.4mi from Menlo Oaks (Medium)",
+    "street": "DOUGLAS AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.44,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6b115fa53desm3181072eaf.0 - gsmtp')"
   }
 ]
