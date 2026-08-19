@@ -13539,5 +13539,27 @@
     "distance_mi": 1.16,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-327bef3bb5csm486520eec.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-19T00:54:26.244398+00:00",
+    "id": "inc-paloalto-202608180195",
+    "subject": "[MOSI] ARSON near 155 EL CAMINO REAL \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "155 EL CAMINO REAL",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 0.97,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-93720493f40sm22717785a.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-19T00:54:26.481533+00:00",
+    "id": "case-redwoodcity-R26-08-6012",
+    "subject": "[MOSI] Vandalism ($400 or more) (F) near KENTFIELD AV \u2014 3.0mi from Menlo Oaks (Medium)",
+    "street": "KENTFIELD AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 3.0,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-90c5edb5196sm2485236d6.8 - gsmtp')"
   }
 ]
