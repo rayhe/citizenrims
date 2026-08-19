@@ -13594,5 +13594,27 @@
     "distance_mi": 1.04,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-327bf1970b0sm9009151eec.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-19T21:21:29.174057+00:00",
+    "id": "inc-paloalto-202608190116",
+    "subject": "[MOSI] 459A near COLORADO AVE/SANDRA PL \u2014 3.0mi from Menlo Oaks (High)",
+    "street": "COLORADO AVE/SANDRA PL",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.99,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52dd874d894sm18407781cf.26 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-19T21:21:29.414394+00:00",
+    "id": "case-menlopark-26-1761",
+    "subject": "[MOSI] Grnd Thft:prop/Etc $400+ near JEFFERSON DRIVE \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "JEFFERSON DRIVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.87,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-937205998ddsm219482285a.44 - gsmtp')"
   }
 ]
