@@ -13561,5 +13561,16 @@
     "distance_mi": 3.0,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-90c5edb5196sm2485236d6.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-19T07:09:54.767878+00:00",
+    "id": "inc-redwoodcity-202608180196",
+    "subject": "[MOSI] Burglary Commercial Report near SHASTA ST \u2014 3.0mi from Menlo Oaks (High)",
+    "street": "SHASTA ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9372056c0e8sm75118385a.25 - gsmtp')"
   }
 ]
