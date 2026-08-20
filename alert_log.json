@@ -13660,5 +13660,16 @@
     "distance_mi": 0.16,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-937204ba087sm400953285a.21 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-20T23:29:06.210788+00:00",
+    "id": "inc-redwoodcity-202608200104",
+    "subject": "[MOSI] Recovered Stolen Vehicle near FLORENCE ST \u2014 1.2mi from Menlo Oaks (High)",
+    "street": "FLORENCE ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.16,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-327c946293dsm14487504eec.22 - gsmtp')"
   }
 ]
