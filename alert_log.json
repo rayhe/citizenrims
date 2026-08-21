@@ -13671,5 +13671,16 @@
     "distance_mi": 1.16,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-327c946293dsm14487504eec.22 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-21T04:03:57.258949+00:00",
+    "id": "case-menlopark-26-1769",
+    "subject": "[MOSI] Grand theft:money/labor/property - Motor vehicle theft (F) near HENDERSON AV \u2014 0.4mi from Menlo Oaks (High)",
+    "street": "HENDERSON AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.41,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1416ad3dd20sm19495718c88.3 - gsmtp')"
   }
 ]
