@@ -13682,5 +13682,27 @@
     "distance_mi": 0.41,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1416ad3dd20sm19495718c88.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-21T16:43:46.981502+00:00",
+    "id": "inc-menlopark-202608210016",
+    "subject": "[MOSI] Vandalism near BAYFRONT EX \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "BAYFRONT EX",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.76,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-395c4be47d7sm3679770a91.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-21T16:43:47.913137+00:00",
+    "id": "inc-redwoodcity-202608210028",
+    "subject": "[MOSI] Stolen Vehicle near HOOVER ST \u2014 1.9mi from Menlo Oaks (High)",
+    "street": "HOOVER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.91,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-395c49223c3sm3578067a91.11 - gsmtp')"
   }
 ]
