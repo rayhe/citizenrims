@@ -13737,5 +13737,16 @@
     "distance_mi": 1.06,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-395c91ba352sm1846332a91.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-22T23:26:25.270913+00:00",
+    "id": "inc-paloalto-202608220151",
+    "subject": "[MOSI] 487 near HOMER AVE/CHANNING AVE \u2014 1.4mi from Menlo Oaks (Medium)",
+    "street": "HOMER AVE/CHANNING AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.39,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2d676761fb1sm6403065ad.13 - gsmtp')"
   }
 ]
