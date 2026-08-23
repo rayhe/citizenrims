@@ -13770,5 +13770,16 @@
     "distance_mi": 1.65,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-14186173199sm11447653c88.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-23T11:39:26.652003+00:00",
+    "id": "inc-paloalto-202608230017",
+    "subject": "[MOSI] 459C near TOWN AND COUNTRY VLG/GALVEZ ST \u2014 1.6mi from Menlo Oaks (High)",
+    "street": "TOWN AND COUNTRY VLG/GALVEZ ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.58,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-395c8e292e8sm2613011a91.0 - gsmtp')"
   }
 ]
