@@ -13814,5 +13814,27 @@
     "distance_mi": 2.7,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials ada2fe7eead31-77d82f70b83sm2938610137.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-24T20:41:53.805498+00:00",
+    "id": "inc-paloalto-202608240109",
+    "subject": "[MOSI] 594 near KELLOGG AVE/EMBARCADERO RD \u2014 1.8mi from Menlo Oaks (Medium)",
+    "street": "KELLOGG AVE/EMBARCADERO RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-327f9099ce7sm27361843eec.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-24T20:41:54.596125+00:00",
+    "id": "case-menlopark-26-1776",
+    "subject": "[MOSI] Theft of personal property - Motor vehicle parts/accessories (M) near NEWBRIDGE ST \u2014 0.3mi from Menlo Oaks (High)",
+    "street": "NEWBRIDGE ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.27,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-327f9236166sm28943248eec.28 - gsmtp')"
   }
 ]
