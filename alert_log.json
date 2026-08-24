@@ -13836,5 +13836,16 @@
     "distance_mi": 0.27,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-327f9236166sm28943248eec.28 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-24T22:34:58.673296+00:00",
+    "id": "case-redwoodcity-R26-07-0477",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near HOOVER ST \u2014 2.0mi from Menlo Oaks (Medium)",
+    "street": "HOOVER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-327f90cb8e3sm44307628eec.12 - gsmtp')"
   }
 ]
