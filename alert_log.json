@@ -13847,5 +13847,16 @@
     "distance_mi": 1.98,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-327f90cb8e3sm44307628eec.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-25T01:45:33.733876+00:00",
+    "id": "case-menlopark-26-1802",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near OAK GROVE AV \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "OAK GROVE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52e099baf17sm58408881cf.12 - gsmtp')"
   }
 ]
