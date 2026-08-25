@@ -13869,5 +13869,16 @@
     "distance_mi": 1.62,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3283d9e4ba6sm1989021eec.26 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-25T23:31:19.345368+00:00",
+    "id": "inc-menlopark-202608250056",
+    "subject": "[MOSI] Fraud near MENLO AV \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "MENLO AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-465b03ae31fsm723859fac.18 - gsmtp')"
   }
 ]
