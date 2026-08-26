@@ -13913,5 +13913,27 @@
     "distance_mi": 0.03,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-141a8eedd13sm4248926c88.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-26T09:06:56.298614+00:00",
+    "id": "inc-menlopark-202608250077",
+    "subject": "[MOSI] Grand Theft near HAVEN AV \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "HAVEN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.73,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-465b014c100sm1642612fac.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-26T09:06:56.665607+00:00",
+    "id": "inc-menlopark-202608250068",
+    "subject": "[MOSI] Fraud near LAUREL ST \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "LAUREL ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.51,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7f4c8183518sm1230515a34.5 - gsmtp')"
   }
 ]
