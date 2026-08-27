@@ -13990,5 +13990,148 @@
     "distance_mi": 1.02,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-90cd741629esm17343376d6.49 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-27T23:45:57.836688+00:00",
+    "id": "inc-menlopark-202608270023",
+    "subject": "[MOSI] Grand Theft near RINGWOOD AV \u2014 0.0mi from Menlo Oaks (Medium)",
+    "street": "RINGWOOD AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.0,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52fbe38d8dasm1868911cf.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-27T23:45:58.150522+00:00",
+    "id": "inc-redwoodcity-202608270066",
+    "subject": "[MOSI] Vandalism near HAVEN AV \u2014 1.4mi from Menlo Oaks (Medium)",
+    "street": "HAVEN AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.41,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-90ce4460e56sm1912976d6.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-27T23:45:58.410094+00:00",
+    "id": "inc-paloalto-202608270112",
+    "subject": "[MOSI] 594 near GUINDA ST/NEWELL RD \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "GUINDA ST/NEWELL RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.86,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-90ce44f5ef1sm1711106d6.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-27T23:45:58.724725+00:00",
+    "id": "inc-paloalto-202608270139",
+    "subject": "[MOSI] 459A near GUINDA ST/ADDISON AVE \u2014 1.3mi from Menlo Oaks (High)",
+    "street": "GUINDA ST/ADDISON AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.29,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9391725670dsm21840285a.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-27T23:46:02.994380+00:00",
+    "id": "case-menlopark-26-1826",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near RINGWOOD AVE \u2014 0.0mi from Menlo Oaks (High)",
+    "street": "RINGWOOD AVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.0,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-93917012b65sm22965685a.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-27T23:46:03.265720+00:00",
+    "id": "case-smcsheriff-26-06228",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near 7TH AV \u2014 1.8mi from Menlo Oaks (Medium)",
+    "street": "7TH AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.75,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-93917012b65sm22979385a.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-27T23:46:03.513399+00:00",
+    "id": "case-smcsheriff-26-06534",
+    "subject": "[MOSI] Grand theft:money/labor/property - From motor vehicle (F) near BARRON AV \u2014 2.1mi from Menlo Oaks (Medium)",
+    "street": "BARRON AV",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.13,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939173a6be1sm20179285a.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-27T23:46:03.756803+00:00",
+    "id": "case-smcsheriff-26-06543",
+    "subject": "[MOSI] Vandalism:deface property (F) near OAKSIDE AV \u2014 2.1mi from Menlo Oaks (Medium)",
+    "street": "OAKSIDE AV",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.1,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9391725f916sm22283485a.20 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-27T23:46:03.986655+00:00",
+    "id": "case-smcsheriff-26-06544",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near 7TH AV \u2014 1.7mi from Menlo Oaks (High)",
+    "street": "7TH AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.72,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9391703a918sm22262685a.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-27T23:46:04.235975+00:00",
+    "id": "case-smcsheriff-26-06545",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near FAIR OAKS AV \u2014 1.8mi from Menlo Oaks (High)",
+    "street": "FAIR OAKS AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939173da67dsm19854885a.34 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-27T23:46:04.467377+00:00",
+    "id": "case-smcsheriff-26-06546",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near 9TH AV / SPRING ST \u2014 1.6mi from Menlo Oaks (High)",
+    "street": "9TH AV / SPRING ST",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.61,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939173a735asm20338385a.28 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-27T23:46:04.728239+00:00",
+    "id": "case-smcsheriff-26-06680",
+    "subject": "[MOSI] Theft of personal property - From motor vehicle (M) near PACIFIC AV \u2014 2.3mi from Menlo Oaks (Medium)",
+    "street": "PACIFIC AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.29,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-90ce415902dsm2161636d6.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-27T23:46:04.966714+00:00",
+    "id": "case-smcsheriff-26-06780",
+    "subject": "[MOSI] Vandalism ($400 or more) (F) near SAND HILL RD \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "SAND HILL RD",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.66,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939173d47f4sm19733985a.32 - gsmtp')"
   }
 ]
