@@ -13979,5 +13979,16 @@
     "distance_mi": 1.07,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52e42767784sm28993331cf.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-27T14:06:22.602448+00:00",
+    "id": "case-menlopark-26-1822",
+    "subject": "[MOSI] Appropriate lost property (M) near WILLOW RD/BAYFRONT EX \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "WILLOW RD/BAYFRONT EX",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.02,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-90cd741629esm17343376d6.49 - gsmtp')"
   }
 ]
