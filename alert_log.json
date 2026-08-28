@@ -14133,5 +14133,71 @@
     "distance_mi": 2.66,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939173d47f4sm19733985a.32 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-28T19:24:31.209976+00:00",
+    "id": "inc-menlopark-202608270096",
+    "subject": "[MOSI] Grand Theft near EVELYN ST \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "EVELYN ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.02,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3286f7836easm9298898eec.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-28T19:24:31.775801+00:00",
+    "id": "case-menlopark-26-1828",
+    "subject": "[MOSI] Burglary:second degree - All other larceny (M) near MIDDLE AVE APT 4 \u2014 1.2mi from Menlo Oaks (High)",
+    "street": "MIDDLE AVE APT 4",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.17,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3286f7be607sm8061446eec.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-28T19:24:33.383159+00:00",
+    "id": "case-menlopark-26-1829",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near ALMA STREET \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "ALMA STREET",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3286f956658sm8372280eec.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-28T19:24:33.876817+00:00",
+    "id": "case-menlopark-26-1834",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near EVELYN ST \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "EVELYN ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.02,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-142e0d1b38esm7652571c88.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-28T19:24:34.530622+00:00",
+    "id": "case-menlopark-26-1836",
+    "subject": "[MOSI] Burglary:second degree - From building (M) near HAVEN AVE \u2014 1.2mi from Menlo Oaks (High)",
+    "street": "HAVEN AVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.2,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-142e0d18eaasm9100167c88.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-28T19:24:35.087103+00:00",
+    "id": "case-redwoodcity-R26-08-0352",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near HOOVER ST \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "HOOVER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.91,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-142e0e0e67dsm7513651c88.15 - gsmtp')"
   }
 ]
