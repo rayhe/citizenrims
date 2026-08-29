@@ -14199,5 +14199,27 @@
     "distance_mi": 1.91,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-142e0e0e67dsm7513651c88.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-29T02:21:09.701817+00:00",
+    "id": "inc-menlopark-202608280024",
+    "subject": "[MOSI] Fraud near BERKELEY AV \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "BERKELEY AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.2,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7f4fa96ce3dsm2770491a34.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-29T02:21:10.191263+00:00",
+    "id": "case-smcsheriff-26-06691",
+    "subject": "[MOSI] Poss id of 10+ persn dfrd - Identity theft (F) near NEWBRIDGE ST \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "NEWBRIDGE ST",
+    "city": "East Palo Alto",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 0.55,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7f4fa6bc029sm2676674a34.1 - gsmtp')"
   }
 ]
