@@ -14265,5 +14265,16 @@
     "distance_mi": 1.87,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-142e0d1b38esm22590055c88.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-31T07:39:15.938897+00:00",
+    "id": "inc-menlopark-202608300030",
+    "subject": "[MOSI] Vandalism near COLEMAN AV \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "COLEMAN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.18,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52fbe878f4esm67434081cf.31 - gsmtp')"
   }
 ]
