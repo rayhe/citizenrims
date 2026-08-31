@@ -14276,5 +14276,38 @@
     "distance_mi": 0.18,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52fbe878f4esm67434081cf.31 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-31T15:27:04.770680+00:00",
+    "id": "inc-redwoodcity-202608310009",
+    "subject": "[MOSI] Burglary - Commercial near MIDDLEFIELD RD \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.83,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-90ce44f5157sm86534686d6.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-31T15:27:05.075374+00:00",
+    "id": "case-smcsheriff-26-06480",
+    "subject": "[MOSI] Burglary:second degree (F) near SPRING ST \u2014 2.4mi from Menlo Oaks (High)",
+    "street": "SPRING ST",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.38,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52fbe54a568sm74575191cf.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-31T15:27:05.332395+00:00",
+    "id": "case-redwoodcity-R26-08-0452",
+    "subject": "[MOSI] Vandalism ($400 or more) (F) near CHARTER ST/BROADWAY \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "CHARTER ST/BROADWAY",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.58,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52fbe82f3b7sm73640061cf.21 - gsmtp')"
   }
 ]
