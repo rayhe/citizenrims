@@ -14309,5 +14309,27 @@
     "distance_mi": 2.58,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52fbe82f3b7sm73640061cf.21 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-31T20:58:57.309117+00:00",
+    "id": "inc-redwoodcity-202608310042",
+    "subject": "[MOSI] Vandalism near BROADWAY \u2014 3.0mi from Menlo Oaks (Medium)",
+    "street": "BROADWAY",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.95,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-52ff704a282sm61941871cf.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-08-31T20:58:57.622093+00:00",
+    "id": "case-smcsheriff-26-06260",
+    "subject": "[MOSI] Grand theft - Motor vehicle parts/accessories (F) near ALAMEDA DE LAS PULGAS \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "ALAMEDA DE LAS PULGAS",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.67,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-90d98d54cfasm73440176d6.40 - gsmtp')"
   }
 ]
