@@ -14397,5 +14397,49 @@
     "distance_mi": 2.82,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1430eb22012sm293068c88.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-01T21:09:42.310079+00:00",
+    "id": "inc-paloalto-202609010066",
+    "subject": "[MOSI] 10851 near EL DORADO AVE/DYMOND CT \u2014 3.0mi from Menlo Oaks (High)",
+    "street": "EL DORADO AVE/DYMOND CT",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.97,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1430eb227basm1069502c88.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-01T21:09:42.913165+00:00",
+    "id": "case-menlopark-26-1865",
+    "subject": "[MOSI] Burglary:first degree (F) near OCONNOR ST \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "OCONNOR ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.9,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-32f079f0eecsm679730eec.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-01T21:09:43.414312+00:00",
+    "id": "case-menlopark-26-1867",
+    "subject": "[MOSI] Tamper with vehicle - Motor vehicle parts/accessories (M) near COLEMAN AV \u2014 0.1mi from Menlo Oaks (High)",
+    "street": "COLEMAN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.11,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-32f079c33f4sm777290eec.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-01T21:09:43.984296+00:00",
+    "id": "case-menlopark-26-1869",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near CLAREMONT WY \u2014 0.6mi from Menlo Oaks (Medium)",
+    "street": "CLAREMONT WY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.58,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-32f07b7987csm789891eec.16 - gsmtp')"
   }
 ]
