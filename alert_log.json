@@ -14342,5 +14342,60 @@
     "distance_mi": 1.25,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939173f6f2esm945858485a.38 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-01T18:22:16.698084+00:00",
+    "id": "inc-menlopark-202609010014",
+    "subject": "[MOSI] Stolen Vehicle near CLAREMONT WY \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "CLAREMONT WY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.58,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3286f8094dasm42572821eec.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-01T18:22:17.509206+00:00",
+    "id": "inc-menlopark-202609010012",
+    "subject": "[MOSI] Vehicle Tampering near COLEMAN AV \u2014 0.1mi from Menlo Oaks (Medium)",
+    "street": "COLEMAN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.11,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-32bdfd03e71sm22478253eec.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-01T18:22:18.215419+00:00",
+    "id": "inc-menlopark-202609010018",
+    "subject": "[MOSI] Fraud near NANCY WY \u2014 2.3mi from Menlo Oaks (Medium)",
+    "street": "NANCY WY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.29,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1430ea31f1esm366289c88.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-01T18:22:18.992882+00:00",
+    "id": "inc-menlopark-202609010005",
+    "subject": "[MOSI] Auto Burglary near OCONNOR ST \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "OCONNOR ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.9,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3286f7bf283sm43938836eec.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-01T18:22:19.704696+00:00",
+    "id": "inc-redwoodcity-202609010033",
+    "subject": "[MOSI] Stolen Vehicle near EL CAMINO REAL \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.82,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1430eb22012sm293068c88.12 - gsmtp')"
   }
 ]
