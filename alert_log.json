@@ -14463,5 +14463,27 @@
     "distance_mi": 2.64,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-90e9ef0f57fsm6447956d6.47 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-02T17:53:13.965906+00:00",
+    "id": "inc-menlopark-202609020028",
+    "subject": "[MOSI] Fraud near LIVE OAK AV \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "LIVE OAK AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.97,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7f74fded8a0sm3264023a34.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-02T17:53:15.504150+00:00",
+    "id": "case-menlopark-26-1825",
+    "subject": "[MOSI] Theft of personal property - Motor vehicle parts/accessories (M) near WILLOW RD APT 320 \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "WILLOW RD APT 320",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.61,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6b40f316e6asm2821025eaf.12 - gsmtp')"
   }
 ]
