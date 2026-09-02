@@ -14485,5 +14485,27 @@
     "distance_mi": 0.61,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6b40f316e6asm2821025eaf.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-02T20:17:44.128395+00:00",
+    "id": "case-menlopark-26-1875",
+    "subject": "[MOSI] Get credit/etc others id - Impersonation (F) near LIVE OAK AV \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "LIVE OAK AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.97,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-4b698a34576sm3098878b6e.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-02T20:17:44.545478+00:00",
+    "id": "case-smcsheriff-26-06790",
+    "subject": "[MOSI] Tamper with vehicle - Destruction/damage/vandalism of property (M) near BUCKINGHAM AV \u2014 2.4mi from Menlo Oaks (Medium)",
+    "street": "BUCKINGHAM AV",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.41,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7f74f3e2e0dsm2904538a34.17 - gsmtp')"
   }
 ]
