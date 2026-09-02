@@ -14507,5 +14507,49 @@
     "distance_mi": 2.41,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7f74f3e2e0dsm2904538a34.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-02T22:41:59.183545+00:00",
+    "id": "case-smcsheriff-26-06656",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near SEQUOIA AV \u2014 3.0mi from Menlo Oaks (High)",
+    "street": "SEQUOIA AV",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.96,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1431991f777sm960066c88.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-02T22:41:59.786830+00:00",
+    "id": "case-smcsheriff-26-06696",
+    "subject": "[MOSI] Theft of personal property - Motor vehicle parts/accessories (M) near ALAMEDA DE LAS PULGAS \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "ALAMEDA DE LAS PULGAS",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.72,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-14319875cc0sm994412c88.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-02T22:42:00.426067+00:00",
+    "id": "case-redwoodcity-R26-08-0215",
+    "subject": "[MOSI] Burglary:first degree - All other larceny (F) near 2ND AV \u2014 2.0mi from Menlo Oaks (High)",
+    "street": "2ND AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.99,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3325680d493sm1143527eec.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-02T22:42:01.065266+00:00",
+    "id": "case-redwoodcity-R26-08-0222",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near 2ND AV \u2014 2.0mi from Menlo Oaks (Medium)",
+    "street": "2ND AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.99,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1431994fdd7sm996058c88.10 - gsmtp')"
   }
 ]
