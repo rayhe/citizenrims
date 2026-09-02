@@ -14441,5 +14441,27 @@
     "distance_mi": 0.58,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-32f07b7987csm789891eec.16 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-02T01:04:59.097346+00:00",
+    "id": "inc-paloalto-202609010204",
+    "subject": "[MOSI] 487 near LANE 15 E/BRYANT ST \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "LANE 15 E/BRYANT ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 0.83,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5303301df60sm8686251cf.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-02T01:04:59.436945+00:00",
+    "id": "case-redwoodcity-R26-08-0477",
+    "subject": "[MOSI] Theft by use of access card information - Credit card/atm (M) near MIDDLEFIELD RD \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-90e9ef0f57fsm6447956d6.47 - gsmtp')"
   }
 ]
