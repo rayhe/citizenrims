@@ -14551,5 +14551,16 @@
     "distance_mi": 1.99,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1431994fdd7sm996058c88.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-03T00:42:15.211053+00:00",
+    "id": "case-redwoodcity-R26-08-0406",
+    "subject": "[MOSI] Causing fire of property (M) near MIDDLEFIELD RD \u2014 2.6mi from Menlo Oaks (High)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-33255e31897sm1641260eec.18 - gsmtp')"
   }
 ]
