@@ -14562,5 +14562,16 @@
     "distance_mi": 2.64,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-33255e31897sm1641260eec.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-03T17:24:02.064109+00:00",
+    "id": "case-redwoodcity-R26-08-0417",
+    "subject": "[MOSI] Theft of prop after prior - All other larceny (F) near CHARTER ST \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "CHARTER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.68,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-4b69851db91sm5017220b6e.3 - gsmtp')"
   }
 ]
