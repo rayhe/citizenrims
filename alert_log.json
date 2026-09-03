@@ -14573,5 +14573,27 @@
     "distance_mi": 2.68,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-4b69851db91sm5017220b6e.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-03T19:59:41.766163+00:00",
+    "id": "inc-menlopark-202609030054",
+    "subject": "[MOSI] Burglary near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-39b08c397b1sm6826904a91.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-03T19:59:42.119139+00:00",
+    "id": "inc-redwoodcity-202609030037",
+    "subject": "[MOSI] Stolen Vehicle near EL CAMINO REAL \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.82,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2db149cb630sm618415ad.69 - gsmtp')"
   }
 ]
