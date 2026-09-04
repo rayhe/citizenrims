@@ -14639,5 +14639,27 @@
     "distance_mi": 0.88,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6b6d93df1easm1398637eaf.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-04T04:43:01.585789+00:00",
+    "id": "inc-redwoodcity-202609030146",
+    "subject": "[MOSI] Burglary Commercial Report near EAST BAYSHORE RD \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "EAST BAYSHORE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.8,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-910406871b6sm11968906d6.32 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-04T04:43:01.825969+00:00",
+    "id": "inc-redwoodcity-202609030126",
+    "subject": "[MOSI] Vandalism near YARNALL PL \u2014 1.5mi from Menlo Oaks (Medium)",
+    "street": "YARNALL PL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.52,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-530541ba2d2sm12759181cf.22 - gsmtp')"
   }
 ]
