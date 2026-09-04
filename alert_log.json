@@ -14606,5 +14606,38 @@
     "distance_mi": 1.04,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-530541ba2d2sm7372991cf.22 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-04T00:17:53.545442+00:00",
+    "id": "inc-menlopark-202609030010",
+    "subject": "[MOSI] Grand Theft near RAVENSWOOD AV \u2014 0.4mi from Menlo Oaks (Medium)",
+    "street": "RAVENSWOOD AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.44,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-475523d1dc5sm1051385fac.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-04T00:17:53.979705+00:00",
+    "id": "case-menlopark-26-1880",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.71,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7f9f6794e6fsm1556708a34.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-04T00:17:54.410688+00:00",
+    "id": "case-menlopark-26-1892",
+    "subject": "[MOSI] Burglary:second degree - From building (M) near HARVARD AV \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "HARVARD AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.88,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6b6d93df1easm1398637eaf.1 - gsmtp')"
   }
 ]
