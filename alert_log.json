@@ -14815,5 +14815,38 @@
     "distance_mi": 0.25,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3339b9f68e4sm21523601eec.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-06T16:15:20.942327+00:00",
+    "id": "case-menlopark-26-1906",
+    "subject": "[MOSI] Take vehicle without owners consent - Motor vehicle parts/accessories (M) near PIERCE RD \u2014 0.2mi from Menlo Oaks (High)",
+    "street": "PIERCE RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.25,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-143240d86c3sm18925360c88.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-06T16:15:21.442546+00:00",
+    "id": "case-atherton-26-313",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near MIDDLEFIELD RD \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.2,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-3346ea43377sm19643176eec.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-06T16:15:21.886937+00:00",
+    "id": "case-smcsheriff-26-06817",
+    "subject": "[MOSI] Burglary:first degree (F) near BLENHEIM AV \u2014 2.4mi from Menlo Oaks (High)",
+    "street": "BLENHEIM AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.41,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-334fbd5e6f6sm14428291eec.23 - gsmtp')"
   }
 ]
