@@ -14771,5 +14771,16 @@
     "distance_mi": 0.24,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-14324356931sm24389626c88.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-06T05:48:52.718534+00:00",
+    "id": "inc-paloalto-202609050180",
+    "subject": "[MOSI] 459A near BOYCE AVE \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "BOYCE AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.14,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9397fbe31c6sm594452485a.46 - gsmtp')"
   }
 ]
