@@ -14980,5 +14980,38 @@
     "distance_mi": 0.69,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6b6dbedc6a0sm16332237eaf.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-08T17:24:35.508733+00:00",
+    "id": "case-menlopark-26-1920",
+    "subject": "[MOSI] Receive/etc known stolen property (F) near BAYFRONT EX/DUMBARTON BRIDGE \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "BAYFRONT EX/DUMBARTON BRIDGE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.76,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-530898a20e3sm48588631cf.25 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-08T17:24:35.892923+00:00",
+    "id": "case-menlopark-26-1922",
+    "subject": "[MOSI] Grnd Thft:prop/Etc $400+ near CONSTITUTION DRIVE \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DRIVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.02,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5305418950fsm116635231cf.20 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-08T17:24:36.257546+00:00",
+    "id": "case-redwoodcity-R26-09-0091",
+    "subject": "[MOSI] Vandalism ($400 or more) (F) near 5TH AV \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "5TH AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5308d8d3eddsm39707921cf.0 - gsmtp')"
   }
 ]
