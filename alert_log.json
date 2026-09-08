@@ -15024,5 +15024,27 @@
     "distance_mi": 1.4,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5308a706823sm48236411cf.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-08T22:33:22.286379+00:00",
+    "id": "inc-menlopark-202609080028",
+    "subject": "[MOSI] Burglary near ZACHARY CT \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "ZACHARY CT",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.86,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1434bb7d71fsm8104178c88.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-08T22:33:22.890852+00:00",
+    "id": "case-menlopark-26-1924",
+    "subject": "[MOSI] Burglary:first degree (F) near ZACHARY CT \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "ZACHARY CT",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.86,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1434c745a09sm7236916c88.7 - gsmtp')"
   }
 ]
