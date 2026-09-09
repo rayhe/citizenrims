@@ -15057,5 +15057,38 @@
     "distance_mi": 0.69,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-530541ba2d2sm133723431cf.22 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-09T17:30:18.911689+00:00",
+    "id": "inc-redwoodcity-202609090016",
+    "subject": "[MOSI] Stolen Vehicle near POPLAR AV \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "POPLAR AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.95,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7fa888f614dsm16770955a34.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-09T17:30:19.557418+00:00",
+    "id": "inc-redwoodcity-202609090038",
+    "subject": "[MOSI] Burglary-Vehicle Report near REDWOOD AV \u2014 3.0mi from Menlo Oaks (High)",
+    "street": "REDWOOD AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 3.0,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-475543fcaa9sm14573332fac.7 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-09T17:30:20.123481+00:00",
+    "id": "case-menlopark-26-1930",
+    "subject": "[MOSI] Grand theft:money/labor/property - From motor vehicle (F) near SHARON PARK DR \u2014 3.0mi from Menlo Oaks (High)",
+    "street": "SHARON PARK DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.96,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-4b970d1cf26sm16814518b6e.4 - gsmtp')"
   }
 ]
