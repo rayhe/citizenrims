@@ -15046,5 +15046,16 @@
     "distance_mi": 2.86,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1434c745a09sm7236916c88.7 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-09T05:06:28.943010+00:00",
+    "id": "case-menlopark-26-1926",
+    "subject": "[MOSI] Display on vehicle/present to officer unlawful registration (M) near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.69,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-530541ba2d2sm133723431cf.22 - gsmtp')"
   }
 ]
