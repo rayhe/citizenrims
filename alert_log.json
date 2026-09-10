@@ -15167,5 +15167,16 @@
     "distance_mi": 2.96,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-9104066f6b9sm157126296d6.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-10T04:59:05.993223+00:00",
+    "id": "inc-paloalto-202609090288",
+    "subject": "[MOSI] 594 near MIDTOWN CT/RANDERS CT \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "MIDTOWN CT/RANDERS CT",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.89,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-47989a71ebbsm8945206fac.17 - gsmtp')"
   }
 ]
