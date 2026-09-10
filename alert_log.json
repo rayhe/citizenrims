@@ -15178,5 +15178,16 @@
     "distance_mi": 2.89,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-47989a71ebbsm8945206fac.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-10T13:46:16.678633+00:00",
+    "id": "case-redwoodcity-R26-08-6052",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near POPLAR AV \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "POPLAR AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.9,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-87149316361sm122318467b3.14 - gsmtp')"
   }
 ]
