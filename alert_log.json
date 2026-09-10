@@ -15123,5 +15123,49 @@
     "distance_mi": 0.78,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939cb4317bbsm313275785a.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-10T00:23:52.911899+00:00",
+    "id": "inc-menlopark-202609090064",
+    "subject": "[MOSI] Burglary near WILLOW RD \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.93,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-9104066f6b9sm157125946d6.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-10T00:23:53.449919+00:00",
+    "id": "inc-atherton-202609090035",
+    "subject": "[MOSI] BURGLARY - RESIDENTIAL/COMMERCIAL near PARK LN \u2014 1.8mi from Menlo Oaks (High)",
+    "street": "PARK LN",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.81,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-5305413d7f8sm152871161cf.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-10T00:23:53.917246+00:00",
+    "id": "case-menlopark-26-1899",
+    "subject": "[MOSI] Obtain credit/etc:use others id - Identity theft (M) near NOEL DR \u2014 0.6mi from Menlo Oaks (Medium)",
+    "street": "NOEL DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.59,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-91048476220sm127567716d6.31 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-10T00:23:54.401460+00:00",
+    "id": "case-menlopark-26-1938",
+    "subject": "[MOSI] Theft by use of access card information - Credit card/atm (M) near MONTE ROSA DR \u2014 3.0mi from Menlo Oaks (Medium)",
+    "street": "MONTE ROSA DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.96,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-9104066f6b9sm157126296d6.24 - gsmtp')"
   }
 ]
