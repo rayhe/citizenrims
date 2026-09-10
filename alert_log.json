@@ -15189,5 +15189,49 @@
     "distance_mi": 2.9,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-87149316361sm122318467b3.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-10T17:16:54.058190+00:00",
+    "id": "inc-menlopark-202609100017",
+    "subject": "[MOSI] Auto Burglary near GLENWOOD AV \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "GLENWOOD AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.74,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939e86b7424sm22531385a.32 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-10T17:16:54.606238+00:00",
+    "id": "inc-menlopark-202609100012",
+    "subject": "[MOSI] Auto Burglary near OAK GROVE AV \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "OAK GROVE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939e8045d9fsm28746485a.19 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-10T17:16:55.000128+00:00",
+    "id": "case-menlopark-26-1943",
+    "subject": "[MOSI] Burglary:second degree - All other larceny (M) near OAK GROVE AV \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "OAK GROVE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939e803dc90sm29198285a.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-10T17:16:55.713380+00:00",
+    "id": "case-redwoodcity-R26-08-6063",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near LEAHY ST \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "LEAHY ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.53,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939e80b812csm29478685a.35 - gsmtp')"
   }
 ]
