@@ -15332,5 +15332,49 @@
     "distance_mi": 1.83,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-530ca50c5d7sm8128351cf.28 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-11T06:44:14.566395+00:00",
+    "id": "inc-menlopark-202609100077",
+    "subject": "[MOSI] Auto Burglary near OAK GROVE AV \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "OAK GROVE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-530ca45bbd7sm12936691cf.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-11T06:44:14.844695+00:00",
+    "id": "inc-redwoodcity-202609100150",
+    "subject": "[MOSI] Grand Theft near EL CAMINO REAL \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.7,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-9120f2033e7sm14538886d6.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-11T06:44:15.113535+00:00",
+    "id": "inc-paloalto-202609100310",
+    "subject": "[MOSI] 487 near PAHS DRIVEWAY/ALMA ST \u2014 1.7mi from Menlo Oaks (Medium)",
+    "street": "PAHS DRIVEWAY/ALMA ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.72,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939e8045b46sm175518685a.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-11T06:44:15.415245+00:00",
+    "id": "case-menlopark-26-1956",
+    "subject": "[MOSI] Theft of personal property - Motor vehicle parts/accessories (M) near OAK GROVE AV \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "OAK GROVE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-9120f20367dsm14347126d6.6 - gsmtp')"
   }
 ]
