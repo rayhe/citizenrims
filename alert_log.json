@@ -15299,5 +15299,38 @@
     "distance_mi": 0.86,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-33ba4e51449sm1283445eec.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-11T01:52:06.106753+00:00",
+    "id": "inc-menlopark-202609100009",
+    "subject": "[MOSI] Auto Burglary near OAK GROVE AV \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "OAK GROVE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939e7da5f59sm129865685a.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-11T01:52:06.514362+00:00",
+    "id": "inc-menlopark-202609100066",
+    "subject": "[MOSI] Burglary near SANTA CRUZ AV \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "SANTA CRUZ AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-9120f47a6ebsm9719296d6.22 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-11T01:52:06.823474+00:00",
+    "id": "case-menlopark-26-1951",
+    "subject": "[MOSI] Tamper with vehicle - Motor vehicle parts/accessories (M) near OLIVE ST \u2014 1.8mi from Menlo Oaks (High)",
+    "street": "OLIVE ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.83,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-530ca50c5d7sm8128351cf.28 - gsmtp')"
   }
 ]
