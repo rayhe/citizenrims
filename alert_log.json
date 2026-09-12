@@ -15453,5 +15453,16 @@
     "distance_mi": 2.73,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-14365b97994sm27941059c88.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-12T22:40:03.445763+00:00",
+    "id": "inc-paloalto-202609120125",
+    "subject": "[MOSI] 459A near BRYSON AVE/COLORADO AVE \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "BRYSON AVE/COLORADO AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.81,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939f19f94a1sm478142585a.42 - gsmtp')"
   }
 ]
