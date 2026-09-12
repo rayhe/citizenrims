@@ -15442,5 +15442,16 @@
     "distance_mi": 1.35,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-8051005d845sm2294578a34.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-12T20:51:25.891893+00:00",
+    "id": "inc-paloalto-202609120078",
+    "subject": "[MOSI] 459A near MIDDLEFIELD RD \u2014 2.7mi from Menlo Oaks (High)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.73,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-14365b97994sm27941059c88.12 - gsmtp')"
   }
 ]
