@@ -15464,5 +15464,27 @@
     "distance_mi": 2.81,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939f19f94a1sm478142585a.42 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-13T05:01:13.587541+00:00",
+    "id": "inc-paloalto-202609120251",
+    "subject": "[MOSI] 459A near MIDDLEFIELD RD/ROSEWOOD DR \u2014 2.7mi from Menlo Oaks (High)",
+    "street": "MIDDLEFIELD RD/ROSEWOOD DR",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.75,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-33bbeb053a5sm5448392eec.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-13T05:01:14.175270+00:00",
+    "id": "inc-paloalto-202609120287",
+    "subject": "[MOSI] 459A near BRYSON AVE/COLORADO AVE \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "BRYSON AVE/COLORADO AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.83,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-143659a9a06sm16746292c88.0 - gsmtp')"
   }
 ]
