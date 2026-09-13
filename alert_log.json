@@ -15497,5 +15497,49 @@
     "distance_mi": 0.25,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-530ca4b9c54sm67037831cf.20 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-13T23:34:22.013579+00:00",
+    "id": "inc-menlopark-202609130028",
+    "subject": "[MOSI] Fraud near DEL NORTE AV \u2014 0.1mi from Menlo Oaks (Medium)",
+    "street": "DEL NORTE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.12,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-9120f4d35a9sm80747106d6.41 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-13T23:34:22.258670+00:00",
+    "id": "inc-atherton-202609130034",
+    "subject": "[MOSI] FRAUD / FALSE PERSONATION near TUSCALOOSA AV \u2014 2.1mi from Menlo Oaks (Medium)",
+    "street": "TUSCALOOSA AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 2.06,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-93a26921baesm59949185a.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-13T23:34:22.508301+00:00",
+    "id": "inc-redwoodcity-202609130094",
+    "subject": "[MOSI] Burglary-Vehicle Report near WOODSIDE RD \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "WOODSIDE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.91,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939e809fd0bsm831495685a.33 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-13T23:34:22.728699+00:00",
+    "id": "inc-paloalto-202609130192",
+    "subject": "[MOSI] 594 near BRYSON AVE/COLORADO AVE \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "BRYSON AVE/COLORADO AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.82,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-9120f4d3a50sm80544836d6.40 - gsmtp')"
   }
 ]
