@@ -15541,5 +15541,27 @@
     "distance_mi": 2.82,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-9120f4d3a50sm80544836d6.40 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-14T01:35:31.816716+00:00",
+    "id": "inc-paloalto-202609130235",
+    "subject": "[MOSI] 594 near HAWTHORNE AVE/EVERETT AVE \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "HAWTHORNE AVE/EVERETT AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 0.95,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-530f9b99fc7sm34274971cf.30 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-14T01:35:32.111644+00:00",
+    "id": "case-menlopark-26-1975",
+    "subject": "[MOSI] Get credit/etc others id - False pretenses/swindle/confidence game (F) near DEL NORTE AV \u2014 0.1mi from Menlo Oaks (Medium)",
+    "street": "DEL NORTE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.12,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-939ec337d23sm796186885a.2 - gsmtp')"
   }
 ]
