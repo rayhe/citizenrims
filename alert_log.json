@@ -15640,5 +15640,93 @@
     "distance_mi": 2.14,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-39dfdd58b30sm4587334a91.11 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-15T18:55:46.538429+00:00",
+    "id": "inc-menlopark-202609150023",
+    "subject": "[MOSI] Vandalism near BAYFRONT EX \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "BAYFRONT EX",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.76,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-80b07ad0294sm181562a34.24 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-15T18:55:47.235929+00:00",
+    "id": "inc-menlopark-202609150060",
+    "subject": "[MOSI] Fraud near BERKELEY AV \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "BERKELEY AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.19,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-4842a67ca40sm588188fac.15 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-15T18:55:47.764495+00:00",
+    "id": "inc-menlopark-202609150068",
+    "subject": "[MOSI] Auto Burglary near OAK GROVE AV \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "OAK GROVE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6c7a6f8a92dsm437004eaf.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-15T18:55:48.467694+00:00",
+    "id": "inc-menlopark-202609150054",
+    "subject": "[MOSI] Burglary near WAVERLEY ST \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "WAVERLEY ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.55,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-80b073bbdd3sm215905a34.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-15T18:55:49.077937+00:00",
+    "id": "inc-paloalto-202609150045",
+    "subject": "[MOSI] 459A near COLLEGE AVE/CALIFORNIA AVE \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "COLLEGE AVE/CALIFORNIA AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.88,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-4ca2377cf2fsm180121b6e.9 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-15T18:55:49.655128+00:00",
+    "id": "case-menlopark-26-1949",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near OAK GROVE AV \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "OAK GROVE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.64,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-4ca23059f0asm225731b6e.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-15T18:55:50.396617+00:00",
+    "id": "case-menlopark-26-1978",
+    "subject": "[MOSI] Tamper with vehicle - Motor vehicle parts/accessories (M) near MIDDLE AV \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "MIDDLE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.09,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6c7a75a3beesm420685eaf.12 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-15T18:55:50.913364+00:00",
+    "id": "case-menlopark-26-1984",
+    "subject": "[MOSI] Burglary:first degree (F) near WAVERLEY ST \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "WAVERLEY ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.55,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-80b073c839fsm176295a34.21 - gsmtp')"
   }
 ]
