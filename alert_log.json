@@ -15585,5 +15585,49 @@
     "distance_mi": 2.9,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-39dfba45a1dsm539574a91.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-15T05:26:15.569677+00:00",
+    "id": "inc-menlopark-202609140105",
+    "subject": "[MOSI] Burglary in Progress near INDEPENDENCE DR \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "INDEPENDENCE DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-8075a10bc3fsm5767394a34.6 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-15T05:26:16.070496+00:00",
+    "id": "inc-menlopark-202609140096",
+    "subject": "[MOSI] Vehicle Tampering near MIDDLE AV \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "MIDDLE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.09,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6c342ec1ff5sm8579513eaf.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-15T05:26:16.618364+00:00",
+    "id": "inc-paloalto-202609140349",
+    "subject": "[MOSI] 487 near N PASTEUR DR/S PASTEUR DR \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "N PASTEUR DR/S PASTEUR DR",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.88,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-805cb5ba734sm9081881a34.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-15T05:26:17.129705+00:00",
+    "id": "case-atherton-26-328",
+    "subject": "[MOSI] Burglary:first degree - All other larceny (F) near JUNIPER DR \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "JUNIPER DR",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.68,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6c342ec1ff5sm8579541eaf.14 - gsmtp')"
   }
 ]
