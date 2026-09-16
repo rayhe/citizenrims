@@ -15904,5 +15904,16 @@
     "distance_mi": 1.38,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-48429a92129sm3405495fac.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-16T23:10:48.612855+00:00",
+    "id": "inc-paloalto-202609160171",
+    "subject": "[MOSI] 487 near WEBSTER ST/BRYSON AVE \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "WEBSTER ST/BRYSON AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.74,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-53291651dabsm304111cf.10 - gsmtp')"
   }
 ]
