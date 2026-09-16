@@ -15860,5 +15860,38 @@
     "distance_mi": 1.18,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-33bf596e20esm6272323eec.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-16T13:44:38.215252+00:00",
+    "id": "inc-menlopark-202609160005",
+    "subject": "[MOSI] Auto Burglary near EL CAMINO REAL \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.84,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 2adb3069b0e04-5b8b57897easm862893e87.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-16T13:44:39.425244+00:00",
+    "id": "inc-paloalto-202609160022",
+    "subject": "[MOSI] 487 near NEWELL RD \u2014 1.7mi from Menlo Oaks (Medium)",
+    "street": "NEWELL RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.71,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 2adb3069b0e04-5b8b57e73f5sm849378e87.69 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-16T13:44:41.305266+00:00",
+    "id": "case-menlopark-26-1995",
+    "subject": "[MOSI] Burglary:first degree - Motor vehicle parts/accessories (F) near EL CAMINO REAL \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.84,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 38308e7fff4ca-3a5daf9ed0dsm5988741fa.16 - gsmtp')"
   }
 ]
