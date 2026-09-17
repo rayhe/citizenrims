@@ -15915,5 +15915,27 @@
     "distance_mi": 2.74,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-53291651dabsm304111cf.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-17T01:24:41.093478+00:00",
+    "id": "inc-atherton-202609160053",
+    "subject": "[MOSI] TRESPASSING near MIDDLEFIELD RD \u2014 0.2mi from Menlo Oaks (High)",
+    "street": "MIDDLEFIELD RD",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.2,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2dd89d8e6a3sm18555045ad.7 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-17T01:24:41.534434+00:00",
+    "id": "case-redwoodcity-R26-09-0111",
+    "subject": "[MOSI] Vandalism:deface property (M) near ENCINA AV \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "ENCINA AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.52,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-39e36115cc8sm1880896a91.3 - gsmtp')"
   }
 ]
