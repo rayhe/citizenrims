@@ -16025,5 +16025,38 @@
     "distance_mi": 0.98,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-87201d17e76sm3057413b3a.49 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-17T19:42:20.897685+00:00",
+    "id": "inc-menlopark-202609150090",
+    "subject": "[MOSI] Fraud near WILLOW RD \u2014 0.4mi from Menlo Oaks (Medium)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.43,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-80c477cc3d3sm3907702a34.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-17T19:42:21.628903+00:00",
+    "id": "inc-menlopark-202609170035",
+    "subject": "[MOSI] Fraud near WILLOW RD \u2014 0.4mi from Menlo Oaks (Medium)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.43,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-4cb6d9999e8sm3567114b6e.17 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-17T19:42:22.295009+00:00",
+    "id": "inc-redwoodcity-202609170073",
+    "subject": "[MOSI] Burglary Commercial Report near WILLOW ST \u2014 2.7mi from Menlo Oaks (High)",
+    "street": "WILLOW ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.68,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6c8f79b6369sm4106787eaf.14 - gsmtp')"
   }
 ]
