@@ -16003,5 +16003,27 @@
     "distance_mi": 1.0,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-9123be7c43bsm50059846d6.23 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-17T16:05:27.528327+00:00",
+    "id": "inc-menlopark-202609170006",
+    "subject": "[MOSI] Vehicle Tampering near OAK CT \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "OAK CT",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-39e35b589c2sm5734285a91.0 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-17T16:05:28.645312+00:00",
+    "id": "case-menlopark-26-2003",
+    "subject": "[MOSI] Grnd Thft:prop/Etc $400+ near OAK CT \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "OAK CT",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-87201d17e76sm3057413b3a.49 - gsmtp')"
   }
 ]
