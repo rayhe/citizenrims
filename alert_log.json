@@ -16168,5 +16168,16 @@
     "distance_mi": 2.34,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-91260a85093sm15640616d6.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-19T16:01:52.740588+00:00",
+    "id": "inc-paloalto-202609190012",
+    "subject": "[MOSI] 459C near OXFORD AVE/COLLEGE AVE \u2014 2.5mi from Menlo Oaks (High)",
+    "street": "OXFORD AVE/COLLEGE AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.52,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
