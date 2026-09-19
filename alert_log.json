@@ -16179,5 +16179,16 @@
     "distance_mi": 2.52,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-09-19T20:57:29.876251+00:00",
+    "id": "inc-redwoodcity-202609190080",
+    "subject": "[MOSI] Burglary Commercial Report near EAST BAYSHORE RD \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "EAST BAYSHORE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.8,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-33c33186490sm6780614eec.18 - gsmtp')"
   }
 ]
