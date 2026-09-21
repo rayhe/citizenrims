@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>Peninsula Burglary Research</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&display=swap');
+    :root {
+      color-scheme: light dark;
+      --paper:#f4f5f2; --surface:#ffffff; --surface-2:#e9ece8; --ink:#17211f; --muted:#55625f;
+      --line:#cdd4d0; --strong:#0e4c46; --strong-2:#0a3935; --accent:#c5522d; --accent-soft:#f3ddd4;
+      --good:#356b4a; --warn:#9a541f; --shadow:0 18px 42px rgba(20,42,38,.10);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper:#101614; --surface:#17201e; --surface-2:#202b28; --ink:#eef3f0; --muted:#b5c0bc;
+        --line:#34423e; --strong:#71c9bb; --strong-2:#9adcd1; --accent:#f08a63; --accent-soft:#46291f;
+        --good:#82c99c; --warn:#e4a46f; --shadow:0 18px 42px rgba(0,0,0,.26);
+      }
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.58 'DM Sans',sans-serif}
+    a{color:var(--strong);text-decoration-thickness:1px;text-underline-offset:3px}
+    a:hover{color:var(--accent)}
+    button{font:inherit}
+    .shell{width:min(1180px,calc(100% - 36px));margin:0 auto;padding:44px 0 80px}
+    .masthead{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:54px;padding:28px 0 40px;border-bottom:2px solid var(--ink)}
+    .dateline{font:650 12px/1 'Libre Franklin',sans-serif;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
+    h1,h2,h3{font-family:'Libre Franklin',sans-serif;letter-spacing:-.035em;margin:0}
+    h1{font-size:clamp(38px,6vw,72px);line-height:.98;max-width:880px}
+    .dek{font-size:clamp(18px,2.2vw,23px);line-height:1.42;max-width:800px;color:var(--muted);margin:24px 0 0}
+    .briefing-note{align-self:end;border-top:4px solid var(--accent);padding-top:14px;font-size:13px;color:var(--muted)}
+    .briefing-note strong{display:block;color:var(--ink);font-size:16px;margin-bottom:4px}
+    .layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:54px;margin-top:38px}
+    .rail{position:sticky;top:20px;align-self:start}
+    .rail-label{font:700 11px/1 'Libre Franklin',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+    .rail a{display:block;padding:9px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--muted);font-size:14px}
+    .rail a:hover{color:var(--strong)}
+    .rail .scope{margin-top:26px;padding:16px;background:var(--surface-2);font-size:12px;color:var(--muted)}
+    .scope strong{display:block;color:var(--ink);margin-bottom:4px}
+    main{min-width:0}
+    section{scroll-margin-top:28px;margin-bottom:64px}
+    .section-head{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;margin-bottom:24px}
+    .num{font:800 13px/1 'Libre Franklin',sans-serif;color:var(--accent);padding-top:7px}
+    h2{font-size:clamp(28px,4vw,43px);line-height:1.06}
+    h3{font-size:20px;line-height:1.2}
+    .lede{font-size:18px;line-height:1.55;margin:0 0 28px;max-width:760px}
+    .finding-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .finding{background:var(--surface);padding:22px 22px 20px;box-shadow:var(--shadow);border-top:3px solid var(--strong)}
+    .finding.urgent{border-top-color:var(--accent)}
+    .finding .place{font:700 11px/1 'Libre Franklin',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+    .finding .big{font:800 clamp(28px,4vw,46px)/1 'Libre Franklin',sans-serif;margin:12px 0 8px;color:var(--strong)}
+    .finding.urgent .big{color:var(--accent)}
+    .finding p{margin:0;color:var(--muted);font-size:14px}
+    .finding small{display:block;margin-top:13px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;line-height:1.45;color:var(--muted)}
+    .pattern{margin-top:18px;padding:24px;background:var(--strong-2);color:#fff;display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
+    @media(prefers-color-scheme:dark){.pattern{color:#eef8f6}}
+    .pattern h3{font-size:26px;margin-bottom:12px}.pattern p{margin:0;color:#d2e4df}
+    .pattern ol{margin:0;padding-left:20px}.pattern li{padding:5px 0;color:#e7f1ef}
+    .chart-card{background:var(--surface);padding:24px;box-shadow:var(--shadow)}
+    .chart-card header{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:20px}
+    .chart-card header p{margin:0;color:var(--muted);font-size:12px;text-align:right}
+    #burglaryChart{width:100%;height:auto;display:block;overflow:visible}
+    .chart-note{font-size:12px;color:var(--muted);margin:14px 0 0}
+    .filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+    .filter{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 13px;border-radius:999px;cursor:pointer}
+    .filter[aria-pressed="true"]{background:var(--strong);border-color:var(--strong);color:#fff}
+    .jurisdictions{display:grid;gap:16px}
+    .jurisdiction{background:var(--surface);border-left:6px solid var(--strong);padding:26px;box-shadow:var(--shadow)}
+    .jurisdiction[data-place="atherton"]{border-color:#be5c3d}.jurisdiction[data-place="menlo"]{border-color:#176e67}.jurisdiction[data-place="paloalto"]{border-color:#3473a0}.jurisdiction[data-place="county"]{border-color:#6a6a3a}
+    .jurisdiction.hidden{display:none}
+    .j-head{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:start}
+    .j-head .metric{font:800 28px/1 'Libre Franklin',sans-serif;color:var(--strong);text-align:right}
+    .j-head .metric span{display:block;font:500 11px/1.4 'DM Sans',sans-serif;color:var(--muted);margin-top:6px;max-width:150px}
+    .j-summary{font-size:17px;margin:14px 0 20px}
+    .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding-top:18px;border-top:1px solid var(--line)}
+    .detail-grid h4{font:700 12px/1 'Libre Franklin',sans-serif;letter-spacing:.1em;text-transform:uppercase;margin:0 0 10px;color:var(--muted)}
+    .detail-grid ul{margin:0;padding-left:18px}.detail-grid li{margin:8px 0}
+    .signal{display:inline-block;font-size:11px;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:3px 7px;margin-left:5px;vertical-align:2px}
+    .meeting-list{display:grid;gap:0;border-top:1px solid var(--line)}
+    .meeting{display:grid;grid-template-columns:112px 155px 1fr;gap:18px;padding:17px 0;border-bottom:1px solid var(--line);align-items:start}
+    .meeting time{font-weight:700}.meeting .body{font-size:15px}.meeting .body strong{display:block;margin-bottom:3px}.meeting .status{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+    .timeline{position:relative;margin-left:8px;padding-left:28px;border-left:2px solid var(--line)}
+    .event{position:relative;padding:0 0 26px}.event:last-child{padding-bottom:0}.event::before{content:'';position:absolute;left:-35px;top:6px;width:12px;height:12px;background:var(--surface);border:3px solid var(--strong);border-radius:50%}
+    .event[data-place="atherton"]::before{border-color:#be5c3d}.event[data-place="menlo"]::before{border-color:#176e67}.event[data-place="paloalto"]::before{border-color:#3473a0}.event[data-place="county"]::before{border-color:#6a6a3a}
+    .event.hidden{display:none}.event time{font:700 12px/1 'Libre Franklin',sans-serif;color:var(--accent)}.event h3{margin:6px 0 5px;font-size:18px}.event p{margin:0;color:var(--muted);font-size:14px}
+    .response-matrix{display:grid;grid-template-columns:150px repeat(4,minmax(0,1fr));border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+    .cell{padding:15px 12px;border-bottom:1px solid var(--line);min-width:0;font-size:13px}.cell:nth-last-child(-n+5){border-bottom:0}.cell.header{font:700 11px/1.2 'Libre Franklin',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.cell.rowhead{font-weight:700}
+    .implications{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--line)}
+    .implication{background:var(--surface);padding:24px}.implication b{font:800 25px/1 'Libre Franklin',sans-serif;color:var(--accent)}.implication h3{margin:10px 0}.implication p{margin:0;color:var(--muted);font-size:14px}
+    .caveats{background:var(--surface-2);padding:28px}.caveats ul{margin:0;padding-left:20px}.caveats li{margin:12px 0}.caveats strong{color:var(--ink)}
+    .sources{font-size:13px}.sources ol{padding-left:22px}.sources li{margin:10px 0;overflow-wrap:anywhere}.source-key{display:inline-flex;align-items:center;gap:7px;margin:0 16px 8px 0;font-size:12px;color:var(--muted)}.dot{width:8px;height:8px;border-radius:50%;background:var(--good)}.dot.index{background:var(--warn)}
+    footer{border-top:2px solid var(--ink);padding-top:20px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:20px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:850px){
+      .shell{width:min(100% - 28px,720px);padding-top:20px}.masthead{grid-template-columns:1fr;gap:24px}.layout{display:block}.rail{position:static;margin-bottom:40px}.rail nav{display:grid;grid-template-columns:repeat(2,1fr);gap:0 16px}.rail .scope{display:none}.finding-grid,.pattern,.detail-grid,.implications{grid-template-columns:1fr}.meeting{grid-template-columns:105px 1fr}.meeting .status{grid-column:2}.response-matrix{display:block;border:0}.response-matrix .header{display:none}.cell{display:block;border:0}.cell.rowhead{background:var(--surface-2);margin-top:14px;padding:10px 12px}.cell:not(.rowhead)::before{content:attr(data-label);display:block;font:700 10px/1 'Libre Franklin',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}.cell:not(.rowhead){background:var(--surface);border-bottom:1px solid var(--line)}.j-head{grid-template-columns:1fr}.j-head .metric{text-align:left}.j-head .metric span{max-width:none}.chart-card{padding:18px}.chart-card header{display:block}.chart-card header p{text-align:left;margin-top:5px}footer{display:block}}
+    @media(max-width:480px){.shell{width:min(100% - 20px,720px)}h1{font-size:38px}.finding,.jurisdiction,.implication{padding:19px}.meeting{grid-template-columns:1fr;gap:4px}.meeting .status{grid-column:1}.pattern{padding:20px}.rail nav{grid-template-columns:1fr}.section-head{grid-template-columns:38px 1fr}.filter{padding:7px 10px;font-size:13px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{body{background:#fff;color:#111}.shell{width:100%;padding:0}.rail,.filters{display:none}.layout{display:block}.finding,.jurisdiction,.chart-card{box-shadow:none}.pattern{color:#000;background:#eee}.pattern p,.pattern li{color:#222}a{color:#111}.jurisdiction,.meeting,.event,.implication{break-inside:avoid}}
+  </style>
+</head>
+<body>
+<div class="shell">
+  <header class="masthead">
+    <div>
+      <p class="dateline">Research brief · September 21, 2026</p>
+      <h1>Residential burglary on the Mid-Peninsula</h1>
+      <p class="dek">A 2024–September 2026 evidence review of Atherton, Menlo Park, Palo Alto, and the unincorporated Menlo Oaks corridor — what happened, what officials discussed, and where the record still has gaps.</p>
+    </div>
+    <aside class="briefing-note">
+      <strong>Bottom line</strong>
+      The risk has not disappeared. Reported levels differ by jurisdiction, but the repeated pattern is consistent: early-evening rear entry, fast access to primary bedrooms, and crews moving across city lines.
+    </aside>
+  </header>
+
+  <div class="layout">
+    <aside class="rail" aria-label="Report sections">
+      <div class="rail-label">Contents</div>
+      <nav>
+        <a href="#findings">Key findings</a>
+        <a href="#numbers">The numbers</a>
+        <a href="#places">By jurisdiction</a>
+        <a href="#meetings">Meeting record</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#responses">Response matrix</a>
+        <a href="#menlo-oaks">Menlo Oaks</a>
+        <a href="#caveats">Open questions</a>
+        <a href="#sources">Sources</a>
+      </nav>
+      <div class="scope"><strong>Scope</strong>Residential burglary and closely related policy responses. Not a live crime feed. Values are fixed to the research date.</div>
+    </aside>
+
+    <main>
+      <section id="findings">
+        <div class="section-head"><div class="num">01</div><h2>Four findings that shape the picture</h2></div>
+        <div class="finding-grid">
+          <article class="finding urgent">
+            <div class="place">Atherton</div><div class="big">30</div>
+            <p>All burglaries in 2024, up from 20 in 2023. The town calls residential burglary its number-one crime concern.</p>
+            <small>Sources: <a href="https://www.athertonca.gov/DocumentCenter/View/12127/Police-Department-Annual-Report-2024?bidId=">Atherton PD 2024 Annual Report</a> and <a href="https://www.athertonca.gov/ArchiveCenter/ViewFile/Item/3934">April 2025 Monthly Matters</a>. “All burglaries” and “residential” are not interchangeable.</small>
+          </article>
+          <article class="finding">
+            <div class="place">Menlo Park</div><div class="big">57 → 59</div>
+            <p>Home burglaries in 2024 and 2025: more than one a week, characterized by Chief Dave Norris as a stable trend.</p>
+            <small>Source: <a href="https://padailypost.com/2026/05/11/police-chief-says-sharon-heights-substation-doesnt-pencil-out-city-should-expand-license-plate-camera-system-crime-overall-is-down/">Palo Alto Daily Post, May 11, 2026</a>; press coverage of the chief’s report ahead of the May 12 study session.</small>
+          </article>
+          <article class="finding urgent">
+            <div class="place">Palo Alto</div><div class="big">19 / month</div>
+            <p>Homes hit during the October–November 2025 south Palo Alto spree; 16 were south of Oregon Expressway.</p>
+            <small>Source: <a href="https://www.paloaltoonline.com/crime/2025/11/21/police-warn-about-spike-in-burglaries-in-south-palo-alto/">Palo Alto Online, Nov. 21, 2025</a>. Police believed the same suspects were involved; no arrests were reported.</small>
+          </article>
+          <article class="finding">
+            <div class="place">Menlo Oaks</div><div class="big">$100K+</div>
+            <p>Spent by residents on private guards and street cameras after six burglaries between November 2023 and February 2025.</p>
+            <small>Source: <a href="https://padailypost.com/2025/10/02/neighborhood-hires-its-own-security-because-of-lack-of-patrols-by-sheriff/">Palo Alto Daily Post, Oct. 2, 2025</a>. Resident-reported response times were 5–15 minutes; the Sheriff’s Office said responses were timely.</small>
+          </article>
+        </div>
+        <div class="pattern">
+          <div>
+            <h3>The recurring method</h3>
+            <p>Across the corridor, the most consistent pattern is a rear glass door or window breached in the early evening, followed by a rapid search of the primary bedroom for portable valuables.</p>
+          </div>
+          <ol>
+            <li>Approach from side or rear</li>
+            <li>Smash glass or exploit an unlocked opening</li>
+            <li>Move to the primary bedroom</li>
+            <li>Take jewelry, cash, coins, safes, bags, or electronics</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="numbers">
+        <div class="section-head"><div class="num">02</div><h2>The numbers, without false equivalence</h2></div>
+        <p class="lede">Available series use different definitions. Atherton’s annual report counts all burglaries; Menlo Park reports home burglaries; Palo Alto’s FBI UCR series counts total burglaries and labels 2025 partial. The chart keeps those series separate.</p>
+        <figure class="chart-card">
+          <header><h3>Reported burglaries</h3><p>Count · zero baseline · gaps are unavailable data</p></header>
+          <svg id="burglaryChart" viewBox="0 0 760 360" role="img" aria-labelledby="chartTitle chartDesc">
+            <title id="chartTitle">Reported burglary counts by jurisdiction and year</title>
+            <desc id="chartDesc">Atherton all burglaries: 20 in 2023 and 30 in 2024. Menlo Park home burglaries: 57 in 2024 and 59 in 2025. Palo Alto total burglaries: 176 in 2023, 147 in 2024, and 184 in partial-year 2025.</desc>
+          </svg>
+          <figcaption class="chart-note">Sources: <a href="https://www.athertonca.gov/DocumentCenter/View/12127/Police-Department-Annual-Report-2024?bidId=">Atherton PD</a>; <a href="https://padailypost.com/2026/05/11/police-chief-says-sharon-heights-substation-doesnt-pencil-out-city-should-expand-license-plate-camera-system-crime-overall-is-down/">Menlo Park chief’s report via Daily Post</a>; <a href="https://www.city-data.com/crime/crime-Palo-Alto-California.html">FBI UCR via city-data.com</a>. Palo Alto’s 2025 value is partial-year and not residential-only.</figcaption>
+        </figure>
+      </section>
+
+      <section id="places">
+        <div class="section-head"><div class="num">03</div><h2>What the record shows by jurisdiction</h2></div>
+        <div class="filters" role="group" aria-label="Filter jurisdiction cards">
+          <button class="filter" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" data-filter="atherton" aria-pressed="false">Atherton</button>
+          <button class="filter" data-filter="menlo" aria-pressed="false">Menlo Park</button>
+          <button class="filter" data-filter="paloalto" aria-pressed="false">Palo Alto</button>
+          <button class="filter" data-filter="county" aria-pressed="false">County / Menlo Oaks</button>
+        </div>
+        <div class="jurisdictions">
+          <article class="jurisdiction" data-place="atherton">
+            <div class="j-head"><h3>Atherton</h3><div class="metric">2–3 / month<span>average investigations; 10-year average 27/year</span></div></div>
+            <p class="j-summary">The town’s 2024 annual report records 30 burglaries, 10 more than 2023, with $1.7 million in losses across the two years. A separate 2023 residential deck reports 17 that year, versus 20 in the annual report — an unresolved likely-definition gap.</p>
+            <div class="detail-grid">
+              <div><h4>Incidents & pattern</h4><ul>
+                <li>Jan. 11, 2025: two Stevick Drive homes hit around 7 p.m.; rear glass doors broken; about $20,000 in jewelry and coins taken from one.</li>
+                <li>Apr. 26, 2025: Isabella Avenue rear-door window removed; entry between 5 and 9 p.m.; fourth reported home burglary of 2025.</li>
+                <li>Oct. 25–27, 2025: three smash-and-glass attempts on Faxon Road, Mulberry Lane, and Faxon Forest Road; no arrests reported.</li>
+              </ul></div>
+              <div><h4>Response</h4><ul>
+                <li>47 ALPR cameras: 21 town-leased plus 26 resident-funded.</li>
+                <li>2024 bait-house program with 50+ volunteer homes; GPS tags cost $565 plus $30/year each.</li>
+                <li>$10,000 reward announced Apr. 23, 2025 for the two January cases, the first use of the county pilot.</li>
+              </ul></div>
+            </div>
+            <p class="chart-note">Sources: <a href="https://www.athertonca.gov/ArchiveCenter/ViewFile/Item/3934">town recap</a>, <a href="https://www.athertonca.gov/DocumentCenter/View/12127/Police-Department-Annual-Report-2024?bidId=">2024 annual report</a>, <a href="https://ci.atherton.ca.us/DocumentCenter/View/11215/Community-meeting-presentation-2023">2023 community deck</a>, <a href="https://www.athertonca.gov/DocumentCenter/View/9335/ITEM-6">2021 ALPR report</a>, <a href="http://www.paloaltoonline.com/atherton/2025/04/27/burlgars-break-into-another-atherton-home-just-days-after-police-announce-10k-reward/">Palo Alto Online</a>, and <a href="https://padailypost.com/2025/10/27/town-hit-by-burglars-days-after-community-meeting-about-burglaries/">Daily Post</a>.</p>
+          </article>
+
+          <article class="jurisdiction" data-place="menlo">
+            <div class="j-head"><h3>Menlo Park</h3><div class="metric">32 / 35<span>planned fixed ALPR cameras operating by Dec. 31, 2025</span></div></div>
+            <p class="j-summary">After rejecting Flock on privacy grounds in September 2023, the council reversed course following Sharon Heights burglaries. Home burglaries held nearly flat at 57 in 2024 and 59 in 2025; a January–February 2026 spike later returned to typical levels.</p>
+            <div class="detail-grid">
+              <div><h4>Incidents & pressure</h4><ul>
+                <li>June 16, 2024: suspected burglar arrested at a residential construction site; an alleged collaborator escaped.</li>
+                <li>A resident petition in early 2026 claimed 25+ west-side homes hit in a year, including one occupied home invasion. <span class="signal">Petitioner claims</span></li>
+                <li>Public comments pushed safety into the council’s FY2026–27 priority discussion.</li>
+              </ul></div>
+              <div><h4>Response & oversight</h4><ul>
+                <li>30-day Flock retention; 30 of 35 cameras live July 2, 2025 and 32 by Dec. 31.</li>
+                <li>Out-of-state agencies ran tens of thousands of searches for an unknown period, contrary to California law; disclosed after press inquiry.</li>
+                <li>Chief rejected a Sharon Heights substation as not cost-effective; favored patrols, coordination, home inspections, watch blocks, and a camera registry.</li>
+              </ul></div>
+            </div>
+            <p class="chart-note">Sources: <a href="https://www.paloaltoonline.com/news/2023/09/29/citing-privacy-concerns-menlo-park-says-no-to-automated-license-plate-readers/">2023 council coverage</a>, <a href="https://www.menlopark.gov/files/sharedassets/public/v/1/agendas-and-minutes/city-council/2025-meetings/20250812/i2-pd-quarterly-update.pdf">Q2 2025 PD report</a>, <a href="https://www.menlopark.gov/files/sharedassets/public/v/1/agendas-and-minutes/city-council/2026-meetings/20260210/g2-20260210-cc-police-dept-quarterly-update-2025-q4.pdf">Q4 2025 PD report</a>, <a href="https://www.paloaltoonline.com/investigative-story/2025/08/19/menlo-park-police-broke-state-law-shared-license-plate-data-out-of-state/">Almanac investigation</a>, and <a href="https://padailypost.com/2026/05/11/police-chief-says-sharon-heights-substation-doesnt-pencil-out-city-should-expand-license-plate-camera-system-crime-overall-is-down/">May 2026 Daily Post</a>.</p>
+          </article>
+
+          <article class="jurisdiction" data-place="paloalto">
+            <div class="j-head"><h3>Palo Alto</h3><div class="metric">30<span>Flock cameras; roughly $93,500 per year</span></div></div>
+            <p class="j-summary">Palo Alto expanded from 20 cameras approved in 2023 to 30 in 2024. The chief reported a 13% year-over-year reduction in residential burglaries around June 2026, while the 2025 FBI series shows 184 total burglaries for a partial year and cannot be compared as a residential annual total.</p>
+            <div class="detail-grid">
+              <div><h4>Incidents & trend</h4><ul>
+                <li>19 homes hit in about a month in late 2025; 16 south of Oregon Expressway.</li>
+                <li>Nov. 10: three homes in one hour, two occupied; backyard glass doors were breached.</li>
+                <li>Designer handbags, jewelry, and cash were primary targets; no arrests reported in the spree.</li>
+              </ul></div>
+              <div><h4>Response & controversy</h4><ul>
+                <li>Flock was key evidence in 130+ cases since 2024, according to the chief.</li>
+                <li>Two suspects tied to dozens of regional residential burglaries were identified and arrested using multi-jurisdiction Flock data.</li>
+                <li>June 1, 2026 council study session examined Flock’s undisclosed “Nationwide Lookup”; no formal action, cameras remained.</li>
+              </ul></div>
+            </div>
+            <p class="chart-note">Sources: <a href="https://www.paloalto.gov/files/assets/public/v/2/police-department/public-information-portal/alpr-staff-report-6-1-2026.pdf">June 1, 2026 ALPR staff report</a>, <a href="https://www.paloaltoonline.com/police/2026/06/01/palo-alto-considers-ditching-license-plate-cameras-amid-public-outcry/">Palo Alto Online council coverage</a>, <a href="https://padailypost.com/2026/07/04/council-divided-over-license-plate-cameras/">Daily Post council coverage</a>, and <a href="https://www.paloaltoonline.com/crime/2025/11/21/police-warn-about-spike-in-burglaries-in-south-palo-alto/">south Palo Alto spree report</a>.</p>
+          </article>
+
+          <article class="jurisdiction" data-place="county">
+            <div class="j-head"><h3>Unincorporated county / Menlo Oaks</h3><div class="metric">−23%<span>residential + commercial burglary, YTD Sept. 2024 vs. 2023</span></div></div>
+            <p class="j-summary">The Sheriff’s Office reported a broad year-to-date decline in 2024, but residents in Menlo Oaks described a localized gap: no dedicated patrol, attempted burglaries, and 5–15-minute response times. The Sheriff’s Office said the area received regular patrols and timely responses.</p>
+            <div class="detail-grid">
+              <div><h4>Local picture</h4><ul>
+                <li>Historically about 3–4 burglaries per year; six between Nov. 2023 and Feb. 2025.</li>
+                <li>Sheriff count: three home burglaries in 2024 and two in 2025 year-to-date as of Oct. 2.</li>
+                <li>200+ families funded guards four nights a week plus holidays; 100+ residents joined the security chat.</li>
+              </ul></div>
+              <div><h4>County response</h4><ul>
+                <li>$10,000 reward pilot followed 90+ burglaries in five months across unincorporated areas and nearby cities.</li>
+                <li>Sheriff cited patrols, public-safety forums, and ALPR in the 2024 decline.</li>
+                <li>County supervisors reportedly approved up to $3.3 million for an 18-month Peregrine data platform in January 2026. <span class="signal">Unofficial summary</span></li>
+              </ul></div>
+            </div>
+            <p class="chart-note">Sources: <a href="https://www.smcsheriff.com/sites/default/files/articles/09-30-2024%20San%20Mateo%20County%20Sheriff%E2%80%99s%20Office%20%E2%80%93%20A%20Safer%20Community%20%E2%80%93%20Crime%20is%20Down%20Across%20Key%20Categories.pdf">Sheriff’s Sept. 30, 2024 release</a>, <a href="https://padailypost.com/2025/10/02/neighborhood-hires-its-own-security-because-of-lack-of-patrols-by-sheriff/">Daily Post on Menlo Oaks</a>, and <a href="http://www.paloaltoonline.com/atherton/2025/04/27/burlgars-break-into-another-atherton-home-just-days-after-police-announce-10k-reward/">reward-pilot coverage</a>. Peregrine detail comes from a citizenportal.ai index summary; no source URL was confirmed in the report.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="meetings">
+        <div class="section-head"><div class="num">04</div><h2>The public-meeting trail</h2></div>
+        <p class="lede">The clearest official record is in police staff reports and council packets. Several 2026 developments were found only in press coverage or an AI-generated meeting summary; those distinctions matter.</p>
+        <div class="meeting-list">
+          <article class="meeting"><time>Apr 2, 2025</time><div class="status">Atherton · official recap</div><div class="body"><strong>Joint council and finance study session</strong>Reviewed the 2024 Police Department Annual Report: residential burglary was described as the town’s number-one crime; police investigate two to three per month. <a href="https://www.athertonca.gov/ArchiveCenter/ViewFile/Item/3934">Source</a></div></article>
+          <article class="meeting"><time>Aug 12, 2025</time><div class="status">Menlo Park · official packet</div><div class="body"><strong>City Council, Item I-2 / #25-110-CC</strong>Q2 update recorded 30 of 35 fixed Flock cameras operational as of July 2 and a 30-day retention period. <a href="https://www.menlopark.gov/files/sharedassets/public/v/1/agendas-and-minutes/city-council/2025-meetings/20250812/i2-pd-quarterly-update.pdf">Source</a></div></article>
+          <article class="meeting"><time>Feb 10, 2026</time><div class="status">Menlo Park · official packet</div><div class="body"><strong>City Council, Item G-2 / #26-015-CC</strong>Q4 update recorded 32 of 35 cameras operational as of Dec. 31, 2025 and no out-of-state agency access granted in Q4. <a href="https://www.menlopark.gov/files/sharedassets/public/v/1/agendas-and-minutes/city-council/2026-meetings/20260210/g2-20260210-cc-police-dept-quarterly-update-2025-q4.pdf">Source</a></div></article>
+          <article class="meeting"><time>Mar 21, 2026</time><div class="status">Menlo Park · unofficial summary</div><div class="body"><strong>Council priorities workshop</strong>Public comments about burglaries contributed to council direction for a public-safety study session. Only a citizenportal.ai summary was located; no official record was confirmed.</div></article>
+          <article class="meeting"><time>May 12, 2026</time><div class="status">Menlo Park · press coverage</div><div class="body"><strong>Public-safety study session</strong>The chief’s report rejected a Sharon Heights substation as not cost-effective and favored broader patrol and technology strategies. Official minutes were not located. <a href="https://padailypost.com/2026/05/11/police-chief-says-sharon-heights-substation-doesnt-pencil-out-city-should-expand-license-plate-camera-system-crime-overall-is-down/">Source</a></div></article>
+          <article class="meeting"><time>Jun 1, 2026</time><div class="status">Palo Alto · official report</div><div class="body"><strong>City Council study session, Report #2605-6381</strong>Reviewed the Flock program after disclosure of “Nationwide Lookup.” No formal action was taken. <a href="https://www.paloalto.gov/files/assets/public/v/2/police-department/public-information-portal/alpr-staff-report-6-1-2026.pdf">Staff report</a></div></article>
+        </div>
+      </section>
+
+      <section id="timeline">
+        <div class="section-head"><div class="num">05</div><h2>Incident and policy timeline</h2></div>
+        <div class="filters" role="group" aria-label="Filter timeline">
+          <button class="filter timeline-filter" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter timeline-filter" data-filter="atherton" aria-pressed="false">Atherton</button>
+          <button class="filter timeline-filter" data-filter="menlo" aria-pressed="false">Menlo Park</button>
+          <button class="filter timeline-filter" data-filter="paloalto" aria-pressed="false">Palo Alto</button>
+          <button class="filter timeline-filter" data-filter="county" aria-pressed="false">County</button>
+        </div>
+        <div class="timeline">
+          <article class="event" data-place="atherton"><time>February–May 2024</time><h3>Atherton bait-house concept becomes a program</h3><p>A surge prompted the concept in February; by May 28, 50+ homes had volunteered for GPS-tagged valuables. Atherton had recorded 15 residential burglaries year-to-date by May 28.</p></article>
+          <article class="event" data-place="menlo"><time>June 16, 2024</time><h3>Construction-site arrest in Menlo Park</h3><p>A suspected burglar was arrested at a residential construction site; an alleged collaborator escaped.</p></article>
+          <article class="event" data-place="county"><time>September 30, 2024</time><h3>Sheriff reports a broad decline</h3><p>Residential and commercial burglary down 23% year-to-date; larceny down 12%; stolen property down 38%, all versus the same 2023 period.</p></article>
+          <article class="event" data-place="paloalto"><time>December 2, 2024</time><h3>Palo Alto expands Flock</h3><p>Council approves 10 more cameras, bringing the planned total to 30 under a five-year contract through December 2029.</p></article>
+          <article class="event" data-place="atherton"><time>January 11, 2025</time><h3>Two Stevick Drive homes hit</h3><p>Rear glass doors broken around 7 p.m.; roughly $20,000 in jewelry and gold and silver coins stolen from one home.</p></article>
+          <article class="event" data-place="atherton"><time>April 23–26, 2025</time><h3>Reward, then another burglary</h3><p>A $10,000 reward is announced for the January cases. Three days later, a rear-door window is removed at an Isabella Avenue home.</p></article>
+          <article class="event" data-place="menlo"><time>August 19, 2025</time><h3>Out-of-state Flock access disclosed</h3><p>The Almanac reports that Houston and Sauk Village police ran tens of thousands of searches of Menlo Park data for an unknown period.</p></article>
+          <article class="event" data-place="atherton"><time>October 25–27, 2025</time><h3>Three Atherton attempts in four days</h3><p>Faxon Road, Mulberry Lane, and Faxon Forest Road; glass was smashed, no arrests reported.</p></article>
+          <article class="event" data-place="paloalto"><time>November 10–16, 2025</time><h3>South Palo Alto surge</h3><p>Three homes hit in one hour on Nov. 10; two occupied. Greenmeadow meeting held Nov. 16 amid a 19-home monthly spike.</p></article>
+          <article class="event" data-place="menlo"><time>January–May 2026</time><h3>Spike drives policy debate</h3><p>A January–February home-burglary spike returns to typical levels; council debates but does not pursue a Sharon Heights substation in May.</p></article>
+          <article class="event" data-place="paloalto"><time>April 21–June 1, 2026</time><h3>Nationwide Lookup disclosed and debated</h3><p>Palo Alto publishes Flock search logs, then holds a council study session. No formal action is taken.</p></article>
+        </div>
+      </section>
+
+      <section id="responses">
+        <div class="section-head"><div class="num">06</div><h2>How the four jurisdictions responded</h2></div>
+        <div class="response-matrix" role="table" aria-label="Police and city response comparison">
+          <div class="cell header" role="columnheader">Response</div><div class="cell header" role="columnheader">Atherton</div><div class="cell header" role="columnheader">Menlo Park</div><div class="cell header" role="columnheader">Palo Alto</div><div class="cell header" role="columnheader">County / uninc.</div>
+          <div class="cell rowhead" role="rowheader">Fixed ALPR</div><div class="cell" data-label="Atherton">47 cameras: 21 town + 26 resident</div><div class="cell" data-label="Menlo Park">35 planned; 32 live end-2025</div><div class="cell" data-label="Palo Alto">30 cameras; about $93,500/year</div><div class="cell" data-label="County / uninc.">Sheriff uses ALPR</div>
+          <div class="cell rowhead" role="rowheader">Bait houses</div><div class="cell" data-label="Atherton">Yes; 50+ homes, GPS tags</div><div class="cell" data-label="Menlo Park">Not found</div><div class="cell" data-label="Palo Alto">Not found</div><div class="cell" data-label="County / uninc.">Not found</div>
+          <div class="cell rowhead" role="rowheader">Reward</div><div class="cell" data-label="Atherton">$10,000, April 2025</div><div class="cell" data-label="Menlo Park">Not found</div><div class="cell" data-label="Palo Alto">Not found</div><div class="cell" data-label="County / uninc.">Mueller pilot launched 2024</div>
+          <div class="cell rowhead" role="rowheader">Community</div><div class="cell" data-label="Atherton">CPTED reviews, ADAPT, volunteer patrol</div><div class="cell" data-label="Menlo Park">Watch blocks, home inspections, camera registry proposed</div><div class="cell" data-label="Palo Alto">Greenmeadow meeting, Nov. 2025</div><div class="cell" data-label="County / uninc.">Public-safety forums; private Menlo Oaks network</div>
+          <div class="cell rowhead" role="rowheader">Oversight</div><div class="cell" data-label="Atherton">Council study reports</div><div class="cell" data-label="Menlo Park">Transparency portal + quarterly updates</div><div class="cell" data-label="Palo Alto">Transparency portal + monthly logs since Apr. 2026</div><div class="cell" data-label="County / uninc.">Peregrine approval reported, not officially verified</div>
+        </div>
+        <p class="chart-note">Dash-equivalent “not found” means the research located no program; it does not prove none exists. Menlo Park and Palo Alto publish <a href="https://transparency.flocksafety.com/menloparkcapd">Menlo Park</a> and <a href="https://transparency.flocksafety.com/paloaltocapd">Palo Alto</a> Flock transparency portals.</p>
+      </section>
+
+      <section id="menlo-oaks">
+        <div class="section-head"><div class="num">07</div><h2>What this means for Menlo Oaks</h2></div>
+        <p class="lede">Menlo Oaks lies in the Sheriff’s jurisdiction but directly borders two active burglary-suppression systems. The evidence supports practical actions now and a political question about patrol capacity.</p>
+        <div class="implications">
+          <article class="implication"><b>01</b><h3>Risk is moderate, not imaginary</h3><p>The historic baseline is about three to four burglaries a year, with six between Nov. 2023 and Feb. 2025. Attempted burglaries appear to drive more concern than completed-case statistics capture.</p></article>
+          <article class="implication"><b>02</b><h3>Design for the repeated entry pattern</h3><p>Prioritize rear glass protection, locked side gates, exterior lighting and motion detection, a monitored alarm, and a safe bolted to structure. Keep high-value portable items out of the primary bedroom.</p></article>
+          <article class="implication"><b>03</b><h3>Make street cameras investigative</h3><p>Resident-funded cameras are already in place. A formal registry or footage-sharing path with the Sheriff could make them more useful across jurisdiction lines, following the model Menlo Park’s chief proposed.</p></article>
+          <article class="implication"><b>04</b><h3>Use the county lever</h3><p>The Mueller reward pilot covers unincorporated-area burglaries. The longer-term ask is dedicated patrol capacity and clear performance reporting for unincorporated neighborhoods.</p></article>
+          <article class="implication"><b>05</b><h3>Watch winter and evening hours</h3><p>Atherton’s January 2025 cases and Menlo Park’s Jan.–Feb. 2026 spike, plus repeated 5–10 p.m. entry windows, support extra attention during winter evenings.</p></article>
+          <article class="implication"><b>06</b><h3>Demand cross-border accountability</h3><p>The reported Peregrine platform could improve regional case linkage, but its official approval record, access rules, and measured outcomes remain open questions in this review.</p></article>
+        </div>
+      </section>
+
+      <section id="caveats">
+        <div class="section-head"><div class="num">08</div><h2>Corrections, caveats, and open questions</h2></div>
+        <div class="caveats"><ul>
+          <li><strong>No verified Chilean-crew link to the January 2025 Atherton cases.</strong> The documented link belongs to the 2021–2022 Atherton wave. Treat the newer attribution as a conflation.</li>
+          <li><strong>Atherton’s 2025 year-end count was not found.</strong> The available record has four reported home burglaries by Apr. 27 plus three October attempts.</li>
+          <li><strong>Atherton’s 2023 figures conflict.</strong> The community deck reports 17 residential burglaries; the 2024 annual report reports 20 burglaries. Likely different definitions, not resolved.</li>
+          <li><strong>Menlo Park’s May 12, 2026 official minutes were not located.</strong> Findings come from press coverage of the chief’s report.</li>
+          <li><strong>The March 21, 2026 Menlo Park workshop is supported only by an AI-generated summary.</strong> It is not treated as an official record.</li>
+          <li><strong>County Legistar file 24-923 could not be fetched.</strong> Its possible connection to the reward pilot remains unverified.</li>
+          <li><strong>No arrests were reported for the October 2025 Atherton spree or November 2025 Palo Alto spree.</strong> This review did locate a June 2024 Menlo Park arrest and a March 2025 Atherton attempted-burglary arrest.</li>
+        </ul></div>
+      </section>
+
+      <section id="sources" class="sources">
+        <div class="section-head"><div class="num">09</div><h2>Source standard and primary documents</h2></div>
+        <div><span class="source-key"><span class="dot"></span>Read directly during Sept. 21 research</span><span class="source-key"><span class="dot index"></span>Search-index or press-summary evidence</span></div>
+        <ol>
+          <li><a href="https://www.athertonca.gov/DocumentCenter/View/12127/Police-Department-Annual-Report-2024?bidId=">Atherton Police Department Annual Report 2024</a> <span class="signal">Index</span></li>
+          <li><a href="https://www.athertonca.gov/DocumentCenter/View/9335/ITEM-6">Atherton ALPR Effectiveness / Burglary Activity Update, Sept. 1, 2021</a></li>
+          <li><a href="https://ci.atherton.ca.us/DocumentCenter/View/11215/Community-meeting-presentation-2023">Atherton Police community meeting presentation, 2023</a> <span class="signal">Index</span></li>
+          <li><a href="https://www.menlopark.gov/files/sharedassets/public/v/1/agendas-and-minutes/city-council/2025-meetings/20250812/i2-pd-quarterly-update.pdf">Menlo Park PD quarterly update, Q2 2025</a></li>
+          <li><a href="https://www.menlopark.gov/files/sharedassets/public/v/1/agendas-and-minutes/city-council/2026-meetings/20260210/g2-20260210-cc-police-dept-quarterly-update-2025-q4.pdf">Menlo Park PD quarterly update, Q4 2025</a></li>
+          <li><a href="https://www.paloalto.gov/files/assets/public/v/2/police-department/public-information-portal/alpr-staff-report-6-1-2026.pdf">Palo Alto ALPR staff report, June 1, 2026</a></li>
+          <li><a href="https://www.smcsheriff.com/sites/default/files/articles/09-30-2024%20San%20Mateo%20County%20Sheriff%E2%80%99s%20Office%20%E2%80%93%20A%20Safer%20Community%20%E2%80%93%20Crime%20is%20Down%20Across%20Key%20Categories.pdf">San Mateo County Sheriff: “A Safer Community,” Sept. 30, 2024</a> <span class="signal">Index</span></li>
+          <li><a href="https://www.paloaltoonline.com/crime/2025/11/21/police-warn-about-spike-in-burglaries-in-south-palo-alto/">Palo Alto Online: south Palo Alto burglary spike, Nov. 21, 2025</a></li>
+          <li><a href="https://padailypost.com/2025/10/02/neighborhood-hires-its-own-security-because-of-lack-of-patrols-by-sheriff/">Palo Alto Daily Post: Menlo Oaks private security, Oct. 2, 2025</a></li>
+          <li><a href="https://www.paloaltoonline.com/investigative-story/2025/08/19/menlo-park-police-broke-state-law-shared-license-plate-data-out-of-state/">The Almanac: Menlo Park out-of-state ALPR sharing, Aug. 19, 2025</a> <span class="signal">Index</span></li>
+        </ol>
+      </section>
+    </main>
+  </div>
+  <footer><span>Research snapshot: September 21, 2026</span><span>Counts are not directly comparable where agencies use different definitions.</span></footer>
+</div>
+<script>
+(() => {
+  const series = [
+    {name:'Atherton · all burglaries', color:'#be5c3d', values:{2023:20,2024:30}},
+    {name:'Menlo Park · home burglaries', color:'#176e67', values:{2024:57,2025:59}},
+    {name:'Palo Alto · total burglaries', color:'#3473a0', values:{2023:176,2024:147,2025:184}, partial:2025}
+  ];
+  const svg = document.getElementById('burglaryChart');
+  const ns='http://www.w3.org/2000/svg';
+  const W=760,H=360,m={l:54,r:18,t:42,b:92},years=[2023,2024,2025],max=Math.ceil(Math.max(...series.flatMap(s=>Object.values(s.values)))/50)*50;
+  const y=v=>m.t+(H-m.t-m.b)*(1-v/max), plotH=H-m.t-m.b, groupW=(W-m.l-m.r)/years.length, barW=42;
+  const add=(tag,attrs,text)=>{const el=document.createElementNS(ns,tag);Object.entries(attrs||{}).forEach(([k,v])=>el.setAttribute(k,v));if(text!==undefined)el.textContent=text;svg.appendChild(el);return el};
+  for(let t=0;t<=max;t+=50){const yy=y(t);add('line',{x1:m.l,y1:yy,x2:W-m.r,y2:yy,stroke:'var(--line)','stroke-width':1});add('text',{x:m.l-10,y:yy+4,'text-anchor':'end',fill:'var(--muted)','font-size':11},t)}
+  years.forEach((yr,yi)=>{add('text',{x:m.l+groupW*(yi+.5),y:H-m.b+24,'text-anchor':'middle',fill:'var(--ink)','font-size':12,'font-weight':700},yr);series.forEach((s,si)=>{const v=s.values[yr];if(v==null)return;const x=m.l+groupW*yi+groupW/2+(si-1)*(barW+7)-barW/2;const yy=y(v);add('rect',{x,y:yy,width:barW,height:plotH-(yy-m.t),fill:s.color,rx:2});add('text',{x:x+barW/2,y:yy-7,'text-anchor':'middle',fill:'var(--ink)','font-size':12,'font-weight':700},v+(s.partial===yr?'*':''))})});
+  series.forEach((s,i)=>{const x=m.l+i*220;add('rect',{x,y:H-34,width:11,height:11,fill:s.color,rx:2});add('text',{x:x+17,y:H-24,fill:'var(--muted)','font-size':11},s.name)});
+  add('text',{x:W-m.r,y:m.t-18,'text-anchor':'end',fill:'var(--muted)','font-size':11},'* partial year');
+
+  const wireFilters=(selector,itemSelector)=>{
+    const buttons=[...document.querySelectorAll(selector)],items=[...document.querySelectorAll(itemSelector)];
+    buttons.forEach(btn=>btn.addEventListener('click',()=>{buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));const f=btn.dataset.filter;items.forEach(item=>item.classList.toggle('hidden',f!=='all'&&item.dataset.place!==f));}));
+  };
+  wireFilters('#places .filter','.jurisdiction');
+  wireFilters('#timeline .filter','.event');
+})();
+</script>
+</body>
+</html>
