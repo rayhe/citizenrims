@@ -16531,5 +16531,49 @@
     "distance_mi": 1.67,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-33e9684d643sm17194915eec.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-23T21:44:34.480536+00:00",
+    "id": "inc-menlopark-202609230032",
+    "subject": "[MOSI] Fraud near LAUREL ST \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "LAUREL ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.51,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-144f982089fsm8199309c88.5 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-23T21:44:35.176966+00:00",
+    "id": "inc-atherton-202609230036",
+    "subject": "[MOSI] FRAUD / FALSE PERSONATION near MOUNT VERNON LN \u2014 1.4mi from Menlo Oaks (Medium)",
+    "street": "MOUNT VERNON LN",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.37,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-33e96952605sm8480002eec.22 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-23T21:44:35.927314+00:00",
+    "id": "case-menlopark-26-2024",
+    "subject": "[MOSI] Theft of personal property - From building (M) near HAVEN AV \u2014 1.4mi from Menlo Oaks (High)",
+    "street": "HAVEN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.35,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-33e96258978sm7967602eec.14 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-23T21:44:36.633481+00:00",
+    "id": "case-redwoodcity-R26-08-0496",
+    "subject": "[MOSI] Thft util srvs rcv beneft - All other larceny (M) near 5TH AV \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "5TH AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.85,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-33e96258351sm8507232eec.12 - gsmtp')"
   }
 ]
