@@ -16641,5 +16641,27 @@
     "distance_mi": 0.71,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-91425b7c3b9sm2876326d6.46 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-24T14:20:36.638659+00:00",
+    "id": "case-redwoodcity-R26-09-6002",
+    "subject": "[MOSI] Obtain credit/etc:use others id - Identity theft (M) near WOODSIDE RD \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "WOODSIDE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.84,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2df6a516d96sm27809975ad.2 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-24T14:20:37.487154+00:00",
+    "id": "case-redwoodcity-R26-09-6003",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near EAST BAYSHORE RD \u2014 2.4mi from Menlo Oaks (Medium)",
+    "street": "EAST BAYSHORE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.36,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
