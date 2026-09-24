@@ -16619,5 +16619,27 @@
     "distance_mi": 1.01,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-33e95c7c63bsm9848979eec.10 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-24T09:28:15.062189+00:00",
+    "id": "inc-menlopark-202609230075",
+    "subject": "[MOSI] Fraud near HOOVER ST \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "HOOVER ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.86,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-93c24753395sm420146385a.4 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-24T09:28:15.334428+00:00",
+    "id": "case-menlopark-26-2039",
+    "subject": "[MOSI] Theft by use of access card information - Credit card/atm (M) near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.71,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-91425b7c3b9sm2876326d6.46 - gsmtp')"
   }
 ]
