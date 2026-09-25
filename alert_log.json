@@ -16762,5 +16762,38 @@
     "distance_mi": 0.78,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-914309a27dcsm13573746d6.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-25T18:56:46.484743+00:00",
+    "id": "inc-menlopark-202609240117",
+    "subject": "[MOSI] Grand Theft near MIDDLE AV \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "MIDDLE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.09,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-8804595820esm1391345b3a.57 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-25T18:56:46.876810+00:00",
+    "id": "inc-paloalto-202609250050",
+    "subject": "[MOSI] 459A near CHANNING AVE/EMBARCADERO RD \u2014 2.3mi from Menlo Oaks (High)",
+    "street": "CHANNING AVE/EMBARCADERO RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.32,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-87fea88ed6fsm1587777b3a.31 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-25T18:56:47.316706+00:00",
+    "id": "case-redwoodcity-R26-09-0048",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Embezzlement (F) near EL CAMINO REAL \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.82,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-cc7879057f2sm1769929a12.5 - gsmtp')"
   }
 ]
