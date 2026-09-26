@@ -16817,5 +16817,49 @@
     "distance_mi": 1.41,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-34141a4a00dsm9355110eec.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-26T05:22:24.224333+00:00",
+    "id": "inc-menlopark-202609250067",
+    "subject": "[MOSI] Vehicle Tampering near GARWOOD WY \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "GARWOOD WY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-91430df77adsm32061446d6.26 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-26T05:22:24.457231+00:00",
+    "id": "inc-menlopark-202609250058",
+    "subject": "[MOSI] Fraud near WAVERLEY ST \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "WAVERLEY ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.53,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-91430dcba2dsm32260886d6.18 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-26T05:22:24.743697+00:00",
+    "id": "case-menlopark-26-2065",
+    "subject": "[MOSI] Theft by use of access card information - Credit card/atm (M) near WAVERLEY ST \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "WAVERLEY ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.53,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-91430e0be09sm32188736d6.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-26T05:22:24.990992+00:00",
+    "id": "case-menlopark-26-2066",
+    "subject": "[MOSI] Tamper with vehicle - Motor vehicle parts/accessories (M) near GARWOOD WY/GLENWOOD AV \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "GARWOOD WY/GLENWOOD AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.78,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-91430dcba2dsm32260996d6.18 - gsmtp')"
   }
 ]
