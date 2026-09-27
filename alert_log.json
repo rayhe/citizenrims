@@ -16883,5 +16883,27 @@
     "distance_mi": 0.94,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-6d581dc77b5sm6702116eaf.3 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-27T06:26:10.759012+00:00",
+    "id": "inc-paloalto-202609260245",
+    "subject": "[MOSI] 487 near KINGSLEY AVE/WHITMAN CT \u2014 1.7mi from Menlo Oaks (Medium)",
+    "street": "KINGSLEY AVE/WHITMAN CT",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.68,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-342c9c245a7sm11306873eec.11 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-27T06:26:11.522240+00:00",
+    "id": "case-atherton-26-351",
+    "subject": "[MOSI] Tamper with vehicle - Motor vehicle parts/accessories (M) near EL CAMINO REAL \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.94,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-34144757747sm22167491eec.13 - gsmtp')"
   }
 ]
