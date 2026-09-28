@@ -16960,5 +16960,38 @@
     "distance_mi": 1.37,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-93c8145c65csm83701085a.35 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-28T15:50:02.129398+00:00",
+    "id": "inc-menlopark-202609270057",
+    "subject": "[MOSI] Burglary near LAUREL AV \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "LAUREL AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.71,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-91430dd2858sm83152516d6.21 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-28T15:50:02.431156+00:00",
+    "id": "case-menlopark-26-2076",
+    "subject": "[MOSI] Burglary - All other larceny (F) near LAUREL AV \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "LAUREL AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.71,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-53322132f3dsm65830161cf.8 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-28T15:50:02.679899+00:00",
+    "id": "case-smcsheriff-26-07126",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near OAKSIDE AV \u2014 2.1mi from Menlo Oaks (Medium)",
+    "street": "OAKSIDE AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.12,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-93c813fee09sm175948085a.24 - gsmtp')"
   }
 ]
