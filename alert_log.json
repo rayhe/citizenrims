@@ -16905,5 +16905,49 @@
     "distance_mi": 0.94,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-34144757747sm22167491eec.13 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-28T01:30:38.266823+00:00",
+    "id": "inc-menlopark-202609270021",
+    "subject": "[MOSI] Burglary near CRANE ST \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CRANE ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-53322020e91sm52164321cf.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-28T01:30:38.676246+00:00",
+    "id": "inc-menlopark-202609270035",
+    "subject": "[MOSI] Grand Theft near LAUREL ST \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "LAUREL ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.5,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-9143bafa102sm58750086d6.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-28T01:30:39.044487+00:00",
+    "id": "case-menlopark-26-2070",
+    "subject": "[MOSI] Burglary:second degree - From building (F) near CRANE ST \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CRANE ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.98,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-53322020e91sm52164561cf.1 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-28T01:30:39.235810+00:00",
+    "id": "case-menlopark-26-2071",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near LAUREL ST \u2014 0.5mi from Menlo Oaks (High)",
+    "street": "LAUREL ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.5,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d75a77b69052e-533220200cdsm52586761cf.2 - gsmtp')"
   }
 ]
