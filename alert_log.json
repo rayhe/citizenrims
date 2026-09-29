@@ -17092,5 +17092,38 @@
     "distance_mi": 0.74,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-09-29T01:07:25.465595+00:00",
+    "id": "inc-menlopark-202609280058",
+    "subject": "[MOSI] Vehicle Tampering near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.71,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-93c81423acasm279123085a.27 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-29T01:07:25.744176+00:00",
+    "id": "inc-menlopark-202609280054",
+    "subject": "[MOSI] Grand Theft near SANTA CRUZ AV \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "SANTA CRUZ AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.96,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-91430e6ccfcsm91693696d6.40 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-09-29T01:07:26.019098+00:00",
+    "id": "case-redwoodcity-R26-09-0013",
+    "subject": "[MOSI] Burglary:second degree - From building (F) near HAZEL AV \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "HAZEL AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.81,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-915e7afe81asm37406026d6.6 - gsmtp')"
   }
 ]
