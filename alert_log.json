@@ -17147,5 +17147,38 @@
     "distance_mi": 0.96,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-09-30T07:23:43.488441+00:00",
+    "id": "inc-redwoodcity-202609290200",
+    "subject": "[MOSI] Vandalism near EAST BAYSHORE RD \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "EAST BAYSHORE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.76,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-09-30T07:23:43.597701+00:00",
+    "id": "inc-paloalto-202609290367",
+    "subject": "[MOSI] 487 near KELLOGG AVE/EMBARCADERO RD \u2014 1.8mi from Menlo Oaks (Medium)",
+    "street": "KELLOGG AVE/EMBARCADERO RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.77,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-09-30T07:23:43.760245+00:00",
+    "id": "case-atherton-26-358",
+    "subject": "[MOSI] Theft of prop after prior - All other larceny (F) near MIDDLEFIELD RD \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.2,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
