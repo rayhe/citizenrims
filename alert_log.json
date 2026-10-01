@@ -17191,5 +17191,38 @@
     "distance_mi": 0.9,
     "status": "failed",
     "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-93cb6542832sm32654485a.29 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-10-01T01:55:32.307497+00:00",
+    "id": "inc-menlopark-202609300059",
+    "subject": "[MOSI] Grand Theft near SHARON PARK DR \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "SHARON PARK DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.85,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-01T01:55:32.538105+00:00",
+    "id": "inc-paloalto-202609300211",
+    "subject": "[MOSI] 459R near NEWELL RD/MARK TWAIN ST \u2014 2.1mi from Menlo Oaks (High)",
+    "street": "NEWELL RD/MARK TWAIN ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.11,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-93cb658d40esm107445485a.40 - gsmtp')"
+  },
+  {
+    "timestamp": "2026-10-01T01:55:32.830351+00:00",
+    "id": "case-menlopark-26-2099",
+    "subject": "[MOSI] Grnd Thft:prop/Etc $400+ near GARDEN LN \u2014 2.6mi from Menlo Oaks (High)",
+    "street": "GARDEN LN",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.59,
+    "status": "failed",
+    "error": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-93cb64eb59esm104684385a.22 - gsmtp')"
   }
 ]
