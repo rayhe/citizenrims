@@ -17246,5 +17246,16 @@
     "distance_mi": 0.2,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-01T20:27:26.153073+00:00",
+    "id": "inc-atherton-202610010030",
+    "subject": "[MOSI] BURGLARY - RESIDENTIAL/COMMERCIAL near JAMES AV \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "JAMES AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.82,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
