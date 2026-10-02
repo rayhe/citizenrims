@@ -17257,5 +17257,27 @@
     "distance_mi": 0.82,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-02T05:25:13.181218+00:00",
+    "id": "inc-paloalto-202610010297",
+    "subject": "[MOSI] 487 near PISTACHE PL/SHOPPING CENTER WAY \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "PISTACHE PL/SHOPPING CENTER WAY",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.03,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-02T05:25:13.373310+00:00",
+    "id": "case-smcsheriff-26-07766",
+    "subject": "[MOSI] Burglary:second degree (F) near SPRING ST \u2014 2.6mi from Menlo Oaks (High)",
+    "street": "SPRING ST",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.6,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
