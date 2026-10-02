@@ -17279,5 +17279,16 @@
     "distance_mi": 2.6,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-02T16:39:53.674192+00:00",
+    "id": "inc-menlopark-202610020006",
+    "subject": "[MOSI] Stolen Vehicle near TERMINAL AV \u2014 0.5mi from Menlo Oaks (High)",
+    "street": "TERMINAL AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.46,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
