@@ -17290,5 +17290,16 @@
     "distance_mi": 0.46,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-02T20:58:38.756724+00:00",
+    "id": "inc-atherton-202610020020",
+    "subject": "[MOSI] VANDALISM near IRVING AV \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "IRVING AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.08,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
