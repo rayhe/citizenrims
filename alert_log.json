@@ -17345,5 +17345,16 @@
     "distance_mi": 0.2,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-03T21:29:11.824953+00:00",
+    "id": "inc-paloalto-202610030107",
+    "subject": "[MOSI] 594 near LANE 5 E/HAMILTON AVE \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "LANE 5 E/HAMILTON AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.22,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
