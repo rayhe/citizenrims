@@ -17334,5 +17334,16 @@
     "distance_mi": 0.46,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-03T18:21:02.276914+00:00",
+    "id": "inc-atherton-202610030012",
+    "subject": "[MOSI] GRAND THEFT near MIDDLEFIELD RD \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.2,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
