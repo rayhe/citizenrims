@@ -17301,5 +17301,16 @@
     "distance_mi": 1.08,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-03T05:28:18.645499+00:00",
+    "id": "case-menlopark-26-2116",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near TERMINAL AV \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "TERMINAL AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.46,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
