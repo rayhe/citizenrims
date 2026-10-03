@@ -17312,5 +17312,27 @@
     "distance_mi": 0.46,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-03T10:32:25.858635+00:00",
+    "id": "inc-redwoodcity-202610020198",
+    "subject": "[MOSI] Grand Theft near EL CAMINO REAL \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.7,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-03T10:32:26.026193+00:00",
+    "id": "case-menlopark-26-2115",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - False pretenses/swindle/confidence game (F) near TERMINAL AV \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "TERMINAL AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.46,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
