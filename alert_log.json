@@ -17411,5 +17411,38 @@
     "distance_mi": 2.77,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-04T22:00:06.388147+00:00",
+    "id": "inc-paloalto-202610040125",
+    "subject": "[MOSI] 459A near COLORADO AVE \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "COLORADO AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.86,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-04T22:00:06.676728+00:00",
+    "id": "case-smcsheriff-26-07408",
+    "subject": "[MOSI] Burglary:second degree (F) near EL CAMINO REAL \u2014 2.4mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.42,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-04T22:00:06.918073+00:00",
+    "id": "case-smcsheriff-26-07515",
+    "subject": "[MOSI] Burglary:second degree (F) near MARSH RD \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "MARSH RD",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.13,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
