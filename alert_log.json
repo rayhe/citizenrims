@@ -17400,5 +17400,16 @@
     "distance_mi": 0.51,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-04T18:49:50.303328+00:00",
+    "id": "inc-paloalto-202610040080",
+    "subject": "[MOSI] 459C near WEBSTER ST/BRYSON AVE \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "WEBSTER ST/BRYSON AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.77,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
