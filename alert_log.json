@@ -17389,5 +17389,16 @@
     "distance_mi": 1.01,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-04T15:50:28.859885+00:00",
+    "id": "inc-menlopark-202610040008",
+    "subject": "[MOSI] Recovered Stolen Vehicle near LAUREL ST \u2014 0.5mi from Menlo Oaks (High)",
+    "street": "LAUREL ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.51,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
