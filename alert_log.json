@@ -17378,5 +17378,16 @@
     "distance_mi": 2.64,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-04T11:17:10.011652+00:00",
+    "id": "case-menlopark-26-2122",
+    "subject": "[MOSI] Burglary:first degree (F) near OCONNOR ST \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "OCONNOR ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.01,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
