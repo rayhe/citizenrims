@@ -17455,5 +17455,16 @@
     "distance_mi": 0.96,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-05T14:55:12.920522+00:00",
+    "id": "inc-paloalto-202610050023",
+    "subject": "[MOSI] 487 near DANA AVE \u2014 1.4mi from Menlo Oaks (Medium)",
+    "street": "DANA AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.42,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
