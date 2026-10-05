@@ -17444,5 +17444,16 @@
     "distance_mi": 1.13,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-05T00:43:40.882405+00:00",
+    "id": "case-menlopark-26-2087",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near SANTA CRUZ AV \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "SANTA CRUZ AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.96,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
