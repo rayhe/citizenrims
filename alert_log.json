@@ -17466,5 +17466,16 @@
     "distance_mi": 1.42,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-06T01:56:39.770109+00:00",
+    "id": "case-menlopark-26-2100",
+    "subject": "[MOSI] Theft of personal property - From building (M) near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.71,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
