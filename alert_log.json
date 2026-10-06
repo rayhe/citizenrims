@@ -17488,5 +17488,27 @@
     "distance_mi": 2.91,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-06T23:59:46.269133+00:00",
+    "id": "inc-paloalto-202610060164",
+    "subject": "[MOSI] 487 near BYRON ST/MIDDLEFIELD RD \u2014 2.1mi from Menlo Oaks (Medium)",
+    "street": "BYRON ST/MIDDLEFIELD RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.15,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-06T23:59:46.561563+00:00",
+    "id": "case-menlopark-26-2141",
+    "subject": "[MOSI] Theft of personal property - Motor vehicle parts/accessories (M) near CURTIS ST \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "CURTIS ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
