@@ -17477,5 +17477,16 @@
     "distance_mi": 0.71,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-06T20:28:10.844584+00:00",
+    "id": "case-redwoodcity-R26-09-0286",
+    "subject": "[MOSI] Burglary:first degree - Motor vehicle parts/accessories (F) near HUDSON ST \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "HUDSON ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.91,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
