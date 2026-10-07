@@ -17554,5 +17554,16 @@
     "distance_mi": 0.85,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-07T18:49:51.735059+00:00",
+    "id": "case-redwoodcity-R26-09-0336",
+    "subject": "[MOSI] Appropriate lost property (M) near WOODSIDE RD/VETERANS BL \u2014 2.7mi from Menlo Oaks (High)",
+    "street": "WOODSIDE RD/VETERANS BL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.75,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
