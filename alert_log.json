@@ -17565,5 +17565,27 @@
     "distance_mi": 2.75,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-07T23:20:54.218733+00:00",
+    "id": "inc-menlopark-202610070039",
+    "subject": "[MOSI] Vandalism near MIDDLEFIELD RD \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.15,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-07T23:20:54.365471+00:00",
+    "id": "inc-menlopark-202610070049",
+    "subject": "[MOSI] Suspicious Person near VAN BUREN RD \u2014 0.2mi from Menlo Oaks (High)",
+    "street": "VAN BUREN RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.22,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
