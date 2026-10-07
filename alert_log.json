@@ -17510,5 +17510,16 @@
     "distance_mi": 0.85,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-07T05:41:45.403456+00:00",
+    "id": "inc-menlopark-202610060091",
+    "subject": "[MOSI] Grand Theft near MENLO AV \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "MENLO AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
