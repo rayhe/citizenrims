@@ -17521,5 +17521,38 @@
     "distance_mi": 0.85,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-07T12:01:07.258151+00:00",
+    "id": "inc-paloalto-202610060376",
+    "subject": "[MOSI] 487 near PISTACHE PL/SHOPPING CENTER WAY \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "PISTACHE PL/SHOPPING CENTER WAY",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-07T12:01:07.709774+00:00",
+    "id": "case-menlopark-26-2143",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.71,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-07T12:01:08.061193+00:00",
+    "id": "case-menlopark-26-2144",
+    "subject": "[MOSI] Theft of personal property - From motor vehicle (M) near MENLO AV \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "MENLO AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.85,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
