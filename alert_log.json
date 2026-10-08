@@ -17587,5 +17587,27 @@
     "distance_mi": 0.22,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-08T02:45:19.260407+00:00",
+    "id": "inc-menlopark-202610070057",
+    "subject": "[MOSI] Fraud near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.74,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-08T02:45:19.689675+00:00",
+    "id": "case-menlopark-26-2149",
+    "subject": "[MOSI] Personate to get money/property [over $400] - False pretenses/swindle/confidence game (F) near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.74,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
