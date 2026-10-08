@@ -17631,5 +17631,27 @@
     "distance_mi": 2.98,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-08T21:35:43.913224+00:00",
+    "id": "inc-atherton-202610080030",
+    "subject": "[MOSI] TRESPASSING near MIDDLEFIELD RD \u2014 0.2mi from Menlo Oaks (High)",
+    "street": "MIDDLEFIELD RD",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.2,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-08T21:35:44.390717+00:00",
+    "id": "inc-paloalto-202610080113",
+    "subject": "[MOSI] IDTHE near TULIP LN/EMBARCADERO RD \u2014 2.2mi from Menlo Oaks (Medium)",
+    "street": "TULIP LN/EMBARCADERO RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.23,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
