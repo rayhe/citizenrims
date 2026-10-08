@@ -17609,5 +17609,27 @@
     "distance_mi": 0.74,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-08T16:51:36.268722+00:00",
+    "id": "case-menlopark-26-2146",
+    "subject": "[MOSI] Possess stolen vehicle/vessel/etc (F) near ORANGE AV \u2014 2.3mi from Menlo Oaks (High)",
+    "street": "ORANGE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.3,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-08T16:51:37.132507+00:00",
+    "id": "case-redwoodcity-R26-10-0043",
+    "subject": "[MOSI] Possess/etc burglary tools (M) near REDWOOD AV/CLINTON ST \u2014 3.0mi from Menlo Oaks (High)",
+    "street": "REDWOOD AV/CLINTON ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.98,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
