@@ -17686,5 +17686,27 @@
     "distance_mi": 0.47,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-09T23:35:13.463165+00:00",
+    "id": "inc-menlopark-202610090056",
+    "subject": "[MOSI] Fraud near MAY BROWN AV \u2014 1.6mi from Menlo Oaks (Medium)",
+    "street": "MAY BROWN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.56,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-09T23:35:13.729941+00:00",
+    "id": "case-smcsheriff-26-07712",
+    "subject": "[MOSI] Vandalism:deface property (F) near NA FAIR OAKS AV \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "NA FAIR OAKS AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.86,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
