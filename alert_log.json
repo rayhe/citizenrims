@@ -17653,5 +17653,27 @@
     "distance_mi": 2.23,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-09T01:24:21.317415+00:00",
+    "id": "case-menlopark-26-2157",
+    "subject": "[MOSI] Theft of personal property - From motor vehicle (M) near SANTA CRUZ AV \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "SANTA CRUZ AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.69,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-09T01:24:21.576832+00:00",
+    "id": "case-menlopark-26-2160",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near BARRON ST \u2014 0.5mi from Menlo Oaks (High)",
+    "street": "BARRON ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.47,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
