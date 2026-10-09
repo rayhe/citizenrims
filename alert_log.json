@@ -17675,5 +17675,16 @@
     "distance_mi": 0.47,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-09T07:40:03.763547+00:00",
+    "id": "inc-menlopark-202610080069",
+    "subject": "[MOSI] Grand Theft near BARRON ST \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "BARRON ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.47,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
