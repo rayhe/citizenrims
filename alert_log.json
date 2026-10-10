@@ -17708,5 +17708,16 @@
     "distance_mi": 1.86,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-10T22:41:45.464095+00:00",
+    "id": "inc-paloalto-202610100135",
+    "subject": "[MOSI] 594 near SAN CARLOS CT/STER AVE \u2014 3.0mi from Menlo Oaks (Medium)",
+    "street": "SAN CARLOS CT/STER AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.97,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
