@@ -17719,5 +17719,16 @@
     "distance_mi": 2.97,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-11T01:15:56.817462+00:00",
+    "id": "inc-paloalto-202610100198",
+    "subject": "[MOSI] 487 near TOWN AND COUNTRY VLG/GALVEZ ST \u2014 1.6mi from Menlo Oaks (Medium)",
+    "street": "TOWN AND COUNTRY VLG/GALVEZ ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.59,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
