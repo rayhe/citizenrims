@@ -17730,5 +17730,27 @@
     "distance_mi": 1.59,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-11T22:34:00.613230+00:00",
+    "id": "inc-menlopark-202610110019",
+    "subject": "[MOSI] Vandalism near OKEEFE ST \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "OKEEFE ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.68,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-11T22:34:00.802918+00:00",
+    "id": "inc-paloalto-202610110072",
+    "subject": "[MOSI] 459A near SAN CARLOS CT/STER AVE \u2014 3.0mi from Menlo Oaks (High)",
+    "street": "SAN CARLOS CT/STER AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.99,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
