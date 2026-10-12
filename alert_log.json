@@ -17752,5 +17752,16 @@
     "distance_mi": 2.99,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-12T01:43:10.782061+00:00",
+    "id": "inc-paloalto-202610110190",
+    "subject": "[MOSI] 459A near MARION AVE/MIDDLEFIELD RD \u2014 2.7mi from Menlo Oaks (High)",
+    "street": "MARION AVE/MIDDLEFIELD RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.72,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
