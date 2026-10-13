@@ -17840,5 +17840,38 @@
     "distance_mi": 1.98,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-13T03:57:00.210973+00:00",
+    "id": "inc-menlopark-202610120049",
+    "subject": "[MOSI] Recovered Stolen Vehicle near MENALTO AV \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "MENALTO AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.68,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-13T03:57:00.493451+00:00",
+    "id": "inc-paloalto-202610120205",
+    "subject": "[MOSI] 487 near BIRCH ST/ASH ST \u2014 2.3mi from Menlo Oaks (Medium)",
+    "street": "BIRCH ST/ASH ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.35,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-13T03:57:00.837075+00:00",
+    "id": "case-smcsheriff-26-07747",
+    "subject": "[MOSI] Vandalism:deface property (F) near SPRING ST \u2014 1.5mi from Menlo Oaks (Medium)",
+    "street": "SPRING ST",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.48,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
