@@ -17939,5 +17939,16 @@
     "distance_mi": 0.79,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-13T23:00:52.281803+00:00",
+    "id": "inc-atherton-202610130042",
+    "subject": "[MOSI] TRESPASSING near MIDDLEFIELD RD \u2014 0.2mi from Menlo Oaks (High)",
+    "street": "MIDDLEFIELD RD",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.2,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
