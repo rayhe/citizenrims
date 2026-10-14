@@ -17961,5 +17961,27 @@
     "distance_mi": 2.75,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-14T06:45:04.986894+00:00",
+    "id": "inc-menlopark-202610130095",
+    "subject": "[MOSI] Recovered Stolen Vehicle near OCONNOR ST \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "OCONNOR ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.81,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-14T06:45:05.220295+00:00",
+    "id": "inc-paloalto-202610130335",
+    "subject": "[MOSI] 487 near PISTACHE PL/SHOPPING CENTER WAY \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "PISTACHE PL/SHOPPING CENTER WAY",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
