@@ -18016,5 +18016,27 @@
     "distance_mi": 2.01,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-15T16:49:08.487937+00:00",
+    "id": "inc-menlopark-202610140119",
+    "subject": "[MOSI] Burglary near WILLOW RD \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.75,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-15T16:49:08.876582+00:00",
+    "id": "case-menlopark-26-2211",
+    "subject": "[MOSI] Burglary:first degree (F) near WILLOW RD \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.75,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
