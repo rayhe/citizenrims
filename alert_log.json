@@ -18038,5 +18038,16 @@
     "distance_mi": 0.75,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-16T01:10:14.469983+00:00",
+    "id": "inc-paloalto-202610150215",
+    "subject": "[MOSI] 537 near HIGH ST/EMERSON ST \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "HIGH ST/EMERSON ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.19,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
