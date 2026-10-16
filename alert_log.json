@@ -18049,5 +18049,16 @@
     "distance_mi": 1.19,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-16T10:10:17.561126+00:00",
+    "id": "inc-paloalto-202610150376",
+    "subject": "[MOSI] 594 near PEAR LN/SWEET OLIVE WAY \u2014 1.3mi from Menlo Oaks (Medium)",
+    "street": "PEAR LN/SWEET OLIVE WAY",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.34,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
