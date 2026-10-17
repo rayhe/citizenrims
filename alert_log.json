@@ -18093,5 +18093,16 @@
     "distance_mi": 1.52,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-17T16:53:10.914327+00:00",
+    "id": "inc-redwoodcity-202610170031",
+    "subject": "[MOSI] Stolen Vehicle near 10TH AV \u2014 1.5mi from Menlo Oaks (High)",
+    "street": "10TH AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.52,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
