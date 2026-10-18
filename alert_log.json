@@ -18148,5 +18148,16 @@
     "distance_mi": 0.96,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-18T05:47:02.649192+00:00",
+    "id": "inc-menlopark-202610170062",
+    "subject": "[MOSI] Vandalism near MARKET PL \u2014 0.4mi from Menlo Oaks (Medium)",
+    "street": "MARKET PL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.38,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
