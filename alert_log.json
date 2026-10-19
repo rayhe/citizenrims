@@ -18181,5 +18181,16 @@
     "distance_mi": 2.36,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-19T19:50:16.653440+00:00",
+    "id": "case-smcsheriff-26-08101",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near OAKSIDE AV \u2014 2.1mi from Menlo Oaks (High)",
+    "street": "OAKSIDE AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.12,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
