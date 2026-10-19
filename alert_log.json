@@ -18192,5 +18192,38 @@
     "distance_mi": 2.12,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-19T23:08:31.341250+00:00",
+    "id": "inc-atherton-202610190031",
+    "subject": "[MOSI] FRAUD / FALSE PERSONATION near TUSCALOOSA AV \u2014 2.1mi from Menlo Oaks (Medium)",
+    "street": "TUSCALOOSA AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 2.06,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-19T23:08:32.636947+00:00",
+    "id": "inc-paloalto-202610190110",
+    "subject": "[MOSI] 487 near KAPLAN DR/PASTEUR DR \u2014 1.8mi from Menlo Oaks (Medium)",
+    "street": "KAPLAN DR/PASTEUR DR",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.83,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-19T23:08:33.870365+00:00",
+    "id": "case-atherton-26-381",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near ATHERTON AV \u2014 2.1mi from Menlo Oaks (Medium)",
+    "street": "ATHERTON AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 2.14,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
