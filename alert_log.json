@@ -18225,5 +18225,27 @@
     "distance_mi": 2.14,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-20T06:42:42.091209+00:00",
+    "id": "inc-paloalto-202610190369",
+    "subject": "[MOSI] 487 near TOWN AND COUNTRY VLG/GALVEZ ST \u2014 1.6mi from Menlo Oaks (Medium)",
+    "street": "TOWN AND COUNTRY VLG/GALVEZ ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.58,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-20T06:42:42.331457+00:00",
+    "id": "case-menlopark-26-2237",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near WILLOW ROAD \u2014 0.3mi from Menlo Oaks (High)",
+    "street": "WILLOW ROAD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.29,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
