@@ -18247,5 +18247,27 @@
     "distance_mi": 0.29,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-20T17:14:54.913496+00:00",
+    "id": "inc-redwoodcity-202610200031",
+    "subject": "[MOSI] Stolen Vehicle near ORCHARD AV \u2014 2.7mi from Menlo Oaks (High)",
+    "street": "ORCHARD AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.72,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-20T17:14:55.329275+00:00",
+    "id": "case-redwoodcity-R26-10-0303",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near 10TH AV \u2014 1.5mi from Menlo Oaks (Medium)",
+    "street": "10TH AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.52,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
