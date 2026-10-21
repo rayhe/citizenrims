@@ -18357,5 +18357,60 @@
     "distance_mi": 1.19,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-21T20:48:36.709437+00:00",
+    "id": "inc-menlopark-202610210036",
+    "subject": "[MOSI] Burglary near JEFFERSON DR \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "JEFFERSON DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.87,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-21T20:48:37.111200+00:00",
+    "id": "inc-menlopark-202610210045",
+    "subject": "[MOSI] Fraud near SEVIER AV \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "SEVIER AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.19,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-21T20:48:37.803969+00:00",
+    "id": "case-smcsheriff-26-07878",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near .3200 FAIR OAKS AV \u2014 1.8mi from Menlo Oaks (Medium)",
+    "street": ".3200 FAIR OAKS AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.85,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-21T20:48:38.358604+00:00",
+    "id": "case-redwoodcity-R26-10-0347",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near ORCHARD AV \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "ORCHARD AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.72,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-21T20:48:38.699953+00:00",
+    "id": "case-redwoodcity-R26-10-0361",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near EL CAMINO REAL \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.64,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
