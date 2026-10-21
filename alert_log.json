@@ -18346,5 +18346,16 @@
     "distance_mi": 2.26,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-21T12:23:10.503772+00:00",
+    "id": "inc-paloalto-202610200375",
+    "subject": "[MOSI] 10851 near UNIVERSITY AVE/HAMILTON AVE \u2014 1.2mi from Menlo Oaks (High)",
+    "street": "UNIVERSITY AVE/HAMILTON AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.19,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
