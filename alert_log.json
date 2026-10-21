@@ -18412,5 +18412,60 @@
     "distance_mi": 2.64,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-21T23:43:55.846125+00:00",
+    "id": "inc-menlopark-202610210056",
+    "subject": "[MOSI] Fraud near OLIVE ST \u2014 1.8mi from Menlo Oaks (Medium)",
+    "street": "OLIVE ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.84,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-21T23:43:56.236903+00:00",
+    "id": "case-menlopark-26-2255",
+    "subject": "[MOSI] Personate to get money/property - False pretenses/swindle/confidence game (M) near SEVIER AV \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "SEVIER AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.19,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-21T23:43:56.528320+00:00",
+    "id": "case-redwoodcity-R26-09-0417",
+    "subject": "[MOSI] Burglary:first degree (F) near MIDDLEFIELD RD \u2014 2.8mi from Menlo Oaks (High)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.75,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-21T23:43:56.884172+00:00",
+    "id": "case-redwoodcity-R26-10-0206",
+    "subject": "[MOSI] Vandalism ($400 or more) (M) near EL CAMINO REAL \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.7,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-21T23:43:57.170200+00:00",
+    "id": "case-redwoodcity-R26-10-0241",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near EL CAMINO REAL \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.7,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
