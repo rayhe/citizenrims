@@ -18467,5 +18467,27 @@
     "distance_mi": 2.7,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-22T01:55:01.765798+00:00",
+    "id": "inc-atherton-202610210053",
+    "subject": "[MOSI] GRAND THEFT near ATHERTON AV \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "ATHERTON AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 2.91,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-22T01:55:02.112261+00:00",
+    "id": "case-menlopark-26-2257",
+    "subject": "[MOSI] Burglary:first degree - From motor vehicle (F) near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
