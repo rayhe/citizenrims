@@ -18489,5 +18489,38 @@
     "distance_mi": 1.04,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-22T12:54:28.351119+00:00",
+    "id": "inc-paloalto-202610210404",
+    "subject": "[MOSI] 459A near LYTTON AVE/LANE 20 E \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "LYTTON AVE/LANE 20 E",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.0,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-22T12:54:28.532108+00:00",
+    "id": "inc-paloalto-202610210407",
+    "subject": "[MOSI] 459A near LYTTON AVE/LANE 20 E \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "LYTTON AVE/LANE 20 E",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.01,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-22T12:54:28.749795+00:00",
+    "id": "case-smcsheriff-26-08374",
+    "subject": "[MOSI] Personate to make other liable - Impersonation (F) near BROADWAY \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "BROADWAY",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.75,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
