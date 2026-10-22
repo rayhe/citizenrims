@@ -18522,5 +18522,16 @@
     "distance_mi": 2.75,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-22T17:49:14.696558+00:00",
+    "id": "case-redwoodcity-R26-09-0504",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near 17TH AV \u2014 1.2mi from Menlo Oaks (High)",
+    "street": "17TH AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.21,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
