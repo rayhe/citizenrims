@@ -18566,5 +18566,38 @@
     "distance_mi": 1.84,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-23T12:41:19.263835+00:00",
+    "id": "inc-paloalto-202610220380",
+    "subject": "[MOSI] 459A near LANE 20 W/UNIVERSITY AVE \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "LANE 20 W/UNIVERSITY AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.03,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-23T12:41:19.462084+00:00",
+    "id": "inc-paloalto-202610220404",
+    "subject": "[MOSI] 459A near LANE 15 E/PAULSEN LN \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "LANE 15 E/PAULSEN LN",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.07,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-23T12:41:19.649226+00:00",
+    "id": "case-smcsheriff-26-08186",
+    "subject": "[MOSI] Vandalism:deface property (M) near 4TH AV \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "4TH AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.94,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
