@@ -18654,5 +18654,16 @@
     "distance_mi": 1.27,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-24T06:35:14.395197+00:00",
+    "id": "inc-paloalto-202610230306",
+    "subject": "[MOSI] IDTHE near GUINDA ST/SENECA ST \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "GUINDA ST/SENECA ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.11,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
