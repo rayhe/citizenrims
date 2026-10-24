@@ -18665,5 +18665,27 @@
     "distance_mi": 1.11,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-24T11:34:16.673006+00:00",
+    "id": "inc-paloalto-202610230354",
+    "subject": "[MOSI] 459R near STANLEY WAY \u2014 2.0mi from Menlo Oaks (High)",
+    "street": "STANLEY WAY",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.98,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-24T11:34:16.984289+00:00",
+    "id": "inc-paloalto-202610230387",
+    "subject": "[MOSI] 459R near CENTER DR \u2014 1.4mi from Menlo Oaks (High)",
+    "street": "CENTER DR",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.39,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
