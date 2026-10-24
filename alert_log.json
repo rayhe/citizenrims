@@ -18687,5 +18687,16 @@
     "distance_mi": 1.39,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-24T14:50:10.529150+00:00",
+    "id": "case-menlopark-26-2265",
+    "subject": "[MOSI] Grand theft:money/labor/property - Motor vehicle theft (F) near PIERCE RD \u2014 0.3mi from Menlo Oaks (High)",
+    "street": "PIERCE RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.29,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
