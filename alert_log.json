@@ -18643,5 +18643,16 @@
     "distance_mi": 0.87,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-24T01:51:44.257880+00:00",
+    "id": "inc-redwoodcity-202610230137",
+    "subject": "[MOSI] Grand Theft near HOOVER ST \u2014 1.3mi from Menlo Oaks (Medium)",
+    "street": "HOOVER ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.27,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
