@@ -18742,5 +18742,27 @@
     "distance_mi": 0.18,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-25T22:04:52.067464+00:00",
+    "id": "inc-menlopark-202610250022",
+    "subject": "[MOSI] Burglary near RAVENSWOOD AV \u2014 0.3mi from Menlo Oaks (High)",
+    "street": "RAVENSWOOD AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.31,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-25T22:04:52.343753+00:00",
+    "id": "case-menlopark-26-2272",
+    "subject": "[MOSI] Burglary:first degree (F) near RAVENSWOOD AV \u2014 0.3mi from Menlo Oaks (High)",
+    "street": "RAVENSWOOD AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.31,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
