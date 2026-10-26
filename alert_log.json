@@ -18786,5 +18786,16 @@
     "distance_mi": 0.18,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-26T16:59:05.898464+00:00",
+    "id": "inc-redwoodcity-202610260015",
+    "subject": "[MOSI] Burglary-Vehicle Report near HAVEN AV \u2014 1.4mi from Menlo Oaks (High)",
+    "street": "HAVEN AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.41,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
