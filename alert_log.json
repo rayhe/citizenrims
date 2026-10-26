@@ -18764,5 +18764,27 @@
     "distance_mi": 0.31,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-26T00:14:03.727094+00:00",
+    "id": "inc-menlopark-202610250027",
+    "subject": "[MOSI] Vandalism near BAY RD \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "BAY RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.09,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-26T00:14:04.084731+00:00",
+    "id": "case-menlopark-26-2271",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near COLEMAN AV \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "COLEMAN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.18,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
