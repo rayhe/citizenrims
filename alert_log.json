@@ -18808,5 +18808,16 @@
     "distance_mi": 0.2,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-27T00:44:22.105283+00:00",
+    "id": "case-menlopark-26-2275",
+    "subject": "[MOSI] Arson:property (F) near OAK KNOLL LN \u2014 2.3mi from Menlo Oaks (High)",
+    "street": "OAK KNOLL LN",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.33,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
