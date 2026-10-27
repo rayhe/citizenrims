@@ -18907,5 +18907,27 @@
     "distance_mi": 0.2,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-27T20:49:28.111794+00:00",
+    "id": "inc-menlopark-202610270041",
+    "subject": "[MOSI] Vandalism near JEFFERSON DR \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "JEFFERSON DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.87,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-27T20:49:28.260562+00:00",
+    "id": "inc-menlopark-202610270021",
+    "subject": "[MOSI] Auto Burglary near MILLS ST \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "MILLS ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.67,
+    "status": "failed",
+    "error": "Connection unexpectedly closed: [Errno 32] Broken pipe"
   }
 ]
