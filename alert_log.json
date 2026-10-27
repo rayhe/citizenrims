@@ -18819,5 +18819,60 @@
     "distance_mi": 2.33,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-27T05:39:37.373862+00:00",
+    "id": "inc-menlopark-202610260058",
+    "subject": "[MOSI] Burglary near RAVENSWOOD AV \u2014 0.3mi from Menlo Oaks (High)",
+    "street": "RAVENSWOOD AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.31,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-27T05:39:37.596619+00:00",
+    "id": "inc-paloalto-202610260148",
+    "subject": "[MOSI] 594 near SAN CARLOS CT/STER AVE \u2014 3.0mi from Menlo Oaks (Medium)",
+    "street": "SAN CARLOS CT/STER AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.97,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-27T05:39:37.799197+00:00",
+    "id": "inc-paloalto-202610260214",
+    "subject": "[MOSI] 487 near WELLESLEY ST/CORNELL ST \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "WELLESLEY ST/CORNELL ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.88,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-27T05:39:38.046161+00:00",
+    "id": "inc-paloalto-202610260296",
+    "subject": "[MOSI] 487 near CHANNING AVE/ADDISON AVE \u2014 1.3mi from Menlo Oaks (Medium)",
+    "street": "CHANNING AVE/ADDISON AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.27,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-27T05:39:38.309141+00:00",
+    "id": "case-menlopark-26-2281",
+    "subject": "[MOSI] Burglary:second degree - From building (M) near RAVENSWOOD AV \u2014 0.3mi from Menlo Oaks (High)",
+    "street": "RAVENSWOOD AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.31,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
