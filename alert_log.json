@@ -19039,5 +19039,38 @@
     "distance_mi": 0.75,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T05:29:58.294774+00:00",
+    "id": "inc-redwoodcity-202610270172",
+    "subject": "[MOSI] Vandalism near 5TH AV \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "5TH AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.85,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T05:29:58.464667+00:00",
+    "id": "inc-redwoodcity-202610270225",
+    "subject": "[MOSI] Burglary-Vehicle Report near PAGE ST \u2014 1.2mi from Menlo Oaks (High)",
+    "street": "PAGE ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.21,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T05:29:58.612334+00:00",
+    "id": "inc-paloalto-202610270246",
+    "subject": "[MOSI] 594 near LANE 20 W/UNIVERSITY AVE \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "LANE 20 W/UNIVERSITY AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.01,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
