@@ -18929,5 +18929,115 @@
     "distance_mi": 0.67,
     "status": "failed",
     "error": "Connection unexpectedly closed: [Errno 32] Broken pipe"
+  },
+  {
+    "timestamp": "2026-10-28T00:06:24.248074+00:00",
+    "id": "inc-menlopark-202610270045",
+    "subject": "[MOSI] Grand Theft near ALMA LN \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "ALMA LN",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.66,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T00:06:24.527513+00:00",
+    "id": "inc-menlopark-202610270055",
+    "subject": "[MOSI] Grand Theft near HERMOSA WY \u2014 1.6mi from Menlo Oaks (Medium)",
+    "street": "HERMOSA WY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.6,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T00:06:24.804891+00:00",
+    "id": "inc-menlopark-202610270065",
+    "subject": "[MOSI] Grand Theft near LINFIELD DR \u2014 0.4mi from Menlo Oaks (Medium)",
+    "street": "LINFIELD DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.4,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T00:06:25.133671+00:00",
+    "id": "case-menlopark-26-2286",
+    "subject": "[MOSI] Burglary:first degree - From motor vehicle (F) near MILLS ST \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "MILLS ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.67,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T00:06:25.373433+00:00",
+    "id": "case-menlopark-26-2290",
+    "subject": "[MOSI] Grand theft:money/labor/property - From motor vehicle (M) near ALMA STREET \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "ALMA STREET",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.66,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T00:06:25.662039+00:00",
+    "id": "case-menlopark-26-2292",
+    "subject": "[MOSI] Get credit/etc others id - False pretenses/swindle/confidence game (F) near HERMOSA WY \u2014 1.6mi from Menlo Oaks (Medium)",
+    "street": "HERMOSA WY",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.6,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T00:06:25.962931+00:00",
+    "id": "case-menlopark-26-2293",
+    "subject": "[MOSI] Grand theft:money/labor/property - From building (F) near CHERRY AVE \u2014 0.5mi from Menlo Oaks (High)",
+    "street": "CHERRY AVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.46,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T00:06:26.286444+00:00",
+    "id": "case-menlopark-26-2295",
+    "subject": "[MOSI] Get credit/etc others id - Identity theft (F) near WILLOW ROAD \u2014 0.3mi from Menlo Oaks (Medium)",
+    "street": "WILLOW ROAD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.34,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T00:06:26.506577+00:00",
+    "id": "case-menlopark-26-2296",
+    "subject": "[MOSI] Burglary:second degree - From building (F) near LINFIELD DR \u2014 0.4mi from Menlo Oaks (High)",
+    "street": "LINFIELD DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.4,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T00:06:26.732929+00:00",
+    "id": "case-menlopark-26-2297",
+    "subject": "[MOSI] Burglary:second degree - From building (M) near WILLOW ROAD \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "WILLOW ROAD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.75,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
