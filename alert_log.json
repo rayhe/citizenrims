@@ -19116,5 +19116,60 @@
     "distance_mi": 1.24,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T17:18:56.434277+00:00",
+    "id": "inc-menlopark-202610280009",
+    "subject": "[MOSI] Auto Burglary near RINGWOOD AV \u2014 0.0mi from Menlo Oaks (High)",
+    "street": "RINGWOOD AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.0,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T17:18:56.757943+00:00",
+    "id": "inc-menlopark-202610280010",
+    "subject": "[MOSI] Auto Burglary near RINGWOOD AV \u2014 0.0mi from Menlo Oaks (High)",
+    "street": "RINGWOOD AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.0,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T17:18:57.059764+00:00",
+    "id": "case-menlopark-26-2301",
+    "subject": "[MOSI] Theft of personal property - From motor vehicle (M) near RINGWOOD AV \u2014 0.0mi from Menlo Oaks (High)",
+    "street": "RINGWOOD AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.0,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T17:18:57.365664+00:00",
+    "id": "case-menlopark-26-2302",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (M) near RINGWOOD AV \u2014 0.0mi from Menlo Oaks (High)",
+    "street": "RINGWOOD AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.0,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-28T17:18:57.714896+00:00",
+    "id": "case-atherton-26-390",
+    "subject": "[MOSI] Thft eldr/depn adlt $950+ - False pretenses/swindle/confidence game (F) near HOLBROOK LN \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "HOLBROOK LN",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.24,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
