@@ -19171,5 +19171,27 @@
     "distance_mi": 1.24,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-29T01:16:30.941793+00:00",
+    "id": "inc-menlopark-202610280045",
+    "subject": "[MOSI] Fraud near HEDGE RD \u2014 0.6mi from Menlo Oaks (Medium)",
+    "street": "HEDGE RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.63,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-29T01:16:31.145096+00:00",
+    "id": "case-redwoodcity-R26-10-0042",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (M) near MIDDLEFIELD RD \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.51,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
