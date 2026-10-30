@@ -19259,5 +19259,38 @@
     "distance_mi": 0.73,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-30T09:37:18.437074+00:00",
+    "id": "inc-menlopark-202610290082",
+    "subject": "[MOSI] Grand Theft near WAVERLEY ST \u2014 0.5mi from Menlo Oaks (Medium)",
+    "street": "WAVERLEY ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.53,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-30T09:37:18.727910+00:00",
+    "id": "inc-paloalto-202610290353",
+    "subject": "[MOSI] 594 near UNIVERSITY CIR/ALMA ST \u2014 1.4mi from Menlo Oaks (Medium)",
+    "street": "UNIVERSITY CIR/ALMA ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.37,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-10-30T09:37:19.164668+00:00",
+    "id": "case-menlopark-26-2317",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near WAVERLEY ST \u2014 0.5mi from Menlo Oaks (High)",
+    "street": "WAVERLEY ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.53,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
