@@ -19325,5 +19325,16 @@
     "distance_mi": 0.0,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-01T09:09:26.203840+00:00",
+    "id": "inc-paloalto-202610310212",
+    "subject": "[MOSI] 459A near BOWDOIN ST \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "BOWDOIN ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.9,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
