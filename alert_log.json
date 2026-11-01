@@ -19336,5 +19336,16 @@
     "distance_mi": 2.9,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-01T20:25:26.313365+00:00",
+    "id": "inc-menlopark-202611010019",
+    "subject": "[MOSI] Suspicious Person near TEHAMA AV \u2014 0.1mi from Menlo Oaks (High)",
+    "street": "TEHAMA AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.11,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
