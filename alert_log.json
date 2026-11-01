@@ -19314,5 +19314,16 @@
     "distance_mi": 0.96,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-01T02:07:39.630317+00:00",
+    "id": "case-menlopark-26-2262",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near RINGWOOD AV \u2014 0.0mi from Menlo Oaks (Medium)",
+    "street": "RINGWOOD AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.0,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
