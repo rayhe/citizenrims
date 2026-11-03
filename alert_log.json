@@ -19435,5 +19435,49 @@
     "distance_mi": 1.35,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-03T22:24:35.679941+00:00",
+    "id": "inc-menlopark-202611030025",
+    "subject": "[MOSI] Grand Theft near ROBLE AV \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "ROBLE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.94,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-03T22:24:35.911444+00:00",
+    "id": "case-menlopark-26-2311",
+    "subject": "[MOSI] Burglary:second degree - From building (F) near SEVIER AVE \u2014 0.2mi from Menlo Oaks (High)",
+    "street": "SEVIER AVE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.19,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-03T22:24:36.073004+00:00",
+    "id": "case-menlopark-26-2337",
+    "subject": "[MOSI] Burglary:second degree - From building (M) near ROBLE AVENUE \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "ROBLE AVENUE",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.94,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-03T22:24:36.269537+00:00",
+    "id": "case-redwoodcity-R26-10-0052",
+    "subject": "[MOSI] Vandalism:deface property (F) near MIDDLEFIELD RD \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.64,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
