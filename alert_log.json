@@ -19424,5 +19424,16 @@
     "distance_mi": 1.35,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-03T17:22:45.915585+00:00",
+    "id": "case-menlopark-26-2332",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near HAVEN AV \u2014 1.4mi from Menlo Oaks (High)",
+    "street": "HAVEN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.35,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
