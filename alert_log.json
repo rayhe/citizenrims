@@ -19391,5 +19391,38 @@
     "distance_mi": 2.6,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-03T02:24:10.239992+00:00",
+    "id": "inc-atherton-202611020045",
+    "subject": "[MOSI] FRAUD / FALSE PERSONATION near FAIR OAKS LN \u2014 1.4mi from Menlo Oaks (Medium)",
+    "street": "FAIR OAKS LN",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.38,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-03T02:24:10.386332+00:00",
+    "id": "inc-paloalto-202611020097",
+    "subject": "[MOSI] 459A near FULTON ST/PALO ALTO AVE \u2014 0.8mi from Menlo Oaks (High)",
+    "street": "FULTON ST/PALO ALTO AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 0.8,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-03T02:24:10.649398+00:00",
+    "id": "case-menlopark-26-2330",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near HAVEN AV \u2014 1.4mi from Menlo Oaks (High)",
+    "street": "HAVEN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.35,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
