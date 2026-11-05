@@ -19523,5 +19523,27 @@
     "distance_mi": 0.53,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-05T10:13:09.879454+00:00",
+    "id": "inc-paloalto-202611040299",
+    "subject": "[MOSI] 594 near PISTACHE PL/SHOPPING CENTER WAY \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "PISTACHE PL/SHOPPING CENTER WAY",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.06,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-05T10:13:10.301205+00:00",
+    "id": "case-smcsheriff-26-08617",
+    "subject": "[MOSI] Theft by use of access card information - Credit card/atm (F) near NIMITZ AV \u2014 2.6mi from Menlo Oaks (Medium)",
+    "street": "NIMITZ AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.57,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
