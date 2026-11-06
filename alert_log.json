@@ -19545,5 +19545,16 @@
     "distance_mi": 2.57,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-06T18:16:18.705399+00:00",
+    "id": "case-atherton-26-395",
+    "subject": "[MOSI] Grand theft - False pretenses/swindle/confidence game (F) near SANTA CRUZ AV \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "SANTA CRUZ AV",
+    "city": "MENLO PARK",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.77,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
