@@ -19611,5 +19611,60 @@
     "distance_mi": 2.95,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-07T09:23:53.398240+00:00",
+    "id": "inc-menlopark-202611060059",
+    "subject": "[MOSI] Vehicle Tampering near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.71,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-07T09:23:53.558461+00:00",
+    "id": "inc-menlopark-202611060065",
+    "subject": "[MOSI] Stolen Vehicle near UNIVERSITY DR \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "UNIVERSITY DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.06,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-07T09:23:53.726489+00:00",
+    "id": "case-menlopark-26-2352",
+    "subject": "[MOSI] Malicious mischief to vehicle - Motor vehicle theft (M) near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.71,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-07T09:23:53.846134+00:00",
+    "id": "case-menlopark-26-2354",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near UNIVERSITY DR \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "UNIVERSITY DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.06,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-07T09:23:53.965620+00:00",
+    "id": "case-menlopark-26-2355",
+    "subject": "[MOSI] Theft of personal property - All other larceny (M) near MERRILL ST \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "MERRILL ST",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.67,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
