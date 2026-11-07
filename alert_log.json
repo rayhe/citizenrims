@@ -19600,5 +19600,16 @@
     "distance_mi": 0.87,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-07T02:52:30.061192+00:00",
+    "id": "inc-redwoodcity-202611060138",
+    "subject": "[MOSI] Burglary -Residential Report near CHESTNUT ST \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "CHESTNUT ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.95,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
