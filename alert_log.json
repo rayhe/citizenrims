@@ -19688,5 +19688,38 @@
     "distance_mi": 0.85,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-09T11:19:26.617734+00:00",
+    "id": "inc-menlopark-202611080047",
+    "subject": "[MOSI] Recovered Stolen Vehicle near UNIVERSITY DR \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "UNIVERSITY DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.06,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-09T11:19:26.754788+00:00",
+    "id": "inc-atherton-202611080043",
+    "subject": "[MOSI] BURGLARY - RESIDENTIAL/COMMERCIAL near ADAM WY \u2014 1.9mi from Menlo Oaks (High)",
+    "street": "ADAM WY",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.92,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-09T11:19:26.889649+00:00",
+    "id": "inc-redwoodcity-202611080133",
+    "subject": "[MOSI] Burglary - Residential near 15TH AV \u2014 1.3mi from Menlo Oaks (High)",
+    "street": "15TH AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.29,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
