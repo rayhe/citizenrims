@@ -19721,5 +19721,16 @@
     "distance_mi": 1.29,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-09T21:29:30.242280+00:00",
+    "id": "case-redwoodcity-R26-11-0035",
+    "subject": "[MOSI] Theft of personal property - Motor vehicle parts/accessories (M) near STAMBAUGH ST/WILLOW ST \u2014 2.7mi from Menlo Oaks (Medium)",
+    "street": "STAMBAUGH ST/WILLOW ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.73,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
