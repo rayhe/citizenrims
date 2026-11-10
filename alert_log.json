@@ -19765,5 +19765,49 @@
     "distance_mi": 2.91,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-10T23:53:46.116987+00:00",
+    "id": "inc-paloalto-202611100048",
+    "subject": "[MOSI] 487 near PISTACHE PL/SHOPPING CENTER WAY \u2014 1.0mi from Menlo Oaks (Medium)",
+    "street": "PISTACHE PL/SHOPPING CENTER WAY",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.03,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-10T23:53:46.342245+00:00",
+    "id": "case-menlopark-26-2380",
+    "subject": "[MOSI] Theft of personal property - Motor vehicle parts/accessories (M) near MIDDLE AV \u2014 1.5mi from Menlo Oaks (High)",
+    "street": "MIDDLE AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.45,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-10T23:53:46.571318+00:00",
+    "id": "case-menlopark-26-2381",
+    "subject": "[MOSI] Theft of personal property - From motor vehicle (M) near HAVEN AV \u2014 1.2mi from Menlo Oaks (High)",
+    "street": "HAVEN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.2,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-10T23:53:46.716749+00:00",
+    "id": "case-redwoodcity-R26-10-0432",
+    "subject": "[MOSI] Possess/etc/bad/etc check/etc (M) near WOODSIDE RD \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "WOODSIDE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.82,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
