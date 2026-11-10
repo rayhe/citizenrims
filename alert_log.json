@@ -19743,5 +19743,27 @@
     "distance_mi": 3.0,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-10T18:55:25.159862+00:00",
+    "id": "inc-menlopark-202611100015",
+    "subject": "[MOSI] Vehicle Tampering near SHARON PARK DR \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "SHARON PARK DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.82,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-10T18:55:25.426326+00:00",
+    "id": "case-redwoodcity-R26-11-0025",
+    "subject": "[MOSI] Obtain money/etc by false pretenses [over $400] (F) near HUDSON ST \u2014 2.9mi from Menlo Oaks (Medium)",
+    "street": "HUDSON ST",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.91,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
