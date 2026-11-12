@@ -19930,5 +19930,60 @@
     "distance_mi": 1.07,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-12T16:54:06.440520+00:00",
+    "id": "inc-menlopark-202611120010",
+    "subject": "[MOSI] Embezzlement near Menlo Park \u2014 0.8mi from Menlo Oaks (Medium)",
+    "street": "",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.75,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-12T16:54:06.682500+00:00",
+    "id": "inc-paloalto-202611110358",
+    "subject": "[MOSI] 459A near KIPLING ST/COWPER ST \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "KIPLING ST/COWPER ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 0.96,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-12T16:54:07.000386+00:00",
+    "id": "case-atherton-26-412",
+    "subject": "[MOSI] Burglary:first degree (F) near ADAM WY \u2014 1.9mi from Menlo Oaks (High)",
+    "street": "ADAM WY",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.92,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-12T16:54:07.300566+00:00",
+    "id": "case-redwoodcity-R26-11-0080",
+    "subject": "[MOSI] Vandalism ($400 or more) (F) near 17TH AV \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "17TH AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.19,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-12T16:54:07.530967+00:00",
+    "id": "case-redwoodcity-R26-11-0199",
+    "subject": "[MOSI] Burglary:first degree (F) near 17TH AV \u2014 1.2mi from Menlo Oaks (High)",
+    "street": "17TH AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.19,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
