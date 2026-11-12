@@ -19919,5 +19919,16 @@
     "distance_mi": 2.51,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-12T08:19:35.515685+00:00",
+    "id": "inc-paloalto-202611110261",
+    "subject": "[MOSI] 487 near BRYANT ST/FLORENCE ST \u2014 1.1mi from Menlo Oaks (Medium)",
+    "street": "BRYANT ST/FLORENCE ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.07,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
