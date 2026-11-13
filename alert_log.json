@@ -20095,5 +20095,16 @@
     "distance_mi": 1.13,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-13T17:43:02.765293+00:00",
+    "id": "inc-paloalto-202611120395",
+    "subject": "[MOSI] 459R near GREER RD \u2014 2.3mi from Menlo Oaks (High)",
+    "street": "GREER RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.27,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
