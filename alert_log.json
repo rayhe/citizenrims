@@ -20040,5 +20040,60 @@
     "distance_mi": 1.91,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-13T10:09:39.336959+00:00",
+    "id": "inc-paloalto-202611120360",
+    "subject": "[MOSI] 459R near WEBSTER ST/BYRON ST \u2014 2.3mi from Menlo Oaks (High)",
+    "street": "WEBSTER ST/BYRON ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.32,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-13T10:09:39.548853+00:00",
+    "id": "inc-paloalto-202611120372",
+    "subject": "[MOSI] 459R near MORENO AVE/ROSEWOOD DR \u2014 2.6mi from Menlo Oaks (High)",
+    "street": "MORENO AVE/ROSEWOOD DR",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.63,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-13T10:09:39.749345+00:00",
+    "id": "inc-paloalto-202611120387",
+    "subject": "[MOSI] 459R near OREGON AVE \u2014 2.5mi from Menlo Oaks (High)",
+    "street": "OREGON AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.48,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-13T10:09:40.019421+00:00",
+    "id": "inc-paloalto-202611120392",
+    "subject": "[MOSI] 459A near LANE 20 W/UNIVERSITY AVE \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "LANE 20 W/UNIVERSITY AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.05,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-13T10:09:40.261990+00:00",
+    "id": "inc-paloalto-202611120393",
+    "subject": "[MOSI] 459A near WAVERLEY ST/COWPER ST \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "WAVERLEY ST/COWPER ST",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.13,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
