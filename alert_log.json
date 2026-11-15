@@ -20249,5 +20249,16 @@
     "distance_mi": 1.35,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-15T06:46:59.150115+00:00",
+    "id": "inc-redwoodcity-202611140130",
+    "subject": "[MOSI] Recovered Stolen Vehicle near BAY RD \u2014 2.0mi from Menlo Oaks (High)",
+    "street": "BAY RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.98,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
