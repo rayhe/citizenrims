@@ -20260,5 +20260,27 @@
     "distance_mi": 1.98,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-15T14:20:48.839459+00:00",
+    "id": "inc-paloalto-202611140301",
+    "subject": "[MOSI] 594 near UNIVERSITY AVE \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "UNIVERSITY AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 1.15,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-15T14:20:49.159816+00:00",
+    "id": "case-atherton-26-411",
+    "subject": "[MOSI] Grand theft:money/labor/property - All other larceny (F) near MIDDLEFIELD RD \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.2,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
