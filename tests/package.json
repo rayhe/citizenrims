@@ -1,0 +1,13 @@
+{
+  "name": "crime-feed-integration-tests",
+  "private": true,
+  "description": "Loads public/index.html with a fixed data snapshot and checks what the page shows.",
+  "scripts": {
+    "test": "TZ=America/Los_Angeles node --test"
+  },
+  "devDependencies": {
+    "jsdom": "24.1.3",
+    "leaflet": "1.9.4",
+    "leaflet.markercluster": "1.5.3"
+  }
+}

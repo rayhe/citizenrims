@@ -1,0 +1,96 @@
+{
+ "meta": {
+  "month": "2026-11"
+ },
+ "incidents": [
+  {
+   "incidentNumber": "I8",
+   "street": "MAIN ST",
+   "city": "MENLO PARK",
+   "incidentDate": "2026-11-01T00:00:00",
+   "incidentTime": "10:00:00",
+   "yCoord": 37.47,
+   "xCoord": -122.155,
+   "callType": "WELFARE CHECK",
+   "callTypeDescription": "Welfare",
+   "_source": "incident",
+   "_agency": "Menlo Park Police Department",
+   "_prefix": "menlopark"
+  },
+  {
+   "incidentNumber": "I4",
+   "street": "MAIN ST",
+   "city": "MENLO PARK",
+   "incidentDate": "2026-11-14T00:00:00",
+   "incidentTime": "21:45:00",
+   "yCoord": 37.466,
+   "xCoord": -122.168,
+   "callType": "459 PC - BURGLARY",
+   "callTypeDescription": "Burglary",
+   "_source": "incident",
+   "_agency": "Menlo Park Police Department",
+   "_prefix": "menlopark"
+  },
+  {
+   "incidentNumber": "I5",
+   "street": "MAIN ST",
+   "city": "Palo Alto",
+   "incidentDate": "2026-11-15T19:30:00Z",
+   "incidentTime": "19:30:00",
+   "yCoord": 37.47,
+   "xCoord": -122.155,
+   "callType": "PETTY THEFT",
+   "callTypeDescription": "Theft",
+   "_source": "incident",
+   "_agency": "Palo Alto Police Department",
+   "_prefix": "paloalto"
+  },
+  {
+   "incidentNumber": "I6",
+   "street": "MAIN ST",
+   "city": "MENLO PARK",
+   "incidentDate": "2026-11-15T00:00:00",
+   "incidentTime": "13:05:00",
+   "yCoord": 37.47,
+   "xCoord": -122.155,
+   "callType": "TRAFFIC STOP",
+   "callTypeDescription": "Traffic",
+   "_source": "incident",
+   "_agency": "Menlo Park Police Department",
+   "_prefix": "menlopark"
+  },
+  {
+   "incidentNumber": "I7",
+   "street": "<img src=x onerror=\"window.__xss=1\">OAK AV",
+   "city": "MENLO PARK",
+   "incidentDate": "2026-11-15T00:00:00",
+   "incidentTime": "09:00:00",
+   "yCoord": 37.466,
+   "xCoord": -122.168,
+   "callType": "SUSPICIOUS <b>PERSON</b>",
+   "callTypeDescription": "Suspicious",
+   "_source": "incident",
+   "_agency": "Menlo Park Police Department",
+   "_prefix": "menlopark"
+  }
+ ],
+ "cases": [
+  {
+   "caseNumber": "C4",
+   "reportDate": "2026-11-13T00:00:00",
+   "occurrence1Date": "2026-11-12T00:00:00",
+   "occurrence1Time": null,
+   "street": "OAK AV",
+   "blockNumber": 100,
+   "city": "Menlo Park",
+   "yCoord": 37.47,
+   "xCoord": -122.155,
+   "crimeType": "Burglary",
+   "offenseDescription1": "459 PC Burglary:first degree",
+   "crimeClassification": "Felony",
+   "_source": "case",
+   "_agency": "Menlo Park Police Department",
+   "_prefix": "menlopark"
+  }
+ ]
+}

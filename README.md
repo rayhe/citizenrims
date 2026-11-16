@@ -232,7 +232,7 @@ Stacked bar chart showing incidents per day, broken down by police watch period:
 
 Watch period x day-of-week cross-tabulation below the chart:
 
-- Rows: Day, Swing, Night watches
+- Rows: Day, Swing, Night watches, plus "Time unknown" for items with no known hour (so totals match the map)
 - Columns: Mon – Sun
 - Cells colored on a green-to-red gradient based on incident count
 - Row totals, column totals, and grand total
@@ -240,8 +240,11 @@ Watch period x day-of-week cross-tabulation below the chart:
 ## Tests
 
 ```bash
-python3 -m unittest test_alerts -v
+python3 -m unittest test_alerts -v          # alert logic
+cd tests && npm ci && npm test              # page integration tests
 ```
+
+The page tests load `public/index.html` in jsdom with a small fixed data snapshot (`tests/fixtures`, regenerate with `python3 tests/fixtures/make_fixtures.py`) and check what a visitor would see: deep links like `?filter=burglary&days=all&geo=1` show every matching item, the chart counts the same items as the map, the default view loads only the current month, times are real and newest-first, feed text is escaped, and the map zooms to street level. Both suites run on every pull request (`.github/workflows/test.yml`).
 
 65 tests covering:
 - Alert regex matching (crime types, exclusions)

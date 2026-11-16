@@ -1,0 +1,40 @@
+{
+ "meta": {
+  "month": "2026-09"
+ },
+ "incidents": [
+  {
+   "incidentNumber": "I1",
+   "street": "MAIN ST",
+   "city": "MENLO PARK",
+   "incidentDate": "2026-09-10T00:00:00",
+   "incidentTime": "03:15:00",
+   "yCoord": 37.466,
+   "xCoord": -122.168,
+   "callType": "459 PC - BURGLARY",
+   "callTypeDescription": "Burglary",
+   "_source": "incident",
+   "_agency": "Menlo Park Police Department",
+   "_prefix": "menlopark"
+  }
+ ],
+ "cases": [
+  {
+   "caseNumber": "C1",
+   "reportDate": "2026-09-20T00:00:00",
+   "occurrence1Date": "2026-09-19T00:00:00",
+   "occurrence1Time": 0,
+   "street": "OAK AV",
+   "blockNumber": 100,
+   "city": "Menlo Park",
+   "yCoord": 37.47,
+   "xCoord": -122.155,
+   "crimeType": "Burglary",
+   "offenseDescription1": "459 PC Burglary:first degree",
+   "crimeClassification": "Felony",
+   "_source": "case",
+   "_agency": "San Mateo County Sheriff's Office",
+   "_prefix": "smcsheriff"
+  }
+ ]
+}
