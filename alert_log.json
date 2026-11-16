@@ -20315,5 +20315,16 @@
     "distance_mi": 0.36,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-16T20:53:34.971964+00:00",
+    "id": "inc-menlopark-202611160004",
+    "subject": "[MOSI] Stolen Vehicle near COLEMAN AV \u2014 0.1mi from Menlo Oaks (High)",
+    "street": "COLEMAN AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.11,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
