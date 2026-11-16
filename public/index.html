@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crime Feed — Menlo Park, Atherton, Palo Alto & San Mateo County</title>
+<title>Crime Feed — Menlo Park, Atherton, Palo Alto, Redwood City & San Mateo County</title>
+<meta name="description" content="Map of police incidents, crime reports and arrests for Menlo Park, Atherton, Palo Alto, Redwood City and the San Mateo County Sheriff.">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
@@ -18,6 +19,10 @@
   header h1 { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em; }
   header p { color: #9a9ab0; margin-top: 2px; font-size: 0.78rem; line-height: 1.3; }
   .last-updated { color: #7a7a96; font-size: 0.72rem; white-space: nowrap; }
+  .last-updated.stale { color: #ffb74d; font-weight: 600; white-space: normal; }
+  button:focus-visible, .feed-item:focus-visible, a:focus-visible { outline: 2px solid #1a73e8; outline-offset: 2px; }
+  .map-loading { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 1000; background: rgba(26,26,46,0.88); color: #fff; padding: 5px 12px; border-radius: 14px; font: 600 0.72rem system-ui; box-shadow: 0 2px 6px rgba(0,0,0,0.3); pointer-events: none; }
+  .map-loading[hidden] { display: none; }
 
   .controls { display: flex; flex-wrap: wrap; gap: 0; background: #fff; border-bottom: 1px solid #eee; }
   .filter-bar { display: flex; gap: 5px; padding: 8px 14px; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; align-items: center; flex: 1; min-width: 0; }
@@ -50,7 +55,7 @@
   .feed-panel.feed-dragging { transition: none; }
   .feed-header { display: flex; justify-content: space-between; align-items: center; padding: 4px 14px 5px; background: #fafafa; border-bottom: 1px solid #eee; flex-shrink: 0; }
   .feed-header-title { font-size: 0.78rem; font-weight: 600; color: #333; }
-  .feed-header-close { font-size: 0.72rem; color: #999; cursor: pointer; }
+  .feed-header-close { font: inherit; font-size: 0.72rem; color: #777; cursor: pointer; background: none; border: none; padding: 2px 4px; }
   #feed-list { overflow-y: auto; flex: 1; -webkit-overflow-scrolling: touch; }
   .feed-drag { height: 18px; display: flex; align-items: center; justify-content: center; cursor: ns-resize; flex-shrink: 0; background: #fafafa; border-top: 1px solid #eee; touch-action: none; user-select: none; }
   .feed-drag-grip { width: 32px; height: 4px; border-radius: 2px; background: #ccc; }
@@ -60,8 +65,8 @@
   .feed-icon { flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 9px; }
   .feed-body { flex: 1; min-width: 0; }
   .feed-title { font-size: 0.8rem; font-weight: 600; color: #1a1a2e; }
-  .feed-meta { font-size: 0.7rem; color: #999; }
-  .feed-time { flex-shrink: 0; font-size: 0.65rem; color: #aaa; font-weight: 500; text-align: right; line-height: 1.4; min-width: 70px; }
+  .feed-meta { font-size: 0.7rem; color: #777; }
+  .feed-time { flex-shrink: 0; font-size: 0.65rem; color: #888; font-weight: 500; text-align: right; line-height: 1.4; min-width: 70px; }
   .feed-empty { padding: 18px; text-align: center; color: #bbb; font-size: 0.8rem; }
 
   .stats-bar { display: flex; gap: 10px; padding: 14px; background: #f5f6f8; }
@@ -202,13 +207,13 @@
 <header>
   <div class="header-left">
     <h1>Crime Feed</h1>
-    <p>Menlo Park, Atherton, Palo Alto &amp; SMC Sheriff — updated every 5 min</p>
+    <p>Police incidents &amp; crime reports — Menlo Park, Atherton, Palo Alto, Redwood City &amp; SMC Sheriff</p>
   </div>
-  <div class="last-updated" id="last-updated"></div>
+  <div class="last-updated" id="last-updated" role="status" aria-live="polite"></div>
 </header>
 
 <div class="controls">
-  <div class="filter-bar">
+  <div class="filter-bar" role="toolbar" aria-label="Filters">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="incident">Incidents</button>
     <button class="filter-btn" data-filter="case">Cases</button>
@@ -216,7 +221,7 @@
     <button class="filter-btn" data-filter="property">Property</button>
     <button class="filter-btn" data-filter="burglary">Burglary</button>
     <button class="filter-btn" data-filter="alerts">Alerts</button>
-    <button class="filter-btn" id="arrests-btn" style="background:#7b1fa2;color:#fff;border-color:#7b1fa2">🔒 Arrests</button>
+    <button class="filter-btn" id="arrests-btn" aria-expanded="false" aria-controls="arrests-section" style="background:#7b1fa2;color:#fff;border-color:#7b1fa2;opacity:0.7">🔒 Arrests</button>
     <span class="filter-sep"></span>
     <button class="filter-btn" data-filter="menlopark">Menlo Park</button>
     <button class="filter-btn" data-filter="atherton">Atherton</button>
@@ -241,6 +246,8 @@
     <span><span class="dot" style="background:#ff6d00"></span> Ath case</span>
     <span><span class="dot" style="background:#00897b"></span> PA</span>
     <span><span class="dot" style="background:#9c27b0"></span> SMC</span>
+    <span><span class="dot" style="background:#e91e63"></span> RWC inc.</span>
+    <span><span class="dot" style="background:#c2185b"></span> RWC case</span>
   </div>
   <span class="legend-divider"></span>
   <div class="legend-section">
@@ -265,15 +272,16 @@
 
 <div class="main-area">
   <div class="map-wrap">
-    <div id="map"></div>
+    <div id="map" role="region" aria-label="Map of incidents and crime reports"></div>
+    <div class="map-loading" id="map-loading" role="status" aria-live="polite" hidden>Loading data…</div>
     <button class="feed-toggle" id="feed-toggle">Feed <span class="feed-count" id="feed-count">0</span></button>
   </div>
   <div class="feed-panel" id="feed-panel">
     <div class="feed-header" id="feed-header">
       <span class="feed-header-title">Latest in view</span>
-      <span class="feed-header-close" id="feed-close">close</span>
+      <button type="button" class="feed-header-close" id="feed-close">close</button>
     </div>
-    <div id="feed-list"></div>
+    <div id="feed-list" aria-label="Incidents in the current map view"></div>
     <div class="feed-drag" id="feed-drag"><div class="feed-drag-grip"></div></div>
   </div>
 </div>
@@ -281,7 +289,7 @@
 <div class="stats-bar">
   <div class="stat"><div class="num" id="inc-count">—</div><div class="label" id="inc-label">Incidents (7d)</div></div>
   <div class="stat"><div class="num" id="case-count">—</div><div class="label">Crime Reports</div></div>
-  <div class="stat"><div class="num" id="agency-count">4</div><div class="label">Agencies</div></div>
+  <div class="stat"><div class="num" id="agency-count">5</div><div class="label">Agencies</div></div>
 </div>
 
 <div class="chart-section">
@@ -315,7 +323,7 @@
     </div>
   </div>
   <div class="arrests-controls">
-    <input type="text" class="arrests-search" id="arrests-search" placeholder="Search name, charge, street…" />
+    <input type="search" class="arrests-search" id="arrests-search" placeholder="Search name, charge, street…" aria-label="Search arrests" />
     <span style="font-size:0.72rem;color:#999" id="arrests-showing"></span>
   </div>
   <div class="arrests-table-wrap">
@@ -370,7 +378,7 @@
 </div><!-- .page -->
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://unpkg.com/chart.js@4/dist/chart.umd.min.js"></script>
+<script src="https://unpkg.com/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script>
 const COLORS = {
@@ -554,12 +562,6 @@ const clusterGroup = L.markerClusterGroup({
 });
 const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-function fmtDate(iso) {
-  if (!iso) return '';
-  const d = parseLocalDate(iso);
-  return isNaN(d) ? iso.split('T')[0] : d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
-}
-
 // Parse date string as local time unless it already has a timezone indicator
 function parseLocalDate(s) {
   if (!s) return new Date(NaN);
@@ -567,7 +569,77 @@ function parseLocalDate(s) {
   return new Date(s.replace('T', ' '));
 }
 
-function popupCardHtml(item, crimeConf) {
+// Escape text from the data feeds before it goes into innerHTML.
+// The feeds are third-party, so a stray "<" in a street or charge must not become markup.
+const HTML_ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+function esc(v) {
+  return v == null ? '' : String(v).replace(/[&<>"']/g, c => HTML_ESC[c]);
+}
+
+function hasTz(s) {
+  return s.includes('Z') || /[+-]\d{2}:\d{2}$/.test(s);
+}
+
+// Clock time as "HH:MM[:SS]" (incidents) or an HHMM integer (cases) → [h, m, s], or null if unknown.
+function parseClock(t) {
+  if (t == null || t === '') return null;
+  if (typeof t === 'number') {
+    const h = Math.floor(t / 100), m = t % 100;
+    return h <= 23 && m <= 59 ? [h, m, 0] : null;
+  }
+  const m = String(t).match(/^(\d{1,2}):(\d{2})(?::(\d{2}))?/);
+  return m ? [+m[1], +m[2], +(m[3] || 0)] : null;
+}
+
+// Date fields are midnight with the time in a separate field; combine them.
+// Strings that carry a zone (Palo Alto's are UTC) already hold the full instant.
+function combineDateTime(dateStr, clock) {
+  const d = parseLocalDate(dateStr);
+  if (isNaN(d)) return null;
+  if (clock && !hasTz(dateStr)) d.setHours(clock[0], clock[1], clock[2], 0);
+  return d;
+}
+
+// date:    what the item is listed and filtered by
+// hasTime: whether `date` includes a real time of day
+// when:    when it happened, for the by-watch chart (null if the hour is unknown)
+function itemTiming(item) {
+  if (item._source === 'incident') {
+    const raw = item.incidentDate || '';
+    if (!raw) return { date: null, hasTime: false, when: null };
+    const clock = parseClock(item.incidentTime);
+    const known = hasTz(raw) || !!clock;
+    const date = combineDateTime(raw, clock);
+    return { date, hasTime: known && !!date, when: known ? date : null };
+  }
+  // Cases are listed by report date (no report time is published).
+  // The chart uses the occurrence time; 0000 is mostly a placeholder, so treat it as unknown.
+  const raw = item.reportDate || item.occurrence1Date || '';
+  const d = raw ? parseLocalDate(raw) : null;
+  const occClock = item.occurrence1Time ? parseClock(item.occurrence1Time) : null;
+  const when = item.occurrence1Date && occClock ? combineDateTime(item.occurrence1Date, occClock) : null;
+  return { date: d && !isNaN(d) ? d : null, hasTime: false, when };
+}
+
+function fmtWhen(m) {
+  if (!m._itemDate) return '';
+  const datePart = m._itemDate.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+  if (!m._hasTime) return datePart;
+  return datePart + ' ' + m._itemDate.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' });
+}
+
+// "3h 5m ago" when the time is known; for date-only items, whole days.
+function agoLabel(m) {
+  if (!m._itemDate) return '';
+  if (m._hasTime) return timeAgo(m._itemDate);
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const d = new Date(m._itemDate); d.setHours(0, 0, 0, 0);
+  const days = Math.round((today - d) / 86400000);
+  return days <= 0 ? 'today' : days === 1 ? 'yesterday' : `${days}d ago`;
+}
+
+function popupCardHtml(m) {
+  const item = m._popupItem, crimeConf = m._crimeConf;
   const source = item._source;
   const label = source === 'incident'
     ? (item.callType || item.callTypeDescription || 'Incident')
@@ -576,31 +648,24 @@ function popupCardHtml(item, crimeConf) {
     ? (item.callTypeDescription || '')
     : [item.offenseDescription1, item.crimeClassification ? `(${item.crimeClassification})` : ''].filter(Boolean).join(' ');
   const street = [item.street, item.city].filter(Boolean).join(', ');
-  const dateStr = source === 'incident'
-    ? [fmtDate(item.incidentDate), item.incidentTime].filter(Boolean).join(' ')
-    : fmtDate(item.reportDate || item.occurrence1Date);
-  const ago = (() => {
-    const raw = item.incidentDate || item.reportDate || item.occurrence1Date;
-    if (!raw) return '';
-    const d = parseLocalDate(raw);
-    return isNaN(d) ? '' : timeAgo(d);
-  })();
+  const dateStr = fmtWhen(m);
+  const ago = agoLabel(m);
   return `<div class="popup-card">
-    <div class="popup-type"><span class="popup-dot" style="background:${crimeConf.color}"></span><span class="popup-label">${label}</span></div>
-    ${desc && desc !== label ? `<div class="popup-desc">${desc}</div>` : ''}
-    ${street ? `<div class="popup-location">${street}</div>` : ''}
-    <div class="popup-footer"><span>${dateStr}${ago ? ' · ' + ago : ''}</span><span class="popup-agency">${item._agency || ''}</span></div>
+    <div class="popup-type"><span class="popup-dot" style="background:${crimeConf.color}"></span><span class="popup-label">${esc(label)}</span></div>
+    ${desc && desc !== label ? `<div class="popup-desc">${esc(desc)}</div>` : ''}
+    ${street ? `<div class="popup-location">${esc(street)}</div>` : ''}
+    <div class="popup-footer"><span>${esc(dateStr)}${ago ? ' · ' + esc(ago) : ''}</span><span class="popup-agency">${esc(item._agency)}</span></div>
   </div>`;
 }
 
 function buildPopupCard(marker) {
-  return popupCardHtml(marker._popupItem, marker._crimeConf);
+  return popupCardHtml(marker);
 }
 
 function buildClusterPopup(cluster) {
   const markers = cluster.getAllChildMarkers();
   markers.sort((a, b) => (b._itemDate || 0) - (a._itemDate || 0));
-  const cards = markers.map(m => popupCardHtml(m._popupItem, m._crimeConf)).join('');
+  const cards = markers.map(popupCardHtml).join('');
   return `<div class="popup-scroll">${cards}</div>`;
 }
 
@@ -669,53 +734,103 @@ function updateLastUpdated() {
     month: 'short', day: 'numeric', year: 'numeric',
     hour: 'numeric', minute: '2-digit', timeZoneName: 'short',
   });
-  el.textContent = `Last updated: ${ts} (${timeAgo(lastRefreshDate)})`;
+  const hoursOld = (Date.now() - lastRefreshDate.getTime()) / 3600000;
+  const stale = hoursOld > STALE_AFTER_HOURS;
+  el.classList.toggle('stale', stale);
+  el.textContent = `Last updated: ${ts} (${timeAgo(lastRefreshDate)})` +
+    (stale ? ' — data may be out of date' : '');
+}
+// The refresh job is scheduled every 5 min, but GitHub runs it every few hours in practice.
+const STALE_AFTER_HOURS = 12;
+
+// Monthly data files are fetched only as far back as the selected range needs,
+// so the default 7-day view does not download the whole archive.
+let manifestMonths = [];
+const monthLoads = new Map(); // month -> Promise
+
+function monthKey(d) {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+}
+
+function monthsForRange(days) {
+  if (!days) return manifestMonths.slice();
+  // One extra day of margin: Palo Alto items are filed by their UTC date.
+  const startKey = monthKey(new Date(Date.now() - (days + 1) * 86400000));
+  return manifestMonths.filter(m => m >= startKey);
+}
+
+function loadMonth(month) {
+  if (!monthLoads.has(month)) {
+    monthLoads.set(month, (async () => {
+      try {
+        const resp = await fetch(`data/${month}.json`);
+        if (!resp.ok) { console.warn(`data/${month}.json returned ${resp.status}`); return; }
+        const monthData = await resp.json();
+        addItems([...(monthData.incidents || []), ...(monthData.cases || [])]);
+      } catch (e) {
+        console.warn(`Failed to load data/${month}.json:`, e);
+        monthLoads.delete(month); // allow a retry on the next range change
+      }
+    })());
+  }
+  return monthLoads.get(month);
+}
+
+let loadingCount = 0;
+function setLoading(on) {
+  loadingCount += on ? 1 : -1;
+  document.getElementById('map-loading').hidden = loadingCount <= 0;
+}
+
+// Returns true if it had to fetch anything (so the caller should re-filter).
+async function ensureRangeLoaded() {
+  const months = monthsForRange(activeDays);
+  if (!months.some(m => !monthLoads.has(m))) return false;
+  setLoading(true);
+  try {
+    await Promise.all(months.map(loadMonth));
+  } finally {
+    setLoading(false);
+  }
+  return true;
 }
 
 async function loadData() {
-  // Load manifest to discover available monthly files
-  let allIncidents = [];
-  let allCases = [];
   let meta = {};
-
+  setLoading(true);
   try {
-    const manifestResp = await fetch('manifest.json');
-    const manifest = await manifestResp.json();
-    meta = manifest.meta;
-
-    // Load all month files in parallel
-    const monthFetches = manifest.months.map(async (month) => {
-      try {
-        const resp = await fetch(`data/${month}.json`);
-        if (!resp.ok) { console.warn(`data/${month}.json returned ${resp.status}`); return { incidents: [], cases: [] }; }
-        return await resp.json();
-      } catch (e) {
-        console.warn(`Failed to load data/${month}.json:`, e);
-        return { incidents: [], cases: [] };
-      }
-    });
-    const monthResults = await Promise.all(monthFetches);
-    for (const monthData of monthResults) {
-      allIncidents.push(...(monthData.incidents || []));
-      allCases.push(...(monthData.cases || []));
+    try {
+      const manifestResp = await fetch('manifest.json');
+      if (!manifestResp.ok) throw new Error(`manifest.json returned ${manifestResp.status}`);
+      const manifest = await manifestResp.json();
+      meta = manifest.meta || {};
+      manifestMonths = (manifest.months || []).slice().sort();
+      await ensureRangeLoaded();
+    } catch (e) {
+      // Fallback: try legacy monolithic feed.json
+      console.warn('manifest.json not found, falling back to feed.json', e);
+      const resp = await fetch('feed.json');
+      const feedData = await resp.json();
+      meta = feedData.meta || {};
+      addItems([...(feedData.incidents || []), ...(feedData.cases || [])]);
     }
-  } catch (e) {
-    // Fallback: try legacy monolithic feed.json
-    console.warn('manifest.json not found, falling back to feed.json');
-    const resp = await fetch('feed.json');
-    const feedData = await resp.json();
-    meta = feedData.meta;
-    allIncidents = feedData.incidents || [];
-    allCases = feedData.cases || [];
+  } finally {
+    setLoading(false);
   }
 
   if (meta.generated_at) {
-    const raw = meta.generated_at;
-    lastRefreshDate = parseLocalDate(raw);
+    lastRefreshDate = parseLocalDate(meta.generated_at);
     updateLastUpdated();
   }
+  if (Array.isArray(meta.agencies) && meta.agencies.length) {
+    document.getElementById('agency-count').textContent = meta.agencies.length;
+  }
 
-  const items = [...allIncidents, ...allCases];
+  map.addLayer(clusterGroup);
+  applyFilters();
+}
+
+function addItems(items) {
   items.forEach(item => {
     if (!item.yCoord || !item.xCoord) return;
     const prefix = item._prefix;
@@ -731,12 +846,11 @@ async function loadData() {
     marker._source = source;
     marker._crimeConf = crimeConf;
     marker._crimeText = [item.callType, item.callTypeDescription, item.crimeType, item.crimeClassification, item.offenseDescription1].filter(Boolean).join(' ');
-    const dateStr = item.incidentDate || item.reportDate || item.occurrence1Date || '';
-    marker._itemDate = dateStr ? parseLocalDate(dateStr) : null;
-    // Extract raw hour from local time fields (avoid UTC conversion)
-    const rawTime = item.incidentTime || '';
-    const rawHourMatch = rawTime ? rawTime.match(/^(\d{1,2})/) : dateStr.match(/T(\d{2})/);
-    marker._rawHour = rawHourMatch ? parseInt(rawHourMatch[1]) : -1;
+    const timing = itemTiming(item);
+    marker._itemDate = timing.date;
+    marker._hasTime = timing.hasTime;
+    marker._when = timing.when;
+    marker._moDist = null; // distance to Menlo Oaks, computed on first use
     const _title = source === 'incident' ? (item.callType || item.callTypeDescription || '') : (item.crimeType || item.offenseDescription1 || '');
     const _sub = source === 'incident'
       ? (item.callTypeDescription && item.callTypeDescription !== _title ? item.callTypeDescription : '')
@@ -772,8 +886,6 @@ async function loadData() {
     });
     allMarkers.push(marker);
   });
-  map.addLayer(clusterGroup);
-  applyFilters();
 }
 
 function applyFilters() {
@@ -797,7 +909,11 @@ function applyFilters() {
     }
     // geo filter (AND)
     if (show && geoMenloOaks) {
-      show = distanceToPolygonM(m.getLatLng().lat, m.getLatLng().lng, MENLO_OAKS_POLY) <= THREE_MILES_M;
+      if (m._moDist == null) {
+        const ll = m.getLatLng();
+        m._moDist = distanceToPolygonM(ll.lat, ll.lng, MENLO_OAKS_POLY);
+      }
+      show = m._moDist <= THREE_MILES_M;
     }
     if (show) {
       toAdd.push(m);
@@ -926,18 +1042,21 @@ function updateChart(markers) {
 
   // Build per-day buckets for each watch
   const dayBuckets = []; // [{date, day, swing, night}, ...]
+  const bucketIndex = new Map(); // local "Y-M-D" -> index (safe across DST changes)
+  const dayKey = d => `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
   for (let i = 0; i < days; i++) {
     const d = new Date(cutoff);
     d.setDate(d.getDate() + i);
+    bucketIndex.set(dayKey(d), dayBuckets.length);
     dayBuckets.push({ date: new Date(d), day: 0, swing: 0, night: 0 });
   }
 
+  // Bucket by when it happened, in local time; items with no known hour are left out.
   markers.forEach(m => {
-    if (!m._itemDate || m._itemDate < cutoff) return;
-    const idx = Math.floor((m._itemDate.getTime() - cutoff.getTime()) / 86400000);
-    if (idx < 0 || idx >= days) return;
-    if (m._rawHour < 0) return;
-    const w = getWatch(m._rawHour);
+    if (!m._when || m._when < cutoff) return;
+    const idx = bucketIndex.get(dayKey(m._when));
+    if (idx === undefined) return;
+    const w = getWatch(m._when.getHours());
     if (w === 0) dayBuckets[idx].day++;
     else if (w === 1) dayBuckets[idx].swing++;
     else dayBuckets[idx].night++;
@@ -1044,35 +1163,46 @@ function toggleMenloOaksPoly() {
   }
 }
 
-// Restore active button states from saved settings
-document.querySelectorAll('.filter-btn').forEach(b => {
-  b.classList.toggle('active', b.dataset.filter === activeFilter);
-});
-document.querySelectorAll('.time-btn').forEach(b => {
-  b.classList.toggle('active', parseInt(b.dataset.days) === activeDays);
-});
-document.getElementById('geo-menlooaks').classList.toggle('active', geoMenloOaks);
+// Reflect the current settings on the buttons (visual state + aria-pressed for screen readers)
+function syncButtons() {
+  document.querySelectorAll('.filter-btn[data-filter]').forEach(b => {
+    const on = b.dataset.filter === activeFilter;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-pressed', on);
+  });
+  document.querySelectorAll('.time-btn').forEach(b => {
+    const on = parseInt(b.dataset.days) === activeDays;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-pressed', on);
+  });
+  const geoBtn = document.getElementById('geo-menlooaks');
+  geoBtn.classList.toggle('active', geoMenloOaks);
+  geoBtn.setAttribute('aria-pressed', geoMenloOaks);
+}
+syncButtons();
 toggleMenloOaksPoly();
 
-document.querySelector('.filter-bar').addEventListener('click', e => {
-  if (e.target.classList.contains('filter-btn') && e.target.dataset.filter) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    e.target.classList.add('active');
-    activeFilter = e.target.dataset.filter;
+document.querySelector('.filter-bar').addEventListener('click', async e => {
+  const btn = e.target.closest('button');
+  if (!btn) return;
+  if (btn.classList.contains('filter-btn') && btn.dataset.filter) {
+    activeFilter = btn.dataset.filter;
+    syncButtons();
     saveSettings();
     applyFilters();
-  } else if (e.target.classList.contains('time-btn')) {
-    document.querySelectorAll('.time-btn').forEach(b => b.classList.remove('active'));
-    e.target.classList.add('active');
-    activeDays = parseInt(e.target.dataset.days);
+  } else if (btn.classList.contains('time-btn')) {
+    activeDays = parseInt(btn.dataset.days);
+    syncButtons();
     saveSettings();
-    applyFilters();
+    applyFilters();              // show what is already loaded right away
+    // then fetch older months if the range needs them
+    if (manifestMonths.length && await ensureRangeLoaded()) applyFilters();
   }
 });
 
-document.getElementById('geo-menlooaks').addEventListener('click', e => {
+document.getElementById('geo-menlooaks').addEventListener('click', () => {
   geoMenloOaks = !geoMenloOaks;
-  e.target.classList.toggle('active', geoMenloOaks);
+  syncButtons();
   toggleMenloOaksPoly();
   saveSettings();
   applyFilters();
@@ -1174,16 +1304,16 @@ function updateFeed() {
   feedList.innerHTML = capped.map((m, i) => {
     const d = m._itemData;
     const conf = m._crimeConf || DEFAULT_CRIME;
-    const ago = m._itemDate ? timeAgo(m._itemDate) : '';
+    const ago = agoLabel(m);
     const datePart = m._itemDate ? m._itemDate.toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) : '';
-    const timePart = m._itemDate ? m._itemDate.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' }) : '';
-    return `<div class="feed-item" data-feed-idx="${i}">
-      <span class="feed-icon" style="background:${conf.color}${conf.icon.startsWith('<') ? ';padding:3px' : ''}">${conf.icon}</span>
+    const timePart = m._itemDate && m._hasTime ? m._itemDate.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' }) : '';
+    return `<div class="feed-item" data-feed-idx="${i}" role="button" tabindex="0">
+      <span class="feed-icon" aria-hidden="true" style="background:${conf.color}${conf.icon.startsWith('<') ? ';padding:3px' : ''}">${conf.icon}</span>
       <div class="feed-body">
-        <div class="feed-title">${d.title}${d.subtitle ? ' <span style="font-weight:400;color:#777">· ' + d.subtitle + '</span>' : ''}</div>
-        <div class="feed-meta">${d.street}${d.street && d.agency ? ' — ' : ''}${d.agency}</div>
+        <div class="feed-title">${esc(d.title)}${d.subtitle ? ' <span style="font-weight:400;color:#777">· ' + esc(d.subtitle) + '</span>' : ''}</div>
+        <div class="feed-meta">${esc(d.street)}${d.street && d.agency ? ' — ' : ''}${esc(d.agency)}</div>
       </div>
-      <div class="feed-time">${datePart} ${timePart}${ago ? '<br>' + ago : ''}</div>
+      <div class="feed-time">${esc(datePart)} ${esc(timePart)}${ago ? '<br>' + esc(ago) : ''}</div>
     </div>`;
   }).join('');
 
@@ -1211,6 +1341,14 @@ feedList.addEventListener('mouseout', e => {
   const related = e.relatedTarget;
   if (related && feedList.contains(related)) return;
   if (highlightCircle) { highlightCircle.remove(); highlightCircle = null; }
+});
+
+// Enter/Space on a focused feed row works like a click
+feedList.addEventListener('keydown', e => {
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('feed-item')) {
+    e.preventDefault();
+    e.target.click();
+  }
 });
 
 feedList.addEventListener('click', e => {
@@ -1258,6 +1396,7 @@ setInterval(updateLastUpdated, 60000);
 let arrestsData = [];
 let arrestsSortKey = 'arrestDate';
 let arrestsSortAsc = false;
+let arrestsLoad = null; // Promise, set on first open
 
 async function loadArrests() {
   try {
@@ -1269,7 +1408,7 @@ async function loadArrests() {
     const oldest = meta.oldest_arrest || '';
     const newest = meta.newest_arrest || '';
     if (oldest && newest) {
-      document.getElementById('arrests-range').textContent = `${oldest} — ${newest}`;
+      document.getElementById('arrests-range').textContent = `${oldest} — ${newest}`; // textContent: no escaping needed
     }
     if (meta.generated_at) {
       const d = parseLocalDate(meta.generated_at);
@@ -1335,21 +1474,21 @@ function renderArrests() {
   tbody.innerHTML = display.map(a => {
     const charges = [a.chargeDescription1, a.chargeDescription2, a.chargeDescription3]
       .filter(Boolean)
-      .map(c => `<span class="charge-tag">${c}</span>`)
+      .map(c => `<span class="charge-tag">${esc(c)}</span>`)
       .join(' ');
     const street = [a.blockNumber, a.street].filter(Boolean).join(' ');
     const dateStr = fmtArrestDate(a.arrestDate);
     const agencyShort = (a._agency || '').replace(/ Police Department| Office/g, '').replace("San Mateo County Sheriff's", 'SMC Sheriff');
     return `<tr>
-      <td class="date-cell">${dateStr}</td>
-      <td style="font-size:0.7rem;color:#888;white-space:nowrap">${agencyShort}</td>
-      <td class="name-cell">${a.fullName || [a.firstName, a.lastName].filter(Boolean).join(' ') || '—'}</td>
-      <td>${a.age ?? '—'}</td>
-      <td>${a.sex || '—'}</td>
-      <td>${street || '—'}</td>
+      <td class="date-cell">${esc(dateStr)}</td>
+      <td style="font-size:0.7rem;color:#888;white-space:nowrap">${esc(agencyShort)}</td>
+      <td class="name-cell">${esc(a.fullName || [a.firstName, a.lastName].filter(Boolean).join(' ')) || '—'}</td>
+      <td>${esc(a.age) || '—'}</td>
+      <td>${esc(a.sex) || '—'}</td>
+      <td>${esc(street) || '—'}</td>
       <td class="charge-cell">${charges || '—'}</td>
-      <td>${a.actionTakenDescription || a.actionTaken || '—'}</td>
-      <td>${a.caseNumber || '—'}</td>
+      <td>${esc(a.actionTakenDescription || a.actionTaken) || '—'}</td>
+      <td>${esc(a.caseNumber) || '—'}</td>
     </tr>`;
   }).join('');
 
@@ -1386,15 +1525,15 @@ document.getElementById('arrests-btn').addEventListener('click', () => {
   const btn = document.getElementById('arrests-btn');
   const isActive = section.classList.toggle('active');
   btn.style.opacity = isActive ? '1' : '0.7';
+  btn.setAttribute('aria-expanded', isActive);
   if (isActive) {
     // Load arrests data if not already loaded
-    if (!arrestsData.length) loadArrests();
+    if (!arrestsLoad) arrestsLoad = loadArrests();
     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 });
 
-// Preload arrests data
-loadArrests();
+// arrests.json (~2 MB) is fetched the first time the Arrests panel is opened
 </script>
 
 </body>
