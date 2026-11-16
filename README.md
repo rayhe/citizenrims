@@ -187,7 +187,7 @@ The burglary icon is a domino mask SVG ([game-icons.net](https://game-icons.net/
 
 **Type filters**: All, Incidents, Cases, Violent, Property, Burglary, Alerts (alertable crime types only)
 
-**Agency filters**: Menlo Park, Atherton, Palo Alto, SMC Sheriff
+**Agency filters**: Menlo Park, Atherton, Palo Alto, SMC Sheriff, Redwood City
 
 **Geo filter**: "Menlo Oaks 3mi" — shows only incidents within 3 miles of the Menlo Oaks boundary. Draws the polygon outline on the map when active.
 
@@ -206,6 +206,13 @@ Filters sync to the URL bar via `history.replaceState`. Query parameters:
 Example: `?filter=property&days=14&geo=1`
 
 Settings also persist in localStorage.
+
+### Loading and times
+
+- Monthly files in `public/data/` are fetched only as far back as the selected day range needs (the default 7-day view loads the current month, not the whole archive). Older months load when a longer range or "All" is picked. `arrests.json` loads the first time the Arrests panel is opened.
+- An incident's time comes from `incidentDate` + `incidentTime`; Palo Alto timestamps are UTC and are shown in local time. Cases are listed by report date (date only); the watch chart uses their occurrence time, and leaves out items with no known hour.
+- All text from the data feeds is HTML-escaped before rendering.
+- The header shows when the data was last generated and flags it if it is more than 12 hours old.
 
 ### Timeline chart
 
