@@ -1,0 +1,19 @@
+{
+ "meta": {
+  "generated_at": "2026-11-16T19:00:00+00:00",
+  "days": 31,
+  "agencies": [
+   "menlopark",
+   "atherton",
+   "paloalto",
+   "smcsheriff",
+   "redwoodcity"
+  ],
+  "incident_count": 8,
+  "case_count": 4,
+  "split": "monthly",
+  "manifest": "manifest.json"
+ },
+ "incidents": [],
+ "cases": []
+}

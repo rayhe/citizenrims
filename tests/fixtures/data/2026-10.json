@@ -1,0 +1,71 @@
+{
+ "meta": {
+  "month": "2026-10"
+ },
+ "incidents": [
+  {
+   "incidentNumber": "I2",
+   "street": "MAIN ST",
+   "city": "MENLO PARK",
+   "incidentDate": "2026-10-05T00:00:00",
+   "incidentTime": "14:20:00",
+   "yCoord": 37.47,
+   "xCoord": -122.155,
+   "callType": "459 PC - BURGLARY",
+   "callTypeDescription": "Burglary",
+   "_source": "incident",
+   "_agency": "Atherton Police Department",
+   "_prefix": "atherton"
+  },
+  {
+   "incidentNumber": "I3",
+   "street": "MAIN ST",
+   "city": "MENLO PARK",
+   "incidentDate": "2026-10-20T00:00:00",
+   "incidentTime": "08:00:00",
+   "yCoord": 37.47,
+   "xCoord": -122.155,
+   "callType": "BURGLARY ALARM",
+   "callTypeDescription": "Alarm",
+   "_source": "incident",
+   "_agency": "Menlo Park Police Department",
+   "_prefix": "menlopark"
+  }
+ ],
+ "cases": [
+  {
+   "caseNumber": "C2",
+   "reportDate": "2026-10-12T00:00:00",
+   "occurrence1Date": "2026-10-11T00:00:00",
+   "occurrence1Time": 2230,
+   "street": "OAK AV",
+   "blockNumber": 100,
+   "city": "Menlo Park",
+   "yCoord": 37.47,
+   "xCoord": -122.155,
+   "crimeType": "Burglary",
+   "offenseDescription1": "459 PC Burglary:first degree",
+   "crimeClassification": "Felony",
+   "_source": "case",
+   "_agency": "Menlo Park Police Department",
+   "_prefix": "menlopark"
+  },
+  {
+   "caseNumber": "C3",
+   "reportDate": "2026-10-15T00:00:00",
+   "occurrence1Date": "2026-10-15T00:00:00",
+   "occurrence1Time": 1100,
+   "street": "OAK AV",
+   "blockNumber": 100,
+   "city": "Menlo Park",
+   "yCoord": 37.56,
+   "xCoord": -122.32,
+   "crimeType": "Burglary",
+   "offenseDescription1": "459 PC Burglary:first degree",
+   "crimeClassification": "Felony",
+   "_source": "case",
+   "_agency": "Redwood City Police Department",
+   "_prefix": "redwoodcity"
+  }
+ ]
+}

@@ -506,10 +506,12 @@ function makeDivIcon(crimeConf, agencyColor) {
 const map = L.map('map').setView([37.4665, -122.1663], 13);
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
   attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
-  maxZoom: 16,
+  maxNativeZoom: 16, // Esri serves tiles to z16; Leaflet upscales them past that
+  maxZoom: 20,       // so nearby incidents can still be zoomed apart instead of staying clustered
 }).addTo(map);
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {
-  maxZoom: 16,
+  maxNativeZoom: 16,
+  maxZoom: 20,
 }).addTo(map);
 
 let allMarkers = [];
@@ -528,10 +530,14 @@ function saveSettings() {
   history.replaceState(null, '', qs ? '?' + qs : window.location.pathname);
 }
 const saved = (() => { try { return JSON.parse(localStorage.getItem('cf_settings')) || {}; } catch { return {}; } })();
-const urlParams = new URLSearchParams(window.location.search);
+// Links copied out of HTML or email sometimes arrive with "&amp;" instead of "&".
+const urlParams = new URLSearchParams(window.location.search.replace(/&amp;/gi, '&'));
 let activeFilter = urlParams.get('filter') || saved.filter || 'all';
 const daysParam = urlParams.get('days');
-let activeDays = daysParam === 'all' ? 0 : (parseInt(daysParam) || saved.days || 7);
+let activeDays = daysParam === 'all' ? 0
+  : parseInt(daysParam) > 0 ? parseInt(daysParam)
+  : Number.isInteger(saved.days) && saved.days >= 0 ? saved.days
+  : 7;
 let geoMenloOaks = urlParams.has('geo') ? urlParams.get('geo') === '1' : !!saved.geo;
 const clusterGroup = L.markerClusterGroup({
   maxClusterRadius: 10,
@@ -565,10 +571,13 @@ const clusterGroup = L.markerClusterGroup({
 const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
 // Parse date string as local time unless it already has a timezone indicator
+// (built from parts: "2026-11-01 00:00:00" is not a format every browser accepts)
 function parseLocalDate(s) {
   if (!s) return new Date(NaN);
   if (s.includes('Z') || /[+-]\d{2}:\d{2}$/.test(s)) return new Date(s);
-  return new Date(s.replace('T', ' '));
+  const m = String(s).match(/^(\d{4})-(\d{2})-(\d{2})(?:[T ](\d{2}):(\d{2})(?::(\d{2}))?)?/);
+  if (!m) return new Date(NaN);
+  return new Date(+m[1], +m[2] - 1, +m[3], +(m[4] || 0), +(m[5] || 0), +(m[6] || 0));
 }
 
 // Escape text from the data feeds before it goes into innerHTML.
@@ -976,7 +985,9 @@ const WATCHES = [
   { label: 'Day (7a–3p)',   color: '#f9a825', border: '#f57f17', hour0: 7,  hour1: 15 },
   { label: 'Swing (3p–11p)', color: '#e65100', border: '#bf360c', hour0: 15, hour1: 23 },
   { label: 'Night (11p–7a)', color: '#1a237e', border: '#0d1642', hour0: 23, hour1: 7  },
+  { label: 'Time unknown',   color: '#9e9e9e', border: '#757575' },
 ];
+const UNKNOWN_WATCH = 3;
 
 function getWatch(hour) {
   if (hour >= 7 && hour < 15) return 0;   // Day
@@ -1050,18 +1061,22 @@ function updateChart(markers) {
     const d = new Date(cutoff);
     d.setDate(d.getDate() + i);
     bucketIndex.set(dayKey(d), dayBuckets.length);
-    dayBuckets.push({ date: new Date(d), day: 0, swing: 0, night: 0 });
+    dayBuckets.push({ date: new Date(d), counts: WATCHES.map(() => 0) });
   }
 
-  // Bucket by when it happened, in local time; items with no known hour are left out.
+  // Every item on the map is counted exactly once, so the chart total matches the map.
+  // Bucket by when it happened (local time) when that falls in the range; otherwise
+  // by the date it is listed under, in the "Time unknown" row.
   markers.forEach(m => {
-    if (!m._when || m._when < cutoff) return;
-    const idx = bucketIndex.get(dayKey(m._when));
-    if (idx === undefined) return;
-    const w = getWatch(m._when.getHours());
-    if (w === 0) dayBuckets[idx].day++;
-    else if (w === 1) dayBuckets[idx].swing++;
-    else dayBuckets[idx].night++;
+    let idx = m._when && m._when >= cutoff ? bucketIndex.get(dayKey(m._when)) : undefined;
+    if (idx !== undefined) {
+      dayBuckets[idx].counts[getWatch(m._when.getHours())]++;
+      return;
+    }
+    const listed = m._itemDate || null;
+    idx = listed ? bucketIndex.get(dayKey(listed)) : undefined;
+    if (idx === undefined) idx = listed && listed < cutoff ? 0 : dayBuckets.length - 1;
+    dayBuckets[idx].counts[UNKNOWN_WATCH]++;
   });
 
   // Include month in labels when span > 14 days
@@ -1085,10 +1100,10 @@ function updateChart(markers) {
   const DOW = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
   const grid = WATCHES.map(() => [0,0,0,0,0,0,0]);
   const colTotals = [0,0,0,0,0,0,0];
-  const rowTotals = [0,0,0];
+  const rowTotals = WATCHES.map(() => 0);
   dayBuckets.forEach(b => {
     const dow = (b.date.getDay() + 6) % 7; // 0=Mon
-    grid[0][dow] += b.day;   grid[1][dow] += b.swing;  grid[2][dow] += b.night;
+    b.counts.forEach((v, wi) => { grid[wi][dow] += v; });
   });
   grid.forEach((row, wi) => row.forEach((v, di) => { rowTotals[wi] += v; colTotals[di] += v; }));
   const grand = rowTotals.reduce((a, b) => a + b, 0);
@@ -1098,11 +1113,11 @@ function updateChart(markers) {
 
   const datasets = WATCHES.map((w, wi) => ({
     label: w.label,
-    data: dayBuckets.map(b => wi === 0 ? b.day : wi === 1 ? b.swing : b.night),
+    data: dayBuckets.map(b => b.counts[wi]),
     backgroundColor: dayBuckets.map((_, i) => isWeekend[i] ? w.color + 'cc' : w.color),
     borderColor: w.border,
     borderWidth: 0.5,
-    borderRadius: wi === 2 ? { topLeft: 3, topRight: 3 } : 0,
+    borderRadius: wi === WATCHES.length - 1 ? { topLeft: 3, topRight: 3 } : 0,
   }));
 
   const chartOpts = {
