@@ -20392,5 +20392,27 @@
     "distance_mi": 1.76,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-17T20:48:41.684514+00:00",
+    "id": "inc-menlopark-202611170008",
+    "subject": "[MOSI] Suspicious Person near HENDERSON AV \u2014 0.0mi from Menlo Oaks (High)",
+    "street": "HENDERSON AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.02,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-17T20:48:42.007302+00:00",
+    "id": "case-smcsheriff-26-08807",
+    "subject": "[MOSI] Burglary:second degree - From motor vehicle (F) near 2ND AV / FAIR OAKS AV \u2014 2.0mi from Menlo Oaks (High)",
+    "street": "2ND AV / FAIR OAKS AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.02,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
