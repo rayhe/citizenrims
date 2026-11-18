@@ -20436,5 +20436,27 @@
     "distance_mi": 2.21,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-18T10:42:22.738021+00:00",
+    "id": "inc-menlopark-202611170071",
+    "subject": "[MOSI] Robbery near WILLOW RD \u2014 0.6mi from Menlo Oaks (High)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.57,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-18T10:42:22.974919+00:00",
+    "id": "case-smcsheriff-26-09035",
+    "subject": "[MOSI] Vandalism:deface property (F) near OAKSIDE AV \u2014 2.1mi from Menlo Oaks (Medium)",
+    "street": "OAKSIDE AV",
+    "city": "Redwood City",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.1,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
