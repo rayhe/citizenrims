@@ -20414,5 +20414,27 @@
     "distance_mi": 2.02,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-18T02:37:49.828138+00:00",
+    "id": "inc-atherton-202611170026",
+    "subject": "[MOSI] FRAUD / FALSE PERSONATION near MONTE VISTA AV \u2014 1.9mi from Menlo Oaks (Medium)",
+    "street": "MONTE VISTA AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.91,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-18T02:37:50.065198+00:00",
+    "id": "case-smcsheriff-26-09021",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near HAMPSHIRE AV \u2014 2.2mi from Menlo Oaks (Medium)",
+    "street": "HAMPSHIRE AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.21,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
