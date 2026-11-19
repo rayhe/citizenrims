@@ -20480,5 +20480,27 @@
     "distance_mi": 1.84,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-19T17:41:01.777414+00:00",
+    "id": "inc-redwoodcity-202611190050",
+    "subject": "[MOSI] Burglary - Commercial near BROADWAY \u2014 3.0mi from Menlo Oaks (High)",
+    "street": "BROADWAY",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.95,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-19T17:41:01.978755+00:00",
+    "id": "case-smcsheriff-26-09114",
+    "subject": "[MOSI] Grand theft:money/labor/property - From building (M) near MIDDLEFIELD RD \u2014 2.0mi from Menlo Oaks (Medium)",
+    "street": "MIDDLEFIELD RD",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.99,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
