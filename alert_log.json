@@ -20557,5 +20557,49 @@
     "distance_mi": 1.37,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-20T21:24:26.448082+00:00",
+    "id": "inc-paloalto-202611190361",
+    "subject": "[MOSI] 594 near PEPPER AVE/OLIVE AVE \u2014 3.0mi from Menlo Oaks (Medium)",
+    "street": "PEPPER AVE/OLIVE AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.97,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-20T21:24:26.564438+00:00",
+    "id": "inc-atherton-202611200039",
+    "subject": "[MOSI] FRAUD / FALSE PERSONATION near BETTY LN \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "BETTY LN",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 2.49,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-20T21:24:26.686791+00:00",
+    "id": "inc-paloalto-202611200047",
+    "subject": "[MOSI] 459A near SAN CARLOS CT/STER AVE \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "SAN CARLOS CT/STER AVE",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.94,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-20T21:24:26.841239+00:00",
+    "id": "inc-paloalto-202611200060",
+    "subject": "[MOSI] 459C near LAURA LN/OBRINE LN \u2014 2.2mi from Menlo Oaks (High)",
+    "street": "LAURA LN/OBRINE LN",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.17,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
