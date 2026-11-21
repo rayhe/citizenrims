@@ -20656,5 +20656,16 @@
     "distance_mi": 0.16,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-21T17:34:41.470782+00:00",
+    "id": "case-menlopark-26-2460",
+    "subject": "[MOSI] Display on vehicle/present to officer unlawful registration (M) near BAYFRONT EX/UNIVERSITY AV \u2014 1.5mi from Menlo Oaks (Medium)",
+    "street": "BAYFRONT EX/UNIVERSITY AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.54,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
