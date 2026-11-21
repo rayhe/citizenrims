@@ -20645,5 +20645,16 @@
     "distance_mi": 0.39,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-21T10:12:54.113800+00:00",
+    "id": "inc-menlopark-202611200043",
+    "subject": "[MOSI] Vandalism near MADERA AV \u2014 0.2mi from Menlo Oaks (Medium)",
+    "street": "MADERA AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.16,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
