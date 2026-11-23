@@ -20777,5 +20777,71 @@
     "distance_mi": 2.92,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-23T03:13:53.406779+00:00",
+    "id": "inc-atherton-202611220027",
+    "subject": "[MOSI] ID THEFT near SNOWDEN AV \u2014 1.7mi from Menlo Oaks (Medium)",
+    "street": "SNOWDEN AV",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 1.72,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-23T03:13:53.590952+00:00",
+    "id": "inc-paloalto-202611220133",
+    "subject": "[MOSI] IDTHE near HILBAR LN/ALANNAH CT \u2014 2.1mi from Menlo Oaks (Medium)",
+    "street": "HILBAR LN/ALANNAH CT",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.06,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-23T03:13:53.810811+00:00",
+    "id": "case-menlopark-26-2463",
+    "subject": "[MOSI] Burglary:first degree (F) near ELDER AV \u2014 2.0mi from Menlo Oaks (High)",
+    "street": "ELDER AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 2.01,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-23T03:13:53.960078+00:00",
+    "id": "case-menlopark-26-2464",
+    "subject": "[MOSI] Appropriate lost property - All other larceny (M) near MARSH RD \u2014 1.1mi from Menlo Oaks (High)",
+    "street": "MARSH RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.06,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-23T03:13:54.110862+00:00",
+    "id": "case-menlopark-26-2466",
+    "subject": "[MOSI] Burglary:first degree (F) near WILLIAM CT \u2014 2.0mi from Menlo Oaks (High)",
+    "street": "WILLIAM CT",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.99,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-23T03:13:54.261855+00:00",
+    "id": "case-menlopark-26-2467",
+    "subject": "[MOSI] Theft of personal property - From building (M) near ELDER AV \u2014 1.9mi from Menlo Oaks (High)",
+    "street": "ELDER AV",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.91,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
