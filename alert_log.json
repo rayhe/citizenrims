@@ -20898,5 +20898,16 @@
     "distance_mi": 2.83,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-24T10:20:24.461775+00:00",
+    "id": "inc-redwoodcity-202611230220",
+    "subject": "[MOSI] Grand Theft near EAST BAYSHORE RD \u2014 2.5mi from Menlo Oaks (Medium)",
+    "street": "EAST BAYSHORE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.49,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
