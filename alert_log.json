@@ -20843,5 +20843,60 @@
     "distance_mi": 1.91,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-24T00:30:36.862161+00:00",
+    "id": "inc-atherton-202611230029",
+    "subject": "[MOSI] MAIL THEFT near EL CAMINO REAL \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "ATHERTON",
+    "agency": "Atherton Police Department",
+    "distance_mi": 0.94,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-24T00:30:37.131263+00:00",
+    "id": "inc-redwoodcity-202611230016",
+    "subject": "[MOSI] Vandalism near 2ND AV \u2014 2.0mi from Menlo Oaks (Medium)",
+    "street": "2ND AV",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 1.99,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-24T00:30:37.446319+00:00",
+    "id": "inc-paloalto-202611230050",
+    "subject": "[MOSI] 459C near TANLAND DR/W BAYSHORE RD \u2014 2.9mi from Menlo Oaks (High)",
+    "street": "TANLAND DR/W BAYSHORE RD",
+    "city": "Palo Alto",
+    "agency": "Palo Alto Police Department",
+    "distance_mi": 2.93,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-24T00:30:37.789092+00:00",
+    "id": "case-smcsheriff-26-09024",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - Motor vehicle theft (F) near HAMPSHIRE AV \u2014 2.2mi from Menlo Oaks (Medium)",
+    "street": "HAMPSHIRE AV",
+    "city": "San Mateo County - Unincorporated",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 2.22,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-24T00:30:38.085333+00:00",
+    "id": "case-redwoodcity-R26-11-0366",
+    "subject": "[MOSI] Theft of prop after prior - Motor vehicle parts/accessories (F) near WOODSIDE RD \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "WOODSIDE RD",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.83,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
