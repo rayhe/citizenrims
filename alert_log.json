@@ -21008,5 +21008,38 @@
     "distance_mi": 0.94,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-25T22:43:16.779704+00:00",
+    "id": "case-menlopark-26-2493",
+    "subject": "[MOSI] Theft of personal property - From motor vehicle (M) near CONSTITUTION DR \u2014 1.0mi from Menlo Oaks (High)",
+    "street": "CONSTITUTION DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 1.04,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-25T22:43:16.995750+00:00",
+    "id": "case-menlopark-26-2496",
+    "subject": "[MOSI] Tamper with vehicle - Motor vehicle parts/accessories (M) near OBRIEN DR \u2014 0.9mi from Menlo Oaks (High)",
+    "street": "OBRIEN DR",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.9,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-25T22:43:17.179810+00:00",
+    "id": "case-redwoodcity-R26-11-0423",
+    "subject": "[MOSI] Take vehicle w/o owners consent/vehicle theft - All other larceny (F) near EL CAMINO REAL \u2014 2.8mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Redwood City",
+    "agency": "Redwood City Police Department",
+    "distance_mi": 2.82,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
