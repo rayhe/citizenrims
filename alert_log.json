@@ -21041,5 +21041,38 @@
     "distance_mi": 2.82,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-26T04:26:02.608992+00:00",
+    "id": "inc-menlopark-202611250034",
+    "subject": "[MOSI] Auto Burglary near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (High)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.74,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-26T04:26:02.804739+00:00",
+    "id": "inc-menlopark-202611250057",
+    "subject": "[MOSI] Grand Theft near EL CAMINO REAL \u2014 0.7mi from Menlo Oaks (Medium)",
+    "street": "EL CAMINO REAL",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.71,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-26T04:26:02.992612+00:00",
+    "id": "inc-menlopark-202611250055",
+    "subject": "[MOSI] Grand Theft near WILLOW RD \u2014 0.9mi from Menlo Oaks (Medium)",
+    "street": "WILLOW RD",
+    "city": "Menlo Park",
+    "agency": "Menlo Park Police Department",
+    "distance_mi": 0.93,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
