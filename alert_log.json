@@ -21074,5 +21074,16 @@
     "distance_mi": 0.93,
     "status": "failed",
     "error": "Connection unexpectedly closed"
+  },
+  {
+    "timestamp": "2026-11-27T22:54:39.062714+00:00",
+    "id": "case-smcsheriff-26-09247",
+    "subject": "[MOSI] Grand theft - All other larceny (F) near UNIVERSITY AV \u2014 1.2mi from Menlo Oaks (Medium)",
+    "street": "UNIVERSITY AV",
+    "city": "Palo Alto",
+    "agency": "San Mateo County Sheriff's Office",
+    "distance_mi": 1.22,
+    "status": "failed",
+    "error": "Connection unexpectedly closed"
   }
 ]
